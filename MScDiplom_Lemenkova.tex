@@ -4,6 +4,7 @@
 \usepackage{graphicx}
 \usepackage[numbers]{natbib}
 \usepackage{calc}
+\usepackage{amsmath}
 \usepackage{longtable}
 \usepackage[svgnames,table]{xcolor}
 %\usepackage[table]{xcolor}
@@ -114,6 +115,7 @@ the author, and do not necessarily represent those of the university.\\
 \item \href{http://www.openoffice.org/}{Open Office} : document typesetting, data preprocessing and preliminary statistical evalution
 \item \href{http://calc2latex.sourceforge.net/}{Calc2LaTeX} : converting spreadsheets into \LaTeX environment
 \item \href{http://www.spss.com/}{SPSS (PASW Statistics 18)} : statistical data edition and analysis 
+\item \href{http://gretl.sourceforge.net/}{Gretl: Gnu Regression, Econometrics and Time-series Library} for statistic analysis
 \end{itemize}
 \pagebreak
 
@@ -2216,6 +2218,27 @@ Lag & Partial Autocorrelation & Std error\\ \hline\hline
 \label{fig:53}
 \end{center}
 \end{figure}
+\pagebreak
+
+\begin{table}[htbp]
+\rowcolors{1}{Ivory}{GhostWhite}
+\caption{Summary of the table with values of the spectral reflectance of \textbf{P.oceanica} measured on three different depths, R}
+\label{tab:13}
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline\hline
+wl & X0.5m & X1.5m & X2.5m\\ \hline\hline
+Min.   :318.2   &  Min.   :0.00000     &   Min.   : 0.7792     &   Min.   :0.005096  \\ \hline
+ 1st Qu.:476.9   &  1st Qu.:0.03398    &  1st Qu.:14.4084    &  1st Qu.:0.091878  \\ \hline
+ Median :636.1   &   Median :0.10955    &  Median :22.4621   &  Median :0.269328 \\ \hline 
+ Mean   :635.6   &   Mean   :0.11392   &   Mean   :19.6899   &  Mean   :0.301121  \\ \hline
+ 3rd Qu.:794.5   &   3rd Qu.:0.17198   &   3rd Qu.:25.8785    &  3rd Qu.:0.431055 \\ \hline  
+ Max.   :950.9     &  Max.   :0.32937    &  Max.   :30.9573   &   Max.   :0.981314  \\ \hline
+\end{tabular}
+\end{center}
+From: DepthData $<$- read.table(file="Three-Depths.dat", sep="", header=T); summary(DepthData)
+\end{table}
+
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.25]{GNU-11.jpg}
@@ -2223,6 +2246,8 @@ Lag & Partial Autocorrelation & Std error\\ \hline\hline
 \label{fig:54}
 \end{center}
 \end{figure}
+\pagebreak
+
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.25]{GNU-12.jpg}
@@ -2231,6 +2256,52 @@ mean value within the range.­}
 \label{fig:55}
 \end{center}
 \end{figure}
+
+%%% Gretl
+
+\begin{table}[htbp]
+\caption{\textit{Two-Stage Least Squares}: results of the \textit{TSLS} analysis of the measurement set 1-191 of the spectral reflectance of \textbf{P.oceanica} (15.X.). Gretl.}
+\begin{center}
+Model 1: TSLS, using observations 1--191\\
+Dependent variable: const\\
+Instrumented: v17 \\
+Instruments: v12 \\
+
+\vspace{1em}
+
+\begin{tabular}{lr@{.}lr@{.}lr@{.}lr@{.}l}
+  &
+ \multicolumn{2}{c}{Coefficient} &
+  \multicolumn{2}{c}{Std.\ Error} &
+   \multicolumn{2}{c}{$z$} &
+    \multicolumn{2}{c}{p-value} \\[1ex]
+v17 &  6 & 88502 & 0 & 527503 & 13 & 0521 & 0 & 0000 \\
+\end{tabular}
+
+\vspace{1ex}
+\begin{tabular}{lrlr}
+Mean dependent var &  1.000000 & S.D. dependent var &  0.000000 \\
+Sum squared resid &  97.51535 & S.E. of regression &  0.716407 \\
+Log-likelihood & $-$237.5799 & Akaike criterion &  477.1598 \\
+Schwarz criterion &  480.4121 & Hannan--Quinn &  478.4771 \\
+\end{tabular}
+
+\vspace{1em}
+\begin{raggedright}
+Hausman test --\\
+\quad Null hypothesis: OLS estimates are consistent\\
+\quad Asymptotic test statistic: $\chi^2(1)$ = 13.2834\\
+\quad with p-value = 0.000267768\\
+\vspace{1ex}
+Weak instrument test -- \\
+\quad First-stage $F(1, 190)$ = 16670.2 \\
+\end{raggedright}
+
+\end{center}
+\label{tab:14}
+\end{table}
+%%% Gretl
+
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.4]{GNU-14.jpg}
@@ -2268,7 +2339,7 @@ V15 &	.184836 &	.000223 &	V29 &	.283744 &	.000436 \\ \hline
 	 &	 &	 &		V30 &	.406525 &	.000646 \\ \hline
 \end{tabular}
 \end{center}
-\label{fig:5}
+\label{tab:14}
 \end{table}
 
 \begin{table}[htbp]

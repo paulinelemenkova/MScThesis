@@ -179,7 +179,7 @@ underwater videometric measurements.
 
 \subsection{Background}
 \subsubsection{Global distribution of the seagrasses}
-Globally, there are 58 recognized and described seagrass species \ref{fig:2}, belonging to two orders
+Globally, there are 58 recognized and described seagrass species (Fig. \ref{fig:2}), belonging to two orders
 (Hydrocharitales and Najadales), four families (Hydrocharitaceae, Posidoniaceae, Cymodoceaceae
 and Zosteraceae), and 12 genera (Enhalus, Thalassia, Halophila, Posidonia, Syringodium, Halodule,
 Cymodocea, Amphibolis, Thalassodendron, Zostera, Heterozostera and Phyllospandix) \cite{Kuo89}\label{Kuo89}.
@@ -1457,8 +1457,17 @@ irradiance received in Agia Pelagia bay.
 \paragraph{Spectral discrimination of sand}
 
 \subsubsection{Statistical analysis of the observational data and hypothesis testing}
-The raw data of measurements of spectral reflectances of P.oceanica have been tested statistically. We
-analysed 400 datasets made on two different data.
+In the statistical anlysis of the raw observed data pool of the values of spectral reflectances (about 400 single measurements for P.oceanica), we summarize their complexity by concentrating on some simple numerical characteristics that they possess, i.e. parameters. Examples are the mean and variance of a probability distribution of measurements dataset (Fig.). We divided the total data pool into datasets of 25 measurements for more convenience and ease of use, both for P.oceanica and carbonate sand. The mean of a probability distribution of spectral reflectance describes the average value of the random variable over all of its possible realizations (see for example, Fig. Appendix).  Conceptually, there are an infinite number of such realizations, therefore parameters are not known to us. However, in the statistical analysis of the observed data our goal is to estimate these parameters using a finite amount of information available to us. 
+Thus, we collect a number of realizations (a sample of 25 measurements) and then estimate the unknown parameters using a statistical analysis (Appendices, see Tables ). \\
+Finally we
+analysed 400 datasets made on two different data. 
+Since the actual values that measured variables of spectral reflectance take on are not actually known before we observed them, they are random. 
+Probability thus expresses uncertainty about the possible values of the values of spectral reflectances  of P.oceanica.
+Each time we observe the outcome of a random variable of spectral reflectance, we obtain an observation. 
+Once observed, its value is known and hence it is no longer random. 
+So, there is a distinction to be made between variables whose values are not yet observed (random variables) and those whose values have been observed (observations). 
+We applied various methods of statistical probability analysis towards data pool, in order to analyse the distribution of values of spectral reflectances of P.oceanica (see Appendices, Tables). 
+A probability distribution, a mathematical statement about the possible values that the random observations of spectral reflectance can take on, displays the relative frequency with which each possible value of spectral reflectance is observed.
 The total amount of measured data was large and included following datasets made using
 hyperspectral radiometer Ramses: 350 measuremetn sets of P.oceanica reflectance for 14th Oct, 400
 sets of P.oceanica reflectance for 15th Oct, 84 datasets for seawater reflectance with sediments, 105
@@ -1467,7 +1476,7 @@ Fig. 4.11. Spectral reflectance of water with sediments
 Therefore, a statistical approach is necessary for the processing of such data. Statistical pre-processing
 of large sets of serial data enables to generalyse data by using the most typical and predicted values of
 spectral reflectance for further calculations, and to get rid of the extreme values, noise and errors.
-The statistical calculators were made by means of Open Office and included following computations
+The statistical calculators were mainly made by means of Gretle and SPSS. The Open Office was used for preliminary data view and preprocessing, and included following computations
 at each data set (table 1): mean, median, Q1 and Q3, standard deviation, min and max values. The
 statistical pre-processing and analysis were made shown the mean values of spectral reflectances,
 which were used for comparison with reflectance data of various seafloor cover types as well as
@@ -2123,6 +2132,88 @@ P>0.05, which means that there is a significant difference in radiance of P.ocea
 \pagebreak
 \newpage
 
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.4]{G-gamma-rad.jpg}
+\caption{Frequency normality test against gamma distribution: radiance of the seawater, measured in aquarium tank. Visualization in Gretl.­}
+\label{fig:48}
+\end{center}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{G-normal-dist.jpg}
+\caption{Frequency normality test against normal distribution: radiance of the seawater, measured in aquarium tank. Visualization in Gretl.­}
+\label{fig:49}
+\end{figure}
+
+%%% Gretle start
+\begin{table}
+\caption{Nonlinear model: results of the \textit{logistic analysis} of the seawater radiance with sediments (15.X.), Series:V16. Gretl}
+\begin{center}
+Model 2: Logistic, using observations 1:01--8:23 ($T$ = 191)\\
+Dependent variable: v16\\
+$\hat{y} = 1 / (1 + e^{-X\hat{\beta}})$
+
+\vspace{1em}
+
+\begin{tabular}{|c|c|c|c|c|}
+  & {Coefficient} & {Std.\ Error} & {$t$-ratio} & {p-value} \\[1ex]
+const &  1.58324 &     0.407258 &       3.8876 &         0.0001 \\
+v1 &   $-$0.00512630 &     0.000615503 &       $-$8.3286 &         0.0000 \\
+\end{tabular}
+
+\vspace{1em}Statistics based on the transformed data:
+
+\vspace{1ex}
+\begin{tabular}{lrlr}
+Sum squared resid &  462.8481 & S.E. of regression &  1.564906 \\
+$R^2$ &  0.268481 & Adjusted $R^2$ &  0.264610 \\
+$F(1, 189)$ &  69.36634 & P-value($F$) &  1.63\textrm{e--14} \\
+Log-likelihood & $-$355.5467 & Akaike criterion &  715.0935 \\
+Schwarz criterion &  721.5980 & Hannan--Quinn &  717.7281 \\
+$\hat{\rho}$ &  0.980662 & Durbin--Watson &  0.020351 \\
+\end{tabular}
+
+\vspace{1em}Statistics based on the original data:
+
+\vspace{1ex}
+\begin{tabular}{lrlr}
+Mean dependent var &  0.262542 & S.D. dependent var &  0.205031 \\
+Sum squared resid &  10.80565 & S.E. of regression &  0.239108 \\
+\end{tabular}
+\end{center}
+\end{table}
+%%% end Gretl
+
+%%%
+\begin{table}
+\rowcolors{1}{Lavender}{LightYellow}
+\caption{Robust estimation of the seawater radiance (measured in aquarium tank, Heraklion): results of the \textit{least absolute deviation} (LAD), Series:V16. Gretl}
+\begin{center}
+Model 6: LAD, using observations 1:01--8:23 ($T$ = 191)\\
+Dependent variable: v16\\
+
+\vspace{1em}
+
+\begin{tabular}{|c c c c c|}
+  & {Coefficient} & {Std.\ Error} & {$t$-ratio} & {p-value} \\[1ex]
+const &   0.738911 &     0.0862011 &       8.5719 &         0.0000 \\
+v1 &   $-$0.000775186 &     0.000114010 &       $-$6.7993 &         0.0000 \\
+\end{tabular}
+
+\vspace{1ex}
+\begin{tabular}{lrlr}
+Median depend. var &  0.227857 & S.D. dependent var &  0.205031 \\
+Sum absolute resid &  30.22342 & Sum squared resid &  8.059632 \\
+Log-likelihood &  28.74727 & Akaike criterion & $-$53.49454 \\
+Schwarz criterion & $-$46.99000 & Hannan--Quinn & $-$50.85990 \\
+\end{tabular}
+\end{center}
+\end{table}
+%%%
+\pagebreak
+\newpage
+
 \begin{table}[htbp]
 \rowcolors{1}{Ivory}{GhostWhite}
 \caption{Results of the \textit{autocorrelation analysis} of the measurement set 1-16 of the spectral reflectance of \textbf{P.oceanica} (15.X.), Series:V3. SPSS}
@@ -2207,17 +2298,86 @@ Lag & Partial Autocorrelation & Std error\\ \hline\hline
 \begin{figure}[h]
 \begin{center}
 \includegraphics[scale=0.25]{GNU-09.jpg}
-\caption{Spectral reflectance of seawater with sediments. Bezier interpolation. Mean value is shown by the vertical impulses linestyle (GNUplot)­}
+\caption{Spectral reflectance of seawater with sediments. Bezier interpolation. Mean value is shown by the vertical impulses linestyle (Gnuplot)­}
 \label{fig:52}
 \end{center}
 \end{figure}
+
+%%% Gretl start
+\begin{table}
+\rowcolors{1}{Bisque}{Ivory}
+\begin{center}
+\caption{\textit{Ordinary Least Squares}: results of the \textit{OLS} analysis of the measurement set 326-350 of the spectral reflectance of \textbf{P.oceanica} (15.X.). Gretl.}
+Model 2: OLS, using observations 326--350\\
+Dependent variable: v20 \\
+\vspace{1em}
+\begin{tabular}{|c c c c c|}
+  & {Coefficient} &  {Std.\ Error} &   {$t$-ratio} &    {p-value} \\[1ex]
+const &  0.414957 &    0.0299342 &      13.8623 &        0.0000 \\
+v1 &   $-$0.000441803 &     4.52185\textrm{e--005} &       $-$9.7704 &         0.0000 \\ \hline\hline
+\end{tabular}
+\vspace{1ex}
+\begin{tabular}{lrlr}
+Mean dependent var &  0.134005 & S.D. dependent var &  0.140653 \\
+Sum squared resid &  2.497416 & S.E. of regression &  0.114951 \\
+$R^2$ &  0.335585 & Adjusted $R^2$ &  0.332070 \\
+$F(1, 189)$ &  95.46076 & P-value($F$) &  1.65\textrm{e--18} \\
+Log-likelihood &  143.1678 & Akaike criterion & $-$282.3357 \\
+Schwarz criterion & $-$275.8311 & Hannan--Quinn & $-$279.7010 \\
+\end{tabular}
+\end{center}
+\end{table}
+\pagebreak
+%%% Gretl end
+
 \begin{figure}[h]
 \begin{center}
-\includegraphics[scale=0.25]{GNU-10.jpg}
-\caption{Spectral reflectance of the seawater without sediments. Interpolation graph. GNUplot display­}
+\includegraphics[scale=0.22]{GNU-10.jpg}
+\caption{Spectral reflectance of the seawater without sediments. Interpolation graph. Gnuplot display­}
 \label{fig:53}
 \end{center}
 \end{figure}
+
+%%% Gretl start
+\begin{table}[H]
+\rowcolors{1}{Thistle}{MintCream}
+\begin{center}
+\caption{Summary statistics of measurements set: 301-325. \\ Example of selected variables 12-22. Gretl.­}
+Summary Statistics, using the observations 301--325\\
+\vspace{8pt}
+\begin{tabular}{|c|c|c|c|c|}
+Variable & {Mean}& {Median}  & {Minimum}    & {Maximum} \\[1ex]
+v12 & 0.221475 & 0.139032 & 0.00101700 & 0.780730\\
+v13 & 0.217074 & 0.139285 & 0.00108700 & 0.754430\\
+v14 & 0.167442 & 0.110878 & 0.000348000 & 0.575242\\
+v15 & 0.155908 & 0.111737 & 0.0125650 & 0.483602\\
+v16 & 0.158329 & 0.111647 & 0.0101590 & 0.498096\\
+v17 & 0.167575 & 0.111349 & 0.000836000 & 0.579004\\
+v18 & 0.125868 & 0.0863670 & 0.000662000 & 0.417701\\
+v19 & 0.179261 & 0.117898 & 0.000935000 & 0.612021\\
+v20 & 0.141302 & 0.0932400 & 0.000714000 & 0.478343\\
+v21 & 0.228822 & 0.143105 & 0.00149500 & 0.800529\\
+v22 & 0.174892 & 0.114994 & 0.000343000 & 0.592146\\ \hline\hline
+\end{tabular}
+\begin{tabular}{|c|c|c|c|c|}
+\rowcolors{1}{Lavender}{MintCream}
+Variable &  {Std.\ Dev.}  & {Coef.Var.}   & {Skewness}    & {Ex.\ kurtosis} \\[1ex]
+v12 & 0.246134 & 1.11134 & 0.930598 & $-$0.393370\\
+v13 & 0.239324 & 1.10250 & 0.910879 & $-$0.440017\\
+v14 & 0.181797 & 1.08573 & 0.884089 & $-$0.466508\\
+v15 & 0.151811 & 0.973718 & 0.796534 & $-$0.646866\\
+v16 & 0.155834 & 0.984241 & 0.832126 & $-$0.587890\\
+v17 & 0.182383 & 1.08837 & 0.901570 & $-$0.435120\\
+v18 & 0.134253 & 1.06662 & 0.820573 & $-$0.603688\\
+v19 & 0.195217 & 1.08901 & 0.873615 & $-$0.515800\\
+v20 & 0.152787 & 1.08128 & 0.863700 & $-$0.525357\\
+v21 & 0.252696 & 1.10434 & 0.924172 & $-$0.408867\\
+v22 & 0.189797 & 1.08523 & 0.858809 & $-$0.546215\\
+\end{tabular}
+\end{center}
+\end{table}
+%%% Gretle end
+
 \pagebreak
 
 \begin{table}[htbp]
@@ -2257,8 +2417,7 @@ mean value within the range.­}
 \end{center}
 \end{figure}
 
-%%% Gretl
-
+%%% Gretl start
 \begin{table}[htbp]
 \caption{\textit{Two-Stage Least Squares}: results of the \textit{TSLS} analysis of the measurement set 1-191 of the spectral reflectance of \textbf{P.oceanica} (15.X.). Gretl.}
 \begin{center}
@@ -2269,13 +2428,9 @@ Instruments: v12 \\
 
 \vspace{1em}
 
-\begin{tabular}{lr@{.}lr@{.}lr@{.}lr@{.}l}
-  &
- \multicolumn{2}{c}{Coefficient} &
-  \multicolumn{2}{c}{Std.\ Error} &
-   \multicolumn{2}{c}{$z$} &
-    \multicolumn{2}{c}{p-value} \\[1ex]
-v17 &  6 & 88502 & 0 & 527503 & 13 & 0521 & 0 & 0000 \\
+\begin{tabular}{|c c c c c|}
+  &  {Coefficient} &  {Std.\ Error} &  {$z$} &    {p-value} \\[1ex]
+v17 &  6.88502 & 0.527503 & 13.0521 & 0.0000 \\
 \end{tabular}
 
 \vspace{1ex}
@@ -2300,7 +2455,7 @@ Weak instrument test -- \\
 \end{center}
 \label{tab:14}
 \end{table}
-%%% Gretl
+%%% Gretl end
 
 \begin{figure}[H]
 \begin{center}
@@ -2310,6 +2465,30 @@ mean value within the range (red bold dots). GNUplot visualization­}
 \label{fig:56}
 \end{center}
 \end{figure}
+
+%%% Gretl start
+\begin{table}[htbp]
+\rowcolors{1}{Ivory}{GhostWhite}
+\caption{Basic mathematical formulae used for statistical analysis of the measurement set of the spectral reflectance.}
+\label{tab:13}
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline\hline
+Basic Statistics & Math Formulae \\ \hline\hline
+\hline
+Mean & $\Sigma(x_i/n=\bar x)$ \\ \hline
+Variance & $1 \over n-1$ $\Sigma(x_i-\bar x)=s^2_x$  \\ \hline
+Standard Deviation & $s=s^2$ \\ \hline
+Coefficient of Variation & $s/\bar x$ \\ \hline
+Skewness & $1 \over n-1$ $\Sigma(x_i-\bar x)/s^3$  \\ \hline
+Excess Kurtosis & $1 \over n-1$ $\Sigma(x_i-\bar x)/s^4-3$  \\ \hline
+
+\end{tabular}
+\end{center}
+\label{tab:14}
+\end{table}
+%%% Gretl end
+
 \pagebreak
 
 \begin{table}[htbp]
@@ -2408,16 +2587,311 @@ V15 &	0.140563 &	0.026211 &	V29 &	0.214436 &	0.038433 \\ \hline
 \label{fig:5}
 \end{table}
 
+%%%Gretl begin
+\begin{table}[H]
+\caption{Results of the \textit{Principal Components Analysis}: measurement variables 1-7 from the selected dataset 301-325 of the spectral reflectance of \textbf{P.oceanica} (15.X.). Gretl.}
+\begin{center}
+Eigenanalysis of the Correlation Matrix\\
+\vspace{1em}
 
+\begin{tabular}{|c|c|c|c|}
+{Component } &  {Eigenvalue } & {Proportion} & {Cumulative} \\
+1 &   6.4848    &   0.9264    &   0.9264 \\
+2 & 0.4949 &      0.0707  &     0.9971 \\
+3 &  0.0140    &   0.0020    &   0.9991 \\
+4 &    0.0052  &     0.0007    &   0.9998 \\
+5 &   0.0008   &    0.0001     &  1.0000 \\
+6 &  0.0002    &   0.0000      & 1.0000 \\
+7 &   0.0001   &    0.0000     &  1.0000 \\
+\end{tabular}
+
+Eigenvectors (component loadings)
+\vspace{1ex}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+v1        &	     -0.308  &	  -0.880  &	   0.334   &	 -0.126  &	   0.033  &	  -0.042   &	  0.006\\ \hline
+v2      &	      0.383  &	  -0.295  &	  -0.512   &	 -0.230  &	  -0.365  &	  -0.370   &	 -0.425\\ \hline
+v3      &	      0.383  &	  -0.300  &	  -0.465   &	 -0.010  &	   0.562  &	   0.307   &	  0.370\\ \hline
+v4      &	      0.390  &	  -0.145  &	   0.203   &	  0.714  &	  -0.129  &	  -0.415   &	  0.293\\ \hline
+v5      &	      0.392  &	  -0.091  &	   0.300   &	  0.262  &	   0.020  &	   0.568   &	 -0.597\\ \hline
+v6      &	      0.392  &	  -0.011  &	   0.259   &	 -0.410  &	  -0.543  &	   0.299   &	  0.476\\ \hline
+v7      &	      0.390  &	   0.138  &	   0.460   &	 -0.429  &	   0.488  &	  -0.427   &	 -0.113\\ \hline
+\end{tabular}
+\end{center}
+\label{tab:14}
+\end{table}
+%%%Gretl end
+\pagebreak
+
+%%%Gretl begin
+\begin{table}[H]
+\begin{center}
+\rowcolors{1}{AntiqueWhite}{LightGoldenrodYellow}
+\caption{Results of the \textit{tobit analysis} with censored dependent variable (2) from the selected dataset Series 151-175 of the s.reflectance of \textbf{P.oceanica}. Gretl.}
+Model 2: Tobit, using observations 1:01--8:23 ($T$ = 191)\\
+Dependent variable: v12\\
+\vspace{1em}
+\begin{tabular}{|c c c c c|}
+  &  {Coefficient} &    {Std.\ Error} & {$z$} & {p-value} \\[1ex]
+const &   $-$0.00413795 &     0.0502867 &     $-$0.0823 &         0.9344 \\
+v2 &   0.890117 &     0.957730 &       0.9294 &         0.3527 \\
+\end{tabular}
+
+\vspace{1ex}
+\begin{tabular}{lrlr}
+Mean dependent var &  0.035372 & S.D. dependent var &  0.053185 \\
+Censored obs &         1 & sigma &  0.050920 \\
+Log-likelihood &  295.1357 & Akaike criterion & $-$584.2715 \\
+Schwarz criterion & $-$574.5147 & Hannan--Quinn & $-$580.3195 \\
+$\hat{\rho}$ & $-$0.032865 & Durbin--Watson &  2.065699 \\
+\end{tabular}
+
+\vspace{1em}
+\begin{raggedright}
+Test for normality of residual --\\
+\quad Null hypothesis: error is normally distributed\\
+\quad Test statistic: $\chi^2(2)$ = 190.404\\
+\quad with p-value = 4.51226e-042\\
+\vspace{1ex}
+\end{raggedright}
+\end{center}
+\end{table}
+%%%Gretl end
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.4]{GNU-15.jpg}
+\includegraphics[scale=0.38]{GNU-15.jpg}
 \caption{Multiplot of spectral reflectance of P.oceanica. Series 151-200. Shown midspread of the statistical quartiles Q1 and Q3 (vertical dashes) and
 mean value within the range (red bold dots). GNUplot visualization­}
 \label{fig:57}
 \end{center}
 \end{figure}
 \pagebreak
+
+%%%Gretl begin
+\begin{table}[H]
+\rowcolors{1}{Gainsboro}{MintCream}
+\begin{center}
+\caption{Results of the \textit{Weighted Least Squares Analysis} applied towards variables 12-20 from the selected dataset 301-325 of the spectral reflectance of \textbf{P.oceanica}. Gretl.}
+Model 1: WLS, using observations 1--95\\
+Dependent variable: v20\\
+Variable used as weight: v12
+
+\vspace{1em}
+\begin{tabular}{|c|c|c|c|c|}
+  & {Coefficient} & {Std.\ Error} & {$t$-ratio} & {p-value} \\[1ex]
+const &   0.239525 &     0.0771338 & 3.1053 &         0.0025 \\
+v1 &   0.000120809 &     0.000147131 &       0.8211 &         0.4137 \\
+\end{tabular}
+
+\vspace{1em}Statistics based on the weighted data:
+
+\vspace{1ex}
+\begin{tabular}{lrlr}
+Sum squared resid &  0.290924 & S.E. of regression &  0.055930 \\
+$R^2$ &  0.007197 & Adjusted $R^2$ & -0.003478 \\
+$F(1, 93)$ &  0.674200 & P-value($F$) &  0.413691 \\
+Log-likelihood &  140.1579 & Akaike criterion & $-$276.3158 \\
+Schwarz criterion & $-$271.2081 & Hannan--Quinn & $-$274.2519 \\
+\end{tabular}
+
+\vspace{1em}Statistics based on the original data:
+
+\vspace{1ex}
+\begin{tabular}{lrlr}
+Mean dependent var &  0.136154 & S.D. dependent var &  0.149193 \\
+Sum squared resid &  5.689669 & S.E. of regression &  0.247344 \\
+\end{tabular}
+\end{center}
+\end{table}
+%%%Gretl end
+
+%%% one more Gretl start
+\begin{table}
+\rowcolors{1}{BlanchedAlmond}{MintCream}
+\begin{center}
+\caption{Results of the \textit{Prais-Winsten estimation} applied towards variables 15 from the selected dataset 151-175 of the spectral reflectance of \textbf{P.oceanica}. Gretl.}
+Model 3: Prais--Winsten, using observations 1:01--8:23 ($T$ = 191)\\
+Dependent variable: v12\\
+$\hat{\rho}$ = -0.0343656
+
+\vspace{1em}
+
+\begin{tabular}{|c c c c c|}
+  & {Coefficient} &  {Std.\ Error} & {$t$-ratio} &   {p-value} \\[1ex]
+const &   $-$0.00498439 &     0.00977709 &       $-$0.5098 &         0.6108 \\
+v2 &   0.912742 &     0.205904 &      4.4328 &         0.0000 \\
+\end{tabular}
+
+\vspace{1em}Statistics based on the rho-differenced data:
+
+\vspace{1ex}
+\begin{tabular}{lrlr}
+Mean dependent var &  0.035372 & S.D. dependent var &  0.053185 \\
+Sum squared resid &  0.490951 & S.E. of regression &  0.050967 \\
+$R^2$ &  0.086511 & Adjusted $R^2$ &  0.081678 \\
+$F(1, 189)$ &  19.67163 & P-value($F$) &  0.000016 \\
+$\hat{\rho}$ & $-$0.001888 & Durbin--Watson &  2.003741 \\
+\end{tabular}
+\end{center}
+\end{table}
+%%%one more Gretl end
+\pagebreak
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.4]{G-autocorr-sand51-75.jpg}
+\caption{Graph of the autocorrelation analysis of the measurements of carbonate sand. Series 51-75, variable 27. Gretl visualization­}
+\label{fig:57}
+\end{center}
+\end{figure}
+
+%%% Gretl start
+\begin{table}[htbp]
+\rowcolors{1}{Ivory}{GhostWhite}
+\caption{Results of the \textit{autocorrelation analysis} of the measurement set 51-75 of the spectral reflectance of \textbf{carbonate sand}, Gretl.}
+\label{tab:14}
+\begin{center}
+\begin{tabular}{|c c c c c c c||}
+\hline\hline
+LAG & ACF & & PACF & & Q-stat & [p-value] \\ \\ \hline\hline
+1  & 0.9851 & ***  & 0.9851& ***   & 104.8293 & [0.000]\\ \hline
+    2  & 0.9657  &***  &-0.1598  &   ***  &  206.5423  &[0.000]\\ \hline
+    3  & 0.9420  &***  &-0.1337  &  ***   &  304.2787  &[0.000]\\ \hline
+    4  & 0.9144  &***  &-0.1107  &  ***   &  397.2949  &[0.000]\\ \hline
+    5  & 0.8835  &***  &-0.0905  &  ***   &  484.9833  &[0.000]\\ \hline
+    6  & 0.8495 & ***  &-0.0732  &  ***   &  566.8791  &[0.000]\\ \hline
+    7  & 0.8131 & ***  &-0.0565  &  ***   &  642.6707  &[0.000]\\ \hline
+    8  & 0.7748 & ***  &-0.0423  &  ***   &  712.1933  &[0.000]\\ \hline
+    9  & 0.7350 & ***  &-0.0317  &  ***   &  775.4114  &[0.000]\\ \hline
+   10 &  0.6941&  *** & -0.0280 &  ***   &   832.3807 & [0.000]\\ \hline
+   11 &  0.6524 & *** & -0.0221 &  ***   &   883.2508 & [0.000]\\ \hline
+   12 &  0.6103 & *** & -0.0197 &  ***   &   928.2405 & [0.000]\\ \hline
+   13 &  0.5679 & *** & -0.0170 &  ***   &   967.6289 & [0.000]\\ \hline
+   14 &  0.5256 & *** & -0.0162 &  ***   &  1001.7381&  [0.000]\\ \hline
+   15 &  0.4835 & *** & -0.0154 &  ***   &  1030.9237 & [0.000]\\ \hline
+   16 & 0.4418 & *** & -0.0172  &  ***  &  1055.5584 & [0.000]\\ \hline
+   17  & 0.4v004 & *** & -0.0196 &***     &  1076.0231 & [0.000]\\ \hline
+   18 & 0.35v94 & *** & -0.0216  & ***   &  1092.7041 & [0.000]\\ \hline
+   19 &  0.3189 & *** & -0.0224   & ***  &  1105.9911 & [0.000]\\ \hline
+   20 &  0.2788 & *** & -0.0269   & ***  &  1116.2679 & [0.000]\\ \hline
+\end{tabular}
+\end{center}
+\label{fig:5}
+\end{table}
+%%% Gretl end
+\pagebreak
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.4]{G-QQplot-sand.jpg}
+\caption{Normal Q-Q plot: estimated versus observed values of the measurement of carbonate sand, variable 27. Series 51-75. Gretl modelling visualization­}
+\label{fig:57}
+\end{center}
+\end{figure}
+
+%%% Gretl start
+\begin{table}[H]
+\caption{Results of the \textit{Quantile estimates}: measurements 51-75 of the spectral reflectance of \textbf{carbonate sand}, Gretl.}
+\begin{center}
+Model 2: Quantile estimates, using observations 1:01--5:09 ($T$ = 105)\\
+Dependent variable: v27\\
+$\tau$ = 0.5\\
+Asymptotic standard errors assuming IID errors\\
+
+\vspace{1em}
+
+\begin{tabular}{c c c c c}
+***   & {Coefficient} & {Std.\ Error} & {$t$-ratio} & {p-value} \\[1ex]
+const &  0.837827 &    0.0386417 &      21.6820 &         0.0000 \\
+v1 &   $-$0.00111120 &     6.60949\textrm{e--005} &       $-$16.8122 &         0.0000 \\ \hline \hline
+\end{tabular}
+
+\vspace{1ex}
+\begin{tabular}{lrlr}
+Median depend. var &  0.191024 & S.D. dependent var &  0.135439 \\
+Sum absolute resid &  8.625039 & Sum squared resid &  1.370360 \\
+Log-likelihood &  84.64508 & Akaike criterion & $-$165.2902 \\
+Schwarz criterion & $-$159.9822 & Hannan--Quinn & $-$163.1393 \\ \hline \hline
+\end{tabular}
+\end{center}
+\end{table}
+%%% Gretl end
+\pagebreak
+
+%%%Gretl begin
+\begin{table}[H]
+\begin{small}
+\rowcolors{1}{Ivory}{LightGoldenrodYellow}
+\caption{Results of the \textit{periodogramm} for v30 of the measurement set 51-75 of the spectral reflectance of \textbf{carbonate sand}, Gretl.}
+\label{tab:14}
+\begin{center}
+\begin{tabular}{|p{15mm} p{15mm} p{15mm} p{15mm} || p{15mm} p{15mm}p{15mm} p{15mm}|}
+omega & scaled frequency & periods & log spectral density & omega & scaled frequency & periods & log spectral density \\ \\ \hline\hline
+0.05984      & 1    &      105.00  &      -1.2466  &  1.61568   &   27    &        3.89     &    -11.111\\ 
+ 0.11968     &  2   &        52.50   &      -5.8761 &   1.67552   &   28    &        3.75     &    -11.170\\ 
+ 0.17952     &  3   &        35.00   &      -4.0657 &  1.73536   &   29    &        3.62     &    -11.208\\ 
+ 0.23936     &  4   &        26.25   &      -7.1031 &  1.79520   &   30    &        3.50     &    -11.461\\ 
+ 0.29920     &  5   &        21.00   &      -6.1742 &  1.85504   &   31    &        3.39     &    -11.380\\ 
+ 0.35904     &  6   &        17.50   &      -7.2772  & 1.91488    & 32     &       3.28      &   -11.686\\ 
+ 0.41888     &  7     &      15.00   &      -8.7802 &  1.97472    &  33    &        3.18     &    -11.624\\ 
+ 0.47872     &  8     &      13.13   &      -7.6806 & 2.03456    &  34    &        3.09         &-11.724\\ 
+ 0.53856     &  9     &      11.67   &      -8.4848  & 2.09440    &  35    &        3.00    &     -11.818\\ 
+ 0.59840     & 10    &       10.50  &       -8.5764 &    2.15423    &  36    &        2.92    &     -11.805\\ 
+ 0.65824     & 11    &        9.55   &      -9.4643 &  2.21407    &  37    &        2.84    &     -12.002\\ 
+ 0.71808     & 12    &        8.75   &      -9.0868 &  2.27391    &  38    &        2.76    &     -11.930\\ 
+ 0.77792     & 13    &        8.08   &      -9.3608 &  2.33375    &  39    &        2.69    &     -12.010\\ 
+ 0.83776     & 14    &        7.50     &    -9.9332 &  2.39359    &  40    &        2.63    &     -12.124\\ 
+ 0.89760     & 15    &        7.00     &    -9.6836 &  2.45343    &  41    &        2.56    &     -12.190\\ 
+ 0.95744     & 16    &        6.56     &    -10.00  & 2.51327    &  42           & 2.50    &     -12.248\\ 
+ 1.01728     & 17    &        6.18     &    -9.8994 & 2.57311    &  43      &      2.44    &     -12.306\\ 
+ 1.07712     & 18    &        5.83     &    -10.188 & 2.63295    &  44      &      2.39    &     -12.323\\ 
+ 1.13696     & 19    &        5.53     &    -10.197 & 2.69279    &  45      &      2.33    &     -12.353\\ 
+ 1.19680     & 20    &        5.25     &    -10.467 &  2.75263    &  46      &      2.28    &     -12.420\\ 
+ 1.25664     & 21    &        5.00     &    -10.505 &  2.81247    &  47      &      2.23    &     -12.382\\ 
+ 1.31648     & 22    &        4.77    &    -10.641 &  2.87231    &  48      &      2.19    &     -12.487\\ 
+ 1.37632     & 23    &        4.57     &    -10.906 &  2.93215    &  49      &    2.14      &   -12.433\\ 
+ 1.43616     & 24    &        4.38     &    -10.957 &  2.99199    &  50        &    2.10    &     -12.609\\ 
+ 1.49600      &25    &        4.20     &    -10.785 &   3.05183    &  51      &      2.06    &     -12.410\\ 
+ 3.11167    &  52      &      2.02    &     -12.477 & & & & \\   \hline \hline
+\end{tabular}
+\end{center}
+\end{small}
+Number of observations = 105
+\label{fig:5}
+\end{table}
+%%% Gretl end
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.25]{G-period-sand30.jpg}
+\caption{Plot illustrating periodogramm for v30 from measurements of carbonate sand, series 51-75. Gretl modelling visualization­}
+\label{fig:57}
+\end{center}
+\end{figure}
+\pagebreak
+
+%%%Begin Plot Gretl
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.32]{G-polynom-trend-wo.jpg}
+\caption{Plot illustrating polynomial trend for spectral reflectance of seawater without sediments (Ligaria Beach), variable V15. Gretl modelling visualization­}
+\label{fig:57}
+\end{center}
+\end{figure}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.32]{G-polynom-trend-with.jpg}
+\caption{Plot illustrating polynomial trend for spectral reflectance of seawater with sediments (Ligaria Beach), variable V15. Gretl modelling visualization­}
+\label{fig:57}
+\end{center}
+\end{figure}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.32]{G-exp-mov-aver.jpg}
+\caption{Exponential moving average of spectral reflectance of seawater with sediments (Ligaria Beach), variable V15. Gretl modelling visualization­}
+\label{fig:57}
+\end{center}
+\end{figure}
+\pagebreak
+%%%end Plot Gretl
 
 \rowcolors{1}{OldLace}{FloralWhite}
 \begin{longtable}{|r|r|r|r|r|r|r|}

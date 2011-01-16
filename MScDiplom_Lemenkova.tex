@@ -185,11 +185,14 @@ Globally, there are 58 recognized and described seagrass species (Fig. \ref{fig:
 (Hydrocharitales and Najadales), four families (Hydrocharitaceae, Posidoniaceae, Cymodoceaceae
 and Zosteraceae), and 12 genera (Enhalus, Thalassia, Halophila, Posidonia, Syringodium, Halodule,
 Cymodocea, Amphibolis, Thalassodendron, Zostera, Heterozostera and Phyllospandix) \cite{Kuo89}\label{Kuo89}.
+
 \begin{wrapfigure}{r}{0.4\textwidth}
-\centering
+	\centering
 	\includegraphics[scale=0.25]{Fig-1-2.jpg}
-	\caption{Distribution of seagrasses in the world.\\ Source:\cite{Green03}\label{Green03} \label{fig:2}} 
+	\caption{Distribution of seagrasses in the world.\\ Source:\cite{Green03}\label{Green03} 
+	\label{fig:2}} 
 \end{wrapfigure}
+
 The distribution of the seagrasses is strongly influensed by several environmental factors, which
 include climate (mostly, tropical and temperate areas), bathymetry (shallow shelf zones), hydrological
 particularities (chemical content of water, nutritient availability and turbidity of waves), and geological 
@@ -215,9 +218,8 @@ constitutes the basis of the food web both within and outside the ecosystem \cit
 \begin{wrapfigure}{r}{0.4\textwidth}
 \centering
 	\includegraphics[scale=0.25]{Fig-1-3.jpg}
-	\caption{Morphology of different types of seagrasses.
+	\caption{Morphology of different types of seagrasses. Source: \url{http://www.ozcoasts.org.au}}
 	\label{fig:3}
-Source: \url{http://www.ozcoasts.org.au}}
 \end{wrapfigure}
 
 Finally, seagrasses are an important component in the environmental "food chain" of the coastal
@@ -1345,7 +1347,7 @@ The specific parameters chosen for the simulation of the environmengal condition
 grow. The adaptations to life in salt sea water requires various phisical and chemical parameters
 which include salinity, temperature of 17-25°C, light requirements with 10-20 percent on average, ranging
 from 4.4percent  minimal up to 29 percent \cite{McKenzie09}\label{McKenzie09}, so that the zenith angle is taken as 35-
-45° and reflection factor 0.0201. P.oceanica. 
+45° and reflection factor 0.0201. P.oceanica. These values, simyulating the environment of the Mediterranean Sea, are fixed (Tab.\ref{tab:3}) on the WASI user-defined parameters.
 The calculations are done for the spectrum 350-800 nm, covering the most important part of the RS spectrum: 1) Blue-green 0.45 - 0.5 μm; 2) Green 0.5 - 0.6 μm; 3) Red 0.6 - 0.7 μm; 4) Red-NIR 0.7 - 0.8 μm (Fig.\ref{fig:30}).
 
 \begin{figure}[h]
@@ -1431,7 +1433,7 @@ irradiance received in Agia Pelagia bay.
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.40]{GNU-19.jpg}
-	\caption{Statistical analysis of the spectral reflectance of \textit{P.oceanica}: min-max, average values (red bold points), Q1-Q3 areas (green vertical dashed) and measured values (dotted): multiplot of measurement sets 200-300}
+	\caption{Statistical analysis of the spectral reflectance of \textit{P.oceanica}: min-max, average values (red bold points), Q1-Q3 areas (green vertical dashed) and 			measured values (dotted): multiplot of measurement sets 200-300}
 	\label{fig:33}
 \end{figure}
 
@@ -1447,40 +1449,54 @@ irradiance received in Agia Pelagia bay.
 \paragraph{Spectral discrimination of sand}
 
 \subsubsection{Statistical analysis of the observational data and hypothesis testing}
-In the statistical anlysis of the raw observed data pool of the values of spectral reflectances (about 400 single measurements for P.oceanica), we summarize their complexity by concentrating on some simple numerical characteristics that they possess, i.e. parameters. Examples are the mean and variance of a probability distribution of measurements dataset (Fig.). We divided the total data pool into datasets of 25 measurements for more convenience and ease of use, both for P.oceanica and carbonate sand. The mean of a probability distribution of spectral reflectance describes the average value of the random variable over all of its possible realizations (see for example, Fig. Appendix).  Conceptually, there are an infinite number of such realizations, therefore parameters are not known to us. However, in the statistical analysis of the observed data our goal is to estimate these parameters using a finite amount of information available to us. 
-Thus, we collect a number of realizations (a sample of 25 measurements) and then estimate the unknown parameters using a statistical analysis (Appendices, see Tables ). \\
-Finally we analysed 400 datasets made on two different data. 
-Since the actual values that measured variables of spectral reflectance take on are not actually known before we observed them, they are random. 
-Probability thus expresses uncertainty about the possible values of the values of spectral reflectances  of P.oceanica.
-Each time we observe the outcome of a random variable of spectral reflectance, we obtain an observation. 
-Once observed, its value is known and hence it is no longer random. 
-So, there is a distinction to be made between variables whose values are not yet observed (random variables) and those whose values have been observed (observations). 
-We applied various methods of statistical probability analysis towards data pool, in order to analyse the distribution of values of spectral reflectances of P.oceanica (see Appendices, Tables). 
-A probability distribution, a mathematical statement about the possible values that the random observations of spectral reflectance can take on, displays the relative frequency with which each possible value of spectral reflectance is observed.
 The total amount of measured data was large and included following datasets made using
-hyperspectral radiometer Ramses: 350 measuremetn sets of P.oceanica reflectance for 14th Oct, 400
-sets of P.oceanica reflectance for 15th Oct, 84 datasets for seawater reflectance with sediments, 105
+hyperspectral radiometer Ramses: 350 measuremetn sets of P.oceanica reflectance for 14th Oct (Tab.\ref{tab:32}), 400
+sets of P.oceanica reflectance for 15th Oct (Tab.\ref{tab:33}), 84 datasets for seawater reflectance with sediments, 105
 datasets for seawater reflectance without sediments, 87 sets for spectral reflectance of carbonat sand.
-Fig. 4.11. Spectral reflectance of water with sediments
-Therefore, a statistical approach is necessary for the processing of such data. Statistical pre-processing
-of large sets of serial data enables to generalyse data by using the most typical and predicted values of
+A statistical approach is evidently necessary for the proper processing of such amounts of data. 
+Statistical pre-processing of large sets of serial data enables to generalyse data by using the most typical and predicted values of
 spectral reflectance for further calculations, and to get rid of the extreme values, noise and errors.
-The statistical calculators were mainly made by means of Gretle and SPSS. The Open Office was used for preliminary data view and preprocessing, and included following computations
-at each data set (table 1): mean, median, Q1 and Q3, standard deviation, min and max values. The
-statistical pre-processing and analysis were made shown the mean values of spectral reflectances,
+The statistical calculators were mainly made by means of Gretle and SPSS. 
+The Open Office was used for preliminary data view and preprocessing, and included following computations
+at each data set (for example, Tab.\ref{tab:31}) with summary outcome of mean, median, Q1 and Q3, standard deviation, min and max values (Tab.\ref{tab:4}). \\
+The statistical pre-processing and analysis were made to display the mean values of spectral reflectances,
 which were used for comparison with reflectance data of various seafloor cover types as well as
-seawater with and without sediment.
+seawater with and without sediment (e.g. Tab.\ref{tab:2}).
+In the statistical anlysis of the raw observed data pool of the values of spectral reflectances (about 400 single measurements for P.oceanica, e.g. Tab.\ref{tab:10}), we summarize their complexity by concentrating on some simple numerical characteristics that they possess, i.e. parameters. Examples are the mean and variance of a probability distribution of measurements dataset (for example, Tab.\ref{tab:16}). We divided the total data pool into datasets of 25 measurements for more convenience and ease of use, both for P.oceanica and carbonate sand. The mean of a probability distribution of spectral reflectance describes the average value of the random variable over all of its possible realizations (Appendices).  Conceptually, there are an infinite number of such realizations, therefore parameters are not known to us. However, in the statistical analysis of the observed data our goal is to estimate these parameters using a finite amount of information available to us: fieldwork observations. \\
+Thus, we collect a number of realizations (a sample of 25 measurements for both sand and P.oceanica) and then estimate the statistical parameters (Appendix). \\
+Finally we analysed abount 400 datasets totally (example of carbonate sand on Fig.\ref{tab:31}) made during different days. 
+Since the actual values that measured variables of spectral reflectance take on are not actually known before we observed them, they are random. 
+Thus, we analysed the statistical distribution of the spectral reflectance values of seafloor cover types using common mathematical formulae, implmented in Gretl software (Tab.\ref{tab:19}). 
+Their probability expresses uncertainty about the possible values of the spectral reflectances  of P.oceanica and sand, respectively.
+There is a distinction to be made between variables whose values are not yet observed (random variables) and those whose values have been observed (observations). 
+Each time we observe the outcome of a random variable of spectral reflectance, we obtain an observation, which is hence no longer random. 
+We applied various methods of statistical analysis towards data pool (some examples of the selected tables are in the Appendix: Tab.\ref{tab:18}, Tab.\ref{tab:24}, Tab.\ref{tab:25}, Tab.\ref{tab:26}, Tab.\ref{tab:29}), in order to analyse the distribution of values of spectral reflectances of \textit{P.oceanica}. 
+A probability distribution, a mathematical statement about the possible values that the random observations of spectral reflectance can take on, displays the relative frequency with which each possible value of spectral reflectance is observed. \\
+The \textit{least absolute deviations (LAD)}, a popular optimization technique, was used to show the main trend of the distribution of spectral reflectance values along the spectra (Tab.\ref{tab:12}). Non-linear logistic anlysis is applied to specify and estimate a model of spectral distribution, in which the dependent variable (i.e. the value of spectral reflectance for each single observation) is not continuous, but discrete and independent for each case (Tab.\ref{tab:11}). \\
+As the observations were made in a repeated way, we also analysed the data pool using autocorrelation as well: Tab.\ref{tab:13} and Tab.\ref{tab:14} for \textit{P.oceanica} and Tab.\ref{tab:28} for carbonate sand. The \textit{autocorrelation}, a cross-correlation of an observed value with itself, made on two different days (14th and 15th October),
+ shows the similarity between observations as a function of the time separation between them. As can be seen on Fig.\ref{fig:52}, Fig.\ref{fig:53} and Fig.\ref{fig:60}, it is a useful tool for finding repeating patterns for a single value of observations, such as the presence of a periodic signal which has been buried under noise. The autocorrelation analysis has been performed using both SPSS and Gretl software. \\
+The method of \textit{least squares} minimizes the sum of the squares of the errors made in solving every single observation made. We tried different approaches of the \textit{least squares} methods: Tab.\ref{tab:15}, Tab.\ref{tab:18}, Tab.\ref{tab:27}.\\
+To focus on the relationship between a dependent variable (each single observation of the spectral reflectance) and independent variables (three various depths: 0.5, 1.5 and 2.5 meters) we used the \textit{regression analysis}, which enables modeling and analyzing values of the spectral reflectances at several depths: Tab.\ref{tab:5}, Tab.\ref{tab:6}, Tab.\ref{tab:7}. 
+The summary of the values of spectral reflectance properties on various depths is presented on the Fig.\ref{fig:17}.
+The \textit{k-means cluster analysis} has been used for partitioning observation sets into k clusters (Tab.\ref{tab:20}, Tab.\ref{tab:21}, Tab.\ref{tab:22}, Tab.\ref{tab:23}) in which each observation belongs to the cluster with the nearest mean.
+It enables to highlight the main areas of the location of values of spectral reflectances along the spectra.\\
+To estimate spectral density of a spectral reflectancfe measurements we used periodogram function (Tab.\ref{tab:30}), 
+which corresponds to the general spectrum of the observations with representation of a variable quantity.  
+Thus, the periodogram of the series of observation highlights so-called “dead spots” of low power between the frequencies we wishe to
+exclude (can be seen clearly at the end of the graphs, e.g. Fig.\ref{fig:43} ) 
+and the frequencies we want to retain (the general profile that lies in the 450-850 nm, Fig.\ref{fig:45}, enlarged part of 500-660nm).\\
 The visualization of the data plotting was made by means of Gnuplot software, which enabels fine
 drawing and advanced displaying of large amounts of serial data, ultimate control over graph properties, 
-the simplicity of plotting and the ease of scripting. (see Fig.15 and Appendix).
+the simplicity of plotting and the ease of scripting. (see Fig.\ref{fig:54}, Appendices).
+
 The graphs illustrating spectral signatures of various seafloor cover types display the mean values and
-areas of quartiles (Q1, Q3, shaded areas on graphs), which cover most probable data distribution
-(spectral reflectance) for each spectral band. In x-axis I displayed the areas of 400 – 950 nm in
+areas of quartiles (Q1, Q3, shaded areas on graph, Fig.\ref{fig:55}), which cover most probable data distribution
+(spectral reflectance) for each spectral band. In x-axis displayed are the areas of 400 – 950 nm in
 spectra, where the measurements were done; the y-axis was adjusted for the better visualisation of the
 P.oceanica spectra: as its spectral values are mostly located in the lower part of the spectra (usually no
-more than 0.20 nm, except for borders), I did not extend the y-scale up to 100 percent, in order to
-focus on the most necessary area of spectral values (Fig. 15 and Appendices). The mean values are
-highligted using bold points, as I used these values for plotting the final graph of P.oceanica spectra in
+more than 0.20 nm, except for borders), we did not extend the y-scale up to 100 percent, in order to
+focus on the most necessary area of spectral values (Fig.\ref{fig:35} and Appendices). The mean values are
+highligted using bold red points, as we used these values for plotting the final graph of P.oceanica spectra in
 Ligaria beach, Agia Pelagia.
 
 \begin{figure}
@@ -1520,7 +1536,7 @@ To analyse average values of spectral reflectance of P.oceanica by means of the 
 mean values for the total set of emasurements 1 – 350 (15th October): mean of min and max values, 
 mean of average for each waveband, mean for statistical quartiles for each wavelength and mean for median, respectively. 
 The adjusted averages evaluate mean values, needed for statistical analysis of the datasets. 
-The outcome of this calculations is shown in the table 5 (Appendices). 
+The outcome of this calculations is shown in the Tab.\ref{tab:5} and Tab.\ref{tab:6} (Appendices). 
 As a result, we have mean values of spectral reflectances of P.oceanica for extreme, average, median and both quartiles,
 independent of the individual sets 1-350. 
 
@@ -1530,11 +1546,11 @@ spectral reflectance of P.oceanica to be more or less spectrally disticnt from o
 types with changing depth. W are checking the statement Hypothesis Ho, is true, which is “the
 spectral distinguishability of the seagrass P.oceanica from other seafloor types is not changing with
 varying in-situ conditions, Ho: μ1 =μ2 =μ3=...= μn.” which gives the following outcome.
-P(reject H0|H0 is valid)= P(X>c|p=)=.05
+P(reject H0|H0 is valid)= P(X$>$c|p=)=.05
 where c comes for critical values and p=probability.
-The result P=.05 is, hence, very small, which makes the statement of Hypothesis Ho highly unlikely
+The result P=.05 is (Tab.\ref{tab:8}), hence, very small, which makes the statement of Hypothesis Ho highly unlikely
 (less than 1 in a 10 chance). The one-way ANOVA highlighted a significant difference between data
-of spectral reflectances of P.oceanica at different depths, i.e. true is the opposite statement:
+of spectral reflectances of P.oceanica at different depths (Tab.\ref{tab:9}), i.e. true is the opposite statement:
 Hypothesis Ha=“the spectral discernibility of the seagrass P.oceanica is distinctly changing with
 varying in-situ conditions, i.e. increasing depth, Ho: μ$\neq$μ2$\neq$μ3$\neq$ ... $\neq$μn“.
 
@@ -1597,7 +1613,8 @@ measurement data of spectral reflectances of under various environmental conditi
 
 \subsubsection{Results of the remote sensing application}
 The in situ spectral reflectance data of \textit{P.oceanica} and sand were used to model these seafloor cover
-types as the different sensors would percept them: MODIS, ASTER, MERIS, SeaWiFS and CZCS.
+types as the different sensors would percept them: MODIS, ASTER, MERIS, SeaWiFS and CZCS.\\
+These sensors possess over various percepting characteristics which we briefly illustrated in a small summary table (Tab.\ref{tab:1})
 These models simulate spectral views of the chosen sensors, how these sensors will "see" seagrass (Fig.\ref{fig:28}) and sand as
 pixels, with accepted default atmosphere and water column effects (given by WASI software). In such
 a way we defined an empirical upper limit to the discriminative potential of these sensors. To create
@@ -1752,7 +1769,7 @@ Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote
 
 \begin{appendices}
 \pagenumbering{roman}
-\appendix
+\appendix \label{app}
 \appendixpage
 \addappheadtotoc
 \appendixname{\textbf{1:\\Results of the measurements of seafloor spectral reflectance}}
@@ -1848,15 +1865,17 @@ Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote
 	\label{fig:46}
 	\end{center}
 \end{figure}
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.25]{GNU-Radiance_Bezier.jpg}
 	\caption{Radiance of the seawater with sediments. Measured in aquarium tank. Bezier Interpolation}
 	\label{fig:47}
 \end{figure}
+
 \begin{table}[htbp]
 	\rowcolors{1}{Ivory}{GhostWhite}
-	\caption{Results of the \textit{ANOVA one-way} analysis: results of the \textit{single factor} (depth) testing of the radiance of\textbf{P.oceanica} at various depths: 0.5, 		1.5 and 2.5 meters}
+	\caption{Results of the \textit{ANOVA one-way} analysis: results of the \textit{single factor} (depth) testing of the radiance of\textbf{P.oceanica} at various depths: 		0.5, 1.5 and 2.5 meters}
 	\begin{center}
 	\begin{tabular}{|c|c|c|c|c|c|c|}
 		\hline\hline
@@ -1869,6 +1888,7 @@ Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote
 	P more than .05, which means that there is a significant difference in radiance of P.oceanica at three different depth (0.5, 1.5 and 2.5). 
 	\label{tab:8}
 \end{table}
+
 \begin{table}[htbp]
 	\rowcolors{1}{Ivory}{GhostWhite}
 	\caption{Summary of the \textit{ANOVA one-way} analysis: results of the \textit{single factor} (depth) testing of the radiance of\textbf{P.oceanica} at various depths: 		0.5, 1.5 and 2.5 meters}
@@ -1888,7 +1908,7 @@ Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote
 
 \rowcolors{1}{GhostWhite}{LightCyan}
 \begin{longtable}{|c|c|c|c|c|c|c|}
-	\caption{Results of the statistical analysis of spectral reflectance of \textbf{P.oceanica}, sets 1-350). Wavelength step: 3 nm. Measured on Agia Pelagia beach, 15th October} \\
+	\caption{Results of the statistical analysis of spectral reflectance of \textbf{P.oceanica}, sets 1-350). Wavelength step: 3 nm. Measured on Agia Pelagia beach, 15th October}\label{tab:10} \\
 	  \multicolumn{1}{|l|}{\textbf{wl}} &
 	   \multicolumn{1}{l|}{\textbf{mean}} & 
 	   \multicolumn{1}{l|}{\textbf{Q1}} & 
@@ -1899,7 +1919,7 @@ Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote
 	\endfirsthead
 
 	\multicolumn{7}{c}{Table 10: Spectral reflectance of \textbf{P.oceanica} \textit{(continued from previous page)}}\\
-	\hline \multicolumn{1}{|l|}{\textbf{wl}} & \multicolumn{1}{l|}{\textbf{mean}} & \multicolumn{1}{l|}{\textbf{Q1}} & \multicolumn{1}{l|}{\textbf{min}} & \multicolumn{1}{l|}{\textbf{Q3}} & 			\multicolumn{1}{l|}{\textbf{max}} & \multicolumn{1}{l|}{\textbf{median}} \\ \hline
+	\hline \multicolumn{1}{|l|}{\textbf{wl}} & \multicolumn{1}{l|}{\textbf{mean}} & \multicolumn{1}{l|}{\textbf{Q1}} & \multicolumn{1}{l|}{\textbf{min}} & \multicolumn{1}{l|}{\textbf{Q3}} & \multicolumn{1}{l|}{\textbf{max}} & \multicolumn{1}{l|}{\textbf{median}} \\ \hline
 	\endhead
 
 	\textbf{318.23354} & 0.030467 & 0.038907 & 0.029764 & 0.069762 & 0.116100 & 0.048984 \\ \hline
@@ -2093,11 +2113,10 @@ Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote
 	\textbf{944.50571} & 0.003354 & 0.025994 & 0.004299 & 0.064521 & 0.232462 & 0.041118 \\ \hline
 	\textbf{947.76881} & 0.003156 & 0.023476 & 0.003813 & 0.059536 & 0.246006 & 0.037035 \\ \hline
 	\textbf{951.03058} & 0.002296 & 0.026581 & 0.002380 & 0.067924 & 0.265845 & 0.041463 \\ \hline
-\label{tab:10} 
 \end{longtable}
 \pagebreak
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=0.25]{GNU-Irr-Splines.jpg}
 		\caption{Irradiance of the seawater, measured in aquarium tank. Smooth Splines interpolation. Visualization in GNUplot­}
@@ -2112,7 +2131,7 @@ Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote
 \end{figure}
 \pagebreak
 \newpage
-\begin{figure}[h]
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=0.4]{G-gamma-rad.jpg}
 		\caption{Frequency normality test against gamma distribution: radiance of the seawater, measured in aquarium tank. Visualization in Gretl.­}
@@ -2237,7 +2256,7 @@ Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote
 
 \begin{table}[htbp]
 	\rowcolors{1}{Ivory}{GhostWhite}
-	\caption{Results of the partial \textit{autocorrelation analysis} of the measurement set 1-16 of the spectral reflectance of \textbf{P.oceanica} (15.X.), Series:V3. SPSS}
+	\caption{Results of the partial \textit{autocorrelation analysis} of the measurement set 1-16 of the spectral reflectance of \textbf{P.oceanica} (15.X.), Series:V3. SPSS}\label{tab:14}
 	\begin{center}
 	\begin{tabular}{|c|c|c|}
 		\hline\hline
@@ -2259,7 +2278,6 @@ Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote
 			15 & .084 & .072 \\ \hline
 			16 & .152 & .072 \\ \hline
 	\end{tabular}
-	\label{tab:14}
 	\end{center}
 \end{table}
 
@@ -2324,7 +2342,7 @@ Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote
 \begin{table}[H]
 	\rowcolors{1}{Thistle}{MintCream}
 	\begin{center}
-		\caption{Summary statistics of measurements set: 301-325. \\ Example of selected variables 12-22. Gretl.­}
+		\caption{Summary statistics of measurements set: 301-325. \\ Example of selected variables 12-22. Gretl.­}\label{tab:16}
 		Summary Statistics, using the observations 301--325\\
 	
 	\vspace{2em}
@@ -2359,7 +2377,7 @@ Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote
 		v22 & 0.189797 & 1.08523 & 0.858809 & $-$0.546215\\
 	\end{tabular}
 	\end{center}
-	\label{tab:16}
+	
 \end{table}
 %%% Gretle end
 
@@ -2642,7 +2660,7 @@ Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=0.38]{GNU-15.jpg}
-		\caption{Multiplot of spectral reflectance of P.oceanica. Series 151-200. Shown midspread of the statistical quartiles Q1 and Q3 (vertical dashes) and mean value within the range (red bold dots). GNUplot visualization­}
+		\caption{Multiplot of spectral reflectance of P.oceanica. Series 151-200. Shown midspread of the statistical quartiles Q1 and Q3 (vertical dashes) and mean value within the range (red bold dots). Gnuplot visualization­}
 		\label{fig:59}
 	\end{center}
 \end{figure}
@@ -2653,6 +2671,7 @@ Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote
 	\rowcolors{1}{BlanchedAlmond}{MintCream}
 	\begin{center}
 	\caption{Results of the \textit{Prais-Winsten estimation} applied towards variables 15 from the selected dataset 151-175 of the spectral reflectance of \textbf{P.oceanica}. Gretl.}
+	\label{tab:26}
 		Model 3: Prais--Winsten, using observations 1:01--8:23 ($T$ = 191)\\
 		Dependent variable: v12\\
 	$\hat{\rho}$ = -0.0343656
@@ -2676,7 +2695,6 @@ Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote
 		$\hat{\rho}$ & $-$0.001888 & Durbin--Watson &  2.003741 \\
 	\end{tabular}
 	\end{center}
-	\label{tab:26}
 \end{table}
 %%%one more Gretl end
 
@@ -2806,6 +2824,7 @@ Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote
 	\begin{small}
 	\rowcolors{1}{Ivory}{LightGoldenrodYellow}
 	\caption{Results of the \textit{periodogramm} for v30 of the measurement set 51-75 of the spectral reflectance of \textbf{carbonate sand}, Gretl.}
+	\label{tab:30}
 	\begin{center}
 	\begin{tabular}{|p{15mm} p{15mm} p{15mm} p{15mm} || p{15mm} p{15mm}p{15mm} p{15mm}|}
 		omega & scaled frequency & periods & log spectral density & omega & scaled frequency & periods & log spectral density \\ \\ \hline\hline
@@ -2839,7 +2858,6 @@ Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote
 	\end{center}
 	\end{small}
 	Number of observations = 105
-	\label{tab:30}
 \end{table}
 %%% Gretl end
 
@@ -2880,7 +2898,7 @@ Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote
 
 \rowcolors{1}{OldLace}{FloralWhite}
 \begin{longtable}{|r|r|r|r|r|r|r|}
-	\caption{Results of the statistical analysis of spectral reflectance of \textbf{carbonate sand}, with average values (for sets 1-3). Wavelength step: 3 nm. Measured on Agia Pelagia beach, 14th October} \\
+	\caption{Results of the statistical analysis of spectral reflectance of \textbf{carbonate sand}, with average values (for sets 1-3). Wavelength step: 3 nm. Measured on Agia Pelagia beach, 14th October}\label{tab:31} \\
  		 \multicolumn{1}{|l|}{\textbf{wl}} &
   		 \multicolumn{1}{l|}{\textbf{min}} & 
   		 \multicolumn{1}{l|}{\textbf{Q1}} & 

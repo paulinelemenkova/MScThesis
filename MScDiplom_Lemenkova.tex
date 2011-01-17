@@ -102,7 +102,7 @@ the author, and do not necessarily represent those of the university.\\
 \addcontentsline{toc}{section}{Table of Content}
 \tableofcontents 
 
-\vspace{5em}
+\vspace{4em}
 
 \textbf{Software and utilities used in the current work}:\\
 \begin{itemize}
@@ -118,6 +118,7 @@ the author, and do not necessarily represent those of the university.\\
 	\item \href{http://calc2latex.sourceforge.net/}{Calc2LaTeX} : converting spreadsheets into \LaTeX environment
 	\item \href{http://www.spss.com/}{SPSS (PASW Statistics 18)} : statistical data edition and analysis 
 	\item \href{http://gretl.sourceforge.net/}{Gretl: Gnu Regression, Econometrics and Time-series Library} for statistic analysis
+	\item \href{http://staruml.sourceforge.net/en/}{StarUML}: modelling flowchart diagrams for work algorithms
 \end{itemize}
 \pagebreak
 
@@ -1463,6 +1464,14 @@ The statistical pre-processing and analysis were made to display the mean values
 which were used for comparison with reflectance data of various seafloor cover types as well as
 seawater with and without sediment (e.g. Tab.\ref{tab:2}).
 In the statistical anlysis of the raw observed data pool of the values of spectral reflectances (about 400 single measurements for P.oceanica, e.g. Tab.\ref{tab:10}), we summarize their complexity by concentrating on some simple numerical characteristics that they possess, i.e. parameters. Examples are the mean and variance of a probability distribution of measurements dataset (for example, Tab.\ref{tab:16}). We divided the total data pool into datasets of 25 measurements for more convenience and ease of use, both for P.oceanica and carbonate sand. The mean of a probability distribution of spectral reflectance describes the average value of the random variable over all of its possible realizations (Appendices).  Conceptually, there are an infinite number of such realizations, therefore parameters are not known to us. However, in the statistical analysis of the observed data our goal is to estimate these parameters using a finite amount of information available to us: fieldwork observations. \\
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.45, angle=90]{UML_StatAn.jpg}
+	\caption{Work Flowchart Diagram illustrating algorithm of the Statistical Analysis applied towards the observation dataset (\href{http://staruml.sourceforge.net/en/}{StarUML})}
+	\label{fig:34}
+\end{figure}
+
 Thus, we collect a number of realizations (a sample of 25 measurements for both sand and P.oceanica) and then estimate the statistical parameters (Appendix). \\
 Finally we analysed abount 400 datasets totally (example of carbonate sand on Fig.\ref{tab:31}) made during different days. 
 Since the actual values that measured variables of spectral reflectance take on are not actually known before we observed them, they are random. 

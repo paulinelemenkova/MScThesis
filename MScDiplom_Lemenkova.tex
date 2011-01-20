@@ -118,7 +118,7 @@ the author, and do not necessarily represent those of the university.\\
 	\item \href{http://calc2latex.sourceforge.net/}{Calc2LaTeX} : converting spreadsheets into \LaTeX environment
 	\item \href{http://www.spss.com/}{SPSS (PASW Statistics 18)} : statistical data edition and analysis 
 	\item \href{http://gretl.sourceforge.net/}{Gretl: Gnu Regression, Econometrics and Time-series Library} for statistic analysis
-	\item \href{http://staruml.sourceforge.net/en/}{StarUML} , \href{http://live.gnome.org/Dia}{Dia}: modelling flowchart diagrams for work algorithms
+	\item \href{http://staruml.sourceforge.net/en/}{StarUML} , \href{http://live.gnome.org/Dia}{Dia} , \href{http://argouml.tigris.org/}{AgroUML}: diagramming flowcharts for work algorithms
 \end{itemize}
 \pagebreak
 
@@ -493,8 +493,6 @@ anova test is to visualize in an effective and quick way the spectral difference
 species and their spatial distribution. Thus, the key hypotheses of the research will be tested to prove
 whether the results of the research are accurate, reasonable and correct.
 
-\subsection{Research scheme}
-
 \subsection{Research approach}
 Seagrass consistent monitoring and mappint is necessary and important for the sustainable coastal
 development and conservation measures. Earlier, many seagrass meadows have been destroyed by
@@ -514,8 +512,16 @@ aerial images and the results of the underwater videographic measurements toward
 mapping. Image classification is based on the principle of the differentiation between the spectral
 signatures of various seafloor cover types. The spectrum of light coming up from the ocean surface in
 shallow waters keeps information on the optical properties of the seawater components and benthic
-substrate which can be read from their spectral signatures \cite{Werdell03}\label{Werdell03}. Spectral
-reflectances, distinct for each seafloor cover type, enable their discrimination on the image. The preprocessing
+substrate which can be read from their spectral signatures \cite{Werdell03}\label{Werdell03}. \\
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.48]{UML_ClassDiagram.jpg}
+	\caption{General methodological approach for the analysis of spectral signatures. \href{http://argouml.tigris.org/}{AgroUML}}
+	\label{fig:16}
+\end{figure}
+
+Spectral reflectances, distinct for each seafloor cover type, enable their discrimination on the image. The preprocessing
 of the images includes imagery corrections for atmospheric noises and effects of the water
 column. Reflectance spectra of the seagrass canopy at different depths of the water-column are
 analysed for the discrimination of their spectral signatures, enabling to separate various seafloor types
@@ -531,6 +537,9 @@ glint and depth effects correction as recommended \cite{Matarrese08}\label{Matar
 working step the training sites for the supervised classification methods are designed, as well as its
 control and trials of different classification approaches (Unsupervised, K-means or Isodata;
 Supervised, Maximum Likelihood).
+
+\subsection{Research scheme}
+
 \pagebreak
 
 \section[Overview of literature]{Seagrass monitoring: overview of literature and research resources} \label{sec:2}

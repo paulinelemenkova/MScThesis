@@ -104,6 +104,24 @@ Environmental Modelling and Management.\\
 \section*{Acknowledgements}
 	\markright{Acknowledgements}
 	\addcontentsline{toc}{section}{Acknowledgements}
+
+This research was carried out at the University of Twente, \href{http://www.itc.nl/}{Faculty of Geo-Information Science and Earth Observation (ITC)}, Enschede, the Netherlands, under the financial support of the EU \href{http://ec.europa.eu/education/external-relation-programmes/doc72_en.htm}{Erasmus Mundus Scholarship}. 
+\vspace{1mm}\\
+I thank my scientific supervisors, Dr. \textit{Albertus G.Toxopeus}  and Mr. \textit{Valentijn Venus} from the ITC, Department of Natural Resources, for our successful scientific collaboration, help and discussions of my research work. \\
+I also express them my most sincere appreciations for our fieldwork on Crete. \\ Besides scientific routine, we had an unforgettable time spent together. \\ Personally, I would like to mention that I have visited Greece the first time in my life, and I will always remember my Cretan period-2010 and Ligaria beach.\vspace{1mm}\\
+I extend my gratitude to the staff of the Museum of Natural History, the University of Crete, especially to Dr.\textit{Petros Limberakis} and his colleagues, for their assistance during our fieldwork, providing us with all necessary equipment (e.g. SCUBA gear diving, instruments for underwater measurements, etc). I also appretiate their very warm, personal attitude and interest towards our research. 
+\vspace{1mm}\\
+My sincere gratitude goes again to Mr.\textit{Valentijn Venus} for his generous providing me with a lot of spatial data   relevant to my research (e.g. such as digital vector layers of Crete island, raster georeferenced maps for the whole island for my GIS project, Excel spreadsheets, etc). Without these vital data the implementation of this project would have hardly been possible. I am also thankful to him for the technical help in Google Earth imagery capturing, using Gdal technologies and assistance during the fieldwork (videometric underwater footage, consultancies in seagrass observation and monitoring, driving boat, etc). \\ My special thank to his personal, friendly support in various situations on Crete.\vspace{1mm}\\
+I am thankful to Dr.rer.nat.\textit{Peter Gege}, the software developer from the Earth Observation Centre of the German Space Agency, for his generous consultancies concerning the technical question about WASI that arose during my work. I am thankful for all his explanations and articles given to me via e-mail \vspace{1mm}\\
+My special thanks are addressed to my elder brother, Mr.\textit{Peter Lemenkov}, the software developer from the ipPort, for his priceless numerous advices and constant professional support throuout my career. He encouraged me to use various very useful software and tools, always gave me necessary recommendations and precious help, thus highly contributing to my professional growth. \\ My special thank for his help with Python scripting. \\
+I am also heartfelt thankful to him for his personal friendship and support. 
+\vspace{1mm}\\
+I am greatful to Mr.\textit{Willem Nieuwenhuis}, the software developer from the ITC, Department of Natural Resources for shared technology of Google Earth aerial imagery grabbing and for his consultancy with ASTER imagery. 
+\vspace{1mm}\\
+I thank Dr. Ir. \textit{Cornelis A.J.M. de Bie} from the Department of Natural Resource, ITC, for his patient sharing of iPAQ knowledge during my Polish fieldwork in summer 2010. I used this skills on Crete. 
+\vspace{1mm}\\
+Many thanks for Dr.\textit{Dingtian Yang} from the South China Sea Institute of Oceanology, our colleague in problem of seagrass monitoring and research, for his handing over the data of spectral reflectances of Thalassia seagrass, which enabled to compare spectra of various seagrass types. 
+
 \pagebreak
 
 \section*{Disclaimer}
@@ -112,6 +130,18 @@ Environmental Modelling and Management.\\
 		This document describes work undertaken as part of a programme of study at the University of
 		Twente, Faculty ITC. All views and opinions expressed therein remain the sole responsibility of
 		the author, and do not necessarily represent those of the university.\\
+
+\vspace{3em}
+
+		I herewith certify that although I confered with other researchers while preparing this document, and used a range of various research and literature 			resources, cited in the text, the content of this MSc Thesis document remains my own, original work, written by me personally. \\
+
+\vspace{1em}
+
+		Signed.................................(Lemenkova Polina) \\
+
+\vspace{1em}
+
+		Enschede, The Netherlands. \\ 18th February 2011.
 \pagebreak
 
 \section*{Abstract}
@@ -161,7 +191,7 @@ Environmental Modelling and Management.\\
 \pagenumbering{arabic}
 \rfoot{MSc Thesis\\ \emph{"Seagrass mapping and monitoring along the coasts of Crete, Greece"}}
 \section{Introduction}
-%%%%%%%%%%%%%%%%%%Section1%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%  Section 1   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \counterwithin{figure}{section}
 \counterwithin{table}{section}
 
@@ -576,7 +606,7 @@ Supervised, Maximum Likelihood).
 \end{figure}
 
 \pagebreak
-%%%%%%%%%%%%%%%%%Section2%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%  Section2   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section[Overview of literature]{Seagrass monitoring: overview of literature and research resources} \label{sec:2}
 \markright{II. Seagrass monitoring: overview of literature and research resources}
 \renewcommand{\headrulewidth}{0.4pt}
@@ -926,12 +956,12 @@ Thus, the use of multispectral imagery
 with high spatial resolution is preferable to using hyperspectral medium resolution data in case of
 mapping benthic vegetation in areas where the spatial heterogeneity is very high \cite{Vahtmae07}\label{Vahtmae07}.
 
-%%%%%%%%%%%%%%%%%  Section  3  %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%  Section  3  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Materials and methods}
 \counterwithin{figure}{section}
 \counterwithin{table}{section}
 
-In the section \nameref{sec:2} we briefly discussed main existing cartographic methods and tools for seagrss mapping. In the current  research we try to combine various techniques from mentioned above for the assessment of the seagrass distribution in the Mediterranean environment, for the case study of Crete. We mentioned in \nameref{sec:0} the software that we used for logically separated research sections, which required various approach. Thus, for example,  spectral analysis and assessment of spectral signaturesis technically based on WASI, sttistical analysis of series of experimental raw data has been made by means of statistical software, such as \href{http://www.spss.com/}{SPSS}; mapping has been made using  \href{http://www.esri.com/software/arcgis/index.html}{ArcGIS}; images processing and classification were made using\href{http://www.erdas.com/products/ERDASIMAGINE/ERDASIMAGINE/Details.aspx}{Erdas Imagine} software by means of Google Earth and  \href{http://landsat.gsfc.nasa.gov/}{Landsat} imagery.
+In the section \nameref{sec:2} we briefly discussed main existing cartographic methods and tools for seagrss mapping. In the current  research we try to combine various techniques from mentioned above for the assessment of the seagrass distribution in the Mediterranean environment, for the case study of Crete. We mentioned in \nameref{sec:0} the software that we used for logically separated research sections, which required various approach. Thus, for example,  spectral analysis and assessment of spectral signaturesis technically based on WASI, sttistical analysis of series of experimental raw data has been made by means of statistical software, such as \href{http://gretl.sourceforge.net/}{Gretl} and \href{http://www.spss.com/}{SPSS}; mapping has been made using  \href{http://www.esri.com/software/arcgis/index.html}{ArcGIS}; images processing and classification were made using\href{http://www.erdas.com/products/ERDASIMAGINE/ERDASIMAGINE/Details.aspx}{Erdas Imagine} software by means of Google Earth and  \href{http://landsat.gsfc.nasa.gov/}{Landsat} imagery.
 \href{http://www.esri.com/software/arcgis/index.html}{ArcGIS 10.0} software is used for the spatial analysis, general mapping and cartographic layout
 presentation; the raster processing techniques are applied for the detection of seagrass spatial
 distribution using supervised classification.
@@ -949,7 +979,7 @@ classification \cite{Pasqualini98a}\label{Pasqualini98a}. Therefore, this work i
 measurements of the seagrass distribution.
 The sampling stations were located in two candidate places on the northern (Ligaria) and southern
 (Xerocampus) parts of Crete island, as these regions are well suitable for the seagrass, due to the
-annual mean water temperatures and geological factors, i.e. seafloor conditions and sediments. The
+annual mean water temperatures and geological factors, i.e. seafloor conditions and sediments. \\ The
 field campaign has been carried out during the September-October period 2010. 
 The information about the location of the seagrass (mostly represented by the P.oceanica species) is useful for the
 understanding of the relationship between the spatial distribution of the seagrass and the environment
@@ -962,9 +992,9 @@ tone are too small to be distinguishable, texture may assist identification, e.g
 rough, smooth, etc.); associated features (those usually found near other objects, e.g., rocks and soil).
 
 \subsection{Study area}
-General area: Island of Crete, Greece (Fig.\ref{fig:16}).\\
+General area: Island of Crete, Greece (Fig.\ref{fig:3.1}).\\
 The study area of the current MSc research is located in the shallow areas of the Ligaria beach, Agia
-Pelagia and Xerocampos, Crete island, Greece (Fig.\ref{fig:17}). These shelf areas have maximal depth of four meters.
+Pelagia and Xerocampos, Crete island, Greece (Fig.\ref{fig:3.2}). These shelf areas have maximal depth of four meters.
 Seagrass sampling has been performed at two stations at a depth of 4 meters, in the following selected
 areas:
 1. Ligaria beach (Agia Pelagia district), 36°20′N 22°59′E
@@ -975,7 +1005,7 @@ areas:
 	\centering
 	\includegraphics[scale=0.10]{Fig-16.jpg}
 	\caption{Study area: Crete island}
-	\label{fig:18}
+	\label{fig:3.1}
 \end{figure}
 
 \subsection{Fieldwork data collection}
@@ -986,10 +1016,10 @@ Seagrass sampling has been performed at two research stations at Crete island - 
 	\centering
 	\includegraphics[scale=0.25]{Fig-17.jpg}
 	\caption{Study area: Ligaria beach, Crete island}
-	\label{fig:19}
+	\label{fig:3.2}
 \end{figure}
 
-The Ligaria Beach is a narrow, sandy and pebble beach (Fig.12), located ca 15 km north-west from Heraklion.
+The Ligaria Beach is a narrow, sandy and pebble beach (Fig.\ref{fig:3.2}), located ca 15 km north-west from Heraklion.
 The in-situ measurements were conducted during the fieldwork in the period 21.09.2010-11.10.2010.
 The fieldwork on seagrass monitoring included visual estimations and photo- and video footage of the
 above-ground seagrass patches, sediment seafloor cover types, species compositions, water depth and
@@ -997,20 +1027,20 @@ geograpic locations recorded using GPS.
 \pagebreak
 
 \subsubsection{Fieldwork equipment}
-The research materials and equipment were provided by \href{http://www.nhmc.uoc.gr/index-2.htm}{the Natural History Museum of Crete}, the \href{http://www.uoc.gr/Department/index.html}{University of Crete} and the ITC, and included the following items (Fig.\ref{fig:18}): 1) three iPAQs; 2)
-three GPS; 3) Three underwater video cameras, Olympus ST 8000, suitable for
+The research materials and equipment were provided by \href{http://www.nhmc.uoc.gr/index-2.htm}{the Natural History Museum of Crete}, the \href{http://www.uoc.gr/Department/index.html}{University of Crete} and the ITC, and included the following items (Fig.\ref{fig:3.3}): 1) three iPAQs (Fig.\ref{fig:3.3a}); 2)
+three GPS (Fig.\ref{fig:3.3c}); 3) Three underwater video cameras, Olympus ST 8000  (Fig.\ref{fig:3.3d}), suitable for
 photographing up to up to 33 foot depths and high-resolution 12.0-Mpixel image sensor; 4)
-Markers and cords for the depths measurements; 5) Waterproof plasctic Otterbox for keeping the
-iPAQ dry; 6) \href{http://www.padi.com/scuba/}{SCUBA Diving equipment}, taken from the Ligaria Diving Centre; 7) Boat (Fig.\ref{fig:19}); 
+Markers and cords for the depths measurements; 5) Waterproof plasctic Otterbox  (Fig.\ref{fig:3.3b})for keeping the
+iPAQ dry; 6) \href{http://www.padi.com/scuba/}{SCUBA Diving equipment}, taken from the Ligaria Diving Centre; 7) Boat (Fig.\ref{fig:3.4}); 
 
 \begin{figure}[h]
 	\centering
-	\subfloat [iPAQ, HP]{\label{fig:20a}\includegraphics[width=0.3\textwidth]{Fig-19a.jpg}}
-	\subfloat [Waterproof Otterbox for iPAQ]{\label{fig:20b}\includegraphics[width=0.3\textwidth]{Fig-19b.jpg}}
-	\subfloat [GPS]{\label{fig:20c}\includegraphics[width=0.15\textwidth]{Fig-19c.jpg}}
-	\subfloat [Olympus waterproof camera]{\label{fig:20d}\includegraphics[width=0.25\textwidth]{Fig-19d.jpg}}
+	\subfloat [iPAQ, HP]{\label{fig:3.3a}\includegraphics[width=0.3\textwidth]{Fig-19a.jpg}}
+	\subfloat [Waterproof Otterbox for iPAQ]{\label{fig:3.3b}\includegraphics[width=0.3\textwidth]{Fig-19b.jpg}}
+	\subfloat [GPS]{\label{fig:3.3c}\includegraphics[width=0.15\textwidth]{Fig-19c.jpg}}
+	\subfloat [Olympus waterproof camera]{\label{fig:3.3d}\includegraphics[width=0.25\textwidth]{Fig-19d.jpg}}
 	\caption{Fieldwork equipment}
-	\label{fig:20}
+	\label{fig:3.3}
 \end{figure}
 
 A GPS and iPAQ have been used for detection of the geodetic coordinates and keeping the tracklogs
@@ -1020,7 +1050,7 @@ along the boat route for GIS project.
 	\centering
 	\includegraphics[scale=0.70]{Fig-18.jpg}
 	\caption{Boat used for the fieldwork measurements on Crete island. 2010}
-	\label{fig:21}
+	\label{fig:3.4}
 \end{figure}
 
 \newpage
@@ -1046,30 +1076,30 @@ enabling the occurrences of the seagrass meadows to be recorded and counted in a
 accurate way, detect spatial distribution of the single seagrass mattes to be properly identified,
 without location bias. 
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
 	\subfloat [view from below]{\label{fig:22a}\includegraphics[width=0.3\textwidth]{Fig-20a.jpg}}
 	\subfloat [view \textit{en-face}]{\label{fig:22a}\includegraphics[width=0.3\textwidth]{Fig-20b.jpg}}
 	\subfloat [view from above]{\label{fig:22a}\includegraphics[width=0.3\textwidth]{Fig-20c.jpg}}
 	\caption{Scheme of placements of the Olimpus cameras during the measurements}
-	\label{fig:22}
+	\label{fig:3.5}
 \end{figure}
 
 The videographic measurements and photos, enabling to detect types of the
-seafloor, were captured by means of three underwater digital video cameras Olympus ST 8000 (Fig.\ref{fig:18}), at
-five minutes interval along the tracklog path (Fig.\ref{fig:21}).
-research sampling design also included measurements of depths (Fig. \ref{fig:63}), because bathymetry is one of the
+seafloor, were captured by means of three underwater digital video cameras Olympus ST 8000  (Fig.\ref{fig:3.3d}), at
+five minutes interval along the tracklog path (Fig.\ref{fig:3.6}).
+research sampling design also included measurements of depths (Fig. \ref{fig:A.4}), because bathymetry is one of the
 most determinating factors for the seagrass locations. Measurements of depths were performed during
 the fieldwork using cord, iPAQs, and markers in order to assure that the videometric measurements
 are taken at depths not more than four meters, in the shelf area.
 As a result, nine transects were established of one m wide and 20 m long track, to cover seagrass beds
 with videographic measurements. The GPS allowed to capture measurement locations on the iPAQ,
-encapsulated in a plastic waterproof Otterbox (Fig \ref{}). Camera were adjusted horizontally by a leveller and
-were mounted under the bottom of the boat to capture video footage and imagery (Fig.\ref{fig:20}). The data
+encapsulated in a plastic waterproof Otterbox (Fig \ref{fig:3.3b}). Camera were adjusted horizontally by a leveller and
+were mounted under the bottom of the boat to capture video footage and imagery (Fig.\ref{fig:3.5}). The data
 were taken at proper weather conditions: sunny, serene and cloud-free days with glassy sea state. The
 locations of the route were randomly selected in the areas of the Ligaria beach, to ensure most dense
 coverage of the seagrass meadows in the research area. The underwater measurements of the seagrass
-coverage were carried out by taking video footage and photos of ca 0.5 m2 size each (Fig \ref{66}).
+coverage were carried out by taking video footage and photos of ca 0.5 m2 size each (Fig \ref{fig:A.7}).
 The results of the underwater videometric measurements include series of digital images helping to
 classify seafloor cover types and seagrass meadows, according to the differences in the structure,
 colour, texture and shapes of the depicted objects.
@@ -1078,19 +1108,19 @@ colour, texture and shapes of the depicted objects.
 	\centering
 	\includegraphics[scale=0.40]{Fig-21.jpg}
 	\caption{Locations of the video measurements and GPS tracklogs, Ligaria}
-	\label{fig:23}
+	\label{fig:3.6}
 \end{figure}
 
 Along the Ligaria beach there are several types of the seagrass landscapes, namely, segrass meadows
-continuously covering vast areas (Fig.\ref{fig:62} (a)), aggregated seagrass patches, represented by separate mattes with short irregular channels between them (Fig.\ref{fig:62} (b)) and isolated seagrass patches, or mattes,
-which located separately from broad meadows (Fig.\ref{fig:62} (c)).
+continuously covering vast areas (Fig.\ref{fig:A.3} (a)), aggregated seagrass patches, represented by separate mattes with short irregular channels between them (Fig.\ref{fig:A.3} (b)) and isolated seagrass patches, or mattes,
+which located separately from broad meadows (Fig.\ref{fig:A.3} (c)).
 The results of the underwater videometric measurements of the Olympus cameras made during the
 ship route include nine total tracklog routes in the selected research area, including series of
 consequent images, completely covering the area under the boat path. The received data contain
 information on seagrass presence within the study area, distribution of seagrass P.oceanica meadows
-and nature of the seafloor cover types: rocks, sandy, mixed (Fig. \ref{fig:65}). Seagrass species on the Ligaria and Agia
+and nature of the seafloor cover types: rocks, sandy, mixed (Fig. \ref{fig:A5}). Seagrass species on the Ligaria and Agia
 Pelagia beach consist of P.oceanica. The types of sediment on the Ligaria vary from coarse sand,
-P.oceanica patches, sand, mud, rock gravel and fine sand (Fig.\ref{fig:64}).
+P.oceanica patches, sand, mud, rock gravel and fine sand (Fig.\ref{fig:A.6}).
 
 \subsection{Data of spectral measurements}
 
@@ -1128,12 +1158,12 @@ proven by various research papers. The imagery include satellite multi-spectral 
 ETM+) and aerial imagery from the Google Earth.
 The overview of the collected data enables to summarize their following types:
 \begin{itemize}
-	\item[] 1. Optical spectra of P.oceanica, carbonate sand, seawater with sediments and seawater measured in aquarium tank, without sediments, at different environmental conditions (e.g., Fig. \ref{fig:23})
+	\item[] 1. Optical spectra of P.oceanica, carbonate sand, seawater with sediments and seawater measured in aquarium tank, without sediments, at different environmental conditions (e.g., Fig. \ref{fig:A.23})
 	\item[]2. Aerial imagery from the \href{http://www.google.com/earth/index.html}{Google Earth}
-	\item[]3. Satellite images from various open sources (e.g. Landsat, Tab \ref{tab:20}) (previews: Fig. \ref{fig:68})
+	\item[]3. Satellite images from various open sources (e.g. Landsat, Tab \ref{tab:20}) (previews: Fig. \ref{fig:A.37})
 	\item[]4. Results of underwater videometric measurements of the Olympus cameras made during the ship route
 \end{itemize}
-The available satellite imagery (Fig.\ref{fig:68}) and aerial images are read into the ArcGIS project.
+The available satellite imagery (Fig.\ref{fig:A.38}) and aerial images are read into the ArcGIS project.
 The available broadband and hyperspectral remote sensing data are used for the mapping of the
 seagrass in shelf areas no deeper than 4.0 meters, for the environmental monitoring in order to detect
 the dynamics in changes of the seagrass distribution along Crete during the past 10 years using
@@ -1154,70 +1184,69 @@ research includes fieldwork in-situ measurements of the seagrass distribution al
 south-eastern coasts of Crete in chosen locations.\\
 The optical measurements of the irradiance and radiance of the sea water and bottom cover types of
 the seafloor have been received by the means of the optical sensors Trios-RAMSES Hyperspectral
-UVA/UVB Irradiance Sensor and RAMSES-ARC Hyperspectral UV-VIS Radiance Sensor (Fig. \ref{fig:10}), both adjusted for the measurements of the irradiance and radiance (see Appendices: Tab. \ref{tab:18}, Tab. \ref{tab:19}).
-The highest measured values are located in the diapason of 410-730 nm for the water irradiance (Fig. \ref{fig:49}) and 430-650 for the water radiance (Fig.\ref{fig:47}). 
+UVA/UVB Irradiance Sensor and RAMSES-ARC Hyperspectral UV-VIS Radiance Sensor (Fig. \ref{fig:2.1}), both adjusted for the measurements of the irradiance and radiance (see Appendices: Tab. \ref{tab:A.1}, Tab. \ref{tab:A.2}).
+The highest measured values are located in the diapason of 410-730 nm for the water irradiance (Fig. \ref{fig:A.18}) and 430-650 for the water radiance (Fig.\ref{fig:A.16}). 
 Afterwards, the measured values of the
 radiance and irradiance, respectively, have been used for the computation of the spectral reflectance
-properties of the sea water and bottom cover types (Fig.\ref{fig:23}). The spectral range of radiance
+properties of the sea water and bottom cover types (Fig.\ref{fig:A.15}). The spectral range of radiance
 cover diapason of 320-950 nm, and ittadiance measurements are covered in the interval of 280-500
 nm, which is suitable for a characteristics of seagrass reflectance.
-Different curves on the reflectance, radiance and irradiance graphs for example, on Fig.\ref{fig:43}, or \ref{fig:45}, enlarged) represent several series of
+Different curves on the reflectance, radiance and irradiance graphs for example, on Fig.\ref{fig:A.12}, or \ref{fig:A.14}, enlarged) represent several series of
 the measurements. The values of the spectral reflectance are received from the
-computations of these values using Excel mathematical formulae. The graphs shown on Fig.\ref{fig:47}, Fig. \ref{fig:48}, Fig. \ref{fig:49} display values of the radiance and irradiance of the sea water in Agia Pelagia, with and without sediments and suspended particles, respectively. Graph on Fig \ref{fig:44} displays statistuical analysis of the measured sets of observations, i.e. shows the midspread of the statistical quartiles (Q1-Q3), mean and extreme values.
+computations of these values using mathematical formulae. The graphs shown on Fig. \ref{fig:4.2}, Fig. \ref{fig:A.23}, Fig. \ref{fig:A.24}, Fig. \ref{fig:A.17} display values of the radiance and irradiance of the sea water in Agia Pelagia, with and without sediments and suspended particles, respectively. Graph on Fig \ref{fig:A.13} displays statistuical analysis of the measured sets of observations, i.e. shows the midspread of the statistical quartiles (Q1-Q3), mean and extreme values.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.5]{GNU-17.jpg}
-	\caption{Optical properties of the sea water with sediments, measured in aquarium tank. Agia Pelagia district, Crete. \href{http://www.gnuplot.info/}{Gnuplot}}
-	\label{fig:25}
+	\caption{Optical properties of the sea water with sediments, measured in aquarium tank. Agia Pelagia district, Crete. \href{http://www.gnuplot.info/}				{Gnuplot}}\label{fig:4.2}
 \end{figure}
 \pagebreak
 
 \subsection{Data pre-processing}
-A collection of visible spectra of two seafloor cover types - \textit{P.oceanica} and carbonatic sand - consist of multiple measurement sets of P.oceanica made by means of RAMSES hyperspectral radiometer: 1-350 for 15th October, 1-445 for 14th October for P.oceanica (Tab. \ref{tab:10}); 1-106 for water without sedimnts, measured in aquarium tank, 1-27 for seawater with sediments measured in aquarium tank; 1-75 for carbonate sand (Tab. \ref{tab:17}). All these data have been analysed and statistically tested. We measured mean, extreme values (min-max), median and statistical quartiles, in order to visualise distribution of the values at varuious spectral wavelengths. Carbonate sand was measured at wavelengths 402-750 nm, while P.oceanica - at the interval 318-951 nm. We visualised the behavour of different spectra on relevant graphs (Fig. \ref{fig:43}, \ref{fig:44}, \ref{fig:45}). 
+A collection of visible spectra of two seafloor cover types - \textit{P.oceanica} and carbonatic sand - consist of multiple measurement sets of P.oceanica made by means of RAMSES hyperspectral radiometer: 1-350 for 15th October (fragment on Tab. \ref{tab:A.8}), 1-445 for 14th October for P.oceanica; 1-106 for water without sedimnts, measured in aquarium tank, 1-27 for seawater with sediments measured in aquarium tank; 1-75 for carbonate sand (Tab. \ref{tab:17}). All these data have been analysed and statistically tested. We measured mean, extreme values (min-max), median and statistical quartiles, in order to visualise distribution of the values at varuious spectral wavelengths. Carbonate sand was measured at wavelengths 402-750 nm, while P.oceanica - at the interval 318-951 nm. We visualised the behavour of different spectra on relevant graphs (Fig. \ref{fig:4.4}, \ref{fig:A.35}, \ref{fig:A.28}). 
 The available collected data were tested for the spectral variability and separability under varying conditions of dfifferent environmental
 constituents (e.g. depth, water content, sun angle), in order to determine the
-potential that it may have on the approaches for further images processing and classification. Behavour of the spectra of P.oceanica have been tested using datasets for various depths: 0.5, 1.5 and 2.5 meters (Tab. \ref{tab:8}, Tab. \ref{tab:9}). The raw
-initial data of measurements of the spectral reflectance have been preprocessed and statistically analysed thereafter withgraphs visualising mean spectra and Q1-Q3 interval, instead of the series of single observations which is illustrated, for example, on Figures \ref{fig:27}, \ref{fig:33}, \ref{fig:28}). These data
+potential that it may have on the approaches for further images processing and classification. Behavour of the spectra of P.oceanica have been tested using datasets for various depths: 0.5, 1.5 and 2.5 meters (Tab. \ref{tab:8}, Tab. \ref{tab:A.7}). The raw
+initial data of measurements of the spectral reflectance have been preprocessed and statistically analysed thereafter with graphs visualising mean spectra and Q1-Q3 interval, instead of the series of single observations which is illustrated, for example, on Figures \ref{fig:27}, \ref{fig:4.10}, \ref{fig:28}). These data
 have been measured using different step of the wavebands: some measurements
 were made with 3 nm interval, while others – using 4 and 1 nm step.
-Therefore, these data had to be interpolated and standardized to one
+Therefore, these data had to be interpolated (Fig. \ref{fig:A.10}) and standardized to one
 format, which is values of spectral reflectancese with one nm step. For the
 interpolation we used script written on Python programming language that allowed to receive more 
-detailed data by interpolating them from 3 and 4 nm step up to 2 nm (Fig.\ref{fig:24}).
+detailed data by interpolating them from 3 and 4 nm step up to 2 nm (Fig.\ref{fig:A.8}).
 The interpolated data contained spectral measurements of the seagrass P.oceanica (measured at Agia
 Pelagia beach, Crete), sand (measured at Agia Pelagia beach, Crete), silt and default artificial
-spectrum of constant albedo at WASI (Fig.\ref{fig:25}). 
+spectrum of constant albedo at WASI (Fig.\ref{fig:A.9}). 
 We included measurements of the Thalassia seagrass
 (measured at Southern Chinese Sea by C.Yang \cite{Yang10} \label{Yang10}) for the comparison of the spectral reflectances of
 different seagrass speciea under various environmental conditions.
 The most suitable wavebands for the seagrass monitroring usually lay between 400 and 700 nm,
 which can be concluded by the visual examination, comparison and analysis of the different spectra of
 the seagrasses. Therefore, we chosen the spectra 400-750 as the most appropriate range for
-further research experiment.The results of the linear interpolation (Fig.\ref{fig:25}) demonstrate values of the
+further research experiment.The results of the linear interpolation (Fig.\ref{fig:A.35}) demonstrate values of the
 sand spectral reflectances with 1 nm interval covering the wavelength diapason of 400-750 nm.\\
 The initial measured data were stored in raw-oriented format, so that re-formatting them into the
-column-based layout was done using “transpose” command in Open Office or Excel (Fig. \ref{fig:42}). The next step included
-calculation of the median, mean, quartiles and other statistical values at every data set (see Appendix, Fig. \ref{fig:54}, Fig. \ref{fig:55}).
-After the preliminary analysis, the measured data were visualised using GNUplot programm, which
-enables fine plotting of various datasets together: Fig \ref{fig:26}, Fig.\ref{fig:27}, Fig.\ref{fig:28}. The most acceptable method of interpolation was B\'ezier curve (Fig. \ref{fig:47}, Fig. \ref{fig:49}),
+column-based layout was done using “transpose” command in Open Office or Excel (Fig. \ref{fig:A.11}). The next step included
+calculation of the median, mean, quartiles and other statistical values at every data set (see Appendix, Fig. \ref{fig:A.25}, Tab. \ref{tab:17}).
+After the preliminary analysis, the measured data were visualised using Gnuplot programm, which
+enables fine plotting of various datasets together: Fig \ref{fig:4.4}, Fig.\ref{fig:27}, Fig.\ref{fig:28}. The most acceptable method of interpolation was B\'ezier curve (Fig. \ref{fig:A.18}, Fig. \ref{fig:A.16}),
 as it has trend-friendly graph better showing the general behavior of the curves at different wavebands
 comparing to splines (see Appendix for more results). 
 Therefore, after several experiments with
-various interpolation techniques (Fig.\ref{fig:48}), we have choosen Bézier curves interpolation (Fig.\ref{fig:49}) which contain convex
+various interpolation techniques (Fig.\ref{fig:A.15}, Fig.\ref{fig:A.23}), we have choosen B\'ezier curves interpolation (Fig.\ref{fig:A.18}) which contain convex
 hulls made on its control points, and therefore is best suitable for our case: analysis of optical
 properties of seawater.
 %
 \subsection{Analysis of spectral signatures}
 The distinguishing spectral signatures for various seafloor types (e.g. seagrass species, coral reefs,
-various types of sand, mud, other sediments, (Fig.\ref{fig:26})) exist in well-defined and narrow (10–20 nm)
+various types of sand, mud, other sediments, (Fig.\ref{fig:4.4})) exist in well-defined and narrow (10–20 nm)
 wavelength ranges. 
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.30]{GNU-18.jpg}
 	\caption{Multiplot showing spectral reflectance of the seawater with sediments, measured in aquarium tank, Agia Pelagia district, Crete. \href{http://www.gnuplot.info/}{Gnuplot} \\Two complimentray graphs below show the results of the statistical analysis.}
-	\label{fig:26}
+	\label{fig:4.4}
 \end{figure}
 
 The values of their spectral reflectance are accepted as constant. The results of
@@ -1226,7 +1255,7 @@ floor types with changing environmental conditions, using the differences in the
 on the graphs in a WASI, the Water Colour Simulator software. \\The Water Colour Simulator WASI, a
 software tool for analysing and simulating the most common types of spectra \cite{Gege05}\label{Gege05}, is highly
 suitable for the seagrass spectral analysis.
-There are several environmental characteristics, included in WASI interface (Fig.\ref{fig:29}), which influence the
+There are several environmental characteristics, included in WASI interface (Fig.\ref{fig:4.7}), which influence the
 results of water spectral reflectance, e.g. different bottom depths, concentration of suspended particles
 in water column, water temperature, sun angle, concentration of gelbstoff (coloured dissolved organic
 matter), concentration of phytoplankton, aerosol scattering, exponent of backscattering by small
@@ -1235,8 +1264,8 @@ fundamental optical property which plays a central role in the ocean-color remot
 the remotely sensed optical signal, as well as suspended particle distributions, water clarity, and
 underwater visibility \cite{Maffione97}\label{Maffione97}. WASI enables simulation of backscattering of pure
 water, large and small particles. The values of all these parameters can be redacted and changed
-manuall. However, the most important, major factors affecting the in-situ conditions are water depth
-and cover fraction of the seafloor types: P.oceanica and carbonatic sand (Fig.\ref{fig:27}).
+manuall. However, the most important, major factors affecting the in-situ conditions are water depth (Fig.\ref{fig:4.9})
+and cover fraction of the seafloor types: P.oceanica and carbonatic sand .
 
 \begin{figure}[H]
 	\centering
@@ -1269,7 +1298,7 @@ broadband remote sensing.
 
 \begin{table}[htbp]
 	\rowcolors{1}{LightSteelBlue}{Honeydew}
-	\caption{Results of the statistical analysis of spectral reflectance of \textbf{P.oceanica}, with average values (for sets 1 - 350). Generalisation up to step 20 nm}
+	\caption{Results of the statistical analysis of spectral reflectance of \textbf{P.oceanica}, with average values (for sets 1 - 350). Generalisation up to step 20 nm}\label{tab:4.1}
 	\begin{center}
 	\begin{tabular}{|c|c|c|c|c|c|c|}
 	\hline
@@ -1309,12 +1338,11 @@ broadband remote sensing.
 		\textbf{951.03058} & 0.002296 & 0.026581 & 0.002380 & 0.067924 & 0.265845 & 0.041463 \\ \hline
 	\end{tabular}
 	\end{center}
-	\label{tab:2}
 \end{table}
 
 The results enable to study reflectance properties of the seagrass and other
 seafloor types. Application of the optical radiative transfer model WASI is suggested to simulate
-remote sensing sensors (MODIS, ASTER, MERIS and SeaWiFS), (Fig.\ref{fig:28}).
+remote sensing sensors (MODIS, ASTER, MERIS and SeaWiFS), (Fig.\ref{fig:4.6}).
 
 \begin{figure}[h]
 	\centering
@@ -1323,7 +1351,7 @@ remote sensing sensors (MODIS, ASTER, MERIS and SeaWiFS), (Fig.\ref{fig:28}).
 	\subfloat [MODIS]{\label{fig:29c}\includegraphics[width=0.4\textwidth]{Fig-35c.jpg}}
 	\subfloat [SeaWiFS]{\label{fig:29d}\includegraphics[width=0.4\textwidth]{Fig-35d.jpg}}
 	\caption{Simulated remote sensing reflectance of \textit{P.oceanica} at various sensors}
-	\label{fig:29}
+	\label{fig:4.6}
 \end{figure}
 
 In order to focus on the factors of primar importance, other and less influencing factors are excluded,
@@ -1357,7 +1385,7 @@ highest values.
 The main aim of this part of research is to clarify if the bottom reflectance of the different seafloor types including patches of
 the seagrass \textit{P.oceanica}meadows, silt and carbonate sand differ and can be clearly discriminated while mapping. A study is
 based on three seafloor types containing silt, carbonate sand and seagrass, as well as mixed
-types, where the spectral signatures were examined. WASI software (Fig.\ref{fig:29}) is used to simulate
+types, where the spectral signatures were examined. WASI software (Fig.\ref{fig:4.7}) is used to simulate
 spectral reflectance and colour discrimination of water, affected by presence of \textit{P.oceanica} and other factors, under various
 environmental conditions which influence its colour.
 
@@ -1365,7 +1393,7 @@ environmental conditions which influence its colour.
 	\centering
 	\includegraphics[scale=0.30]{Fig-30.jpg}
 	\caption{Main interface of WASI water color spectral simulation: \\ Spectral reflectance of \textit{P.oceanica} and silt at 0.5-4.0m}
-	\label{fig:30}
+	\label{fig:4.7}
 \end{figure}
 
 The data provided with the model was determined at freshwater of the Boddensee \cite{Gege05}\label{Gege05}, 
@@ -1383,14 +1411,14 @@ grow. The adaptations to life in salt sea water requires various phisical and ch
 which include salinity, temperature of 17-25°C, light requirements with 10-20 percent on average, ranging
 from 4.4percent  minimal up to 29 percent \cite{McKenzie09}\label{McKenzie09}, so that the zenith angle is taken as 35-
 45° and reflection factor 0.0201. P.oceanica. These values, simyulating the environment of the Mediterranean Sea, are fixed (Tab.\ref{tab:3}) on the WASI user-defined parameters.
-The calculations are done for the spectrum 350-800 nm, covering the most important part of the RS spectrum: 1) Blue-green 0.45 - 0.5 μm; 2) Green 0.5 - 0.6 μm; 3) Red 0.6 - 0.7 μm; 4) Red-NIR 0.7 - 0.8 μm (Fig.\ref{fig:30}).
+The calculations are done for the spectrum 350-800 nm, covering the most important part of the RS spectrum: 1) Blue-green 0.45 - 0.5 μm; 2) Green 0.5 - 0.6 μm; 3) Red 0.6 - 0.7 μm; 4) Red-NIR 0.7 - 0.8 μm (Fig.\ref{fig:4.8}).
 
 \begin{figure}[h]
 	\centering
 	\subfloat [Concentration of Gelbstoff at depths 0.5 – 8.0 m]{\label{fig:31a}\includegraphics[width=0.4\textwidth]{Fig-31a.jpg}}
 	\subfloat [Bottom reflectance at depth 0.5-4.0 meters]{\label{fig:31b}\includegraphics[width=0.4\textwidth]{Fig-31b.jpg}}
 	\caption{Sea water physical properties, modelled by WASI}
-	\label{fig:31}
+	\label{fig:4.8}
 \end{figure}
 
 \paragraph{Model parameters: depth and bottom cover fraction}
@@ -1434,7 +1462,7 @@ The increase of depths (zB) influences weakening of light and thus directly affe
 production of chlorophyll, because when light passes through the water and suspended particles, it is
 being largely modifed through the absorption and scattering before it finally reaches plant canopy of
 the seagrass. Therefore, the most healthy and suitable areas for the seagrass grow are located at depths
-lesser than 4 meters (Fig.\ref{fig:31}).
+lesser than 4 meters (Fig.\ref{fig:4.9}).
 
 \begin{figure}[H]
 	\centering
@@ -1443,13 +1471,13 @@ lesser than 4 meters (Fig.\ref{fig:31}).
 	\subfloat [depth of 3.5 m]{\label{fig:32c}\includegraphics[width=0.4\textwidth]{Fig-32c.jpg}}
 	\subfloat [depths of 0.5, 2.0 and 3.5 m]{\label{fig:32d}\includegraphics[width=0.4\textwidth]{Fig-32d.jpg}}
 	\caption{Remote sensing reflectance of \textit{P.oceanica} at various depths}
-	\label{fig:32}
+	\label{fig:4.9}
 \end{figure}
 
 An analysis of the spectral reflectances of \textit{P.oceanica}.is done using the WASI simulations in order to
 determine, which wavebands can be still used to identify \textit{P.oceanica}. The analysis of spectra shows
 that the appropriate wavebands for seagrass mapping lay between 500 and 600 nm and has
-also peaks at around 700 nm, ca between 680 and 710 nm (Fig.\ref{fig:31}). The highest values of the bottom
+also peaks at around 700 nm, ca between 680 and 710 nm (Fig.\ref{fig:4.10}). The highest values of the bottom
 reflectance are at spectra of 500-600 nm. The most appropriate depths at which the spectral signatues
 could still be discrtiminated for seagrass are lesser than 2.5 meters.
 The remote sensing properties of the broad-band satellite sensors are often limited and do not allow
@@ -1458,18 +1486,18 @@ spectra with the resolution of 1 nm.
 
 \paragraph{Spectral discrimination of \textit{P.oceanica}}
 The patches of white sandy bottoms of the seafloor, studied in the fieldwork in Ligaria beach, are
-much brighter than mattes of P.Oceanica ((Fig.\ref{fig:64}): seafloor types in Ligaria), which can be clearly seen
-at the graph comparing values of the spectral reflectance of the carbonate sand (Fig.\ref{fig:65}) and that of P.
-oceanica (Fig.\ref{fig:62}).
+much brighter than mattes of P.Oceanica (Fig.\ref{fig:A.6}, \ref{fig:A.5}): seafloor types in Ligaria), which can be clearly seen
+at the graph comparing values of the spectral reflectance of the carbonate sand (Fig.\ref{fig:A.35}) and that of P.
+oceanica (Fig.\ref{fig:A.28}).
 The graph is received in excel spreadsheet using mean values of spectral reflectances of
-sand (Fig.\ref{fig:34}) and seagrass (Fig.\ref{fig:32}), respectively, which have been calculated from measurements of radiance and
+sand (Fig.\ref{fig:A.27}) and seagrass (Fig.\ref{fig:A.35}), respectively, which have been calculated from measurements of radiance and
 irradiance received in Agia Pelagia bay.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.40]{GNU-19.jpg}
 	\caption{Statistical analysis of the spectral reflectance of \textit{P.oceanica}: min-max, average values (red bold points), Q1-Q3 areas (green vertical dashed) and 			measured values (dotted): multiplot of measurement sets 200-300. \href{http://www.gnuplot.info/}{Gnuplot}}
-	\label{fig:33}
+	\label{fig:4.10}
 \end{figure}
 
 \begin{figure}[h]
@@ -1477,7 +1505,7 @@ irradiance received in Agia Pelagia bay.
 	\subfloat [Sand]{\label{fig:34a}\includegraphics[width=0.4\textwidth]{Fig-27a.jpg}}
 	\subfloat [\textit{P.oceanica}]{\label{fig:34b}\includegraphics[width=0.4\textwidth]{Fig-27b.jpg}}
 	\caption{Bottom albedo of carbonate sand and \textit{P.oceanica}, Agia Pelagia}
-	\label{fig:34}
+	\label{fig:4.11}
 \end{figure}
 \pagebreak
 
@@ -1485,60 +1513,61 @@ irradiance received in Agia Pelagia bay.
 
 \subsubsection{Statistical analysis of the observational data and hypothesis testing}
 The total amount of measured data was large and included following datasets made using
-hyperspectral radiometer Ramses: 350 measuremetn sets of P.oceanica reflectance for 14th Oct (Tab.\ref{tab:32}), 400
-sets of P.oceanica reflectance for 15th Oct (Tab.\ref{tab:33}), 84 datasets for seawater reflectance with sediments, 105
+hyperspectral radiometer Ramses: 350 measuremetn sets of P.oceanica reflectance for 14th Oct (Tab.\ref{tab:A.29}), 400
+sets of P.oceanica reflectance for 15th Oct (Tab.\ref{tab:A.8}), 84 datasets for seawater reflectance with sediments, 105
 datasets for seawater reflectance without sediments, 87 sets for spectral reflectance of carbonat sand.
 A statistical approach is evidently necessary for the proper processing of such amounts of data. 
+The schematic view of the statistical approach used for the data processing  can be seen on Fig. \ref{fig:4.12}.
 Statistical pre-processing of large sets of serial data enables to generalyse data by using the most typical and predicted values of
 spectral reflectance for further calculations, and to get rid of the extreme values, noise and errors.
 The statistical calculators were mainly made by means of Gretle and SPSS. 
 The Open Office was used for preliminary data view and preprocessing, and included following computations
-at each data set (for example, Tab.\ref{tab:31}) with summary outcome of mean, median, Q1 and Q3, standard deviation, min and max values (Tab.\ref{tab:4}). \\
+at each data set (for example, Fig.\ref{fig:A.11}) with summary outcome of mean, median, Q1 and Q3, standard deviation, min and max values (Tab.\ref{tab:4}). 
 The statistical pre-processing and analysis were made to display the mean values of spectral reflectances,
 which were used for comparison with reflectance data of various seafloor cover types as well as
-seawater with and without sediment (e.g. Tab.\ref{tab:2}).
-In the statistical anlysis of the raw observed data pool of the values of spectral reflectances (about 400 single measurements for P.oceanica, e.g. Tab.\ref{tab:10}), we summarize their complexity by concentrating on some simple numerical characteristics that they possess, i.e. parameters. Examples are the mean and variance of a probability distribution of measurements dataset (for example, Tab.\ref{tab:16}). We divided the total data pool into datasets of 25 measurements for more convenience and ease of use, both for P.oceanica and carbonate sand. The mean of a probability distribution of spectral reflectance describes the average value of the random variable over all of its possible realizations (Appendices).  Conceptually, there are an infinite number of such realizations, therefore parameters are not known to us. However, in the statistical analysis of the observed data our goal is to estimate these parameters using a finite amount of information available to us: fieldwork observations. \\
+seawater with and without sediment (e.g. Fig..\ref{fig:A.16}).
+In the statistical anlysis of the raw observed data pool of the values of spectral reflectances (about 400 single measurements for P.oceanica, e.g. Tab.\ref{tab:A.8}), we summarize their complexity by concentrating on some simple numerical characteristics that they possess, i.e. parameters. Examples are the mean and variance of a probability distribution of measurements dataset (for example, Tab.\ref{tab:4.1}). We divided the total data pool into datasets of 25 measurements for more convenience and ease of use, both for P.oceanica and carbonate sand. The mean of a probability distribution of spectral reflectance describes the average value of the random variable over all of its possible realizations (Appendices).  Conceptually, there are an infinite number of such realizations, therefore parameters are not known to us. However, in the statistical analysis of the observed data our goal is to estimate these parameters using a finite amount of information available to us: fieldwork observations. \\
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.45, angle=90]{UML_StatAn.jpg}
+	\includegraphics[scale=0.43, angle=90]{UML_StatAn.jpg}
 	\caption{Work Flowchart Diagram illustrating algorithm of the Statistical Analysis applied towards the observation dataset (\href{http://staruml.sourceforge.net/en/}{StarUML})}
-	\label{fig:35}
+	\label{fig:4.12}
 \end{figure}
+\pagebreak
 
 Thus, we collect a number of realizations (a sample of 25 measurements for both sand and P.oceanica) and then estimate the statistical parameters (Appendix). \\
-Finally we analysed abount 400 datasets totally (example of carbonate sand on Fig.\ref{tab:31}) made during different days. 
+Finally we analysed abount 400 datasets totally (example of carbonate sand on Fig.\ref{fig:4.14}, P.oceanica - on  Fig.\ref{fig:4.13}) made during different days. 
 Since the actual values that measured variables of spectral reflectance take on are not actually known before we observed them, they are random. 
 Thus, we analysed the statistical distribution of the spectral reflectance values of seafloor cover types using common mathematical formulae, implmented in Gretl software (Tab.\ref{tab:19}). 
 Their probability expresses uncertainty about the possible values of the spectral reflectances  of P.oceanica and sand, respectively.
 There is a distinction to be made between variables whose values are not yet observed (random variables) and those whose values have been observed (observations). 
 Each time we observe the outcome of a random variable of spectral reflectance, we obtain an observation, which is hence no longer random. 
 We applied various methods of statistical analysis towards data pool (some examples of the selected tables are in the Appendix: Tab.\ref{tab:18}, Tab.\ref{tab:24}, Tab.\ref{tab:25}, Tab.\ref{tab:26}, Tab.\ref{tab:29}), in order to analyse the distribution of values of spectral reflectances of \textit{P.oceanica}. 
-A probability distribution, a mathematical statement about the possible values that the random observations of spectral reflectance can take on, displays the relative frequency with which each possible value of spectral reflectance is observed. \\
+A probability distribution, a mathematical statement about the possible values that the random observations of spectral reflectance can take on, displays the relative frequency with which each possible value of spectral reflectance is observed. 
 The \textit{least absolute deviations (LAD)}, a popular optimization technique, was used to show the main trend of the distribution of spectral reflectance values along the spectra (Tab.\ref{tab:12}). Non-linear logistic anlysis is applied to specify and estimate a model of spectral distribution, in which the dependent variable (i.e. the value of spectral reflectance for each single observation) is not continuous, but discrete and independent for each case (Tab.\ref{tab:11}). \\
 As the observations were made in a repeated way, we also analysed the data pool using autocorrelation as well: Tab.\ref{tab:13} and Tab.\ref{tab:14} for \textit{P.oceanica} and Tab.\ref{tab:28} for carbonate sand. The \textit{autocorrelation}, a cross-correlation of an observed value with itself, made on two different days (14th and 15th October),
- shows the similarity between observations as a function of the time separation between them. As can be seen on Fig.\ref{fig:52}, Fig.\ref{fig:53} and Fig.\ref{fig:60}, it is a useful tool for finding repeating patterns for a single value of observations, such as the presence of a periodic signal which has been buried under noise. The autocorrelation analysis has been performed using both SPSS and Gretl software. \\
+ shows the similarity between observations as a function of the time separation between them. As can be seen on Fig.\ref{fig:A.21}, Fig.\ref{fig:A.22} and Fig.\ref{fig:A.29}, it is a useful tool for finding repeating patterns for a single value of observations, such as the presence of a periodic signal which has been buried under noise. The autocorrelation analysis has been performed using both SPSS and Gretl software. \\
 The method of \textit{least squares} minimizes the sum of the squares of the errors made in solving every single observation made. We tried different approaches of the \textit{least squares} methods: Tab.\ref{tab:15}, Tab.\ref{tab:18}, Tab.\ref{tab:27}.\\
 To focus on the relationship between a dependent variable (each single observation of the spectral reflectance) and independent variables (three various depths: 0.5, 1.5 and 2.5 meters) we used the \textit{regression analysis}, which enables modeling and analyzing values of the spectral reflectances at several depths: Tab.\ref{tab:5}, Tab.\ref{tab:6}, Tab.\ref{tab:7}. 
-The summary of the values of spectral reflectance properties on various depths is presented on the Fig.\ref{fig:17}.
+The summary of the values of spectral reflectance properties on various depths is presented on the Tab.\ref{tab:A.7}.
 The \textit{k-means cluster analysis} has been used for partitioning observation sets into k clusters (Tab.\ref{tab:20}, Tab.\ref{tab:21}, Tab.\ref{tab:22}, Tab.\ref{tab:23}) in which each observation belongs to the cluster with the nearest mean.
 It enables to highlight the main areas of the location of values of spectral reflectances along the spectra.\\
 To estimate spectral density of a spectral reflectancfe measurements we used periodogram function (Tab.\ref{tab:30}), 
 which corresponds to the general spectrum of the observations with representation of a variable quantity.  
-Thus, the periodogram of the series of observation highlights so-called “dead spots” of low power between the frequencies we wishe to
-exclude (can be seen clearly at the end of the graphs, e.g. Fig.\ref{fig:43} ) 
-and the frequencies we want to retain (the general profile that lies in the 450-850 nm, Fig.\ref{fig:45}, enlarged part of 500-660nm).\\
+Thus, the periodogram (Fig. \ref{fig:A.31}) of the series of observation highlights so-called “dead spots” of low power between the frequencies we wishe to
+exclude (can be seen clearly at the end of the graphs, e.g. Fig.\ref{fig:A.12} ) 
+and the frequencies we want to retain (the general profile that lies in the 450-850 nm, Fig.\ref{fig:A.14}, enlarged part of 500-660nm).\\
 The visualization of the data plotting was made by means of Gnuplot software, which enabels fine
 drawing and advanced displaying of large amounts of serial data, ultimate control over graph properties, 
-the simplicity of plotting and the ease of scripting. (see Fig.\ref{fig:54}, Appendices).
-
+the simplicity of plotting and the ease of scripting. (see Fig.\ref{fig:4.13}, Appendices).
 The graphs illustrating spectral signatures of various seafloor cover types display the mean values and
-areas of quartiles (Q1, Q3, shaded areas on graph, Fig.\ref{fig:55}), which cover most probable data distribution
+areas of quartiles (Q1, Q3, shaded areas on graph, Fig. \ref{fig:4.10}, Fig.\ref{fig:4.14}), which cover most probable data distribution
 (spectral reflectance) for each spectral band. In x-axis displayed are the areas of 400 – 950 nm in
 spectra, where the measurements were done; the y-axis was adjusted for the better visualisation of the
 P.oceanica spectra: as its spectral values are mostly located in the lower part of the spectra (usually no
 more than 0.20 nm, except for borders), we did not extend the y-scale up to 100 percent, in order to
-focus on the most necessary area of spectral values (Fig.\ref{fig:35} and Appendices). The mean values are
+focus on the most necessary area of spectral values (Fig.\ref{fig:4.14}, Fig.\ref{fig:4.4} and Appendices). The mean values are
 highligted using bold red points, as we used these values for plotting the final graph of P.oceanica spectra in
 Ligaria beach, Agia Pelagia.
 
@@ -1547,7 +1576,7 @@ Ligaria beach, Agia Pelagia.
 		\includegraphics[scale=0.45]{GNU-13.jpg}
 		\caption{Multiplot of spectral reflectance of P.oceanica. Series 1-100. Shown midspread of the statistical quartiles Q1 and Q3 (vertical dashes) and
 			mean value within the range (red bold dots). \href{http://www.gnuplot.info/}{Gnuplot} visualization­}
-		\label{fig:36}
+		\label{fig:4.13}
 	\end{center}
 \end{figure}
 \begin{figure}
@@ -1555,7 +1584,7 @@ Ligaria beach, Agia Pelagia.
 		\includegraphics[scale=0.5]{GNU-16.jpg}
 		\caption{Multiplot of spectral reflectance of carbonate sand. Series 1-75. Shown midspread of the statistical quartiles Q1 and Q3 (vertical dashes) and
 			mean value within the range (red bold dots). \href{http://www.gnuplot.info/}{Gnuplot} visualization­}
-		\label{fig:37}
+		\label{fig:4.14}
 	\end{center}
 \end{figure}
 
@@ -1671,14 +1700,14 @@ In the image processing part of the research supervised classification has been 
 and satellite images. Seagrass meadows and other seafloor cover types were evaluated through a
 detailed examination of the imagery. \\
 Seagrass beds are clearly visible in color aerial Google Earth
-photographs (Fig.\ref{fig:35}), contrasting against slightly-yellow and browny sand bottom. The seagrass areas are
+photographs (Fig.\ref{fig:A.36}, Fig.\ref{fig:A.37}), contrasting against slightly-yellow and browny sand bottom. The seagrass areas are
 detected using different bands combinations, masked and studied for the estimation of the changes in
 the areas. The classification is based on the spectral properties of the \textit{P.oceanica}, such as brightness,
-colour, texture and structure of the seagrass mattes (Fig.\ref{fig:35}a). The raster-based mapping
+colour, texture and structure of the seagrass mattes (Fig.\ref{fig:38}a). The raster-based mapping
 includes supervised classification with training sites of seagrasses (10-15 set areas) in different bands
 for each photograph by classification a series of polygons characteristic of each of the sea floor
 bottom types: sandy surface, seagrass bed for each species including \textit{P.oceanica} (meadows), patchy
-seagrass bed and algae on rock, rocks, muddy surface, etc (Fig.\ref{fig:36}).
+seagrass bed and algae on rock, rocks, muddy surface, etc (Fig.\ref{fig:38}b).
 
 \begin{figure}
 	\centering
@@ -1711,14 +1740,14 @@ in seagrass landscape occurring in a shallow waters over Crete area.
 	\begin{center}
 		\includegraphics[scale=0.25]{Fig-37.jpg}
 		\caption{Google aerial images incorporated into the GIS project: fragment of \href{http://www.esri.com/software/arcgis/index.html}{ArcGIS} layout}
-		\label{fig:40}
+		\label{fig:4.17}
 	\end{center}
 \end{figure}
 
 It encompasses the integration of
 high resolution aerial color Google Earth photography, spaceborne satellite imgery, assessment of
 spectral signatures using WASI software, image processing by means of Erdas Imagine (Fig.\ref{fig:39}) and Arc GIS
-based mapping. The use of GIS for data incorporation (Fig.\ref{fig:37}), storage, analyses, visualizing and mapping
+based mapping. The use of GIS for data incorporation (Fig.\ref{fig:4.17}), storage, analyses, visualizing and mapping
 enables to analyse environmental changes within seagrass landscapes based on data from various
 sources: aerial and satellite images, geographically referenced maps of Crete island and results of
 images classification showing areas of seagrass distribution.
@@ -1788,8 +1817,8 @@ performed using underwater videometric measurements, aerial and satellite imager
 
 \subsubsection{Results of GIS mapping}
 This research part results in series of thematic maps showing seagrass spatial distribution over the Island of
-Crete. The research is based on the aerial images classification and analysis using ArcGIS and Envi
-software (Fig.24). The map of the seagrass locations within the research area of Ligaria beach illustrates the seagrass
+Crete. The research is based on the aerial images classification and analysis using ArcGIS and Erdas Imagine
+software. The map of the seagrass locations within the research area of Ligaria beach illustrates the seagrass
 distribution at a more detailed scale.
 
 \pagebreak
@@ -1807,35 +1836,217 @@ monitoring and mapping of the shelf zone as vital instrument for the environment
 Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote sensing, monitoring, Google Earth, Crete
 \pagebreak
 
-%%%%%%%%%%%%%%%%%%%  Appendix  %%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%  Appendix  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{appendices}
 \pagenumbering{roman}
 \appendix \label{app}
 \appendixpage
-\addappheadtotoc
-%%%
 \counterwithin{figure}{section}
 \counterwithin{table}{section}
 %\renewcommand{\thefigure}{A-\arabic{figure}}
 %\renewcommand{\thetable}{A-\arabic{table}}
 
-\section*{}
-\appendixname{\textbf{1:\\Results of the measurements of seafloor spectral reflectance}}
-%%%
+\section{appendices}
 
+\subsection{\textit{Appendix-1}. Capturing aerial imagery from the Google Earth: grabbing process}
+%\appendixname{\textbf{1: \\Capturing aerial imagery from the Google Earth: grabbing process}}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.6]{Fig-22.jpg}
+	\caption{Capturing aerial imagery from the Google Earth: grabbing process}
+	\label{fig:A.1}
+\end{figure}
+\pagebreak
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.4]{Script_Gdal.jpg}
+		\caption{Script command of FWTools2.4.7 enabling to reduce the size of the aerial images, from .tif to .ecw format.}
+	\end{center}
+	\label{fig:A.2}
+\end{figure}
+\pagebreak
+
+\subsection{\textit{Appendix-2}. Instrumental adjustment and tuning (Trios-RAMSES setup)}
+%\appendixname{\textbf{2:\\ Instrumental adjustment and tuning (Trios-RAMSES setup)}}
+
+\begin{table}[H]
+	\caption{Attributes of the Trios-RAMSES hyperspectral radiometer during measurement sets. Selected examples (14. X, set 1 and 15.X, set 4).}\label{tab:A.1}
+	\centering
+	\rowcolors{1}{Ivory}{LightGoldenrodYellow}
+	  \begin{tabular}{| p{3cm} | p{3cm} | p{5cm} |}
+		\hline
+		    \textbf{Parameters} & \textbf{15 October, set 1} & \textbf{14 October, set 4} \\ \hline \hline
+		     Version &1 & 1 \\ \hline
+		     IDData & 78B1-2009-10-15-08-56-22-280-272 & 78B1-2009-10-14-15-15-59-342-726 \\ \hline
+		     IDDevice & SAM-820C & SAM-8204\\ \hline
+		     IDDataType & SPECTRUM & SPECTRUM \\ \hline
+		     IDDataTypeSub1 & CALIBRATED & CALIBRATED \\ \hline
+		     DateTime & 2009-10-15 08:56:22 & 10/14/2009, 15:15:59 \\ \hline
+		     PositionLatitude & 35.2451=35°14'29.4354” & 35.24752 = 35° 14' 51.072" \\ \hline
+		     PositionLongitude & 25.01269=25°0'45.6834" & 25.0098 = 25°0'35.2794" \\ \hline
+		     Comment & P.oceanica & P.oceanica \\ \hline
+		     CommentSub1 & 0.5m depth & 2.5m depth \\ \hline
+		     CommentSub2 & diffuse & diffuse \\ \hline
+		     CommentSub3 & Agia Pelagia & Agia Pelagia site 2, close to rocks \\ \hline
+		     IDMethodType & SAM Control & SAM Control \\ \hline
+		    MethodName & SAM-820C & SAM-8204 \\ \hline
+		    Mission & No Mission & No Mission \\ \hline
+		    MissionSub & 1 & 1 \\ \hline
+		    RecordType & 0 & 0 \\ \hline
+		    CalFactor & 1 & 1 \\ \hline
+		   IDDataBack & DLAB-2008-02-06-14-13-18-865-675 & DLAB-2008-01-25-20-42-29-607-062 \\ \hline
+		   IDDataCal & DLAB-2008-02-06-14-23-00-187-767 & DLAB-2008-01-28-08-40-24-220-395 \\ \hline
+		   IntegrationTime & 512 & 1024 \\ \hline
+		    P31 & -1 & -1 \\ \hline
+		   P31e & 0 & 0 \\ \hline
+		   PathLength & +INF & +INF \\ \hline
+		   RAWDynamic & 65535 & 65535 \\ \hline
+		   Temperature & +NAN & +NAN \\ \hline
+		   Unit1 & 0101 Wavelength nm &  1 1 Wavelength nm \\ \hline
+		   Unit2 & 03-06 Intensity mW/(m2nm) & 03 03 Intensity mW/(m2 nm Sr) \\ \hline
+		   Unit3 & f0-06 Error mW/(m2 nm) & 3-3 Error mW/(m2 nm Sr) \\ \hline
+		  Unit4 & f1-00 Status & f1-00 Status \\ \hline
+	  \end{tabular}	
+\end{table}
+\pagebreak
+
+\begin{table}[H]
+	\caption{Attributes of the Trios-RAMSES hyperspectral radiometer during measurement sets. Selected examples (15. X, set 1 and 14.X, set 4).}\label{tab:A.2}	\centering
+	\rowcolors{1}{Lavender}{GhostWhite}
+	\begin{tabular}{| p{3cm} | p{3cm} | p{5cm} |}
+	\hline
+	    \textbf{Parameters} & \textbf{14 October, set 1} & \textbf{15 October, set 4} \\ \hline \hline
+	     Version &1 & 1 \\ \hline
+	     IDData & 78B1-2009-10-14-15-32-02-078-323 & 78B1-2009-10-15-10-36-02-217-136 \\ \hline
+	     IDDevice & SAM-820C & SAM-8204\\ \hline
+	     IDDataType & SPECTRUM & SPECTRUM \\ \hline
+	     IDDataTypeSub1 & CALIBRATED & CALIBRATED \\ \hline
+	      DateTime & 2009-10-14 15:32:02 & 2009-10-15 10:36:02 \\ \hline
+	     PositionLatitude & 35.24752= 35°14'51.072" & 35.245071=35°14'42.2556" \\ \hline
+	     PositionLongitude & 25.0098= 25°0'35.2794" & 25.012661=25°0'45.5796" \\ \hline
+	     Comment & P.oceanica & P.oceanica \\ \hline
+	     CommentSub1 & 3.5m depth & 1.5m depth \\ \hline
+	     CommentSub2 & diffuse & diffuse \\ \hline
+	     CommentSub3 & Agia Pelagia & Agia Pelagia site 1, close to rocks \\ \hline
+	     IDMethodType & SAM Control & SAM Control \\ \hline
+	    MethodName & SAM-820C & SAM-8204 \\ \hline
+	    Mission & No Mission & No Mission \\ \hline
+	    MissionSub & 1 & 1 \\ \hline
+	    RecordType & 0 & 0 \\ \hline
+	    CalFactor & 1 & 1 \\ \hline
+	   IDDataBack & DLAB-2008-02-06-14-13-18-865-675 & DLAB-2008-01-25-20-42-29-607-062 \\ \hline
+	   IDDataCal & DLAB-2008-02-06-14-23-00-187-767 & DLAB-2008-01-28-08-40-24-220-395 \\ \hline
+	   IntegrationTime & 64 & 32 \\ \hline
+	    P31 & -1 & -1 \\ \hline
+	   P31e & 0 & 0 \\ \hline
+	   PathLength & +INF & +INF \\ \hline
+	   RAWDynamic & 65535 & 65535 \\ \hline
+	   Temperature & +NAN & +NAN \\ \hline
+	   Unit1 & 01-01 Wavelength nm &  01-01 Wavelength nm \\ \hline
+	   Unit2 & 03-06 Intensity mW/(m2nm) & 03 03 Intensity mW/(m2 nm Sr) \\ \hline
+	   Unit3 & f0-06 Error mW/(m2 nm) & f0-03 Error mW/(m2 nm Sr) \\ \hline
+	  Unit4 & f1-00 Status & f1-00 Status \\ \hline
+	\end{tabular}
+\end{table}
+\pagebreak
+
+\subsection{\textit{Appendix-3}. Types of seagrass structural patterns, Ligaria beach, Crete}
+%\appendixname{\textbf{3: \\Types of seagrass structural patterns, Ligaria beach, Crete}}
+
+\begin{figure}[h]
+	\centering
+	\subfloat [Fragment of meadow]{\includegraphics[width=0.3\textwidth]{Fragment_meadow.jpg}}
+	\hspace{1mm}
+	\subfloat [Aggregated seagrass patch]{\includegraphics[width=0.3\textwidth]{aggreg_patch.jpg}}
+	\hspace{1mm}
+	\subfloat [Isolated patch of seagrass]{\includegraphics[width=0.3\textwidth]{isolated_patch.jpg}}
+	\caption{Types of seagrass structural patterns, Ligaria beach, Crete}
+	\label{fig:A.3}
+\end{figure}
+
+\subsection{\textit{Appendix-4}. Sampling design of the depths measurements. Ligaria beach, Crete}
+%\appendixname{\textbf{4: \\Sampling design of the depths measurements. Ligaria beach, Crete}}
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=0.35]{Sampling_design.jpg}
+		\caption{Scheme of the depths measurements; fieldwork on Ligaria beach}\label{fig:A.4}
+	\end{center}	
+\end{figure}
+\pagebreak
+
+\subsection{\textit{Appendix-5}. Results of videographic measurements: seafloor types on Crete island}
+%\appendixname{\textbf{5: \\Results of videographic measurements: seafloor types on Crete island}}
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=0.45]{Fig-3-14.jpg}
+		\caption{Ligaria beach, Crete: seafloor types}\label{fig:A.5}
+	\end{center}
+\end{figure}
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=0.25]{Fig-3-15.jpg}
+		\caption{Various seafloor types; Ligaria beach, Crete}\label{fig:A.6}
+	\end{center}
+\end{figure}
+\pagebreak
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=0.35]{Fig-3-16.jpg}
+		\caption{Measurement underwater equipment}\label{fig:A.7}		
+	\end{center}
+\end{figure}
+\pagebreak
+
+\subsection{\textit{Appendix-6}. Data pre-processing}
+%\appendixname{\textbf{6: \\Data pre-processing}}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{Fig-24.jpg}
+	\caption{Script written on Python, for the interpolation raw data of the Trios-RAMSES measurements}
+	\label{fig:A.8}
+\end{figure}
+\pagebreak
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{Fig-28.jpg}
+	\caption{Fragment of \textit{Bottom.R} file: values of spectral measurements of the
+		seagrasses (various species), sand, silt and artificial spectrum of constant albedo}
+	\label{fig:A.9}
+\end{figure}
+\pagebreak
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.35]{Interpolation.jpg}
+		\caption{Interpolation of the spectral measurements by means of Open Office}
+		\label{fig:A.10}
+	\end{center}
+\end{figure}
+\pagebreak
+
+\subsection{\textit{Appendix-7}. Data processing and statistical evaluation: Results of the measurements of the seafloor optical properties.}
+%\appendixname{\textbf{7:\\ Data processing and statistical evaluation: \\ Results of the measurements of the seafloor optical properties.}}
 
 \begin{figure}[h]
 	\begin{center}
 		\includegraphics[scale=0.20]{App-1.jpg}
 		\caption{Values of spectral reflectances of seagrass P.oceanica (fragment)}
-		\label{fig:A-1}
+		\label{fig:A.11}
 	\end{center}
 \end{figure}
 \begin{figure}[h]
 	\begin{center}
 		\includegraphics[scale=0.20]{GNU-401-420.jpg}
 		\caption{Spectral reflectance of P.oceanica. Measurement series 401-420. \href{http://www.gnuplot.info/}{Gnuplot}}
-		\label{fig:44}
+		\label{fig:A.12}
 	\end{center}
 \end{figure}
 \begin{figure}[h]
@@ -1843,7 +2054,7 @@ Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote
 		\includegraphics[scale=0.20]{GNU-401-420-candles.jpg}
 		\caption{Statistical analysis of the measurement data: spectral reflectance of the P.oceanica. 
 		Visualisation of the interquartile ranging. Example of data set 401-420. Shown midspread of  statistical quartiles Q1 and Q3, min and max values within the range. \href{http://www.gnuplot.info/}{Gnuplot}}
-		\label{fig:45}
+		\label{fig:A.13}
 	\end{center}
 \end{figure}
 \begin{figure}[H]
@@ -1851,7 +2062,7 @@ Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote
 		\includegraphics[scale=0.20]{GNU-enlarged-M-401-420.jpg}
 		\caption{Enlarged fragment of the statistical analysis of the measurement data. Example of data set 401-420. 
 		Visualisation of the interquartile ranging and plotted together with measurement data. \href{http://www.gnuplot.info/}{Gnuplot}}
-		\label{fig:46}
+		\label{fig:A.14}
 	\end{center}
 \end{figure}
 \pagebreak
@@ -1911,7 +2122,7 @@ Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote
 	\includegraphics[scale=0.20]{GNU-Stat-M-401-420.jpg}
 	\caption{Fragment of the statistical analysis of the P.oceanica reflectance. Example of data set 401-420. 
 		Visualisation of the measured data together with styatistical values: interquartile ranging, medians, means. \href{http://www.gnuplot.info/}{Gnuplot}}
-	\label{fig:47}
+	\label{fig:A.15}
 	\end{center}
 \end{figure}
 
@@ -1919,12 +2130,12 @@ Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote
 	\centering
 	\includegraphics[scale=0.25]{GNU-Radiance_Bezier.jpg}
 	\caption{Radiance of the seawater with sediments. Measured in aquarium tank. Bezier Interpolation. \href{http://www.gnuplot.info/}{Gnuplot}}
-	\label{fig:48}
+	\label{fig:A.16}
 \end{figure}
 
 \begin{table}[htbp]
 	\rowcolors{1}{Ivory}{GhostWhite}
-	\caption{Results of the \textit{ANOVA one-way} analysis: results of the \textit{single factor} (depth) testing of the radiance of \textit{P.oceanica} at various depths: 		0.5, 1.5 and 2.5 meters. \href{http://www.spss.com/}{SPSS}}
+	\caption{Results of the \textit{ANOVA one-way} analysis: results of the \textit{single factor} (depth) testing of the radiance of \textit{P.oceanica} at various depths: 0.5, 1.5 and 2.5 meters. \href{http://www.spss.com/}{SPSS}}\label{tab:8}
 	\begin{center}
 	\begin{tabular}{|c|c|c|c|c|c|c|}
 		\hline\hline
@@ -1935,12 +2146,12 @@ Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote
 	\end{tabular}
 	\end{center} 
 	P more than .05, which means that there is a significant difference in radiance of P.oceanica at three different depth (0.5, 1.5 and 2.5). 
-	\label{tab:8}
+	
 \end{table}
 
 \begin{table}[htbp]
 	\rowcolors{1}{Ivory}{GhostWhite}
-	\caption{Summary of the \textit{ANOVA one-way} analysis: results of the \textit{single factor} (depth) testing of the radiance of \textit{P.oceanica} at various depths: 		0.5, 1.5 and 2.5 meters. \href{http://www.spss.com/}{SPSS}}
+	\caption{Summary of the \textit{ANOVA one-way} analysis: results of the \textit{single factor} (depth) testing of the radiance of \textit{P.oceanica} at various depths: 0.5, 1.5 and 2.5 meters. \href{http://www.spss.com/}{SPSS}}\label{tab:A.7}
 	\begin{center}
 	\begin{tabular}{|c|c|c|c|c|}
 		\hline\hline
@@ -1951,13 +2162,13 @@ Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote
 	\end{tabular}
 	\end{center}
 	P$>$0.05, which means that there is a significant difference in radiance of P.oceanica at three different depth (0.5, 1.5 and 2.5). 
- 	\label{tab:9}
+ 	
 \end{table}
 \pagebreak
 
 \rowcolors{1}{GhostWhite}{LightCyan}
 \begin{longtable}{|c|c|c|c|c|c|c|}
-	\caption{Results of the statistical analysis of spectral reflectance of \textbf{P.oceanica}, sets 1-350). Wavelength step: 3 nm. Measured on Agia Pelagia beach, 15th October}\label{tab:10} \\
+	\caption{Results of the statistical analysis of spectral reflectance of \textbf{P.oceanica}, sets 1-350). Wavelength step: 3 nm. Measured on Agia Pelagia beach, 15th October}\label{tab:A.8} \\
 	  \multicolumn{1}{|l|}{\textbf{wl}} &
 	   \multicolumn{1}{l|}{\textbf{mean}} & 
 	   \multicolumn{1}{l|}{\textbf{Q1}} & 
@@ -1967,7 +2178,7 @@ Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote
 	   \multicolumn{1}{l|}{\textbf{median}} \\ \hline
 	\endfirsthead
 
-	\multicolumn{7}{c}{Table 10: Spectral reflectance of \textbf{P.oceanica} \textit{(continued from previous page)}}\\
+	\multicolumn{7}{c}{Table A.8: Spectral reflectance of \textbf{P.oceanica} \textit{(continued from previous page)}}\\
 	\hline \multicolumn{1}{|l|}{\textbf{wl}} & \multicolumn{1}{l|}{\textbf{mean}} & \multicolumn{1}{l|}{\textbf{Q1}} & \multicolumn{1}{l|}{\textbf{min}} & \multicolumn{1}{l|}{\textbf{Q3}} & \multicolumn{1}{l|}{\textbf{max}} & \multicolumn{1}{l|}{\textbf{median}} \\ \hline
 	\endhead
 
@@ -2169,14 +2380,14 @@ Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote
 	\begin{center}
 		\includegraphics[scale=0.25]{GNU-Irr-Splines.jpg}
 		\caption{Irradiance of the seawater, measured in aquarium tank. Smooth Splines interpolation. Visualization in \href{http://www.gnuplot.info/}{Gnuplot}­}
-		\label{fig:48}
+		\label{fig:A.17}
 	\end{center}
 \end{figure}
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.25]{GNU-Irr.jpg}
 	\caption{Irradiance of the seawater, measured in aquarium tank. Smooth Bezier interpolation. Visualization in \href{http://www.gnuplot.info/}{Gnuplot}}
-	\label{fig:49}
+	\label{fig:A.18}
 \end{figure}
 \pagebreak
 \newpage
@@ -2184,14 +2395,14 @@ Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote
 	\begin{center}
 		\includegraphics[scale=0.4]{G-gamma-rad.jpg}
 		\caption{Frequency normality test against gamma distribution: radiance of the seawater, measured in aquarium tank. Visualization in \href{http://gretl.sourceforge.net/}{Gretl}}
-		\label{fig:50}
+		\label{fig:A.19}
 	\end{center}
 \end{figure}
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.4]{G-normal-dist.jpg}
 	\caption{Frequency normality test against normal distribution: radiance of the seawater, measured in aquarium tank. Visualization in \href{http://gretl.sourceforge.net/}{Gretl}­}
-	\label{fig:51}
+	\label{fig:A.20}
 \end{figure}
 
 %%% Gretle start
@@ -2298,7 +2509,7 @@ Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote
 	\centering
 	\includegraphics[scale=0.45]{Autocorr.jpg}
 	\caption{\textit{Autocorrelation analysis} of the measurement set 1-16 of the spectral reflectance of \textbf{P.oceanica} (15.X.). Visualization in \href{http://www.spss.com/}{SPSS}}
-	\label{fig:52}
+	\label{fig:A.21}
 \end{figure}
 \pagebreak
 \newpage
@@ -2334,18 +2545,16 @@ Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote
 	\centering
 	\includegraphics[scale=0.45]{Partial_Corr.jpg}
 	\caption{Partial correlation analysis of the measurement set 1-16 of the spectral reflectance of \textit{P.oceanica} (15.X.). Visualization in \href{http://www.spss.com/}{SPSS}}
-	\label{fig:53}
+	\label{fig:A.22}
 \end{figure}
 \pagebreak
 \newpage
-
-\appendixname{\textbf{2: \\Graphs of the measurements of the spectral reflectance of P.oceanica}}
 
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=0.25]{GNU-09.jpg}
 		\caption{Spectral reflectance of the seawater with sediments. Bezier interpolation. Mean value is shown by the vertical impulses linestyle. \href{http://www.gnuplot.info/}{Gnuplot}­}
-		\label{fig:54}
+		\label{fig:A.23}
 	\end{center}
 \end{figure}
 
@@ -2383,7 +2592,7 @@ Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote
 	\begin{center}
 		\includegraphics[scale=0.22]{GNU-10.jpg}
 		\caption{Spectral reflectance of the seawater without sediments. Interpolation graph. \href{http://www.gnuplot.info/}{Gnuplot} display­}
-		\label{fig:55}
+		\label{fig:A.24}
 	\end{center}
 \end{figure}
 
@@ -2429,7 +2638,6 @@ Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote
 	
 \end{table}
 %%% Gretle end
-
 \pagebreak
 
 \begin{table}[htbp]
@@ -2455,7 +2663,7 @@ Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote
 	\begin{center}
 		\includegraphics[scale=0.25]{GNU-11.jpg}
 		\caption{Spectral reflectance of P.oceanica. Measurement series 25-50. \\ \href{http://www.gnuplot.info/}{Gnuplot} display­}
-		\label{fig:56}
+		\label{fig:A.25}
 	\end{center}
 \end{figure}
 \pagebreak
@@ -2464,7 +2672,7 @@ Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote
 	\begin{center}
 		\includegraphics[scale=0.25]{GNU-12.jpg}
 		\caption{Remote sensing reflectance of P.oceanica. Series 1-25. \\Shown midspread of the statistical quartiles Q1 and Q3 (vertical dashes) and mean value within the range.  \href{http://www.gnuplot.info/}{Gnuplot}­}
-		\label{fig:57}
+		\label{fig:A.26}
 	\end{center}
 \end{figure}
 
@@ -2512,7 +2720,7 @@ Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote
 	\begin{center}
 		\includegraphics[scale=0.4]{GNU-14.jpg}
 		\caption{Multiplot of spectral reflectance of P.oceanica. Series 126-150. Shown midspread of the statistical quartiles Q1 and Q3 (vertical dashes) and mean value within the range (red bold dots). \href{http://www.gnuplot.info/}{Gnuplot} visualization­}
-		\label{fig:58}
+		\label{fig:A.27}
 	\end{center}
 \end{figure}
 
@@ -2710,7 +2918,7 @@ Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote
 	\begin{center}
 		\includegraphics[scale=0.38]{GNU-15.jpg}
 		\caption{Multiplot of spectral reflectance of P.oceanica. Series 151-200. Shown midspread of the statistical quartiles Q1 and Q3 (vertical dashes) and mean value within the range (red bold dots). \href{http://www.gnuplot.info/}{Gnuplot} visualization­}
-		\label{fig:59}
+		\label{fig:A.28}
 	\end{center}
 \end{figure}
 \pagebreak
@@ -2791,7 +2999,7 @@ Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote
 	\begin{center}
 	\includegraphics[scale=0.4]{G-autocorr-sand51-75.jpg}
 	\caption{Graph of the autocorrelation analysis of the measurements of carbonate sand. Series 51-75, variable 27. \href{http://gretl.sourceforge.net/}{Gretl} visualization­}
-	\label{fig:60}
+	\label{fig:A.29}
 	\end{center}
 \end{figure}
 
@@ -2834,7 +3042,7 @@ Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote
 	\begin{center}
 		\includegraphics[scale=0.4]{G-QQplot-sand.jpg}
 		\caption{Normal Q-Q plot: estimated versus observed values of the measurement of carbonate sand, variable 27. Series 51-75. \href{http://gretl.sourceforge.net/}{Gretl} modelling visualization­}
-	\label{fig:61}
+	\label{fig:A.30}
 	\end{center}
 \end{figure}
 
@@ -2913,9 +3121,8 @@ Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=0.25]{G-period-sand30.jpg}
-		\caption{Plot illustrating periodogramm for v30 from measurements of carbonate sand, series 51-75. \href{http://gretl.sourceforge.net/}{Gretl} modelling visualization­}
-	\end{center}
-	\label{fig:62}
+		\caption{Plot illustrating periodogramm for v30 from measurements of carbonate sand, series 51-75. \href{http://gretl.sourceforge.net/}{Gretl} modelling visualization­}\label{fig:A.31}
+	\end{center}	
 \end{figure}
 \pagebreak
 
@@ -2925,7 +3132,7 @@ Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote
 		\includegraphics[scale=0.32]{G-polynom-trend-wo.jpg}
 		\caption{Plot illustrating polynomial trend for spectral reflectance of seawater without sediments (Ligaria Beach), variable V15. \href{http://gretl.sourceforge.net/}{Gretl} modelling visualization­}
 	\end{center}
-	\label{fig:63}
+	\label{fig:A.32}
 \end{figure}
 
 \begin{figure}[H]
@@ -2933,21 +3140,21 @@ Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote
 		\includegraphics[scale=0.32]{G-polynom-trend-with.jpg}
 		\caption{Plot illustrating polynomial trend for spectral reflectance of seawater with sediments (Ligaria Beach), variable V15. \href{http://gretl.sourceforge.net/}{Gretl} modelling visualization­}
 	\end{center}
-	\label{fig:64}
+	\label{fig:A.33}
 \end{figure}
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=0.32]{G-exp-mov-aver.jpg}
 		\caption{Exponential moving average of spectral reflectance of seawater with sediments (Ligaria Beach), variable V15. \href{http://gretl.sourceforge.net/}{Gretl} modelling visualization­}
 	\end{center}
-	\label{fig:65}
+	\label{fig:A.34}
 \end{figure}
 \pagebreak
 %%%end Plot Gretl
 
 \rowcolors{1}{OldLace}{FloralWhite}
 \begin{longtable}{|r|r|r|r|r|r|r|}
-	\caption{Results of the statistical analysis of spectral reflectance of \textbf{carbonate sand}, with average values (for sets 1-3). Wavelength step: 3 nm. Measured on Agia Pelagia beach, 14th October}\label{tab:31} \\
+	\caption{Results of the statistical analysis of spectral reflectance of \textbf{carbonate sand}, with average values (for sets 1-3). Wavelength step: 3 nm. Measured on Agia Pelagia beach, 14th October}\label{tab:A.29} \\
  		 \multicolumn{1}{|l|}{\textbf{wl}} &
   		 \multicolumn{1}{l|}{\textbf{min}} & 
   		 \multicolumn{1}{l|}{\textbf{Q1}} & 
@@ -2957,7 +3164,7 @@ Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote
  		  \multicolumn{1}{c|}{\textbf{median}} \\ \hline
 	\endfirsthead
 
-	\multicolumn{7}{c}{Table 5: Spectral reflectance of \textbf{carbonate sand} \textit{(continued from previous page)}}\\
+	\multicolumn{7}{c}{Table A.29: Spectral reflectance of \textbf{carbonate sand} \textit{(continued from previous page)}}\\
 	\hline \multicolumn{1}{|l|}{\textbf{wl}} & \multicolumn{1}{l|}{\textbf{min}} & \multicolumn{1}{l|}{\textbf{Q1}} & \multicolumn{1}{l|}{\textbf{mean}} & \multicolumn{1}{l|}				{\textbf{Q3}} & \multicolumn{1}{l|}{\textbf{max}} & \multicolumn{1}{l|}{\textbf{median}} \\ \hline
 	\endhead
 
@@ -3072,213 +3279,31 @@ Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote
 	\centering
 	\includegraphics[scale=0.35]{Fig-26.jpg}
 	\caption{Spectral reflectance of carbonate sand on A.Pelagia beach. Results of single measurement set made by spectroradiometer Trios-RAMSES. \href{http://www.gnuplot.info/}{Gnuplot}}
-	\label{fig:66}
+	\label{fig:A.35}
 \end{figure}
 \pagebreak
 \newpage
 
-\begin{table}[H]
-	\caption{Attributes of the Trios-RAMSES hyperspectral radiometer during measurement sets. Selected examples (14. X, set 1 and 15.X, set 4).}
-	\centering
-	\rowcolors{1}{Ivory}{LightGoldenrodYellow}
-	  \begin{tabular}{| p{3cm} | p{3cm} | p{5cm} |}
-		\hline
-		    \textbf{Parameters} & \textbf{15 October, set 1} & \textbf{14 October, set 4} \\ \hline \hline
-		     Version &1 & 1 \\ \hline
-		     IDData & 78B1-2009-10-15-08-56-22-280-272 & 78B1-2009-10-14-15-15-59-342-726 \\ \hline
-		     IDDevice & SAM-820C & SAM-8204\\ \hline
-		     IDDataType & SPECTRUM & SPECTRUM \\ \hline
-		     IDDataTypeSub1 & CALIBRATED & CALIBRATED \\ \hline
-		     DateTime & 2009-10-15 08:56:22 & 10/14/2009, 15:15:59 \\ \hline
-		     PositionLatitude & 35.2451=35°14'29.4354” & 35.24752 = 35° 14' 51.072" \\ \hline
-		     PositionLongitude & 25.01269=25°0'45.6834" & 25.0098 = 25°0'35.2794" \\ \hline
-		     Comment & P.oceanica & P.oceanica \\ \hline
-		     CommentSub1 & 0.5m depth & 2.5m depth \\ \hline
-		     CommentSub2 & diffuse & diffuse \\ \hline
-		     CommentSub3 & Agia Pelagia & Agia Pelagia site 2, close to rocks \\ \hline
-		     IDMethodType & SAM Control & SAM Control \\ \hline
-		    MethodName & SAM-820C & SAM-8204 \\ \hline
-		    Mission & No Mission & No Mission \\ \hline
-		    MissionSub & 1 & 1 \\ \hline
-		    RecordType & 0 & 0 \\ \hline
-		    CalFactor & 1 & 1 \\ \hline
-		   IDDataBack & DLAB-2008-02-06-14-13-18-865-675 & DLAB-2008-01-25-20-42-29-607-062 \\ \hline
-		   IDDataCal & DLAB-2008-02-06-14-23-00-187-767 & DLAB-2008-01-28-08-40-24-220-395 \\ \hline
-		   IntegrationTime & 512 & 1024 \\ \hline
-		    P31 & -1 & -1 \\ \hline
-		   P31e & 0 & 0 \\ \hline
-		   PathLength & +INF & +INF \\ \hline
-		   RAWDynamic & 65535 & 65535 \\ \hline
-		   Temperature & +NAN & +NAN \\ \hline
-		   Unit1 & 0101 Wavelength nm &  1 1 Wavelength nm \\ \hline
-		   Unit2 & 03-06 Intensity mW/(m2nm) & 03 03 Intensity mW/(m2 nm Sr) \\ \hline
-		   Unit3 & f0-06 Error mW/(m2 nm) & 3-3 Error mW/(m2 nm Sr) \\ \hline
-		  Unit4 & f1-00 Status & f1-00 Status \\ \hline
-	  \end{tabular}
-	\label{tab:32}
-\end{table}
-\pagebreak
+\subsection{\textit{Appendix-8}. Satellite and aerial images covering research area of Crete island: selected examples}
+%\appendixname{\textbf{8:\\ Satellite and aerial images covering research area of Crete island: selected examples}}
 
-\appendixname{\textbf{3:\\ Google Earth aerial images covering research area of Crete island}}
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=0.20]{Locations_Meas.jpg}
-		\caption{Locations of selected measurements, visualization on Google Earth­}
-	\end{center}
-	\label{fig:67}
+		\caption{Locations of selected measurements, visualization on Google Earth­}\label{fig:A.36}
+	\end{center}	
 \end{figure}
 
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=0.25]{App-8.jpg}
-		\caption{Random mosaic of selected aerial Google Earth images}
-	\end{center}
-	\label{fig:68}	
+		\caption{Random mosaic of selected aerial Google Earth images}\label{fig:A.37}	
+	\end{center}	
 \end{figure}
 \pagebreak
-
-\begin{table}[H]
-	\caption{Attributes of the Trios-RAMSES hyperspectral radiometer during measurement sets. Selected examples (15. X, set 1 and 14.X, set 4).}
-	\centering
-	\rowcolors{1}{Lavender}{GhostWhite}
-	\begin{tabular}{| p{3cm} | p{3cm} | p{5cm} |}
-	\hline
-	    \textbf{Parameters} & \textbf{14 October, set 1} & \textbf{15 October, set 4} \\ \hline \hline
-	     Version &1 & 1 \\ \hline
-	     IDData & 78B1-2009-10-14-15-32-02-078-323 & 78B1-2009-10-15-10-36-02-217-136 \\ \hline
-	     IDDevice & SAM-820C & SAM-8204\\ \hline
-	     IDDataType & SPECTRUM & SPECTRUM \\ \hline
-	     IDDataTypeSub1 & CALIBRATED & CALIBRATED \\ \hline
-	      DateTime & 2009-10-14 15:32:02 & 2009-10-15 10:36:02 \\ \hline
-	     PositionLatitude & 35.24752= 35°14'51.072" & 35.245071=35°14'42.2556" \\ \hline
-	     PositionLongitude & 25.0098= 25°0'35.2794" & 25.012661=25°0'45.5796" \\ \hline
-	     Comment & P.oceanica & P.oceanica \\ \hline
-	     CommentSub1 & 3.5m depth & 1.5m depth \\ \hline
-	     CommentSub2 & diffuse & diffuse \\ \hline
-	     CommentSub3 & Agia Pelagia & Agia Pelagia site 1, close to rocks \\ \hline
-	     IDMethodType & SAM Control & SAM Control \\ \hline
-	    MethodName & SAM-820C & SAM-8204 \\ \hline
-	    Mission & No Mission & No Mission \\ \hline
-	    MissionSub & 1 & 1 \\ \hline
-	    RecordType & 0 & 0 \\ \hline
-	    CalFactor & 1 & 1 \\ \hline
-	   IDDataBack & DLAB-2008-02-06-14-13-18-865-675 & DLAB-2008-01-25-20-42-29-607-062 \\ \hline
-	   IDDataCal & DLAB-2008-02-06-14-23-00-187-767 & DLAB-2008-01-28-08-40-24-220-395 \\ \hline
-	   IntegrationTime & 64 & 32 \\ \hline
-	    P31 & -1 & -1 \\ \hline
-	   P31e & 0 & 0 \\ \hline
-	   PathLength & +INF & +INF \\ \hline
-	   RAWDynamic & 65535 & 65535 \\ \hline
-	   Temperature & +NAN & +NAN \\ \hline
-	   Unit1 & 01-01 Wavelength nm &  01-01 Wavelength nm \\ \hline
-	   Unit2 & 03-06 Intensity mW/(m2nm) & 03 03 Intensity mW/(m2 nm Sr) \\ \hline
-	   Unit3 & f0-06 Error mW/(m2 nm) & f0-03 Error mW/(m2 nm Sr) \\ \hline
-	  Unit4 & f1-00 Status & f1-00 Status \\ \hline
-	\end{tabular}
-	\label{tab:33}
-\end{table}
-\pagebreak
-
-\appendixname{\textbf{4: \\Capturing aerial imagery from the Google Earth: grabbing process}}
-Script command of FWTools2.4.7 enabling to reduce the size of the aerial images, from .tif to .ecw
-format.
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=0.4]{Script_Gdal.jpg}
-		\caption{Script command of FWTools}
-	\end{center}
-	\label{fig:69}
-\end{figure}
-
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.5]{Fig-24.jpg}
-	\caption{Script written on Python, for the interpolation raw data of the Trios-RAMSES measurements}
-	\label{fig:24}
-\end{figure}
-
-\pagebreak
-\newpage
-
-\appendixname{\textbf{5: \\Types of seagrass structural patterns, Ligaria beach, Crete}}
-\begin{figure}[h]
-	\centering
-	\subfloat [Fragment of meadow]{\includegraphics[width=0.3\textwidth]{Fragment_meadow.jpg}}
-	\hspace{1mm}
-	\subfloat [Aggregated seagrass patch]{\includegraphics[width=0.3\textwidth]{aggreg_patch.jpg}}
-	\hspace{1mm}
-	\subfloat [Isolated patch of seagrass]{\includegraphics[width=0.3\textwidth]{isolated_patch.jpg}}
-	\caption{Types of seagrass structural patterns, Ligaria beach, Crete}
-	\label{fig:70}
-\end{figure}
-
-\appendixname{\textbf{6: \\Sampling design of the depths measurements. Ligaria beach, Crete}}
-\begin{figure}[h]
-	\begin{center}
-		\includegraphics[scale=0.35]{Sampling_design.jpg}
-		\caption{Scheme of the depths measurements; fieldwork on Ligaria beach}
-	\end{center}
-	\label{fig:71}
-\end{figure}
-\pagebreak
-
-\appendixname{\textbf{7: \\Results of videographic measurements: seafloor types on Crete island}}
-\begin{figure}[h]
-	\begin{center}
-		\includegraphics[scale=0.45]{Fig-3-14.jpg}
-		\caption{Ligaria beach, Crete: seafloor types}
-	\end{center}
-	\label{fig:72}
-\end{figure}
-
-\appendixname{\textbf{8: \\Various seafloor types on Crete island}}
-\begin{figure}[h]
-	\begin{center}
-		\includegraphics[scale=0.25]{Fig-3-15.jpg}
-		\caption{Various seafloor types; Ligaria beach, Crete}
-	\end{center}
-	\label{fig:73}
-\end{figure}
-\pagebreak
-
-\begin{figure}[h]
-	\begin{center}
-		\includegraphics[scale=0.35]{Fig-3-16.jpg}
-		\caption{Measurement underwater equipment}
-		\label{fig:74}
-	\end{center}
-\end{figure}
-\pagebreak
-
-\appendixname{\textbf{9: \\Data pre-processing: interpolation of the results of spectral measurements}}
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=0.30]{Interpolation.jpg}
-		\caption{Interpolation of the spectral measurements}
-		\label{fig:75}
-	\end{center}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.4]{Fig-28.jpg}
-	\caption{Fragment of \textit{Bottom.R} file: values of spectral measurements of the
-		seagrasses (various species), sand, silt and artificial spectrum of constant albedo}
-	\label{fig:25}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.6]{Fig-22.jpg}
-	\caption{Capturing aerial imagery from the Google Earth: grabbing process}
-	\label{fig:22}
-\end{figure}
-
 
 \begin{table}
-	\caption{Available broadband satellite images covering the research area of Crete island}
+	\caption{Available broadband Landsat satellite images covering the research area of Crete island}\label{tab:34}
 	\centering
 	\rowcolors{1}{Ivory}{GhostWhite}
 	 \begin{tabular}{| p{1cm} | p{3cm} | p{2cm} | p{5cm} |}
@@ -3296,8 +3321,7 @@ format.
 		    10 & Landsat TM / Earth Sat & 1987/Jun/10 & 012-807LandsatWRS2p183r35-5t-19870610-TM-EarthSat \\ \hline
 		    11 & Landsat ETM+ & 2000/Jun/30 & LandsatWRS2p182r036-7dx-20000630-ETM-GLS2000 \\ \hline
 		    12 & Landsat ETM+ & 2005/Apr/09 & LandsatWRS2p182r036L71182036-036-20050409-ETM-GLS2005 \\ \hline
-	  \end{tabular}
-	\label{tab:34}
+	  \end{tabular}	
 \end{table}
 
 \begin{figure}
@@ -3322,14 +3346,14 @@ format.
 	\hspace{1mm}
 	\subfloat [Mosaic-Landsat-ETM-1999-08-08]{\includegraphics[width=0.3\textwidth]{Landsat10.jpg}}
 	\caption{Landsat imagery, Crete island. Previews}
-	\label{fig:76}
+	\label{fig:A.38}
 \end{figure}
 \end{appendices}
 \pagebreak
 \clearpage
 
 \begin{thebibliography}{999}
-\addcontentsline{toc}{chapter}{Bibliography}
+\addcontentsline{toc}{chapter}{\textbf{Bibliography}}
 \bibliographystyle{plainnat}
 \pagenumbering{roman}
 \markright{Bibliography}

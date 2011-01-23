@@ -48,19 +48,20 @@
 \maketitle
 \pagebreak
 
-\textbf{Course Title:} \hfill{Geo-Information Science and Earth Observation for Environmental Modelling and Management}\\
+\textbf{Course Title:} \\
+{Geo-Information Science and Earth Observation for Environmental Modelling and Management}\\
 
 
 \textbf{Level} \hfill{Master of Science (MSc)}\\
 \textbf{Course Duration:} \hfill{September 2009 – March 2011}\\
 \textbf{Consortium partners:} \\
 
-
-University of Southampton (UK)\\
-Lund University (Sweden)\\
-University of Warsaw (Poland)\\
-University of Twente, Faculty ITC (The Netherlands)
-
+\begin{itemize}
+	\item[*] University of Southampton (UK)\\
+	\item[*] Lund University (Sweden)\\
+	\item[*] University of Warsaw (Poland)\\
+	\item[*] University of Twente, Faculty ITC (The Netherlands)
+\end{itemize}
 \pagebreak
 
 \begin{center}
@@ -68,64 +69,80 @@ University of Twente, Faculty ITC (The Netherlands)
  {by Lemenkova Polina}
 \end{center}
 
-Thesis submitted to the University of Twente, faculty ITC, in partial fulfilment of the requirements
+Thesis submitted to the University of Twente, Faculty ITC, in partial fulfilment of the requirements
 for the degree of Master of Science in Geo-information Science and Earth Observation for
 Environmental Modelling and Management.\\
 
-Thesis Assessment Board:\\
+\textbf{Thesis Assessment Board}:
+\begin{itemize}
+	\item Name Examiner 1 (Chair)
+	\item Name Examiner 2
+	\item External Examiner
+\end{itemize}
 
-Name Examiner 1 (Chair)
-Name Examiner 2
-External Examiner
-Member
-Supervisors: Venus V. (Department of Natural Resource, ITC)
-Toxopeus A.G. (Department of Natural Resource, ITC)\\
+\vspace{2em}
+
+\textbf{Member Supervisors}: 
+\begin{itemize}
+	\item[*] Venus V. (Department of Natural Resource, ITC)
+	\item[*] Toxopeus A.G. (Department of Natural Resource, ITC)
+\end{itemize}
 
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[height=2cm,width=8cm]{ITC-logo.jpg}
 	\end{center}
 \end{figure}
-
-\pagebreak
-
-\begin{abstract}
-\end{abstract}
-
-\pagebreak
-\textbf{Disclaimer}\\
-
-This document describes work undertaken as part of a programme of study at the University of
-Twente, Faculty ITC. All views and opinions expressed therein remain the sole responsibility of
-the author, and do not necessarily represent those of the university.\\
-
 \pagebreak
 
 \section*{}
-\markright{Table of Content}
-\addcontentsline{toc}{section}{Table of Content}
-\tableofcontents 
+	\markright{Table of Content}
+	\addcontentsline{toc}{section}{Table of Content}
+	\tableofcontents 
+\pagebreak
 
-\vspace{2em}
+\section*{Acknowledgements}
+	\markright{Acknowledgements}
+	\addcontentsline{toc}{section}{Acknowledgements}
+\pagebreak
 
-\textbf{Software and utilities used in the current work}:\\
-\begin{itemize}
-	\item \href{http://www.esri.com/software/arcgis/index.html}{ArcGIS 10.0}: mapping, data integration and spatial analysis
-	\item \href{http://www.erdas.com/products/ERDASIMAGINE/ERDASIMAGINE/Details.aspx}{Erdas Imagine}: imagery processing and classification
-	\item \href{http://www.filewatcher.com/b/ftp/ftp.dfd.dlr.de/pub/WASI.0.0.html}{WASI Water Color Simulator}, for modelling optical water properties under changing environment
-	\item \href{http://welcome.hp.com/country/us/en/prodserv/handheld.html}{iPAQ} and GPS for data capture during the fieldwork
-	\item \href{http://www.bibtex.org/de/}{BibTeX}, for management of bibliography and reference database
-	\item \href{http://www.latex-project.org/}{\LaTeX}, for document typesetting, formatting and performing pdf output
-	\item \href{http://www.python.org/}{Python language}, for writing auxiliary scripts (e.g. raw data interpolation)
-	\item \href{http://www.gnuplot.info/}{Gnuplot} for plotting graphs
-	\item \href{http://www.openoffice.org/}{Open Office} : document typesetting, data preprocessing and preliminary statistical evalution
-	\item \href{http://calc2latex.sourceforge.net/}{Calc2LaTeX} : converting spreadsheets into \LaTeX environment
-	\item \href{http://www.spss.com/}{SPSS (PASW Statistics 18)} : statistical data edition and analysis 
-	\item \href{http://gretl.sourceforge.net/}{Gretl: Gnu Regression, Econometrics and Time-series Library} for statistic analysis
-	\item \href{http://staruml.sourceforge.net/en/}{StarUML} , \href{http://live.gnome.org/Dia}{Dia} , \href{http://argouml.tigris.org/}{ArgoUML}: diagramming flowcharts for work algorithms
-	\item \href{http://inkscape.org/}{Inkscape}: drawing
-	\item \href{http://www.notepad-plus-plus.org/}{Notepad++}: auxiliary text editing and raw data formatting
-\end{itemize}
+\section*{Disclaimer}
+	\markright{Disclaimer}
+	\addcontentsline{toc}{section}{Disclaimer}
+		This document describes work undertaken as part of a programme of study at the University of
+		Twente, Faculty ITC. All views and opinions expressed therein remain the sole responsibility of
+		the author, and do not necessarily represent those of the university.\\
+\pagebreak
+
+\section*{Abstract}
+	\markright{Abstract}
+	\addcontentsline{toc}{section}{Abstract}
+\pagebreak
+
+\section*{List of Tools}\label{sec:0}
+	\markright{List of Tools}
+	\addcontentsline{toc}{section}{List of Tools}
+
+	\vspace{2em}
+
+	\textbf{Software and utilities used in the current work}:\\
+	\begin{itemize}
+		\item \href{http://www.esri.com/software/arcgis/index.html}{ArcGIS 10.0}: mapping, data integration and spatial analysis
+		\item \href{http://www.erdas.com/products/ERDASIMAGINE/ERDASIMAGINE/Details.aspx}{Erdas Imagine}: imagery processing and 					classification
+		\item \href{http://www.filewatcher.com/b/ftp/ftp.dfd.dlr.de/pub/WASI.0.0.html}{WASI Water Color Simulator}, for modelling optical water 					properties under changing environment
+		\item \href{http://welcome.hp.com/country/us/en/prodserv/handheld.html}{iPAQ} and GPS for data capture during the fieldwork
+		\item \href{http://www.bibtex.org/de/}{BibTeX}, for management of bibliography and reference database
+		\item \href{http://www.latex-project.org/}{\LaTeX}, for document typesetting, formatting and performing pdf output
+		\item \href{http://www.python.org/}{Python language}, for writing auxiliary scripts (e.g. raw data interpolation)
+		\item \href{http://www.gnuplot.info/}{Gnuplot} for plotting graphs
+		\item \href{http://www.openoffice.org/}{Open Office} : document typesetting, data preprocessing and preliminary statistical evalution
+		\item \href{http://calc2latex.sourceforge.net/}{Calc2LaTeX} : converting spreadsheets into \LaTeX environment
+		\item \href{http://www.spss.com/}{SPSS (PASW Statistics 18)} : statistical data edition and analysis 
+		\item \href{http://gretl.sourceforge.net/}{Gretl: Gnu Regression, Econometrics and Time-series Library} for statistic analysis
+		\item \href{http://staruml.sourceforge.net/en/}{StarUML} , \href{http://live.gnome.org/Dia}{Dia} , \href{http://argouml.tigris.org/}						{ArgoUML}: diagramming flowcharts for work algorithms
+		\item \href{http://inkscape.org/}{Inkscape}: drawing
+		\item \href{http://www.notepad-plus-plus.org/}{Notepad++}: auxiliary text editing and raw data formatting
+	\end{itemize}
 \pagebreak
 
 \section*{}
@@ -520,8 +537,8 @@ techniques of the seagrass monitoring, i.e. remote sensing imagery classificatio
 images, GIS-based spatial analysis and ground in-situ surveys.
 The current study is based on the application of the remote sensing data, broadband satellite imagery,
 aerial images and the results of the underwater videographic measurements towards seagrass
-mapping. Image classification is based on the principle of the differentiation between the spectral
-signatures of various seafloor cover types. The spectrum of light coming up from the ocean surface in
+mapping  (Fig.\ref{fig:1.11}). Image classification is based on the principle of the differentiation between the spectral
+signatures of various seafloor cover types  (Fig.\ref{fig:1.10}). The spectrum of light coming up from the ocean surface in
 shallow waters keeps information on the optical properties of the seawater components and benthic
 substrate which can be read from their spectral signatures \cite{Werdell03}\label{Werdell03}. \\
 
@@ -529,7 +546,7 @@ substrate which can be read from their spectral signatures \cite{Werdell03}\labe
 	\centering
 	\includegraphics[scale=0.48]{UML_ClassDiagram.jpg}
 	\caption{General methodological approach for the analysis of spectral signatures. \href{http://argouml.tigris.org/}{ArgoUML}}
-	\label{fig:10}
+	\label{fig:1.10}
 \end{figure}
 
 Spectral reflectances, distinct for each seafloor cover type, enable their discrimination on the image. The preprocessing
@@ -555,7 +572,7 @@ Supervised, Maximum Likelihood).
 	\centering
 	\includegraphics[scale=0.6]{UML_GIS.png}
 	\caption{General methodological research approach. \href{http://inkscape.org/}{Inkscape}}
-	\label{fig:11}
+	\label{fig:1.11}
 \end{figure}
 
 \pagebreak
@@ -581,12 +598,11 @@ growing on the seafloor.
 Several global seagrass surveys organise and provide regular monitoring of the segrass distribution,
 health and species sustainability, amongst which the most world-known are, perhaps, the following
 ones: \href{http://www.seagrassnet.org/}{Global Seagrass Monitoring project}, \href{http://www.seagrasswatch.org/}{Seagrasswatch}, 
-located in Australia, \href{http://mediterranean.seagrassonline.org/}{the Mediterranean association Seagrass-2000},
-\href{http://www.imedea.uib.es/index.php}{the Mediterranean Institute for Advanced Studies},
-\href{http://www2.fiu.edu/~seagrass/}{Seagrass Ecosystems Research Laboratory in South Florida},
-\href{http://www.flseagrass.org/}{Florida Seagrass organisation}, \href{http://www.seagrasses.org/}{the Seagrasses.org} and the 
-\href{http://wsa.seagrassonline.org/}{World Seagrass Association}.
- These organizations aim at global seagrass monitoring, providing with
+located in Australia, two European-located institutions - \href{http://mediterranean.seagrassonline.org/}{the Mediterranean association Seagrass-2000} and \href{http://www.imedea.uib.es/index.php}{the Mediterranean Institute for Advanced Studies}, US American 
+\href{http://www2.fiu.edu/~seagrass/}{Seagrass Ecosystems Research Laboratory in South Florida} and
+\href{http://www.flseagrass.org/}{Florida Seagrass organisation}, the \href{http://wsa.seagrassonline.org/}{World Seagrass Association} and  
+the \href{http://www.seagrasses.org/}{Seagrasses.org}.
+ These organizations aim at the global seagrass monitoring, providing with
 research results and reporting guidelines and manuals with standartized methods and
 recommendations, specific for the seagrass research and monitoring. There are also university marine
 centres and research institutes conducting seagrass monitoring and as a particular part of their
@@ -641,7 +657,7 @@ dependent on wavelengths, i.e. it is greater in blue wavelengths (400 nm) than i
 	\subfloat [RAMSES-ACC-UV - Hyperspectral UVA/UVB Irradiance Sensor: 280-500 nm]{\label{fig:1-1a}\includegraphics[width=0.4\textwidth]{Fig-2-1.jpg}}
 	\subfloat [RAMSES-ARC - Hyperspectral UV-VIS Radiance Sensor: 320-950 nm.]{\label{fig:1-1b}\includegraphics[width=0.4\textwidth]{Fig-2-2.jpg}}
 	\caption{RAMSES Hyperspectral Sensors. Source: \href{http://www.trios.de}{Trios}}
-	\label{fig:12}
+	\label{fig:2.1}
 \end{figure}
 
 The optical properties of the sea water vary with different environmental conditions and reflect
@@ -674,7 +690,7 @@ optical sensors, GER-Series Field portable spectroradiometers from
 (Trios-RAMSES Hyperspectral UVA/UVB Irradiance Sensor and RAMSES-ARC Hyperspectral UV-
 VIS Radiance Sensor) are small-sized, low power-consumpting, flexible for fieldwork yet with high
 level of precision, specially calibrated for air and for water application as well as colour
-measurements  (Fig.\ref{fig:10}). These products have been used for the radiance and irradiance
+measurements  (Fig.\ref{fig:2.1}). These products have been used for the radiance and irradiance
 measurements in Agia Pelagia bay, Crete island, 2009.
 
 \subsection[Application of remote sensing data]{Application of remote sensing data towards seagrass mapping}
@@ -747,14 +763,14 @@ capturing is unavailable.
 	\includegraphics[scale=0.25]{Fig-12.jpg}
 	\caption{Difference between broaddand multispectral and hyperspectral resolution of
 		spectral signatures. Source: \cite{Clark99}\label{Clark99}}
-	\label{fig:14}
+	\label{fig:2.3}
 \end{wrapfigure}
 
 Seagrass meadows may reach spatial scales from several up to hundreds of metres, therefore they are
 susceptible by the means of satellite imagery from remote sensors, both with moderate resolution
 (e.g., \href{http://landsat.gsfc.nasa.gov/}{Landsat MSS, Landsat TM, Landsat ETM+}, \href{http://envisat.esa.int/instruments/meris/}{MERIS}, \href{http://asterweb.jpl.nasa.gov/}{ASTER}, \href{http://modis.gsfc.nasa.gov/}{MODIS}) and high resolution as
 well (e.g., \href{http://www.satimagingcorp.com/gallery-ikonos.html}{IKONOS}, \href{http://www.digitalglobe.com/index.php/85/QuickBird}{Quickbird}, \href{http://www.spotimage.fr/}{SPOT}, \href{http://www.itres.com/products/imagers/casi550}{CASI}). The possibility of their application towards seagrass mapping
-vary and is limited by the technical characteristics (Table \ref{tab:1}) and resolution of these sensors  (Fig.\ref{fig:12}). In the next subparagraphs
+vary and is limited by the technical characteristics (Table \ref{tab:1}) and resolution of these sensors  (Fig.\ref{fig:2.3}). In the next subparagraphs
 we briefly discuss the limitations and research experience of the using of various imagery
 for the seagrass mapping.
 
@@ -786,22 +802,22 @@ and discrimination of the seafloor types using their spectral characteristics in
 Perhaps, the most known imagery, widely used in the remote sensing mapping, is received from the
 group of Landsat sensors, known for its historical, pioneeer role in the satellite industry.
 Being the longest running satellite system, lunched in 1972, Landsat is the only source of archival
-data going back to 1984 at a sufficient spatial resolution \cite{Dekker05}\label{Dekker05}, which makes its data
+data going back to 1984 at a sufficient spatial resolution \cite{Dekker05b}\label{Dekker05b}, which makes its data
 desirable for historial mapping or environmental analysis of change detection of the seagrass
 landscapes.
 The Landsat TM and Landsat ETM+ data, with the most recent from sensor Landsat 7, an advanced
 and multispectral scanning, launched in 1999, proved to be feasibile and useful for the mapping of
 submerged vegetation, such as seagrasses or coral reefs. The successful applications of the imagery
-Landsat TM towards the seagrass mapping, were reported in numerous research works \cite{Palandro03,Gullstroom06,Wabnitz08,Bierwirth93,Ferguson97,Rasib97}\label{Palandro03} \label{Gullstroom06} \label{Wabnitz08} \label{Bierwirth93} \label{Ferguson97} \label{Rasib97}. The Landsat data are particularly suitable for the
+Landsat TM towards the seagrass mapping, were reported in numerous research works \cite{Palandro03,Gullstroom06,Wabnitz08,Bierwirth93,Ferguson97,Rasib97}\label{Palandro03}\label{Gullstroom06}\label{Wabnitz08}\label{Bierwirth93}\label{Ferguson97}\label{Rasib97}.\\ The Landsat data are particularly suitable for the
 case of change detection of seagrass landscapes at a decadal scale, because being the main sensor
-onboard the Landsat satellites, Landsat Thematic Mapper (TM) provides the longest time series
+onboard the Landsat satellites, the Thematic Mapper (TM) provides the longest time series
 available for change detection analysis over submerged vegetation \cite{Palandro03}\label{Palandro03}.
 
 \begin{wrapfigure}{r}{0.5\textwidth}
 	\centering
 	\includegraphics[scale=0.35]{Fig-13.jpg}
  	\caption{Band coverage of ASTER and Landsat channels on the e/m spectrum. Source:\cite{Kalinowski04}\label{Kalinowski04}}
-	\label{fig:15}
+	\label{fig:2.4}
 \end{wrapfigure}
 
 Another well-known multispectral sensor, SPOT provides multispectral imagery with a spatial
@@ -828,12 +844,12 @@ Landsat TM images with their 30*30m resolution.
 	\centering
 	\includegraphics[scale=0.30]{Fig-14.jpg}
 	\caption{Multispectral vs. hyperspectral band coverage. Source: \cite{Sabins97}\label{Sabins97}}
-	\label{fig:16}
+	\label{fig:2.5}
 \end{wrapfigure}
 
 Advanced Spectrometer for Thermal Emission and Reflection Radiometer (\href{http://asterweb.jpl.nasa.gov/}{ASTER}), launched in
 1999 onboard Terra sensor, provides high-resolution images of the Earth in 15 different bands of the
-electromagnetic spectrum, ranging from visible to thermal infrared light  (Fig.\ref{fig:13}). It has diverse
+electromagnetic spectrum, ranging from visible to thermal infrared light  (Fig.\ref{fig:2.4}). It has diverse
 subsystems for the visible near infrared (VNIR) with 15 m resolution, shortwave infrared (SWIR), and
 thermal infrared (TIR) wavelength regions \cite{Kalinowski04}\label{Kalinowski04}. For each channel there is separate
 onboard calibration (OBC) system, telescope with independent pointing and different detector technsology \cite{Arai05}\label{Arai05}. 
@@ -859,7 +875,7 @@ pure reflectance from the benthos; as a result, it may cause significant errors 
 	\includegraphics[scale=0.15]{Fig-15.jpg}
 	\caption{Reflectance spectra of seagrass; Rrs(0-) - subsurface RS reflectance; Rrs b - the bottom
 		reflectance. Source:\cite{Yang10}\label{Yang10}}
-	\label{fig:17}
+	\label{fig:2.6}
 \end{wrapfigure}
 
 Therefore, for the accurate assessments of various seafloor cover types, water
@@ -868,13 +884,13 @@ used as being more suitable in classification and interpretations of imagery.
 While this and other studies \cite{Phinn08}\label{Phinn08}demonstrated the advantages and success of the
 application of multispectral imagery for the spectral discrimination of the seafloor cover types and
 mapping the submerged landscapes on the basis of pixels classification, the application of data from
-hyperspectral sensors has better potential due to their higher resolution.
+hyperspectral sensors has better potential due to their higher resolution (Fig.\ref{fig:2.5}).
 
 \subsubsection{Review of hyperspectral imagery used for seagrass mapping}
 The application of the hyperspectral sensors is most effective and provide more accurate classification
-results (Fig.2.1.), due to their higher spectral resolution \cite{Bharathi03}\label{Bharathi03} with interval
+results  (Fig.\ref{fig:2.5}), due to their higher spectral resolution \cite{Bharathi03}\label{Bharathi03} with interval
 narrows to 10 nanometers, while broadband sensors are limited to the spectral width of ca
-150 nm (Fig.\ref{fig:14}). 
+150 nm  (Fig.\ref{fig:2.3}). 
 Hyperspectral imagery is acquired through the simultaneous acquisition of images in many
 narrow, contiguous spectral bands from hyperspectral scanners (mostly) cover the 400-
 to 2500-nm spectral bands \cite{Schmidt03}\label{Schmidt03}.
@@ -894,7 +910,7 @@ hyperspectral imagery, are strong tool enabling to detect even slight and subtle
 spectral reflectances between various seafloor types, e.g. different seagrass species at diverse depths,
 algae, corals, dark-coloured sands or other types of sediments \cite{Hochberg03a}\label{Hochberg03a}. 
 Therefore, there is great potential of the application of hyperspectral remote sensing imagery towards seagrass
-mapping at species level, as long as they are distinguishable spectrally (Fig.\ref{fig:15}) which, for example, has been
+mapping at species level, as long as they are distinguishable spectrally (Fig.\ref{fig:2.6}) which, for example, has been
 tested in the case study of Australian marine ecosystems by Fyfe \cite{Fyfe04}\label{Fyfe04}. Application of various
 classifications methods, inter alia maximum likelihood, minimum distance and means, towards
 hyperspectral imagery \cite{Peneva08}\label{Peneva08}, combined with fieldwork measurements ensures accurate
@@ -915,7 +931,7 @@ mapping benthic vegetation in areas where the spatial heterogeneity is very high
 \counterwithin{figure}{section}
 \counterwithin{table}{section}
 
-In section \nameref{sec:2} we briefly discussed main existing cartographic methods and tools for seagrss mapping. In current  research we try to combine various techniques for assessment of seagrass in Mediterranean environment, in the cse study of Crete. Therefore, logically separated research sections are based on various software and tools. thus, spectral analysis and assessment of spectral signaturesis technically based on WASI, sttistical analysis of series of experimental raw data has been made by means of statistical software, such as \href{http://www.spss.com/}{SPSS}; mapping has been made using  \href{http://www.esri.com/software/arcgis/index.html}{ArcGIS}; images processing and classification were made using\href{http://www.erdas.com/products/ERDASIMAGINE/ERDASIMAGINE/Details.aspx}{Erdas Imagine} software by means of Google Earth and  \href{http://landsat.gsfc.nasa.gov/}{Landsat} imagery.
+In the section \nameref{sec:2} we briefly discussed main existing cartographic methods and tools for seagrss mapping. In the current  research we try to combine various techniques from mentioned above for the assessment of the seagrass distribution in the Mediterranean environment, for the case study of Crete. We mentioned in \nameref{sec:0} the software that we used for logically separated research sections, which required various approach. Thus, for example,  spectral analysis and assessment of spectral signaturesis technically based on WASI, sttistical analysis of series of experimental raw data has been made by means of statistical software, such as \href{http://www.spss.com/}{SPSS}; mapping has been made using  \href{http://www.esri.com/software/arcgis/index.html}{ArcGIS}; images processing and classification were made using\href{http://www.erdas.com/products/ERDASIMAGINE/ERDASIMAGINE/Details.aspx}{Erdas Imagine} software by means of Google Earth and  \href{http://landsat.gsfc.nasa.gov/}{Landsat} imagery.
 \href{http://www.esri.com/software/arcgis/index.html}{ArcGIS 10.0} software is used for the spatial analysis, general mapping and cartographic layout
 presentation; the raster processing techniques are applied for the detection of seagrass spatial
 distribution using supervised classification.
@@ -1803,7 +1819,7 @@ Seagrass, \textit{\textit{P.oceanica}}, analysis of spectral reflectance, remote
 %\renewcommand{\thefigure}{A-\arabic{figure}}
 %\renewcommand{\thetable}{A-\arabic{table}}
 
-\section{appendices}
+\section*{}
 \appendixname{\textbf{1:\\Results of the measurements of seafloor spectral reflectance}}
 %%%
 

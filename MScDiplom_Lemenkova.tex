@@ -66,6 +66,7 @@
 
 \begin{center}
 \textbf{Seagrass mapping and monitoring along the coasts of Crete, Greece}\\
+\vspace{1em}
  {by Lemenkova Polina}
 \end{center}
 
@@ -77,15 +78,15 @@ Environmental Modelling and Management.\\
 \begin{itemize}
 	\item Name Examiner 1 (Chair)
 	\item Name Examiner 2
-	\item External Examiner
+	\item External Examiner \hfill{Dr. \textit{Petter Pilesj\"o} (Lund University, GIS Centre)}
 \end{itemize}
 
 \vspace{2em}
 
-\textbf{Member Supervisors}: 
+\textbf{Member Supervisors}: \\
 \begin{itemize}
-	\item[*] Venus V. (Department of Natural Resource, ITC)
-	\item[*] Toxopeus A.G. (Department of Natural Resource, ITC)
+	\item[* ] Mr. \textit{Valentijn Venus} (Department of Natural Resource, ITC)
+	\item[* ] Dr. \textit{Albertus G. Toxopeus} (Department of Natural Resource, ITC)
 \end{itemize}
 
 \begin{figure}[h]
@@ -116,7 +117,7 @@ I am thankful to Dr.rer.nat.\textit{Peter Gege}, the software developer from the
 My special thanks are addressed to my elder brother, Mr.\textit{Peter Lemenkov}, the software developer from the ipPort, for his priceless numerous advices and constant professional support throughout my career. He encouraged me to use various very useful software and tools, always gave me necessary recommendations and precious help, thus highly contributing to my professional growth. \\ My special thank for his help with Python scripting. \\
 I am also heartfelt thankful to him for his personal friendship and support. 
 \vspace{1mm}\\
-I am grateful to Mr.\textit{Willem Nieuwenhuis}, the software developer from the ITC, Department of Natural Resources for shared technology of Google Earth aerial imagery grabbing and for his consultancy with ASTER imagery. 
+I am grateful to Mr.\textit{Willem Nieuwenhuis}, the software developer from the ITC, Department of Natural Resources, for shared technology of Google Earth aerial imagery grabbing and for his consultancy with ASTER imagery. 
 \vspace{1mm}\\
 I thank Dr. Ir. \textit{Cornelis A.J.M. de Bie} from the Department of Natural Resource, ITC, for his patient sharing of iPAQ knowledge during my Polish fieldwork in summer 2010. I used this skills on Crete. 
 \vspace{1mm}\\
@@ -212,10 +213,9 @@ Many thanks for Dr.\textit{Dingtian Yang} from the South China Sea Institute of 
 \subsection{Summary}
 The seagrasses, a unique group of aquatic plants growing submerged in the sea water, with root-like
 structures (rhizoms) buried in the sediments and vertical elongate leaves. A flowering plant,
-completely adapted to marine environment, they are however, more closely related to the lily family
-(Liliaceae) than to the true grass, despite their name “seagrass”, caused by the ribbon-like, grassy leaves
-\cite{McKenzie08}\label{McKenzie08}.\\
-Seagrasses create unique, complex, extremely diversified and productive ecological systems in the
+completely adapted to the marine environment, they are however, more closely related to the lily family
+(\textit{Liliaceae}) than to the true grass, despite their name \textit{seagrass}, caused by the ribbon-like, grassy leaves
+\cite{McKenzie08}\label{McKenzie08}. Seagrasses create unique, complex, extremely diversified and productive ecological systems in the
 littoral coastal zones between 0-50 meters in shallow waters all over the world \cite{Hogarth07}\label{Hogarth07}, and
 serve as valuable environmental indicators for the marine ecosystems health. Seagrasses are closely
 connected and linked with complex interactions to other vegetation types, e.g. mangroves, coral reefs,
@@ -243,12 +243,8 @@ It plays an important role in a number
 of geomorphological and ecological processes. Namely, it is a source of food for herbivorous fauna as
 well as shelter zones for fish and other marine organisms; it contributes to the nutrient recycling; it
 provides sediments stability by reducing the degree of water movements, etc \cite{Francour99}\label{Francour99}.\\
-The purpose of current MSc research work aims to apply methods of remote sensing and GIS
-including processing and classification of satellite, aerial photos and videometric underwater imaging
-as well as GIS-based spatial analysis towards mapping and environmental monitoring of \emph{P. oceanica}
-along the coasts of Crete island, Greece. The technical implementation is based on ENVI, Erdas
-Imagine, WASI and ArcGIS software using aerial and satellite images as well as results of the
-underwater videometric measurements.
+The purpose of current MSc research work aims to apply methods of remote sensing analysis, including Radiative Transfer Models (RTM), 
+GIS-based spatial analysis, processing and classification of satellite and aerial photos, as well as videometric underwater footage, towards mapping and environmental monitoring of seagrass \textit{P. oceanica} along the selected locations of the northern coasts of Crete island, Greece. The technical implementation is based on WASI RTM software, GIS (ILWIS, Erdas Imagine and ArcGIS), using aerial and satellite images and the results of the underwater videometric measurements. 
 
 \subsection{Background}
 \subsubsection{Global distribution of the seagrasses}
@@ -265,34 +261,30 @@ Cymodocea, Amphibolis, Thalassodendron, Zostera, Heterozostera} and \textit{Phyl
 \end{wrapfigure}
 
 The distribution of the seagrasses is strongly influenced by several environmental factors, which
-include climate (mostly, tropical and temperate are--as), bathymetry (shallow shelf zones), hydrological
+include climate (mostly, tropical and temperate areas), bathymetry (shallow shelf zones), hydrological
 particularities (chemical content of water, nutrient availability and turbidity of waves), and geological 
 characteristics - sedimentation and cover types of the seafloor \cite{McKenzie06}\label{McKenzie06}.\\
-There are four European seagrass species in Mediterranean area \cite{Borum04}\label{Borum04}: Zostera marina,
-Zostera noltii, Cymodocea nodosa and \textit{P.oceanica}. In Greece the common species are \textit{P.oceanica}
-(L.) Delile, Cymodocea nodosa (Ucria) Ascherson, Zostera noltii Hornemann and Halophila
-stipulacea \cite{Amoutzopoulou-Schina05}\label{Amoutzopoulou-Schina05}. 
-These species differ in morphological and
-phenological features (Fig. \ref{fig:3}) as well as in structure and dynamics. Thus, Cymodocea nodosa is
-considered the pioneer species of \textit{P.oceanica} beds, the latter species forming the last stage. When P.
-oceanica beds regresses, C. nodosa often replaces them \cite{DenHartog77}\label{DenHartog77}; as a result, \textit{P.oceanica},
-C. nodosa, and Z. noltii do not form mixed persistent stands \cite{Buia91}\label{Buia91}.
+There are four European seagrass species in Mediterranean area \cite{Borum04}\label{Borum04}: \textit{Zostera marina,
+Zostera noltii, Cymodocea nodosa} and \textit{P.oceanica}. In Greece the common species are \textit{P.oceanica}
+\textit{(L.) Delile, Cymodocea nodosa (Ucria) Ascherson, Zostera noltii Hornemann} and \textit{Halophila
+stipulacea} \cite{Amoutzopoulou-Schina05}\label{Amoutzopoulou-Schina05}. 
+These species differ in morphological and phenological features (Fig. \ref{fig:3}) as well as in structure and dynamics. Thus, \textit{Cymodocea nodosa} is
+considered the pioneer species of \textit{P.oceanica} beds, the latter species forming the last stage. When \textit{P.oceanica} beds regresses, \textit{C.nodosa} often replaces them \cite{DenHartog77}\label{DenHartog77}; as a result, \textit{P.oceanica},
+\textit{C.nodosa}, and \textit{Z.noltii} do not form mixed persistent stands \cite{Buia91}\label{Buia91}.
 
 \subsubsection{Ecological significance of the seagrasses}
-Seagrass plays vital role in the marine ecosystems of the world ocean. Seagrasses are the only
-flowering plant in the world that is able to live completely submerged. Seagrass is a habitat for
-numerous marine fish species \cite{Nagelkerken00}\label{Nagelkerken00}, source of primary production and food for
-fish, turtles and other organisms, which gives them special environmental value \cite{Noralez10}\label{Noralez10}.\\
-Seagrass meadows produce enormous quantities of organic matter (leaves, epiphytes), which
-constitutes the basis of the food web both within and outside the ecosystem \cite{Gobert06}\label{Gobert06}.
-
+Seagrass plays vital role in the marine ecosystems of the world ocean. 
 \begin{wrapfigure}{r}{0.4\textwidth}
-\centering
+	\centering
 	\includegraphics[scale=0.25]{Fig-1-3.jpg}
 	\caption{Morphology of different types of seagrasses. Source: \url{http://www.ozcoasts.org.au}}
 	\label{fig:3}
 \end{wrapfigure}
-
+Seagrasses are the only flowering plant in the world that is able to live completely submerged. Seagrass is a habitat for
+numerous marine fish species \cite{Nagelkerken00}\label{Nagelkerken00}, source of primary production and food for
+fish, turtles and other organisms, which gives them special environmental value \cite{Noralez10}\label{Noralez10}.\\
+Seagrass meadows produce enormous quantities of organic matter (leaves, epiphytes), which
+constitutes the basis of the food web both within and outside the ecosystem \cite{Gobert06}\label{Gobert06}.
 Finally, seagrasses are an important component in the environmental "food chain" of the coastal
 ecosystems, being the food source for dugongs, turtles, swans and various fish \cite{Cappo95}\label{Cappo95}.\\
 Due to their wide distribution, meadows size, easy collection and abundance, sensitivity to the
@@ -350,7 +342,7 @@ and intensity of storms and waves; local decrease of water quality, increased se
 contamination and nitrification; desiccation; salinity fluctuations; nutrient changes; suspended
 sediments \cite{Blake00}\label{Blake00}. These stress-drivers can alone result in large-scale seagrass
 degradation, but often seagrass undergo simultaneous affects from several of these factors together.
-This naturally increase environmental pressing and leads to drastic loss of very large areas of
+It naturally increases the environmental pressing  to drastic loss of very large areas of
 seagrass globally \cite{Orth06}\label{Orth06}.
 In tropical areas, where most of seagrasses are located (Fig.\ref{Fig.4}), seagrasses are subject to catastrophic
 extinction and loss, due to the cyclones, typhoons, storms, regular floods and increased rainfalls. Recovery from such
@@ -358,23 +350,12 @@ events can take up to several years and often it is only possible by means of th
 environmental surveys \cite{McKenzie07}\label{McKenzie07}. Other threats for seagrasses in tropical areas are 
 increased nutrient availability in the coastal zones, increased
 eutrophication and invasive macroalgae. These processes have strong affect on the status of the
-seagrass meadows, and often lead to their complete disappearance \cite{Holmer09}\label{Holmer09}.
+seagrass meadows, and often lead to their complete disappearance \cite{Holmer09}\label{Holmer09}.\\
 Other environmental threat for the seagrasses arises as a result of the environmental struggle and
 competition for existence among species. Thus, meadows of P.oceanica in the Mediterranean Sea are
 presently facing invasion by alien algal species, particularly in areas where \textit{P.oceanica} is already
 degrading, stressed, have gaps and patchy structure in meadows and show other signs of regression
 \cite{Montefalcone10}\label{Montefalcone10}.
-Seagrasses are vulnerable fragile species, important for the marine coastal ecosystems, especially for
-the protection of the beach structure. However, the facts about seagrass global degrading sound
-worrying: about 54 percent of the total seagrass meadows have lost any part of their area; the areas, where
-the seagrass ecosystems are degrading or lost, are not located in a specific area or continent, but
-registered globally; since 1980s global losses of the seagrasses on our planet is equal to two football
-fields per hour \cite{Mellors09b}\label{Mellors09b}.
-
-\subsubsection{General characteristics of \textit{P.oceanica}}
-The endemic Mediterranean seagrass \textit{Posidonia oceanica} (further \textit{P.oceanica}), is a main species in
-marine coastal environment of Greece, forming, despite its slow growth, the largest, most widespread,
-homogeneous and dense meadows in the Mediterranean between 5 and 40 m depth \cite{DenHartog70}\label{DenHartog70}.
 
 \begin{wrapfigure}{r}{0.5\textwidth}
 	\centering
@@ -384,6 +365,17 @@ homogeneous and dense meadows in the Mediterranean between 5 and 40 m depth \cit
 	\label{fig:5}
 \end{wrapfigure}
 
+Seagrasses are vulnerable fragile species, important for the marine coastal ecosystems, especially for
+the protection of the beach structure. However, the facts about seagrass global degrading sound
+worrying: about 54 \% of the total seagrass meadows have lost any part of their area; the areas, where
+the seagrass ecosystems are degrading or lost, are not located in a specific area or continent, but
+registered globally; since 1980s global losses of the seagrasses on our planet is equal to two football
+fields per hour \cite{Mellors09b}\label{Mellors09b}.
+
+\subsubsection{General characteristics of \textit{P.oceanica}}
+The endemic Mediterranean seagrass \textit{Posidonia oceanica} (further \textit{P.oceanica}), is a main species in
+marine coastal environment of Greece, forming, despite its slow growth, the largest, most widespread,
+homogeneous and dense meadows in the Mediterranean between 5 and 40 m depth \cite{DenHartog70}\label{DenHartog70}.
 The dominant and most productive coastal ecosystem of the Mediterranean, \textit{P.oceanica} is
 spatially restricted to the Mediterranean area (Fig.\ref{fig:5}), with its extension limited by the western part
 of the Mediterranean Sea where cold Atlantic waters enter Gibraltar and mix with warm
@@ -394,7 +386,7 @@ and short rhizomes (0.5-2.0 mm). The leaves are, perhaps, the most particular ch
 \begin{wrapfigure}{r}{0.4\textwidth}
 	\centering
 	\includegraphics[scale=0.15]{Fig-1-6.jpg}
-	\caption{\textit{	extit{P.oceanica}}.\\
+	\caption{\textit{P.oceanica}.\\
 	Source \cite{Luque04}\label{Luque04}}
 	\label{fig:6}
 \end{wrapfigure}
@@ -493,7 +485,7 @@ the uncertainties of the spectral signature of the seagrass at higher depths  (F
 optical particularities, e.g. light refraction under water, unevenness of the water surface, depths, etc.
 Some problems can also arise in the images interpretations, as quite different objects may have
 similar spectral reflectance, e.g. seagrass, dark-coloured bottom patches (mud), macroalgae.
-The in-situ fieldwork including underwater videographic measurements is an important part of the
+The \textit{in-situ} fieldwork including underwater videographic measurements is an important part of the
 seagrass monitoring, and has been successfully applied towards seagrass mapping \cite{Haag08}\label{Haag08}.
 The underwater measurements are used to validate the results and to receive detailed, accurate and
 precise data for the selected locations. The underwater measurements cannot be applied for the whole
@@ -503,59 +495,54 @@ coverage of the seagrass along the track log. Besides, the underwater observatio
 equipment have been conducted for the measurements of depths.
 
 \subsection{Research objective}
-The current MSc research aims to explore the environmental conditions and dynamics of the spatial
-distribution of \textit{P.oceanica} seagrass meadows along the Cretan coast, based on the remote sensing and
-GIS techniques, knowledge about the coastal environment in Crete and integration of various data
+The current MSc research aims to explore the environmental conditions for the spatial distribution of \textit{P.oceanica} seagrass along the northern coast of Crete Island, based on the remote sensing and GIS techniques, knowledge about the coastal environment in Crete and integration of various data
 from the following sources:
-i) spectra of 	extit{P.oceanica}, carbonate sand, silt and other seafloor types
-ii) satellite imagery: Landsat, ASTER, MODIS, MERIS
-iii) aerial photos: Google Earth
-iv) in-situ fieldwork data of underwater videographic measurements
-v) vector GIS layers.
-The research aims to explore the dynamics of the environmental changes of the \textit{P.oceanica} meadows
-over time (2000-2010), as well as the extent of the spatial distribution over the whole island. The
-main research objective is monitoring the seagrass \textit{P.oceanica} along the coasts of Crete, in order to
-analyse the environmental changes of the 	extit{P.oceanica} meadows over the last 10 years (2000-2010)
-and the spatial extent of its current distribution.
-This research is supported by the in-situ measurements in two selected locations of the northern coast
+	\begin{itemize}
+		\item[] i) spectra of \textit{P.oceanica}, carbonate sand, silt and other seafloor types
+		\item[] ii) satellite imagery: Landsat TM, Landsat ETM+
+		\item[] iii) aerial photos: Google Earth
+		\item[] iv) \textit{in-situ} fieldwork data of underwater videographic measurements
+		\item[] v) vector GIS layers.
+	\end{itemize}
+The research aims to explore the limitations of the application of the Radiative Transfer Models (further RTMs) and remote sensing techniques 
+towards the study of the environmental properties of the \textit{P.oceanica} meadows distribution
+over the selected locations of northern Crete. The main research objective is monitoring the seagrass \textit{P.oceanica} in selected areas of Crete and analyzing the environmental conditions for the growth of \textit{P.oceanica}. \\
+This research is supported by the \textit{in-situ} measurements in two selected locations of the northern coast
 of Crete (Ligaria beach in Agia Pelagia district and Xerocampos), using following methods of the
-remote sensing techniques: underwater videometric measurements made by Olympus camera, aerial
-Google Earth and satellite images from different sources, spatial GIS and statistical analysis.
+remote sensing techniques: spectral modelling by means of the RTM Water Colour Simulator WASI,  underwater videometric measurements made by Olympus camera, aerial Google Earth and satellite images from different sources, spatial GIS and statistical analysis.
 
 \subsubsection{General objective}
-The main objective of this study is to investigate the distribution of seagrass along the northern coast
-of Crete using remote sensing techniques.
+The main objective of this study is to analyse the optical properties of the seagrass \textit{P.oceanica} and other seafloor types, and to apply the remote sensing techniques towards the investigation of the seagrass distribution in the selected locations along the northern coast of Crete.
 General objectives:
-1) Mapping the spatial distribution of the seagrass \textit{P.oceanica} along the northern coasts of
-Crete Island
-2) Monitoring the dynamics of the environmental changes of the \textit{P.oceanica} meadows over
-time (2000-2010) in Ligaria beach, Agia Pelagia district.
+	\begin{itemize}
+		\item[*]Analysing spectral reflectance of the \textit{P.oceanica} and other seafloor cover types means of radiative transfer model tools (RTMs), using WASI.
+		\item[*]Mapping spatial distribution of the seagrass \textit{P.oceanica} over selected locations along the northern coasts of Crete Island 
+	\end{itemize}
 
 \subsubsection{Specific objectives}
-1. To apply remote sensing data (Google Earth aerial images, Landsat, SPOT satellite images)
-for the monitoring of the seagrass meadows distribution
-2. To study narrow-band spectral reflectance properties of \textit{P.oceanica} and other seafloor
-cover types (sand and silt) using WASI water colour simulation software
-3. To use methods of the in situ diving observations and underwater videometric measurements
-by Olympus camera in order to receive large-scale imagery of the 	extit{P.oceanica} mattes
-4. To perform images classification (supervised and unsupervised) for the thematic mapping of
-the 	extit{P.oceanica} seagrass distribution along the coasts of northern Crete.
+	\begin{itemize}	
+		\item[]1.	To study narrow-band spectral reflectance properties of \textit{P.oceanica} and other seafloor cover types (sand and silt) using WASI water colour simulation software 
+		\item[]2.	To use methods of the in situ diving observations and underwater videometric measurements by Olympus camera in order to receive large-scale imagery of the P.oceanica mattes 
+		\item[]3.	To apply remote sensing data (Google Earth aerial images, Landsat TM and ETM+ satellite images) for the monitoring of the seagrass meadows distribution 
+		\item[]4.	To perform supervised images classification for the thematic mapping of the \textit{P.oceanica} seagrass distribution along the selected locations over the coasts of northern Crete. 
+	\end{itemize}
+
 
 \subsection{Research questions}
-1. Is \textit{P.oceanica} spectrally distinct from other seafloor cover types with varying in-situ
-conditions ?
-2. Whether broadband and hyperspectral remote sensing data can be used for the mapping of
-\textit{P.oceanica} ?
+	\begin{itemize}	
+		\item Is \textit{P.oceanica} spectrally distinct from other seafloor cover types with varying \textit{in-situ} conditions ?
+		\item Whether broadband and hyperspectral remote sensing data can be used for the mapping of \textit{P.oceanica} ?
+	\end{itemize}
 
 \subsection{Hypotheses testing}
-A statistical testing will be used to compare between the spectral responses of the different seagrass
-types, whether it is spectrally distinct and at least one pair is statistically different at every spectral
+A statistical testing will be used to compare between the spectral responses of the different seafloor cover types (i.e. sand and \textit{P. oceanica}),
+ whether it is spectrally distinct and at least one pair is statistically different at every spectral
 band.
 Hypothesis Ho: seagrass types are not spectrally distinct from other seafloor types with
-varying in-situ conditions, which means
+varying \textit{in-situ} conditions, which means
 Ho: μ1 =μ2 =μ3=...= μn.
 The alternative Hypothesis Ha claims the opposite statement: seagrass is spectrally
-distinct with varying in-situ conditions, Ho: μ$\neq$μ2$\neq$μ3$\neq$ ... $\neq$μn.
+distinct with varying \textit{in-situ} conditions, Ho: μ$\neq$μ2$\neq$μ3$\neq$ ... $\neq$μn.
 The distribution of the spectral responses at every spectral band is assumed to be normal as well as
 the equality of the statistical variances.
 The hypothesis testing is suggested to be carried out using the ANOVA statistical test. The purpose of
@@ -576,22 +563,20 @@ Remote sensing methods alone, though having evident advantages, are insufficient
 images of underwater habitats are notoriously difficult to identify and interpret. The best research
 method should be based on the integrated approach, well described in various scientific works \cite{Brown02,Montefalcone06,Kirkman96}\label{Brown02} \label{Montefalcone06} \label{Kirkman96}, which includes combination of various
 techniques of the seagrass monitoring, i.e. remote sensing imagery classification of aerial and satellite
-images, GIS-based spatial analysis and ground in-situ surveys.
+images, GIS-based spatial analysis and ground \textit{in-situ} surveys.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.48]{UML_ClassDiagram.jpg}
+	\caption{General methodological approach for the analysis of spectral signatures. \href{http://argouml.tigris.org/}{ArgoUML}}
+	\label{fig:1.10}
+\end{figure}
 The current study is based on the application of the remote sensing data, broadband satellite imagery,
 aerial images and the results of the underwater videographic measurements towards seagrass
 mapping  (Fig.\ref{fig:1.11}). Image classification is based on the principle of the differentiation between the spectral
 signatures of various seafloor cover types  (Fig.\ref{fig:1.10}). The spectrum of light coming up from the ocean surface in
 shallow waters keeps information on the optical properties of the seawater components and benthic
 substrate which can be read from their spectral signatures \cite{Werdell03}\label{Werdell03}. \\
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[scale=0.48]{UML_ClassDiagram.jpg}
-	\caption{General methodological approach for the analysis of spectral signatures. \href{http://argouml.tigris.org/}{ArgoUML}}
-	\label{fig:1.10}
-\end{figure}
-
-Spectral reflectance, distinct for each seafloor cover type, enables their discrimination on the image. The pre-processing
+The spectral reflectance, distinct for each seafloor cover type, enables their discrimination on the image. The pre-processing
 of the images includes imagery corrections for atmospheric noises and effects of the water
 column. Reflectance spectra of the seagrass canopy at different depths of the water-column are
 analysed for the discrimination of their spectral signatures, enabling to separate various seafloor types
@@ -608,16 +593,6 @@ working step the training sites for the supervised classification methods are de
 control and trials of different classification approaches (Unsupervised, K-means or Isodata;
 Supervised, Maximum Likelihood).
 
-\subsection{Research scheme}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.57]{UML_GIS.png}
-	\caption{General methodological research approach. \href{http://inkscape.org/}{Inkscape}}
-	\label{fig:1.11}
-\end{figure}
-
-\pagebreak
 %%%%%%%%%%%%%%%%%  Section2   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section[Overview of literature]{Seagrass monitoring: overview of literature and research resources} \label{sec:2}
 \markright{II. Seagrass monitoring: overview of literature and research resources}
@@ -633,27 +608,26 @@ management, which helps to analyse potential environmental risks of coastal area
 number of species, loss of meadows and patches of the seagrasses.
 The tradition of global seagrass mapping though has not a very long history comparing to the
 terrestrial cartography, due to the technical difficulties of underwater observations, yet nowadays is
-has become a successful, rapidly developing and increasingly popular and challenging research branch.
+has become a successful, rapidly developing and increasingly popular and challenging research branch.\\
 Seagrasses can be mapped using various approaches, with the most popular method of the remote
 sensing application, enabling to detect and discriminate the substratum and various vegetation types
-growing on the seafloor.
-Several global seagrass surveys organise and provide regular monitoring of the seagrass distribution,
+growing on the seafloor.\\
+Several global seagrass surveys organize and provide regular monitoring of the seagrass distribution,
 health and species sustainability, amongst which the most world-known are, perhaps, the following
 ones: \href{http://www.seagrassnet.org/}{Global Seagrass Monitoring project}, \href{http://www.seagrasswatch.org/}{Seagrasswatch}, 
 located in Australia, two European-located institutions - \href{http://mediterranean.seagrassonline.org/}{the Mediterranean association Seagrass-2000} and \href{http://www.imedea.uib.es/index.php}{the Mediterranean Institute for Advanced Studies}, US American 
 \href{http://www2.fiu.edu/~seagrass/}{Seagrass Ecosystems Research Laboratory in South Florida} and
-\href{http://www.flseagrass.org/}{Florida Seagrass organisation}, the \href{http://wsa.seagrassonline.org/}{World Seagrass Association} and  
-the \href{http://www.seagrasses.org/}{Seagrasses.org}.
- These organizations aim at the global seagrass monitoring, providing with
+\href{http://www.flseagrass.org/}{Florida Seagrass organisation}, the \href{http://www.seagrasses.org/}{Seagrasses.org} and the \href{http://wsa.seagrassonline.org/}{World Seagrass Association}.
+These organizations aim at the global seagrass monitoring, providing with
 research results and reporting guidelines and manuals with standardized methods and
 recommendations, specific for the seagrass research and monitoring. There are also university marine
 centres and research institutes conducting seagrass monitoring and as a particular part of their
-research. Their reports and guidelines were used for references in the current research.
+research. Their reports and guidelines were used for references in the current research.\\
 Regular observations and monitoring of the seagrasses are known since 1960s, mainly in tropical
 regions (Australia). Since that time traditional methods of the seagrass monitoring and common
 recommendations are being elaborated. The development of the underwater SCUBA diving
 equipment and devices enabled to conduct underwater detailed measurements and observations
-largely contributed to the improvement of the traditional in-situ observations of seagrass. From the
+largely contributed to the improvement of the traditional \textit{in-situ} observations of seagrass. From the
 other side, development of the remote sensing methods and data acquisition from space contributed to
 the new methods of seagrass mapping, using distance approach and generally based on images
 classification.
@@ -668,18 +642,19 @@ following points are traditionally estimated: percentage of the seagrass cover w
 species composition, sediment composition, canopy height, epyphyte abundance, algae percent cover,
 count of microfauna and a specimen of seagrass is being taken. This scheme, well described by
 McKenzie \cite{McKenzieetal03}\label{McKenzieetal03} is widely used and well-known among the marine biologists and
-seagrass researchers. Applications of the in-situ seagrass observations of the structuring epiphyte
+seagrass researchers. Applications of the \textit{in-situ} seagrass observations of the structuring epiphyte
 community composition in the \textit{P.oceanica} ecosystems in Mediterranean Sea is, for example,
 described by Villegas \cite{Villegas06}\label{Villegas06}. Realization of traditional methods for mapping seagrass usually
-involves intensive and time-consuming in-situ observations during the fieldwork, as, for example,
-reported by Iverson and Bittaker \cite{Iverson86}\label{Iverson86}. Other methods of seagrass in-situ monitoring are based on
+involves intensive and time-consuming \textit{in-situ} observations during the fieldwork, as, for example,
+reported by Iverson and Bittaker \cite{Iverson86}\label{Iverson86}. \\
+Other methods of seagrass \textit{in-situ} monitoring are based on
 using the active hydro-acoustic sonar sensors that send towards a sea floor a signal of energy and then
 collect the return echoes for the analysis, yet this requires specialized equipment and is mostly used in
 the depth waters, combined with bathymetric measurements. Another limitation of the acoustic
 techniques is that they are not effective at identifying the composition or even the presence of
 submerged aquatic vegetation such as seagrasses and seaweeds \cite{Werdell03}\label{Werdell03}, because
 initially acoustic methods were intended for the bathymetric surveying, i.e. they are not adjusted for
-the benthic habitat discrimination. The results of the in-situ measurements and observation are usually
+the benthic habitat discrimination. The results of the \textit{in-situ} measurements and observation are usually
 managed and treated using integrated GIS approach, as, for example, reported by Schmieder \cite{Schmieder97}\label{Schmieder97}.
 
 \subsection[Measuring water optical properties]{Measuring water optical properties: \\hyperspectral radiometers}
@@ -688,7 +663,7 @@ spectral reflectance properties of the target objects, and using it for the clas
 on the image. In case of seagrasses it is spectral reflectance of the seafloor cover types, which can be
 analyzed using measurements of optical properties of sea water: radiance and irradiance.
 Optical remote sensing methods can get through the clear waters to approximately 15–30 m \cite{Mumby04}\label{Mumby04}.
- When sunlight enters the waters and goes down into the water column, parts of the
+When sunlight enters the waters and goes down into the water column, parts of the
 electromagnetic energy are absorbed and scattered, which is determined by the optical and physical
 properties of the water, e.g. concentration of suspended particles, chlorofill, colored dissolved
 organic matter (gelbstoff) that make up the water content \cite{Ackleson2003}\label{Ackleson, 2003}. Besides, light is strongly
@@ -711,17 +686,17 @@ influences the transparency and color of the waters of shelf zones \cite{Jerlov5
 dynamic environments, coastal waters experience a variety of processes which alter their optical
 properties incessantly. The effects of these processes influence application of the hyperspectral
 remote sensing and reinforce other processes \cite{Maffione01b}\label{Maffione01b}. Thus, waves and tides increase
-sedimentation processes, which in turn, may change micro relief properties and topology. 
+sedimentation processes, which in turn, may change micro relief properties and topology. \\
 The optical properties of the water are best reflected in the values of its radiance and irradiance,
 which can be converted into spectral reflectance, or reflectivity. The spectral irradiance (E) is a
 radiant flux of the electromagnetic solar radiation energy, received per surface unit area in a given
-time (W·m−2·nm−1), while radiance (L) characterizes total emission or reflection that passes through
-or is emitted from a particular area (W·sr−1·m−2 ·nm−1). Therefore, the spectral reflectance, or the
+time ($W*m^{−2}*nm^{−1}$), while radiance (L) characterizes total emission or reflection that passes through
+or is emitted from a particular area ($W*sr^{−1}*m^{−2}*nm^{−1}$). Therefore, the spectral reflectance, or the
 reflectivity of the object, can be estimated by the direct mathematical division of these first two
 characteristics, and is expressed in percentage.
-Therefore, the irradiance and radiance of the water should be measured in order to estimate spectral
-reflectance of the various seafloor cover types. The optical measurements of the irradiance and
-radiance of the sea water and bottom cover types of the seafloor can be received by the means of the
+The irradiance and radiance of the water thus should be measured, in order to estimate spectral
+reflectance of the various seafloor cover types. \\
+The optical measurements of the irradiance and radiance of the sea water and bottom cover types of the seafloor can be received by the means of the
 optical sensors spectroradiometers. There are several companies producing radiometers with various
 characteristics and adjusted for different purposes, e.g. portable and miniature spectrometers from
 \href{http://www.stellarnet.us}{StellarNet}, Hyperspectral Ocean Colour Radiometer (HyperOCR) sensor by
@@ -733,36 +708,36 @@ optical sensors, GER-Series Field portable spectroradiometers from
 VIS Radiance Sensor) are small-sized, low power-consuming, flexible for fieldwork yet with high
 level of precision, specially calibrated for air and for water application as well as color
 measurements  (Fig.\ref{fig:2.1}). These products have been used for the radiance and irradiance
-measurements in Agia Pelagia bay, Crete island, 2009.
+measurements in Agia Pelagia bay, Crete Island, 2009.
 
 \subsection[Application of remote sensing data]{Application of remote sensing data towards seagrass mapping}
 Various methods and approaches have been applied towards mapping of the seagrasses, based on
 digitized aerial photographs, GPS data, remote sensing and SCUBA-based fieldwork measurements.
-SCUBA-based in-situ observations, though providing high resolution and accuracy results in seagrass
+SCUBA-based \textit{in-situ} observations, though providing high resolution and accuracy results in seagrass
 mapping, is limited in application, because of their time consumption, weather-dependency and
-unsuitability for the case of monitoring large areas of water for small-scale mapping. Methods of
-underwater videography with GPS is a tool of seagrass monitoring which has certain advantages, i.e.
+unsuitability for the case of monitoring large areas of water for small-scale mapping. 
+
+\begin{wrapfigure}{r}{0.4\textwidth}
+	\centering
+	\includegraphics[scale=0.30]{Fig-11.jpg}
+	\caption{In situ optical reflectance spectra of seagrass. Shaded areas - \% of spectra lying within the range of reflectance. 
+		White lines - mean spectra. Source: \cite{Hochberg03b}\label{Hochberg03b}}
+	\label{fig:13}
+\end{wrapfigure}
+
+The underwater videography with a GPS is a tool of seagrass monitoring which has certain advantages, i.e.
 high spatial and visual resolution, non-destructive sampling, effectiveness at all depths and rapid data
 collection in the field \cite{Schultz08}\label{Schultz08}. However, it cannot cover large areas for small-scale mapping.
-Remote sensing techniques offer clear advantages over other methods of in-situ field measurements
+Remote sensing techniques offer clear advantages over other methods of \textit{in-situ} field measurements
 and seagrass observations, mentioned above. Preference of the remote sensing methods consists in
 their weather-independence, cost-effectiveness, accuracy and spatial coverage, which enables
 periodic monitoring of the seagrass meadows and gives access to the distant and unapproachable
 areas. Integrated together with GIS vector layers and maps, remote sensing data enable historical
 mapping \cite{Carter08,Ardizzone06}\label{Carter08} \label{Ardizzone06} and assessment of change detection.\\
 However, application of the remote sensing techniques for mapping of submerged vegetation,
-seafloor cover types and benthic vegetation, inter alia seagrasses, are still in their development.
-
-\begin{wrapfigure}{r}{0.4\textwidth}
-	\centering
-	\includegraphics[scale=0.30]{Fig-11.jpg}
-	\caption{In situ optical reflectance spectra of seagrass. Shaded areas - percent of spectra lying within the range of reflectance. 
-		White lines - mean spectra. Source: \cite{Hochberg03b}\label{Hochberg03b}}
-	\label{fig:13}
-\end{wrapfigure}
-
-Approaches and methods for seagrass protection and monitoring still remain location specific or, at
-least, nation specific, depending to large extent on the tools available for researchers \cite{Mellors09a} \label{Mellors09a}.
+seafloor cover types and benthic vegetation, \textit{inter alia} seagrasses, are still in their development.
+Approaches and methods for the seagrass protection and monitoring still remain location-specific or, at
+least, nation-specific, depending to large extent on the tools available for the researchers \cite{Mellors09a}\label{Mellors09a}.
 Universal, international, standardized methods for seagrass directly for seagrasses
 as such still should be developed. Various case studies have been performed, yet their mostly report
 methods adjusted for particular areas, without evaluating standard general algorithms that could be
@@ -772,12 +747,22 @@ characteristics of the reflectivity, which is visually expressed in distinct col
 turn, reflectivity of the sediments is affected by the water optical properties and content. For
 example, Stephens \cite{Stephens03}\label{Stephens03} prove that microalgae biomass and community structure affect
 hyperspectral reflectance of sediments, which enable to estimate total microalgae biomass from
-measurements of hyperspectral reflectance. Spectral measurements of the target objects are made
+measurements of hyperspectral reflectance. \\
+Spectral measurements of the target objects are made
 by means of the radiometers, which receive and register the amounts of energy (radiance and
-irradiance) from the objects. \\ Measuring optical properties of water allow to calculate spectra of the
+irradiance) from the objects. Measuring optical properties of of the seawater allows to calculate spectra of the
 objects and to discriminate them on the aerial and satellite images. Thus, various scientists report
 success in spectral discrimination of submerged vegetation and other seafloor cover types on imagery
-using hyperspectral optical properties of the sea water for the assessment of benthic habitats \cite{Lewis01,Louchard03,Dehouck08,Werdell03}\label{Lewis01} \label{Louchard03} \label{Dehouck08} \label{Werdell03}.
+using hyperspectral optical properties of the sea water for the assessment of benthic habitats \cite{Lewis01,Louchard03,Dehouck08,Werdell03}\label{Lewis01}\label{Louchard03}\label{Dehouck08}\label{Werdell03}.
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+	\centering
+	\includegraphics[scale=0.25]{Fig-12.jpg}
+	\caption{Difference between broadband multispectral and hyperspectral resolution of
+		spectral signatures. Source: \cite{Clark99}\label{Clark99}}
+	\label{fig:2.3}
+\end{wrapfigure}
+
 Studies of spectral reflectance of the different seagrass species comparing to the spectra of sand and
 other seafloor cover types \cite{Vahtmae06}\label{Vahtmae06} prove that spectra of green, brown and red benthic
 macroalgae differ from each other, as well as from sand and deep water reflectance spectra. These
@@ -794,26 +779,15 @@ The most important spectral diapason for marine mapping of submerged vegetation
 and, particularly, for seagrass, is 350-800 nm \cite{Barille09}\label{Barille09}.
 Using airborne imagery for retrospective data (before 1970s) together with the most
 recent imagery allows to detect changes in seagrass distribution on over different years
-and to analyse dynamics of the seagrass distribution \cite{Ball09}\label{Ball09}. Another important advantage
-of the application of the remote sensing data for mapping of submerged aquatic vegetation has
+and to analyse dynamics of the seagrass distribution \cite{Ball09}\label{Ball09}. \\
+Another important advantage of the application of the remote sensing data for mapping of submerged aquatic vegetation has
 commercial nature: using remote sensing data and methods enables more low-cost and up-to-date
 seagrass mapping \cite{Mumby99}\label{Mumby99}, and is especially useful for the areas where the fieldwork data
 capturing is unavailable.
-
-\begin{wrapfigure}{r}{0.5\textwidth}
-	\centering
-	\includegraphics[scale=0.25]{Fig-12.jpg}
-	\caption{Difference between broadband multispectral and hyperspectral resolution of
-		spectral signatures. Source: \cite{Clark99}\label{Clark99}}
-	\label{fig:2.3}
-\end{wrapfigure}
-
 Seagrass meadows may reach spatial scales from several up to hundreds of metres, therefore they are
 susceptible by the means of satellite imagery from remote sensors, both with moderate resolution
 (e.g., \href{http://landsat.gsfc.nasa.gov/}{Landsat MSS, Landsat TM, Landsat ETM+}, \href{http://envisat.esa.int/instruments/meris/}{MERIS}, \href{http://asterweb.jpl.nasa.gov/}{ASTER}, \href{http://modis.gsfc.nasa.gov/}{MODIS}) and high resolution as
-well (e.g., \href{http://www.satimagingcorp.com/gallery-ikonos.html}{IKONOS}, \href{http://www.digitalglobe.com/index.php/85/QuickBird}{Quickbird}, \href{http://www.spotimage.fr/}{SPOT}, \href{http://www.itres.com/products/imagers/casi550}{CASI}). The possibility of their application towards seagrass mapping varies and is limited by the technical characteristics (Table \ref{tab:1}) and resolution of these sensors  (Fig.\ref{fig:2.3}). In the next subparagraphs
-we briefly discuss the limitations and research experience of the using of various imagery
-for the seagrass mapping.
+well (e.g., \href{http://www.satimagingcorp.com/gallery-ikonos.html}{IKONOS}, \href{http://www.digitalglobe.com/index.php/85/QuickBird}{Quickbird}, \href{http://www.spotimage.fr/}{SPOT}, \href{http://www.itres.com/products/imagers/casi550}{CASI}). The possibility of their application towards seagrass mapping varies and is limited by the technical characteristics (Table \ref{tab:1}) and resolution of these sensors  (Fig.\ref{fig:2.3}).
 
 \begin{table}[htbp]
 	\caption{\textbf{Characteristics of selected ocean-colour sensors}}
@@ -836,8 +810,9 @@ for the seagrass mapping.
 \end{table}
 
 
+In the next paragraphs (\nameref{sec:2.4.1} and \nameref{sec:2.4.2}) we will briefly discuss research experience of the application of satellite imagery towards seagrass mapping, its advantages and limitations, reported by various researchers.
 
-\subsubsection{Review of multispectral imagery used for seagrass mapping}
+\subsubsection[Review of multispectral imagery...]{Review of multispectral imagery used for seagrass mapping}\label{sec:2.4.1}
 Seagrass mapping using remotely sensed data from multispectral sensors is based on the classification
 and discrimination of the seafloor types using their spectral characteristics in different wavebands.
 Perhaps, the most known imagery, widely used in the remote sensing mapping, is received from the
@@ -846,13 +821,6 @@ Being the longest running satellite system, lunched in 1972, Landsat is the only
 data going back to 1984 at a sufficient spatial resolution \cite{Dekker05b}\label{Dekker05b}, which makes its data
 desirable for historical mapping or environmental analysis of change detection of the seagrass
 landscapes.
-The Landsat TM and Landsat ETM+ data, with the most recent from sensor Landsat 7 - an advanced
-and multispectral scanning, launched in 1999, prove to be feasible and useful for the mapping of
-submerged vegetation, such as seagrasses or coral reefs. The successful applications of the imagery
-Landsat TM towards the seagrass mapping, were reported in numerous research works \cite{Palandro03,Gullstroom06,Wabnitz08,Bierwirth93,Ferguson97,Rasib97}\label{Palandro03}\label{Gullstroom06}\label{Wabnitz08}\label{Bierwirth93}\label{Ferguson97}\label{Rasib97}.\\ The Landsat data are particularly suitable for the
-case of change detection of seagrass landscapes at a decade scale, because being the main sensor
-onboard the Landsat satellites, the Thematic Mapper (TM) provides the longest time series
-available for change detection analysis over submerged vegetation \cite{Palandro03}\label{Palandro03}.
 
 \begin{wrapfigure}{r}{0.5\textwidth}
 	\centering
@@ -861,25 +829,18 @@ available for change detection analysis over submerged vegetation \cite{Palandro
 	\label{fig:2.4}
 \end{wrapfigure}
 
+The Landsat TM and Landsat ETM+ data, with the most recent from sensor Landsat 7 - an advanced
+and multispectral scanning, launched in 1999, prove to be feasible and useful for the mapping of
+submerged vegetation, such as seagrasses or coral reefs. The successful applications of the imagery
+Landsat TM towards the seagrass mapping, were reported in numerous research works \cite{Palandro03,Gullstroom06,Wabnitz08,Bierwirth93,Ferguson97,Rasib97}\label{Palandro03}\label{Gullstroom06}\label{Wabnitz08}\label{Bierwirth93}\label{Ferguson97}\label{Rasib97}.\\ The Landsat data are particularly suitable for the
+case of change detection of seagrass landscapes at a decade scale, because being the main sensor
+onboard the Landsat satellites, the Thematic Mapper (TM) provides the longest time series
+available for change detection analysis over submerged vegetation \cite{Palandro03}\label{Palandro03}.
 Another well-known multispectral sensor, SPOT provides multispectral imagery with a spatial
 resolution of 10 m, covering covers a surface area of 3600 km² (60*60 km swath), 26-day
 orbital repeat cycle for nadir viewing and imagery with a spatial resolution 20 - 2.5 m
 \cite{SPOT}\label{SPOT}. \href{http://www.spotimage.fr/}{SPOT} imagery was used for mapping beds of \textit{P.oceanica} in the
-Mediterranean Sea \cite{Pasqualini05} \label{Pasqualini05}. The \href{http://www.satimagingcorp.com/gallery-ikonos.html}{IKONOS}, offering multispectral and panchromatic imagery, was the first to collect publicly
-available high-resolution imagery at 1- and 4-meter resolution from \href{http://www.geoeye.com}{Geoeye}. IKONOS
-imagery has been applied for the seagrass mapping due to its high resolution and accessibility. Thus,
-the results of image classification in case study of shallow-water marine environment \cite{Mumby02}\label{Mumby02}
-made using IKONOS, Landsat TM, and CASI, show that in the blue part of the
-spectrum, the best results are achieved by the IKONOS and CASI, while Landsat TM has not high
-enough resolution. It may be caused to some extent by the loss of the radiance contrast, atmospheric
-Rayleigh scattering and defects of scattering. However, comparing between CASI and IKONOS, the
-same authors prove that CASI enable to receive still more accurate results of the classification
-than IKONOS \cite{Mumby02}\label{Mumby02}.
-Another comparative analysis of the application of \href{http://www.itres.com/products/imagers/casi550}{CASI}, Landsat and \href{http://www.digitalglobe.com/index.php/85/QuickBird}{Quickbird} imagery \cite{Phinn08}\label{Phinn08}
- demonstrates the high suitability of CASI images for the fine-scale mapping of seagrass
-landscapes. Thus, CASI and Quickbird-2 images enable to identify even separate seagrass species
-with small width and heterogeneous nature of the seagrass patches, which could not be detected using
-Landsat TM images with their 30*30m resolution.
+Mediterranean Sea \cite{Pasqualini05} \label{Pasqualini05}. 
 
 \begin{wrapfigure}{r}{0.5\textwidth}
 	\centering
@@ -888,6 +849,22 @@ Landsat TM images with their 30*30m resolution.
 	\label{fig:2.5}
 \end{wrapfigure}
 
+The \href{http://www.satimagingcorp.com/gallery-ikonos.html}{IKONOS}, offering multispectral and panchromatic imagery, was the first to collect publicly
+available high-resolution imagery at 1- and 4-meter resolution from \href{http://www.geoeye.com}{Geoeye}. IKONOS
+imagery has been applied for the seagrass mapping due to its high resolution and accessibility. Thus,
+the results of image classification in case study of shallow-water marine environment \cite{Mumby02}\label{Mumby02}
+made using IKONOS, Landsat TM, and CASI, show that in the blue part of the
+spectrum, the best results are achieved by the IKONOS and CASI, while Landsat TM has not high
+enough resolution. 
+It may be caused to some extent by the loss of the radiance contrast, atmospheric
+Rayleigh scattering and defects of scattering. However, comparing between CASI and IKONOS, the
+same authors prove that CASI enable to receive still more accurate results of the classification
+than IKONOS \cite{Mumby02}\label{Mumby02}.
+Another comparative analysis of the application of \href{http://www.itres.com/products/imagers/casi550}{CASI}, Landsat and \href{http://www.digitalglobe.com/index.php/85/QuickBird}{Quickbird} imagery \cite{Phinn08}\label{Phinn08}
+ demonstrates high suitability of CASI images for the fine-scale mapping of the seagrass
+landscapes. Thus, CASI and Quickbird-2 images enable to identify even separate seagrass species
+with small width and heterogeneous nature of the seagrass patches, which could not be detected using
+Landsat TM images with their 30*30m resolution.
 Advanced Spectrometer for Thermal Emission and Reflection Radiometer (\href{http://asterweb.jpl.nasa.gov/}{ASTER}), launched in
 1999 on board Terra sensor, provides high-resolution images of the Earth in 15 different bands of the
 electromagnetic spectrum, ranging from visible to thermal infrared light  (Fig.\ref{fig:2.4}). It has diverse
@@ -900,7 +877,7 @@ well. Successful application of the ASTER imagery towards mapping of submerged v
 reported, for example, by Hirose \cite{Hirose04} \label{Hirose04}. Other multispectral images have also been used for the
 seagrass interpretation. For example, the success of using imagery from the multispectral airborne
 scanner Daedalus AADS1268 is reported by Heege et al \cite{Heege03}\label{Heege03} where they aim at classification of
-macrophytes in shallow waters of the Lake Constance.
+macrophytes in shallow waters of the Lake Constance. \\
 In regard to the methods chosen for the image interpretation, the supervised classifications proves to
 be the most worthy in a majority of case studies \cite{Palandro03,Peneva08}\label{Palandro03} \label{Peneva08}. While
 often methods of the unsupervised classification are used as a tool for classifying submerged object
@@ -927,7 +904,7 @@ application of multispectral imagery for the spectral discrimination of the seaf
 mapping the submerged landscapes on the basis of pixels classification, the application of data from
 hyperspectral sensors has better potential due to their higher resolution (Fig.\ref{fig:2.5}).
 
-\subsubsection{Review of hyperspectral imagery used for seagrass mapping}
+\subsubsection[Review of hyperspectral imagery...]{Review of hyperspectral imagery used for seagrass mapping}\label{sec:2.4.2}
 The application of the hyperspectral sensors is most effective and provide more accurate classification
 results  (Fig.\ref{fig:2.5}), due to their higher spectral resolution \cite{Bharathi03}\label{Bharathi03} with interval
 narrows to 10 nanometers, while broadband sensors are limited to the spectral width of ca
@@ -952,15 +929,15 @@ spectral reflectance between various seafloor types, e.g. different seagrass spe
 algae, corals, dark-coloured sands or other types of sediments \cite{Hochberg03a}\label{Hochberg03a}. 
 Therefore, there is great potential of the application of hyperspectral remote sensing imagery towards seagrass
 mapping at species level, as long as they are distinguishable spectrally (Fig.\ref{fig:2.6}) which, for example, has been
-tested in the case study of Australian marine ecosystems by Fyfe \cite{Fyfe04}\label{Fyfe04}. Application of various
-classifications methods, inter alia maximum likelihood, minimum distance and means, towards
+tested in the case study of Australian marine ecosystems by Fyfe \cite{Fyfe04}\label{Fyfe04}. 
+Application of various classifications methods, \textit{inter alia} maximum likelihood, minimum distance and means, towards
 hyperspectral imagery \cite{Peneva08}\label{Peneva08}, combined with fieldwork measurements ensures accurate
-mapping results with the maximum likelihood methods producing the best results.
+mapping results with the maximum likelihood methods producing the best results. 
 Therefore, accurate mapping of the seagrass landscapes and other seafloor types using remote sensing
 approaches requires application of high-spatial resolution (higher than 5 m) or hyperspectral imagery.
 Comparative analysis of the application of hyperspectral and multispectral imagery towards the
 seafloor types classification \cite{Hochberg03a}\label{Hochberg03a} demonstrates that coral, seagrasses and
-sand very well distinguishable in their spectra with an overall classification accuracy of 98 percent.
+sand very well distinguishable in their spectra with an overall classification accuracy of 98 \%.
 However, the use of data from various sensors, both hyperspectral and multispectral, is possible and
 reasonable, as soon as it meets the research specific objective. 
 Thus, the use of multispectral imagery
@@ -986,7 +963,7 @@ Earth images are most appropriate for the detailed mapping than satellite than \
 current work is Google Earth aerial images. The  \href{http://landsat.gsfc.nasa.gov/}{Landsat} images are used for the general overview.
 Besides aerial and satellite photographs, data acquired during the fieldwork (three weeks in September - October) are
 necessary addition to the mapping helping to solve problems of interpretation during the images
-classification \cite{Pasqualini98a}\label{Pasqualini98a}. Therefore, this work includes sampling of the in-situ
+classification \cite{Pasqualini98a}\label{Pasqualini98a}. Therefore, this work includes sampling of the \textit{in-situ}
 measurements of the seagrass distribution.
 The sampling stations were located in two candidate places on the northern (Ligaria) and southern
 (Xerocampos) parts of Crete island, as these regions are well suitable for the seagrass, due to the
@@ -1031,7 +1008,7 @@ Seagrass sampling has been performed at two research stations at Crete Island - 
 \end{figure}
 
 The Ligaria Beach is a narrow, sandy and pebble beach (Fig.\ref{fig:3.2}), located ca 15 km north-west from Heraklion.
-The in-situ measurements were conducted during the fieldwork in the period 21.09.2010-11.10.2010.
+The \textit{in-situ} measurements were conducted during the fieldwork in the period 21.09.2010-11.10.2010.
 The fieldwork on seagrass monitoring included visual estimations and photo- and video footage of the
 above-ground seagrass patches, sediment seafloor cover types, species compositions, water depth and
 geographic locations recorded using GPS.
@@ -1080,9 +1057,9 @@ distribution of the seagrass patches from photo transects, in order to use for t
 Three underwater video cameras, located on the bottom of the boat, provided videometric measurements of the
 seafloor during the track, and resulted in a series of consequent overlapping images of the sea bottom under the
 boat path. The general locations of the sampling sites and routes were selected on the basis of the visual examination
-of the seagrass beds during snorkeling and SCUBA diving, recommendations from the Greek collaborators of the Natural Nistory Museum of Crete, and available maps covering the research area. To ensure even and objective selection of sampling sites
-we used transect sampling method, i.e. photographs were taken along the research path. Transect
-method is a common sampling technique in studies of the seagrass monitoring \cite{Shortis07}\label{Shortis07},
+of the seagrass beds during snorkeling and SCUBA diving, recommendations from the Greek collaborators of the \textit{Natural History Museum of Crete}, and available maps covering the research area. To ensure even and objective selection of sampling sites
+we used transect sampling method, i.e. photographs were taken along the research path. \\
+Transect method is a common sampling technique in studies of the seagrass monitoring \cite{Shortis07}\label{Shortis07},
 enabling the occurrences of the seagrass meadows to be recorded and counted in a systematic and
 accurate way, detect spatial distribution of the single seagrass mattes to be properly identified,
 without location bias. 
@@ -1168,7 +1145,7 @@ various interpolation techniques (Fig.\ref{fig:A.15}, Fig.\ref{fig:A.23}), we ha
 hulls made on its control points, and therefore is best suitable for our case: analysis of optical
 properties of seawater.
 
-\subsection[Google Earth aerial imagery]{Google Earth aerial imagery for seagrass mapping}
+\subsection[Google Earth aerial imagery]{Google Earth aerial imagery for the seagrass mapping}
 Apart from the satellite imagery, the aerial photographs from the Google Earth provide
 a powerful tool for seagrass mapping, because they are important, reliable, detailed
 and up-to-date source of imagery.
@@ -1177,18 +1154,14 @@ Earth imagery is its high resolution (15 m in land areas and lower in the oceans
 Obtained from the airborne platforms, Google Earth images have general spatial
 resolution of several meters (though varying in different areas), which allows very
 detailed habitat and seafloor types discrimination, comparing with images
-acquired from the space-borne satellite platforms.
+acquired from the space-borne satellite platforms.\\
 The spatial coverage of the Google imagery is lesser comparing to spaceborne images, but this can be solved as
 well: while in general providing smaller area coverage than satellites images, the Google Earth
 images can be stitched to the composite maps of the acceptable spatial extent, using Google grabbing
 process which allows multiple overlapping of single images over the flight paths, and generates
 mosaics.
 
-\subsection{Application of satellite imagery for seagrass mapping (Landsat, ASTER, MODIS)}
-
-
 %%%%%%%%%%%%%%%%%  Section  4  %%%%%%%%%%%%%%%%%%%%%%%
-\pagebreak
 \section{Results}
 \markright{IV. Results}
 \counterwithin{figure}{section}
@@ -1224,14 +1197,13 @@ The spatial resolution of Landsat ETM+ image is 30 m in the visible and near inf
 1-5 and 7); the spatial resolution of ASTER 15 m for the visible and near-infrared bands. IKONOS
 acquires data in 3 visible channels and NIR, with spatial resolution of 1-4 meters. ASTER and
 IKONOS images are suggested to be included as soon as available, in addition to the Landsat. The
-research includes fieldwork in-situ measurements of the seagrass distribution along the northern and
+research includes fieldwork \textit{in-situ} measurements of the seagrass distribution along the northern and
 south-eastern coasts of Crete in chosen locations.\\
 The optical measurements of the irradiance and radiance of the sea water and bottom cover types of
 the seafloor have been received by the means of the optical sensors Trios-RAMSES Hyperspectral
-UVA/UVB Irradiance Sensor and RAMSES-ARC Hyperspectral UV-VIS Radiance Sensor (Fig. \ref{fig:2.1}), both adjusted for the measurements of the irradiance and radiance (see \nameref{app}: Tab. \ref{tab:A.1}, Tab. \ref{tab:A.2}).
+UVA/UVB Irradiance Sensor and RAMSES-ARC Hyperspectral UV-VIS Radiance Sensor (Fig. \ref{fig:2.1}), both adjusted for the measurements of the irradiance and radiance (see \nameref{app}: Tab. \ref{tab:A.1}, Tab. \ref{tab:A.2}). \\
 The highest measured values are located in the diapason of 410-730 nm for the water irradiance (Fig. \ref{fig:A.18}) and 430-650 for the water radiance (Fig.\ref{fig:A.16}). 
-Afterwards, the measured values of the
-radiance and irradiance, respectively, have been used for the computation of the spectral reflectance
+Afterwards, the measured values of the radiance and irradiance, respectively, have been used for the computation of the spectral reflectance
 properties of the sea water and bottom cover types (Fig.\ref{fig:A.15}). The spectral range of radiance
 cover diapason of 320-950 nm, and irradiance measurements are covered in the interval of 280-500
 nm, which is suitable for characteristics of seagrass reflectance.
@@ -1251,14 +1223,6 @@ computations of these values using mathematical formulae. The graphs shown on Fi
 The distinguishing spectral signatures for various seafloor types (e.g. seagrass species, coral reefs,
 various types of sand, mud, other sediments, (Fig.\ref{fig:4.4})) exist in well-defined and narrow (10–20 nm)
 wavelength ranges. 
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.30]{GNU-18.jpg}
-	\caption{Multiplot showing spectral reflectance of the seawater with sediments, measured in aquarium tank, Agia Pelagia district, Crete. \href{http://www.gnuplot.info/}{Gnuplot} \\Two complimentary graphs below show the results of the statistical analysis.}
-	\label{fig:4.4}
-\end{figure}
-
 The values of their spectral reflectance are accepted as constant. The results of
 spectral measurements enable to analyze, whether P.Oceanica is spectrally distinct from other sea
 floor types with changing environmental conditions, using the differences in their spectral signatures
@@ -1267,24 +1231,24 @@ software tool for analyzing and simulating the most common types of spectra \cit
 suitable for the seagrass spectral analysis.
 There are several environmental characteristics, included in WASI interface (Fig.\ref{fig:4.7}), which influence the
 results of water spectral reflectance, e.g. different bottom depths, concentration of suspended particles
-in water column, water temperature, sun angle, concentration of gelbstoff (coloured dissolved organic
+in water column, water temperature, sun angle, concentration of Gelbstoff (coloured dissolved organic
 matter), concentration of phytoplankton, aerosol scattering, exponent of backscattering by small
 particle \cite{Gege04}\label{Gege04}. The backward-scattering coefficient (bb), also included in WASI, is a
 fundamental optical property which plays a central role in the ocean-color remote sensing, providing
 the remotely sensed optical signal, as well as suspended particle distributions, water clarity, and
 underwater visibility \cite{Maffione97}\label{Maffione97}. WASI enables simulation of backscattering of pure
 water, large and small particles. The values of all these parameters can be redacted and changed
-manually. However, the most important, major factors affecting the in-situ conditions are water depth (Fig.\ref{fig:4.9})
-and cover fraction of the seafloor types: \textit{P.oceanica} and carbonate sand .
+manually. However, the most important, major factors affecting the \textit{in-situ} conditions are water depth (Fig.\ref{fig:4.9})
+and cover fraction of the seafloor types: \textit{P.oceanica} and carbonate sand.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.30]{GNU-21.jpg}
-	\caption{Multiplot graph showing spectral reflectance of the seawater without sediments, measured in aquarium tank, Agia Pelagia district, Crete. \href{http://www.gnuplot.info/}{Gnuplot} \\Two complimentary graphs below show the results of the statistical analysis}
-	\label{fig:27}
+	\includegraphics[scale=0.27]{GNU-18.jpg}
+	\caption{Multiplot showing spectral reflectance of the seawater with sediments, measured in aquarium tank, Agia Pelagia district, Crete. \href{http://www.gnuplot.info/}{Gnuplot} \\Two complimentary graphs below show the results of the statistical analysis.}
+	\label{fig:4.4}
 \end{figure}
 
-Seagrass \textit{P.oceanica} can be mapped using remotely acquired spectral imagery, if it has distinctive
+Seagrass \textit{P.oceanica} can be mapped using remotely acquired spectral imagery, but only if it has distinctive
 reflectance signatures at different depths. Therefore, the depths of the shelf area are the first variable
 condition for this research question. The depths values chosen for the current research are lesser than
 3.5 meters, covering shelf zone, and providing the best environmental conditions for the seagrass
@@ -1292,16 +1256,16 @@ condition for this research question. The depths values chosen for the current r
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.30]{GNU-20.jpg}
+	\includegraphics[scale=0.3]{GNU-20-new.jpg}
 	\caption{Statistical comparison of spectral reflectance of \textit{P.oceanica} and carbonate sand. Selected measurements sets. \href{http://www.gnuplot.info/}{Gnuplot} graph}
 	\label{fig:28}
 \end{figure}
 
 The 3.5 m depth limit was chosen based on the analysis of the separability of seagrass reflectance signatures, received by the means of
-previous in-situ measurements (year 2009) of the radiance and irradiance of water in Agia Pelagia
+previous \textit{in-situ} measurements (year 2009) of the radiance and irradiance of water in Agia Pelagia
 bay, which indicated that \textit{P.oceanica} seagrass could be only well separated within depths of 3.5 m.
 A statistical analysis of WASI-simulated spectral reflectance has been used in order to answer the first
-research question: whether the 	extit{P.oceanica} spectra is spectrally distinct at varying environmental in-situ
+research question: whether the 	extit{P.oceanica} spectra is spectrally distinct at varying environmental \textit{in-situ}
 conditions, and if \textit{P.oceanica} remains spectrally distinct with the increasing water column depth.
 To answer this research question, different seafloor cover types are discriminated using data of the
 broadband remote sensing.
@@ -1368,27 +1332,27 @@ In order to focus on the factors of primary importance, other and less influenci
 i.e. sun angle, concentration of the suspected particles in the water column, content of gelbstoff, etc.
 For these factors default values of WASI are accepted.
 Under normal conditions by independent water colour sampling, values of the remote-sensing
-reflectance can vary by 12–24 per cent \cite{Toole00}\label{Toole00}, and these variations in the radiometric
+reflectance can vary by 12–24 \% \cite{Toole00}\label{Toole00}, and these variations in the radiometric
 determinations are mainly caused by the variety of the environmental factors.
 Different factors influence colour and spectral reflectance of water, among which different bottom
 depths, concentration of suspended particles in water column, water temperature, sun angle,
-concentration of gelbstoff (coloured dissolved organic matter), concentration of phytoplankton,
+concentration of Gelbstoff (coloured dissolved organic matter), concentration of phytoplankton,
 aerosol scattering, exponent of backscattering by small particles, cloudiness, viewing geometry and
 wind speed (which is, however, not the major source of uncertainty). All these environmental
 components increase the absorption and scattering of light which, in its turn, results in a complex
 relationship between their concentrations and the radiance of water that finally influence its spectral
-reflectance.
+reflectance.\\
 However, although there are a variety of environmental factors that contribute to the spectral
-reflectance, the most important ones from the mentioned above are water depth and seafloor fraction.
+reflectance, the most important ones from the mentioned above are the water column (depth) and seafloor fraction.
 It is because spectra of the seagrass \textit{P.oceanica} vary qualitatively over the depths interval of 0.5–4 m,
 and secondly, the content and cover fraction of the seafloor have the most distinctive effect on the
-spectral reflectance of the water.
-Therefore, in current MSc research we focus on these two major factors, and study the response of the
+spectral reflectance of the water. \\
+Therefore, in the current research we focus on these two major factors, and study the response of the
 water reflectance towards changing conditions of the water column depth and seafloor bottom cover
-fraction (seagrass 	extit{P.oceanica}, carbonate sand and silt).
-The analysis of the spectral signatures of the seagrass and sand clearly shows (Fig.\ref{fig:27}) that seagrass
+fraction (seagrass \textit{P.oceanica}, carbonate sand and silt).\\
+The analysis of the spectral signatures of the seagrass \textit{P.oceanica} and sand clearly shows (Fig.\ref{fig:27}) that seagrass
 has spectral reflectance much lesser than that of a carbonate sand, in general not increasing values of
-10 percent reflectance in spectra of 500-600 nm, while sand has spectral reflectance approaching 33 percent in its
+10 \% reflectance in spectra of 500-600 nm, while sand has spectral reflectance approaching 33\% in its
 highest values.
 
 \subsubsection{Water color spectral simulation using WASI}
@@ -1414,12 +1378,12 @@ cover fraction of the seafloor, in order to assess spectral signatures of the se
 as major seafloor types. WASI enables to use forward or inverse calculation for the spectrum types at
 a diapason of 350-800 nm with a 1nm spectral resolution. For the spectral analysis we applied
 forward calculations, i.e. a computing and plotting of series of spectra according to specified
-parameter settings, with exactly defined depths and cover fraction.
+parameter settings, with exactly defined depths and cover fraction. \\
 The specific parameters have been chosen for the simulation of the environmental conditions where seagrass
 grow. The adaptations to life in salt sea water requires various physical and chemical parameters
-which include salinity, temperature of 17-25°C, light requirements with 10-20 percent on average, ranging
-from 4.4percent  minimal up to 29 percent \cite{McKenzie09}\label{McKenzie09}, so that the zenith angle is taken as 35-
-45° and reflection factor 0.0201. \textit{P.oceanica}. These values, simulating the environment of the Mediterranean Sea, are fixed (Tab.\ref{tab:3}) among WASI user-defined parameters.
+which include salinity, temperature of $17-25\,^{\circ}C$, light requirements with 10-20 \% on average, ranging
+from 4.4 \%  minimal up to 29 \% \cite{McKenzie09}\label{McKenzie09}, so that the zenith angle is taken as $35-45\,^{\circ}$
+and reflection factor 0.0201. \textit{P.oceanica}. These values, simulating the environment of the Mediterranean Sea, are fixed (Tab.\ref{tab:3}) among WASI user-defined parameters.
 The calculations are done for the spectrum 350-800 nm, covering the most important part of the RS spectrum: 1) Blue-green 0.45 - 0.5 μm; 2) Green 0.5 - 0.6 μm; 3) Red 0.6 - 0.7 μm; 4) Red-NIR 0.7 - 0.8 μm (Fig.\ref{fig:4.8}).
 
 \begin{figure}[h]
@@ -1518,12 +1482,10 @@ irradiance received in Agia Pelagia bay.
 \end{figure}
 \pagebreak
 
-\paragraph{Spectral discrimination of sand}
-
 \subsubsection{Statistical analysis of the observational data and hypothesis testing}
 The total amount of measured data was large and included following datasets made using
-hyperspectral radiometer Ramses: 350 measurement sets of 	extit{P.oceanica} reflectance for 14th Oct (Tab.\ref{tab:A.29}), 400
-sets of 	extit{P.oceanica} reflectance for 15th Oct (Tab.\ref{tab:A.8}), 84 datasets for seawater reflectance with sediments, 105
+hyperspectral radiometer Ramses: 350 measurement sets of \textit{P.oceanica} reflectance for 14th Oct (Tab.\ref{tab:A.29}), 400
+sets of \textit{P.oceanica} reflectance for 15th Oct (Tab.\ref{tab:A.8}), 84 datasets for seawater reflectance with sediments, 105
 datasets for seawater reflectance without sediments, 87 sets for spectral reflectance of carbonate sand.
 A statistical approach is evidently necessary for the proper processing of such amounts of data. 
 The schematic view of the statistical approach used for the data processing  can be seen on Fig. \ref{fig:4.12}.
@@ -1549,7 +1511,7 @@ Thus, we collect a number of realizations (a sample of 25 measurements for both 
 Finally we analyzed about 400 datasets totally (example of carbonate sand on Fig.\ref{fig:4.14}, \textit{P.oceanica} - on  Fig.\ref{fig:4.13}) made during different days. 
 Since the actual values that measured variables of spectral reflectance take on are not actually known before we observed them, they are random. 
 Thus, we analyzed the statistical distribution of the spectral reflectance values of seafloor cover types using common mathematical formulae, implemented in Gretl software (Tab.\ref{tab:19}). 
-Their probability expresses uncertainty about the possible values of the spectral reflectance of 	extit{P.oceanica} and sand, respectively.
+Their probability expresses uncertainty about the possible values of the spectral reflectance of \textit{P.oceanica} and sand, respectively.
 There is a distinction to be made between variables whose values are not yet observed (random variables) and those whose values have been observed (observations). 
 Each time we observe the outcome of a random variable of spectral reflectance, we obtain an observation, which is hence no longer random. 
 We applied various methods of statistical analysis towards data pool (some examples of the selected tables are in the \nameref{app}: Tab.\ref{tab:18}, Tab.\ref{tab:24}, Tab.\ref{tab:25}, Tab.\ref{tab:26}, Tab.\ref{tab:29}), in order to analyze the distribution of values of spectral reflectance of \textit{P.oceanica}. 
@@ -1574,16 +1536,16 @@ The graphs illustrating spectral signatures of various seafloor cover types disp
 areas of quartiles (Q1, Q3, shaded areas on graph, Fig. \ref{fig:4.10}, Fig.\ref{fig:4.14}), which cover most probable data distribution
 (spectral reflectance) for each spectral band. In x-axis displayed are the areas of 400 – 950 nm in
 spectra, where the measurements were done; the y-axis was adjusted for the better visualization of the
-	extit{P.oceanica} spectra: as its spectral values are mostly located in the lower part of the spectra (usually no
+\textit{P.oceanica} spectra: as its spectral values are mostly located in the lower part of the spectra (usually no
 more than 0.20 nm, except for borders), we did not extend the y-scale up to 100 percent, in order to
 focus on the most necessary area of spectral values (Fig.\ref{fig:4.14}, Fig.\ref{fig:4.4} and \nameref{app}). The mean values are
-highlighted using bold red points, as we used these values for plotting the final graph of 	extit{P.oceanica} spectra in
+highlighted using bold red points, as we used these values for plotting the final graph of \textit{P.oceanica} spectra in
 Ligaria beach, Agia Pelagia.
 
 \begin{figure}
 	\begin{center}
 		\includegraphics[scale=0.45]{GNU-13.jpg}
-		\caption{Multiplot of spectral reflectance of 	extit{P.oceanica}. Series 1-100. Shown mid-spread of the statistical quartiles Q1 and Q3 (vertical dashes) and
+		\caption{Multiplot of spectral reflectance of \textit{P.oceanica}. Series 1-100. Shown mid-spread of the statistical quartiles Q1 and Q3 (vertical dashes) and
 			mean value within the range (red bold dots). \href{http://www.gnuplot.info/}{Gnuplot} visualization­}
 		\label{fig:4.13}
 	\end{center}
@@ -1604,52 +1566,52 @@ according to a pre-determined threshold probability, the significance level. The
 critical tests of significance to analyze the measured data according to their significant value.
 Answering the first research question, we suggest the following statement.
 Assuming that the null hypothesis, Hypothesis Ho, is true, which is “the spectral distinguishability of
-the seagrass 	extit{P.oceanica} from other seafloor types is not changing with varying in-situ conditions,
+the seagrass \textit{P.oceanica} from other seafloor types is not changing with varying \textit{in-situ} conditions,
 Ho: μ1 =μ2 =μ3=...= μn.”, what is the probability of observing the values of spectral reflectance of
-	extit{P.oceanica} at various depths, for the test statistic, that is at least as extreme as the values of spectral
-reflectance of 	extit{P.oceanica} at these depths, that was actually observed? The alternative Hypothesis Ha
-Fig.15. Multiplot display of spectral reflectance of 	extit{P.oceanica}. Measurement sets 1-100, 15th
+\textit{P.oceanica} at various depths, for the test statistic, that is at least as extreme as the values of spectral
+reflectance of \textit{P.oceanica} at these depths, that was actually observed? The alternative Hypothesis Ha
+Fig.15. Multiplot display of spectral reflectance of \textit{P.oceanica}. Measurement sets 1-100, 15th
 October. Bold red dots show the mean values within each dataset; vertical areas: quartiles Q1-Q2.
-claims the opposite statement: “the spectral discernibility of the seagrass 	extit{P.oceanica} is distinctly
-changing with varying in-situ conditions, i.e. increasing depth, Ho: μ$\neq$μ2$\neq$μ3$\neq$ ... $\neq$μn“.
+claims the opposite statement: “the spectral discernibility of the seagrass \textit{P.oceanica} is distinctly
+changing with varying \textit{in-situ} conditions, i.e. increasing depth, Ho: μ$\neq$μ2$\neq$μ3$\neq$ ... $\neq$μn“.
 Two statistical approaches have been tested for confirmatory data analysis and hypothesis testing.
-To analyze average values of spectral reflectance of 	extit{P.oceanica} by means of the measured sets we calculated 
+To analyze average values of spectral reflectance of \textit{P.oceanica} by means of the measured sets we calculated 
 mean values for the total set of measurements 1 – 350 (15th October): mean of min and max values, 
 mean of average for each waveband, mean for statistical quartiles for each wavelength and mean for median, respectively. 
 The adjusted averages evaluate mean values, needed for statistical analysis of the datasets. 
 The outcome of this calculations is shown in the Tab.\ref{tab:5} and Tab.\ref{tab:6} (\nameref{app}). 
-As a result, we have mean values of spectral reflectance of 	extit{P.oceanica} for extreme, average, median and both quartiles,
+As a result, we have mean values of spectral reflectance of \textit{P.oceanica} for extreme, average, median and both quartiles,
 independent of the individual sets 1-350. 
 
 \paragraph{ANOVA-testing}
 We applied ANOVA (ANalysis Of Variance) testing for the analysis of the probability of the
-spectral reflectance of 	extit{P.oceanica} to be more or less spectrally disticnt from other seafloor cover
+spectral reflectance of \textit{P.oceanica} to be more or less spectrally distinct from other seafloor cover
 types with changing depth. W are checking the statement Hypothesis Ho, is true, which is “the
-spectral distinguishability of the seagrass 	extit{P.oceanica} from other seafloor types is not changing with
-varying in-situ conditions, Ho: μ1 =μ2 =μ3=...= μn.” which gives the following outcome.
+spectral distinguishability of the seagrass \textit{P.oceanica} from other seafloor types is not changing with
+varying \textit{in-situ} conditions, Ho: μ1 =μ2 =μ3=...= μn.” which gives the following outcome.
 P(reject H0|H0 is valid)= P(X$>$c|p=)=.05
 where c comes for critical values and p=probability.
 The result P=.05 is (Tab.\ref{tab:8}), hence, very small, which makes the statement of Hypothesis Ho highly unlikely
 (less than 1 in a 10 chance). The one-way ANOVA highlighted a significant difference between data
-of spectral reflectances of 	extit{P.oceanica} at different depths (Tab.\ref{tab:9}), i.e. true is the opposite statement:
-Hypothesis Ha=“the spectral discernibility of the seagrass 	extit{P.oceanica} is distinctly changing with
-varying in-situ conditions, i.e. increasing depth, Ho: μ$\neq$μ2$\neq$μ3$\neq$ ... $\neq$μn“.
+of spectral reflectances of \textit{P.oceanica} at different depths (Tab.\ref{tab:9}), i.e. true is the opposite statement:
+Hypothesis Ha=“the spectral discernibility of the seagrass \textit{P.oceanica} is distinctly changing with
+varying \textit{in-situ} conditions, i.e. increasing depth, Ho: μ$\neq$μ2$\neq$μ3$\neq$ ... $\neq$μn“.
 
 \paragraph{Student-t testing}
 The Student-t test, one of the most commonly used techniques for testing a hypothesis on the basis
 of a difference between sample means, is used for the data analysis. In our case the Student t-test demonstrates, if the variation
-between two analyzed groups – values of spectral reflectance of seagrass 	extit{P.oceanica} and sand - is
+between two analyzed groups – values of spectral reflectance of seagrass \textit{P.oceanica} and sand - is
 significant. Therefore, we use Student t-test to compare two sets of quantitative data of spectral
-reflectance of 	extit{P.oceanica} and sand, respectively, with samples collected independently of one
+reflectance of \textit{P.oceanica} and sand, respectively, with samples collected independently of one
 another. The Student-t test can be performed knowing just the means, standard deviation, and number
-of data points. Therefore, we used the data (\nameref{app}) of means of spectral reflectance of both
-bottom cover types within data sets, their standard deviation, and the number of data points.
+of data points. Therefore, we used the data (\nameref{app}) of means of spectral reflectance of the both
+ cover types within data sets, their standard deviation, and the number of data points.
 The results show the following outcome.
 As a result of the statistical testing, we came to the following conclusion.
-The Hypothesis Ha is true, which claims that the spectral discernibility of the seagrass 	extit{P.oceanica} is
-distinctly changing with varying in-situ conditions, i.e. increasing depth, Ho: μ1≠μ2≠μ3≠...≠ μn .
+The Hypothesis Ha is true, which claims that the spectral discernibility of the seagrass 	\textit{P.oceanica} is
+distinctly changing with varying \textit{in-situ} conditions, i.e. increasing depth, Ho: μ1≠μ2≠μ3≠...≠ μn .
 Statistical results are illustrated with Error bars made using Excel's vertical box and Whisker Charts
-(Box Plots, Fig..).
+(Box Plots).
 The graphs were plotted on the basis of the following statistical data calculated from the sampling
 measurements data: Table 2.
 
@@ -1704,25 +1666,25 @@ the spectral signature of seafloor cover types in full-resolution spectra.
 
 \subsection{Image processing using Erdas Imagine}
 The analysis of the imagery of Cretan coasts is based on the images classification and is aimed to
-investigate the distribution of the seagrass 	extit{P.oceanica} within the research area.
+investigate the distribution of the seagrass \textit{P.oceanica} within the research area.
 In the image processing part of the research supervised classification has been applied to the aerial
 and satellite images. Seagrass meadows and other seafloor cover types were evaluated through a
 detailed examination of the imagery. \\
 Seagrass beds are clearly visible in color aerial Google Earth
 photographs (Fig.\ref{fig:A.36}, Fig.\ref{fig:A.37}), contrasting against slightly-yellow and brownish sand bottom. The seagrass areas are
 detected using different bands combinations, masked and studied for the estimation of the changes in
-the areas. The classification is based on the spectral properties of the \textit{	extit{P.oceanica}}, such as brightness,
+the areas. The classification is based on the spectral properties of the \textit{P.oceanica}, such as brightness,
 colour, texture and structure of the seagrass mattes (Fig.\ref{fig:38}a). The raster-based mapping
 includes supervised classification with training sites of seagrasses (10-15 set areas) in different bands
 for each photograph by classification a series of polygons characteristic of each of the sea floor
-bottom types: sandy surface, seagrass bed for each species including \textit{	extit{P.oceanica}} (meadows), patchy
+bottom types: sandy surface, seagrass bed for each species including \textit{P.oceanica} (meadows), patchy
 seagrass bed and algae on rock, rocks, muddy surface, etc (Fig.\ref{fig:38}b).
 
 \begin{figure}
 	\centering
 	\subfloat [small-scaled (1:54,000)]{\label{fig:38a}\includegraphics[width=0.8\textwidth]{Fig35a.jpg}}\\
 	\subfloat [enlarged (1:10,000)]{\label{fig:38b}\includegraphics[width=0.8\textwidth]{Fig35b.jpg}}
-	\caption{Seafloor types of the Arina beach: \textit{	extit{P.oceanica},} sand, rocks. \\ \href{http://www.google.com/earth/index.html}{Google Earth} images}
+	\caption{Seafloor types of the Arina beach: \textit{P.oceanica}, sand, rocks. \\ \href{http://www.google.com/earth/index.html}{Google Earth} images}
 	\label{fig:38}
 \end{figure}
 
@@ -1783,7 +1745,7 @@ areas, historically defined as landscapes \cite{Robbins94}\label{Robbins94}.
 \begin{figure}[h]
 	\centering
 	\subfloat [Meadows of the seagrass. Source: \href{http://www.google.com/earth/index.html}{Google Earth}]{\label{fig:41a}\includegraphics[width=0.4\textwidth]{Fig-38a.jpg}}
-	\subfloat [Patches (mattes) of the seagrass. Source: in-situ videometric measurements]{\label{fig:41b}\includegraphics[width=0.47\textwidth]{Fig-38b.jpg}}
+	\subfloat [Patches (mattes) of the seagrass. Source: \textit{in-situ} videometric measurements]{\label{fig:41b}\includegraphics[width=0.47\textwidth]{Fig-38b.jpg}}
 	\caption{Variations in spatial structure of the seagrass landscapes}
 	\label{fig:41}
 \end{figure}
@@ -1816,10 +1778,10 @@ Increased nutrient sedimentation, especially phosphorus, were explored \cite{Jen
 potential mechanism for increasing patch dynamics and morphological plasticity within seagrass
 meadows. Finally, increasing the degree of fragmentation of the landscapes of 	extit{P.oceanica} meadows
 can be caused by the invasion of alien species, such as Cymodocea nodosa, Caulerpa prolifera,
-Caulerpa taxifolia. Invaders are in general strong colonizers comparing to native 	extit{P.oceanica}: they
+Caulerpa taxifolia. Invaders are in general strong colonizers comparing to native \textit{P.oceanica}: they
 occupy much greater habitat space within the regressed meadows of stressed native seagrass
 \cite{Montefalcone10}\label{Montefalcone10}. However, on the northern coasts of Crete the only dominating seagrass
-species is 	extit{P.oceanica}.
+species is \textit{P.oceanica}.
 Morphological differences in scale of seagrass landscape formations, discussed above, cause need for
 the different-scale mapping. Therefore, the investigation of the seagrass meadows at different levels is
 performed using underwater videometric measurements, aerial and satellite imagery.
@@ -1834,7 +1796,7 @@ distribution at a more detailed scale.
 \section{Discussion and conclusions}
 The suggested methodology of the analysis of seagrass adaptation towards different environments of
 the coastal zones can be applied to other marine coastal areas with growing seagrass.\\
-More than 50 percent of the world population lives within one km of the coast which results in continued
+More than 50 \% of the world population lives within one km of the coast which results in continued
 anthropogenic pressures in coastal regions. \\Therefore, management of coastal resources and shelf
 zone protection in the Mediterranean Sea become increasingly important and require large-scale
 monitoring and mapping of the shelf zone as vital instrument for the environmental assessment.
@@ -1842,7 +1804,7 @@ monitoring and mapping of the shelf zone as vital instrument for the environment
 
 \section{Keywords}
 \markright{Keywords}
-Seagrass, \textit{\textit{	extit{P.oceanica}}}, analysis of spectral reflectance, remote sensing, monitoring, Google Earth, Crete
+Seagrass, \textit{P.oceanica}, analysis of spectral reflectance, remote sensing, monitoring, Google Earth, Crete
 \pagebreak
 
 %%%%%%%%%%%%%%%%%%%  Appendix  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1935,7 +1897,7 @@ Seagrass, \textit{\textit{	extit{P.oceanica}}}, analysis of spectral reflectance
 	      DateTime & 2009-10-14 15:32:02 & 2009-10-15 10:36:02 \\ \hline
 	     PositionLatitude & 35.24752= 35°14'51.072" & 35.245071=35°14'42.2556" \\ \hline
 	     PositionLongitude & 25.0098= 25°0'35.2794" & 25.012661=25°0'45.5796" \\ \hline
-	     Comment & 	extit{P.oceanica} & 	extit{P.oceanica} \\ \hline
+	     Comment & \textit{P.oceanica} & \textit{P.oceanica} \\ \hline
 	     CommentSub1 & 3.5m depth & 1.5m depth \\ \hline
 	     CommentSub2 & diffuse & diffuse \\ \hline
 	     CommentSub3 & Agia Pelagia & Agia Pelagia site 1, close to rocks \\ \hline
@@ -2044,24 +2006,30 @@ Seagrass, \textit{\textit{	extit{P.oceanica}}}, analysis of spectral reflectance
 \subsection{\textit{Appendix-7}. Data processing and statistical evaluation: Results of the measurements of the seafloor optical properties.}
 %\appendixname{\textbf{7:\\ Data processing and statistical evaluation: \\ Results of the measurements of the seafloor optical properties.}}
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.30]{GNU-21.jpg}
+	\caption{Multiplot graph showing spectral reflectance of the seawater without sediments, measured in aquarium tank, Agia Pelagia district, Crete. \href{http://www.gnuplot.info/}{Gnuplot} \\Two complimentary graphs below show the results of the statistical analysis}
+	\label{fig:27}
+\end{figure}
 \begin{figure}[h]
 	\begin{center}
 		\includegraphics[scale=0.20]{App-1.jpg}
-		\caption{Values of spectral reflectances of seagrass 	extit{P.oceanica} (fragment)}
+		\caption{Values of spectral reflectances of seagrass \textit{P.oceanica} (fragment)}
 		\label{fig:A.11}
 	\end{center}
 \end{figure}
 \begin{figure}[h]
 	\begin{center}
 		\includegraphics[scale=0.20]{GNU-401-420.jpg}
-		\caption{Spectral reflectance of 	extit{P.oceanica}. Measurement series 401-420. \href{http://www.gnuplot.info/}{Gnuplot}}
+		\caption{Spectral reflectance of \textit{P.oceanica}. Measurement series 401-420. \href{http://www.gnuplot.info/}{Gnuplot}}
 		\label{fig:A.12}
 	\end{center}
 \end{figure}
 \begin{figure}[h]
 	\begin{center}
 		\includegraphics[scale=0.20]{GNU-401-420-candles.jpg}
-		\caption{Statistical analysis of the measurement data: spectral reflectance of the 	extit{P.oceanica}. 
+		\caption{Statistical analysis of the measurement data: spectral reflectance of the \textit{P.oceanica}. 
 		Visualization of the interquartile ranging. Example of data set 401-420. Shown mid-spread of  statistical quartiles Q1 and Q3, min and max values within the range. \href{http://www.gnuplot.info/}{Gnuplot}}
 		\label{fig:A.13}
 	\end{center}
@@ -2079,7 +2047,7 @@ Seagrass, \textit{\textit{	extit{P.oceanica}}}, analysis of spectral reflectance
 
 \begin{table}[htbp]
 	\rowcolors{1}{Ivory}{GhostWhite}
-	\caption{Model summary of the \textit{regression} analysis: curve estimation and ANOVA table tested for single observations within one measurement set: spectral 			reflectance of \textbf{	extit{P.oceanica}}. \href{http://www.spss.com/}{SPSS}}
+	\caption{Model summary of the \textit{regression} analysis: curve estimation and ANOVA table tested for single observations within one measurement set: spectral reflectance of \textit{P.oceanica}. \href{http://www.spss.com/}{SPSS}}
 	\begin{center}
 		\begin{tabular}{|c|c|c|c|}
 			\hline\hline
@@ -2093,7 +2061,7 @@ Seagrass, \textit{\textit{	extit{P.oceanica}}}, analysis of spectral reflectance
 
 \begin{table}[htbp]
 	\rowcolors{1}{Ivory}{GhostWhite}
-	\caption{\textit{ANOVA} table: exponential curve estimation in the regression analysis, tested for single observations within one measurement set: spectral reflectance of 		\textbf{	extit{P.oceanica}}. \href{http://www.spss.com/}{SPSS}}
+	\caption{\textit{ANOVA} table: exponential curve estimation in the regression analysis, tested for single observations within one measurement set: spectral reflectance of \textit{P.oceanica}. \href{http://www.spss.com/}{SPSS}}
 	\begin{center}
 		\begin{tabular}{|c|c|c|c| c|c|}
 			\hline\hline
@@ -2109,7 +2077,7 @@ Seagrass, \textit{\textit{	extit{P.oceanica}}}, analysis of spectral reflectance
 
 \begin{table}[htbp]
 	\rowcolors{1}{Ivory}{GhostWhite}
-	\caption{Coefficients of the \textit{regression analysis} (exponential curve estimation) of the spectral reflectance of \textbf{	extit{P.oceanica}}. \href{http://www.spss.com/}{SPSS}}
+	\caption{Coefficients of the \textit{regression analysis} (exponential curve estimation) of the spectral reflectance of \textit{P.oceanica}. \href{http://www.spss.com/}{SPSS}}
 	\begin{center}
 		\begin{tabular}{| c | c | p{2cm}| c | c | c |}
 			\hline\hline
@@ -2129,7 +2097,7 @@ Seagrass, \textit{\textit{	extit{P.oceanica}}}, analysis of spectral reflectance
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[scale=0.20]{GNU-Stat-M-401-420.jpg}
-	\caption{Fragment of the statistical analysis of the 	extit{P.oceanica} reflectance. Example of data set 401-420. 
+	\caption{Fragment of the statistical analysis of the \textit{P.oceanica} reflectance. Example of data set 401-420. 
 		Visualization of the measured data together with statistical values: interquartile ranging, medians, means. \href{http://www.gnuplot.info/}{Gnuplot}}
 	\label{fig:A.15}
 	\end{center}
@@ -2144,7 +2112,7 @@ Seagrass, \textit{\textit{	extit{P.oceanica}}}, analysis of spectral reflectance
 
 \begin{table}[htbp]
 	\rowcolors{1}{Ivory}{GhostWhite}
-	\caption{Results of the \textit{ANOVA one-way} analysis: results of the \textit{single factor} (depth) testing of the radiance of \textit{	extit{P.oceanica}} at various depths: 0.5, 1.5 and 2.5 meters. \href{http://www.spss.com/}{SPSS}}\label{tab:8}
+	\caption{Results of the \textit{ANOVA one-way} analysis: results of the \textit{single factor} (depth) testing of the radiance of \textit{P.oceanica} at various depths: 0.5, 1.5 and 2.5 meters. \href{http://www.spss.com/}{SPSS}}\label{tab:8}
 	\begin{center}
 	\begin{tabular}{|c|c|c|c|c|c|c|}
 		\hline\hline
@@ -2154,13 +2122,13 @@ Seagrass, \textit{\textit{	extit{P.oceanica}}}, analysis of spectral reflectance
 		Total &  635074.8716 & 572 & & & & \\ \hline
 	\end{tabular}
 	\end{center} 
-	P more than .05, which means that there is a significant difference in radiance of 	extit{P.oceanica} at three different depth (0.5, 1.5 and 2.5). 
+	P more than .05, which means that there is a significant difference in radiance of \textit{P.oceanica} at three different depth (0.5, 1.5 and 2.5). 
 	
 \end{table}
 
 \begin{table}[htbp]
 	\rowcolors{1}{Ivory}{GhostWhite}
-	\caption{Summary of the \textit{ANOVA one-way} analysis: results of the \textit{single factor} (depth) testing of the radiance of \textit{	extit{P.oceanica}} at various depths: 0.5, 1.5 and 2.5 meters. \href{http://www.spss.com/}{SPSS}}\label{tab:A.7}
+	\caption{Summary of the \textit{ANOVA one-way} analysis: results of the \textit{single factor} (depth) testing of the radiance of \textit{P.oceanica} at various depths: 0.5, 1.5 and 2.5 meters. \href{http://www.spss.com/}{SPSS}}\label{tab:A.7}
 	\begin{center}
 	\begin{tabular}{|c|c|c|c|c|}
 		\hline\hline
@@ -2170,14 +2138,14 @@ Seagrass, \textit{\textit{	extit{P.oceanica}}}, analysis of spectral reflectance
 		Column 3 & 191 &	12465.19972 & 65.2628257 & 1104.7302015 \\ \hline
 	\end{tabular}
 	\end{center}
-	P$>$0.05, which means that there is a significant difference in radiance of 	extit{P.oceanica} at three different depth (0.5, 1.5 and 2.5). 
+	P$>$0.05, which means that there is a significant difference in radiance of \textit{P.oceanica} at three different depth (0.5, 1.5 and 2.5). 
  	
 \end{table}
 \pagebreak
 
 \rowcolors{1}{GhostWhite}{LightCyan}
 \begin{longtable}{|c|c|c|c|c|c|c|}
-	\caption{Results of the statistical analysis of spectral reflectance of \textbf{	extit{P.oceanica}}, sets 1-350). Wavelength step: 3 nm. Measured on Agia Pelagia beach, 15th October}\label{tab:A.8} \\
+	\caption{Results of the statistical analysis of spectral reflectance of \textit{P.oceanica}, sets 1-350). Wavelength step: 3 nm. Measured on Agia Pelagia beach, 15th October}\label{tab:A.8} \\
 	  \multicolumn{1}{|l|}{\textbf{wl}} &
 	   \multicolumn{1}{l|}{\textbf{mean}} & 
 	   \multicolumn{1}{l|}{\textbf{Q1}} & 
@@ -2187,7 +2155,7 @@ Seagrass, \textit{\textit{	extit{P.oceanica}}}, analysis of spectral reflectance
 	   \multicolumn{1}{l|}{\textbf{median}} \\ \hline
 	\endfirsthead
 
-	\multicolumn{7}{c}{Table A.8: Spectral reflectance of \textbf{	extit{P.oceanica}} \textit{(continued from previous page)}}\\
+	\multicolumn{7}{c}{Table A.8: Spectral reflectance of \textit{P.oceanica} \textit{(continued from previous page)}}\\
 	\hline \multicolumn{1}{|l|}{\textbf{wl}} & \multicolumn{1}{l|}{\textbf{mean}} & \multicolumn{1}{l|}{\textbf{Q1}} & \multicolumn{1}{l|}{\textbf{min}} & \multicolumn{1}{l|}{\textbf{Q3}} & \multicolumn{1}{l|}{\textbf{max}} & \multicolumn{1}{l|}{\textbf{median}} \\ \hline
 	\endhead
 
@@ -2484,7 +2452,7 @@ Seagrass, \textit{\textit{	extit{P.oceanica}}}, analysis of spectral reflectance
 
 \begin{table}[htbp]
 	\rowcolors{1}{Ivory}{GhostWhite}
-	\caption{Results of the \textit{autocorrelation analysis} of the measurement set 1-16 of the spectral reflectance of \textbf{	extit{P.oceanica}} (15.X.), Series:V3. \href{http://www.spss.com/}{SPSS}}
+	\caption{Results of the \textit{autocorrelation analysis} of the measurement set 1-16 of the spectral reflectance of \textit{P.oceanica} (15.X.), Series:V3. \href{http://www.spss.com/}{SPSS}}
 	\begin{center}
 	\begin{tabular}{|c|c|c|c|c|c|}
 		\hline\hline
@@ -2517,7 +2485,7 @@ Seagrass, \textit{\textit{	extit{P.oceanica}}}, analysis of spectral reflectance
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.45]{Autocorr.jpg}
-	\caption{\textit{Autocorrelation analysis} of the measurement set 1-16 of the spectral reflectance of \textbf{	extit{P.oceanica}} (15.X.). Visualization in \href{http://www.spss.com/}{SPSS}}
+	\caption{\textit{Autocorrelation analysis} of the measurement set 1-16 of the spectral reflectance of \textit{P.oceanica} (15.X.). Visualization in \href{http://www.spss.com/}{SPSS}}
 	\label{fig:A.21}
 \end{figure}
 \pagebreak
@@ -2525,7 +2493,7 @@ Seagrass, \textit{\textit{	extit{P.oceanica}}}, analysis of spectral reflectance
 
 \begin{table}[htbp]
 	\rowcolors{1}{Ivory}{GhostWhite}
-	\caption{Results of the partial \textit{autocorrelation analysis} of the measurement set 1-16 of the spectral reflectance of \textit{	extit{P.oceanica}} (15.X.), Series:V3. \href{http://www.spss.com/}{SPSS}}\label{tab:14}
+	\caption{Results of the partial \textit{autocorrelation analysis} of the measurement set 1-16 of the spectral reflectance of \textit{P.oceanica} (15.X.), Series:V3. \href{http://www.spss.com/}{SPSS}}\label{tab:14}
 	\begin{center}
 	\begin{tabular}{|c|c|c|}
 		\hline\hline
@@ -2553,7 +2521,7 @@ Seagrass, \textit{\textit{	extit{P.oceanica}}}, analysis of spectral reflectance
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.45]{Partial_Corr.jpg}
-	\caption{Partial correlation analysis of the measurement set 1-16 of the spectral reflectance of \textit{	extit{P.oceanica}} (15.X.). Visualization in \href{http://www.spss.com/}{SPSS}}
+	\caption{Partial correlation analysis of the measurement set 1-16 of the spectral reflectance of \textit{P.oceanica} (15.X.). Visualization in \href{http://www.spss.com/}{SPSS}}
 	\label{fig:A.22}
 \end{figure}
 \pagebreak
@@ -2571,7 +2539,7 @@ Seagrass, \textit{\textit{	extit{P.oceanica}}}, analysis of spectral reflectance
 \begin{table}[H]
 	\rowcolors{1}{Bisque}{Ivory}
 	\begin{center}
-		\caption{\textit{Ordinary Least Squares}: results of the \textit{OLS} analysis of the measurement set 326-350 of the spectral reflectance of \textit{	extit{P.oceanica}} (15.X.). \href{http://gretl.sourceforge.net/}{Gretl}}
+		\caption{\textit{Ordinary Least Squares}: results of the \textit{OLS} analysis of the measurement set 326-350 of the spectral reflectance of \textit{P.oceanica} (15.X.). \href{http://gretl.sourceforge.net/}{Gretl}}
 		Model 2: OLS, using observations 326--350\\
 		Dependent variable: v20 \\
 
@@ -2651,7 +2619,7 @@ Seagrass, \textit{\textit{	extit{P.oceanica}}}, analysis of spectral reflectance
 
 \begin{table}[htbp]
 	\rowcolors{1}{Ivory}{GhostWhite}
-	\caption{Summary of the table with values of the spectral reflectance of \textbf{	extit{P.oceanica}} measured on three different depths, R}
+	\caption{Summary of the table with values of the spectral reflectance of \textit{P.oceanica} measured on three different depths, R}
 	\begin{center}
 	\begin{tabular}{|c|c|c|c|}
 		\hline\hline
@@ -2671,7 +2639,7 @@ Seagrass, \textit{\textit{	extit{P.oceanica}}}, analysis of spectral reflectance
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=0.25]{GNU-11.jpg}
-		\caption{Spectral reflectance of 	extit{P.oceanica}. Measurement series 25-50. \\ \href{http://www.gnuplot.info/}{Gnuplot} display­}
+		\caption{Spectral reflectance of \textit{P.oceanica}. Measurement series 25-50. \\ \href{http://www.gnuplot.info/}{Gnuplot} display­}
 		\label{fig:A.25}
 	\end{center}
 \end{figure}
@@ -2680,7 +2648,7 @@ Seagrass, \textit{\textit{	extit{P.oceanica}}}, analysis of spectral reflectance
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=0.25]{GNU-12.jpg}
-		\caption{Remote sensing reflectance of 	extit{P.oceanica}. Series 1-25. \\Shown midspread of the statistical quartiles Q1 and Q3 (vertical dashes) and mean value within the range.  \href{http://www.gnuplot.info/}{Gnuplot}­}
+		\caption{Remote sensing reflectance of \textit{P.oceanica}. Series 1-25. \\Shown midspread of the statistical quartiles Q1 and Q3 (vertical dashes) and mean value within the range.  \href{http://www.gnuplot.info/}{Gnuplot}­}
 		\label{fig:A.26}
 	\end{center}
 \end{figure}
@@ -2728,7 +2696,7 @@ Seagrass, \textit{\textit{	extit{P.oceanica}}}, analysis of spectral reflectance
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=0.4]{GNU-14.jpg}
-		\caption{Multiplot of spectral reflectance of 	extit{P.oceanica}. Series 126-150. Shown mid-spread of the statistical quartiles Q1 and Q3 (vertical dashes) and mean value within the range (red bold dots). \href{http://www.gnuplot.info/}{Gnuplot} visualization­}
+		\caption{Multiplot of spectral reflectance of \textit{P.oceanica}. Series 126-150. Shown mid-spread of the statistical quartiles Q1 and Q3 (vertical dashes) and mean value within the range (red bold dots). \href{http://www.gnuplot.info/}{Gnuplot} visualization­}
 		\label{fig:A.27}
 	\end{center}
 \end{figure}
@@ -2790,7 +2758,7 @@ Seagrass, \textit{\textit{	extit{P.oceanica}}}, analysis of spectral reflectance
 
 \begin{table}[htbp]
 	\rowcolors{1}{Ivory}{GhostWhite}
-	\caption{Iteration History(a): results of the \textit{K-means} analysis of the measurement set 201-236 of the spectral reflectance of \textbf{	extit{P.oceanica}} (15.X.).  \href{http://www.spss.com/}{SPSS}}
+	\caption{Iteration History(a): results of the \textit{K-means} analysis of the measurement set 201-236 of the spectral reflectance of \textit{P.oceanica} (15.X.).  \href{http://www.spss.com/}{SPSS}}
 	\begin{center}
 	\begin{tabular}{|c|c|c|}
 		\hline\hline
@@ -2808,7 +2776,7 @@ Seagrass, \textit{\textit{	extit{P.oceanica}}}, analysis of spectral reflectance
 
 \begin{table}[H]
 	\rowcolors{1}{Ivory}{GhostWhite}
-	\caption{Number of Cases in each Cluster: results of the \textit{K-means} analysis of the measurement set 201-236 of the spectral reflectance of \textbf{	extit{P.oceanica}} (15.X.).  \href{http://www.spss.com/}{SPSS}}
+	\caption{Number of Cases in each Cluster: results of the \textit{K-means} analysis of the measurement set 201-236 of the spectral reflectance of \textit{P.oceanica} (15.X.).  \href{http://www.spss.com/}{SPSS}}
 		\begin{center}
 		\begin{tabular}{|c|c|}
 		\hline\hline
@@ -2824,7 +2792,7 @@ Seagrass, \textit{\textit{	extit{P.oceanica}}}, analysis of spectral reflectance
 
 \begin{table}[htbp]
 	\rowcolors{1}{Ivory}{GhostWhite}
-	\caption{Final Cluster Centers: results of the \textit{K-means} analysis of the measurement set 201-236 of the spectral reflectance of \textbf{	extit{P.oceanica}} (15.X.).  \href{http://www.spss.com/}{SPSS}}
+	\caption{Final Cluster Centers: results of the \textit{K-means} analysis of the measurement set 201-236 of the spectral reflectance of \textit{P.oceanica} (15.X.).  \href{http://www.spss.com/}{SPSS}}
 	\begin{center}
 	\begin{tabular}{|c|c|c|c|c|c|}
 	\hline\hline
@@ -2852,7 +2820,7 @@ Seagrass, \textit{\textit{	extit{P.oceanica}}}, analysis of spectral reflectance
 
 %%%Gretl begin
 \begin{table}[H]
-	\caption{Results of the \textit{Principal Components Analysis}: measurement variables 1-7 from the selected dataset 301-325 of the spectral reflectance of \textbf{	extit{P.oceanica}} (15.X.). \href{http://gretl.sourceforge.net/}{Gretl}}
+	\caption{Results of the \textit{Principal Components Analysis}: measurement variables 1-7 from the selected dataset 301-325 of the spectral reflectance of \textit{P.oceanica} (15.X.). \href{http://gretl.sourceforge.net/}{Gretl}}
 	\begin{center}
 	Eigenanalysis of the Correlation Matrix\\
 	\vspace{1em}
@@ -2891,7 +2859,7 @@ Seagrass, \textit{\textit{	extit{P.oceanica}}}, analysis of spectral reflectance
 \begin{table}[H]
 	\begin{center}
 		\rowcolors{1}{AntiqueWhite}{LightGoldenrodYellow}
-		\caption{Results of the \textit{tobit analysis} with censored dependent variable (2) from the selected dataset Series 151-175 of the s.reflectance of \textbf{	extit{P.oceanica}}. \href{http://gretl.sourceforge.net/}{Gretl}}
+		\caption{Results of the \textit{tobit analysis} with censored dependent variable (2) from the selected dataset Series 151-175 of the s.reflectance of \textit{P.oceanica}. \href{http://gretl.sourceforge.net/}{Gretl}}
 			Model 2: Tobit, using observations 1:01--8:23 ($T$ = 191)\\
 			Dependent variable: v12\\
 		\vspace{1em}
@@ -2926,7 +2894,7 @@ Seagrass, \textit{\textit{	extit{P.oceanica}}}, analysis of spectral reflectance
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=0.38]{GNU-15.jpg}
-		\caption{Multiplot of spectral reflectance of 	extit{P.oceanica}. Series 151-200. Shown mid-spread of the statistical quartiles Q1 and Q3 (vertical dashes) and mean value within the range (red bold dots). \href{http://www.gnuplot.info/}{Gnuplot} visualization­}
+		\caption{Multiplot of spectral reflectance of \textit{P.oceanica}. Series 151-200. Shown mid-spread of the statistical quartiles Q1 and Q3 (vertical dashes) and mean value within the range (red bold dots). \href{http://www.gnuplot.info/}{Gnuplot} visualization­}
 		\label{fig:A.28}
 	\end{center}
 \end{figure}
@@ -2936,7 +2904,7 @@ Seagrass, \textit{\textit{	extit{P.oceanica}}}, analysis of spectral reflectance
 \begin{table}[H]
 	\rowcolors{1}{BlanchedAlmond}{MintCream}
 	\begin{center}
-	\caption{Results of the \textit{Prais-Winsten estimation} applied towards variables 15 from the selected dataset 151-175 of the spectral reflectance of \textbf{	extit{P.oceanica}}. \href{http://gretl.sourceforge.net/}{Gretl}}
+	\caption{Results of the \textit{Prais-Winsten estimation} applied towards variables 15 from the selected dataset 151-175 of the spectral reflectance of \textit{P.oceanica}. \href{http://gretl.sourceforge.net/}{Gretl}}
 	\label{tab:26}
 		Model 3: Prais--Winsten, using observations 1:01--8:23 ($T$ = 191)\\
 		Dependent variable: v12\\
@@ -3015,7 +2983,7 @@ Seagrass, \textit{\textit{	extit{P.oceanica}}}, analysis of spectral reflectance
 %%% Gretl start
 \begin{table}[htbp]
 	\rowcolors{1}{Ivory}{GhostWhite}
-	\caption{Results of the \textit{autocorrelation analysis} of the measurement set 51-75 of the spectral reflectance of \textbf{carbonate sand}, \href{http://gretl.sourceforge.net/}{Gretl}}
+	\caption{Results of the \textit{autocorrelation analysis} of the measurement set 51-75 of the spectral reflectance of \textit{carbonate sand}, \href{http://gretl.sourceforge.net/}{Gretl}}
 	\begin{center}
 	\begin{tabular}{|c c c c c c c||}
 		\hline\hline
@@ -3057,7 +3025,7 @@ Seagrass, \textit{\textit{	extit{P.oceanica}}}, analysis of spectral reflectance
 
 %%% Gretl start
 \begin{table}[H]
-	\caption{Results of the \textit{Quantile estimates}: measurements 51-75 of the spectral reflectance of \textbf{carbonate sand}, \href{http://gretl.sourceforge.net/}{Gretl}}
+	\caption{Results of the \textit{Quantile estimates}: measurements 51-75 of the spectral reflectance of \textit{carbonate sand}, \href{http://gretl.sourceforge.net/}{Gretl}}
 	\begin{center}
 		Model 2: Quantile estimates, using observations 1:01--5:09 ($T$ = 105)\\
 		Dependent variable: v27\\
@@ -3089,7 +3057,7 @@ Seagrass, \textit{\textit{	extit{P.oceanica}}}, analysis of spectral reflectance
 \begin{table}[H]
 	\begin{small}
 	\rowcolors{1}{Ivory}{LightGoldenrodYellow}
-	\caption{Results of the \textit{periodogram} for v30 of the measurement set 51-75 of the spectral reflectance of \textbf{carbonate sand}, \href{http://gretl.sourceforge.net/}{Gretl}}
+	\caption{Results of the \textit{periodogram} for v30 of the measurement set 51-75 of the spectral reflectance of \textit{carbonate sand}, \href{http://gretl.sourceforge.net/}{Gretl}}
 	\label{tab:30}
 	\begin{center}
 	\begin{tabular}{|p{15mm} p{15mm} p{15mm} p{15mm} || p{15mm} p{15mm}p{15mm} p{15mm}|}
@@ -3388,7 +3356,15 @@ Seagrass, \textit{\textit{	extit{P.oceanica}}}, analysis of spectral reflectance
 		\caption{Color composite image composed of 3 images of Cretan shelf, Google Earth. \href{http://www.ilwis.org/}{ILWIS}}\label{fig:A.42}	
 	\end{center}	
 \end{figure}
+\pagebreak
 
+\subsection{\textit{Appendix-10}. Research general workflow}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.57]{UML_GIS.png}
+	\caption{General methodological research approach. \href{http://inkscape.org/}{Inkscape}}
+	\label{fig:1.11}
+\end{figure}
 
 \end{appendices}
 \pagebreak
@@ -3449,7 +3425,7 @@ Boudouresque, C.F., Meinesz, A., Fresi, E. and Gravez, V., 1989. \emph{2nd Inter
 Workshop on \textit{Posidonia oceanica} Beds}. G.I.S. Posidonie, Oceanica, 2, 322 pp. \pageref{Boudouresque89}
 \bibitem{Bharathi03}
 Bharathi A.M, Kumar S.C, Kalliappan S. 2003. \emph{Target Identification in multispectral images
-using in-situ hyperspectral reflectance}. The Geospatial Resource Portal. Remote Sensing.
+using \textit{in-situ} hyperspectral reflectance}. The Geospatial Resource Portal. Remote Sensing.
 www.gisdevelopment.net \pageref{Bharathi03}
 \bibitem{Buia91}
 Buia M.C. and Mazzella L. 1991. \emph{Reproductive phenology of the Mediterranean

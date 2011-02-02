@@ -1,6 +1,10 @@
 \documentclass[11pt, a4paper]{article}
+\usepackage{authblk}
+%\usepackage{authorindex}
 \usepackage{color}
+\usepackage[stable]{footmisc }
 \usepackage{setspace}
+\usepackage[printonlyused,withpage]{acronym}
 \usepackage[a4paper, left=30mm,right=25mm,top=30mm,bottom=35mm]{geometry}
 \usepackage{graphics}
 \usepackage{graphicx}
@@ -49,8 +53,9 @@
 
 \begin{titlepage}
 	\centering
-	\title{Seagrass mapping and monitoring along the coasts of Crete, Greece}
-	\author{by Lemenkova Polina}
+	\title{Seagrass mapping and monitoring \\ along the coasts of Crete, Greece}
+	\author[1]{by Lemenkova Polina}
+	\affil[1]{\textit{University of Twente, Faculty of Geo-Information Science and Earth Observation (ITC)}, The Netherlands}
 	\date{\today}
 	\maketitle	
 \end{titlepage}
@@ -77,6 +82,18 @@
 	\item[*] University of Warsaw (Poland)\\
 	\item[*] University of Twente, Faculty ITC (The Netherlands)
 \end{itemize}
+
+\begin{figure}[H]
+	\centering
+	\subfloat{\includegraphics [width=0.2\textwidth] {Logo-Sou.jpg}}
+	\hspace{3mm}
+	\subfloat{\includegraphics [width=0.1\textwidth] {Logo-Lun.jpg}}
+	\hspace{3mm}
+	\subfloat{\includegraphics [width=0.1\textwidth] {Logo-War.jpg}}
+	\hspace{3mm}
+	\subfloat{\includegraphics [width=0.5\textwidth] {ITC-logo.jpg}}	
+\end{figure}
+
 \pagebreak
 
 
@@ -96,7 +113,7 @@ Environmental Modelling and Management.\\
 \begin{itemize}
 	\item Name Examiner 1 (Chair)\dotfill
 	\item Name Examiner 2\dotfill
-	\item External Examiner \dotfill \\ \hfill{Dr. \textit{Petter Pilesj\"o} (Lund University, GIS Centre)}
+	\item External Examiner \dotfill \\ \hfill{Dr.{\textit{Petter Pilesj\"o}}(Lund University, GIS Centre)}
 \end{itemize}
 
 \vspace{2em}
@@ -143,7 +160,7 @@ I am grateful to Mr.\textit{Willem Nieuwenhuis}, the software developer from the
 \vspace{1mm}\\
 I thank Dr. Ir. \textit{Cornelis A.J.M. de Bie} from the Department of Natural Resource, ITC, for his patient sharing of iPAQ knowledge during my Polish fieldwork in summer 2010. I used this skills on Crete. 
 \vspace{1mm}\\
-Many thanks for Dr.\textit{Dingtian Yang} from the South China Sea Institute of Oceanology, our colleague in problem of seagrass monitoring and research, for his handing over the data of spectral reflectance of Thalassia seagrass, which enabled to compare spectra of various seagrass types. 
+Many thanks for Dr. \author{\textit{Dingtian Yang}} from the South China Sea Institute of Oceanology, our colleague in problem of seagrass monitoring and research, for his handing over the data of spectral reflectance of Thalassia seagrass, which enabled to compare spectra of various seagrass types. 
 
 \pagebreak
 
@@ -172,10 +189,10 @@ Many thanks for Dr.\textit{Dingtian Yang} from the South China Sea Institute of 
 	\addcontentsline{toc}{section}{Abstract}
 
 The seagrasses, a unique group of aquatic plants, create complex, extremely diversified and productive ecological systems in the littoral coastal zones. The only flowering plant in the world that is able to live completely submerged, seagrasses play vital role in the marine ecosystems of the World Ocean. Seagrasses are the most important component in the environmental food chain of the coastal ecosystems, being a vital food source for various marine species (e.g. fish, dugongs, turtles, swans), and a producer of organic matter, which is the very basis of the food web.\\
-The \textit{P.oceanica} seagrass is an endemic for the Mediterranean region, and a main species in the marine coastal environment of Greece. Meadows of \textit{P.oceanica} are subjected to the human activities, because they occur in coastal areas, where they are affected both by anthropogenic and by climatic and environmental factors.  Nowadays \textit{P.oceanica} is in the alarming state of regression, because of the deterioration of the environment in the Mediterranean Sea. Due to these reasons, \textit{P.oceanica} is a protected species since 1988 in some European countries (France). Monitoring \textit{P.oceanica} is therefore an important contribution to the saving and protecting the environment of Mediterranean region.\\
+The \textit{P.oceanica} seagrass is an endemic for the Mediterranean region, and a main species in the marine coastal environment of Greece. Meadows of \textit{P.oceanica} are subjected to the human activities, because they occur in coastal areas, where they are affected both by anthropogenic and by climatic and environmental factors. Nowadays \textit{P.oceanica} is in the alarming state of regression, because of the deterioration of the environment in the Mediterranean Sea. Due to these reasons, \textit{P.oceanica} is a protected species since 1988 in some European countries (France). Monitoring \textit{P.oceanica} is therefore an important contribution to the saving and protecting the environment of Mediterranean region.\\
 The current MSc thesis focuses on the monitoring of seagrass \textit{P.oceanica} along the northern coasts of Crete Island, Greece, and investigates the application of the remote sensing techniques for the seagrass mapping. 
 This research was articulated in two parts, where the first one involves an ecological approach to the seagrass distribution in various regions around the globe and the experience of seagrass monitoring nowadays. The second part of this work has technical character and investigates the application of the remote sensing techniques towards seagrass mapping. It, furthermore, focuses on the optical properties of the \textit{P.oceanica} and other seafloor cover types, and studies distinguishability of various seafloor cover types. Studies of the optical characteristics of separate seafloor cover types were made with purpose to clarify, whether their spectral properties change with varying environmental conditions. \\
-Special attention has been drawn on the role of environmental factors on the distribution of \textit{P.oceanica} along the coasts of Crete, and in particular, how the optical properties of the seafloor cover types, i.e. spectral reflectance, are being changed under varying external conditions, e.g. water column, amount of suspended particles and sediments in the seawater, and water temperature. For this purpose we studied differences in the spectral reflectance of \textit{P.oceanica} and other bottom cover types at three distinct depths. The diverse spectral values entail variations in optical properties of the seafloor cover types at changing environmental conditions. We applied WASI simulation techniques for the modelling of the optical parameters of various seafloor cover types by various spaceborne imaging spectrometers (MERIS, SeaWiFS, CZCS and MODIS), in order to understand their suitability and possible limitations for the seagrass mapping.\\
+Special attention has been drawn on the role of environmental factors on the distribution of \textit{P.oceanica} along the coasts of Crete, and in particular, how the optical properties of the seafloor cover types, i.e. spectral reflectance, are being changed under varying external conditions, e.g. water column, amount of suspended particles and sediments in the seawater, and water temperature. For this purpose we studied differences in the spectral reflectance of \textit{P.oceanica} and other bottom cover types at three distinct depths. The diverse spectral values entail variations in optical properties of the seafloor cover types at changing environmental conditions. We applied \ac{WASI} simulation techniques for the modelling of the optical parameters of various seafloor cover types by various spaceborne imaging spectrometers (\ac{MERIS}, \ac{SeaWiFS}, \ac{CZCS} and \ac{MODIS}), in order to understand their suitability and possible limitations for the seagrass mapping.\\
 Fieldwork research sites were presented by separate locations on the northern coast of Crete region (Ligaria, Agia Pelagia, Xerocampos). The additional measurements of the reflectance spectra of the seawater with and without sediments have been made in aquarium tank in 2009 by means of Trios-RAMSES spectroradiometer. Parallel to the collection of spectra signatures, we captured the imagery for the seagrass mapping, which consists of the aerial images from the Google Earth website and the satellite Landsat TM and ETM+ scenes. 
 
 \pagebreak
@@ -187,7 +204,7 @@ Fieldwork research sites were presented by separate locations on the northern co
 \newline
 In \textit{Chapter 2}: \nameref{sec:2} we review the existing literature and reported research experience on the similar problem: studies of spectral separability of various seafloor types, limitations and advantages of the remote sensing techniques applied for seagrass mapping seagrass ecology and mapping seagrass environment. We considered not only the Mediterranean environment, but also papers from Australian and Chinese scientists, because seagrass monitoring is most actively developed in the southern regions of our planet. The review of the existing RTM algorithms for the retrieval of the optical parameters, as well as description of various tools for the spectrometric measurements - are given in the same Chapter as well. More close attention has been given to the imaging hyperspectral radiometer Trios RAMSES, used for the data collection.\\
 \textit{Chapter 3}: \nameref{sec:3} deals with the methods and materials used in current work. We start our discussion from the fieldwork area location and describe tools and instruments used during the fieldwork, as well as sampling design. Procedures of the data pre-processing and capturing imagery from the Google Earth are also presented in the same chapter. \\
-\textit{Chapter 4}: \nameref{sec:4} presents to the reader the main results of the current MSc work, obtained during the processing fieldwork and other collected data. It starts from the review of the collected data from different sources, then describes the modelling component of the research, namely WASI colour simulation and plotted resulting graphs. We also discuss here the particularities of various sensors, suitable enough for deriving radiometric information to discriminate sand from the seagrass. Furthermore, this chapter includes analysis of the spectral signatures of various seafloor cover types in conditions of changing environment, possibility and limitations for \textit{P.oceanica} spectral discrimination, statistical analysis of the data sets and mapping based on images processing.\\
+\textit{Chapter 4}: \nameref{sec:4} presents to the reader the main results of the current MSc work, obtained during the processing fieldwork and other collected data. It starts from the review of the collected data from different sources, then describes the modelling component of the research, namely \ac{WASI} colour simulation and plotted resulting graphs. We also discuss here the particularities of various sensors, suitable enough for deriving radiometric information to discriminate sand from the seagrass. Furthermore, this chapter includes analysis of the spectral signatures of various seafloor cover types in conditions of changing environment, possibility and limitations for \textit{P.oceanica} spectral discrimination, statistical analysis of the data sets and mapping based on images processing.\\
 \textit{Chapter 5}: \nameref{sec:5} summarizes and briefly discusses again the main results, reported in detail in a previous chapter. This chapter proposes some final discussions to the reader, and comes to the main research outcomes.\\
 Finally, we suggest some recommendations for any further research focusing on the seagrass environment along the coasts of Crete (or other Mediterranean areas) in the final \nameref{sec:6}.\\
 A lot of plotted graphs, statistical outcomes, tables, auxiliary (yet relevant to our research) pictures and images, illustrating our work - are collected in the \nameref{app}. Due to the standard editorial limitations of the current MSc work, it was not possible to include all them to the main chapters. However, we tried to make the structure of the Appendices most clear and easy-readable as possible, by dividing the Appendices into 10 various sub-sections and referencing to them from the main text where necessary. \\
@@ -196,69 +213,70 @@ An Index is placed in the end of the Document to help the reader find what he is
 
 \pagebreak
 
-\section*{List of Acronyms}
+\section*{List of Acronyms\footnote{The page is given where the glossary is first entered and defined}}
 	\markright{Acronyms}
 	\addcontentsline{toc}{section}{List of Acronyms}
-\doublespacing
-\textbf{4AOP}: Automatized Atmospheric Absorption Atlas Operational Release \\
-\textbf{6SV1}:  Second Simulation of a Satellite Signal in the Solar Spectrum, Version1\\
-\textbf{ANOVA}: ANalysis of VAriance\\
-\textbf{ASTER}: Advanced Spaceborne Thermal Emission and Reflection Radiometer\\
-\textbf{BRDF}:  Bidirectional Reflectance Distribution Function\\
-\textbf{CASI}:		Compact Airborne Spectrographic Imager\\
-\textbf{CNES}: 		Centre National d'Etudes Spatiales (of France)\\
-\textbf{CRTM}:		Community Radiative Transfer Model\\
-\textbf{CZCS}:		 Coastal Zone Color Scanner\\
-\textbf{DISORT}:	 Discrete Ordinates Radiative Transfer Program for a Multi-Layered Plane-Parallel Medium\\
-\textbf{ENVISAT}:	ENVIronmental SATellite\\
-\textbf{ESA}:		European Space Agency\\
-\textbf{ERS}: 		European Remote Sensing satellite\\
-\textbf{GIS}:		Geographic Information System\\
-\textbf{GNU}:		GNU's Not Unix \\
-\textbf{GPS}:		 Global Positioning System\\
-\textbf{GRASS}:	 Geographic Resources Analysis Support System\\
-\textbf{GRETL}:		GNU Regression, Econometrics and Time-series Library\\
-\textbf{HyMap}:	Hyperspectral Mapper\\
-\textbf{HyperOCR}:	Hyperspectral Ocean Colour Radiometer\\
-\textbf{IKONOS}: 	derived its name from the Greek term \textit{eikon} for image\\
-\textbf{ILWIS}:		Integrated Land and Water Information System\\
-\textbf{iPAQ}:	internet Pocket PC by CompAQ\\
-\textbf{KOPRA}:	 Karlsruhe Optimized and Precise Radiative transfer Algorithm\\
-\textbf{LaTeX}:		Lamport Tau Epsilon Chi (Greek for \textit{techne}), modified by L.Lamport\\
-\textbf{LAI}:	 Leaf Area Index\\
-\textbf{Landsat TM}:	 Landsat Thematic Mapper \\
-\textbf{Landsat ETM+}:	Landsat Enhanced Thematic Mapper Plus\\
-\textbf{LyX}: 		LyriX-files\\
-\textbf{MERIS}:		MEdium Resolution Imaging Spectrometer\\
-\textbf{MIPAS}:		Michelson Interferometer for Passive Atmospheric Sounding\\
-\textbf{MODIS}:	Moderate Resolution Imaging Spectroradiometer\\
-\textbf{NASA}:		National Aeronautics and Space Administration\\
-\textbf{NIR}:		 Near-Infra-Red\\
-\textbf{NOAA}:		 National Oceanic and Atmospheric Administration\\
-\textbf{OBC}:		On Board Calibration\\
-\textbf{Olympus ST}: 	 Olympus Stylus Tough\\
-\textbf{Open EV}: 	Open Earth View\\
-\textbf{RAMSES}:	RAdiance Measurement SEnSor\\
-\textbf{RRTM}:		Rapid Radiative Transfer Model\\
-\textbf{RTTOV}: 	Radiative Transfer for TIROS Operational Vertical Sounder\\
-\textbf{RTM}:		Radiative Transfer Model\\
-\textbf{SAM}:		Scanning Acoustic Microscope\\
-\textbf{SCUBA}:	Self Contained Underwater Breathing Apparatus\\
-\textbf{SeaWiFS}: 	Sea-viewing Wide Field-of-view Sensor\\
-\textbf{SPOT}:		Satellite Pour l'Observation de la Terre\\
-\textbf{SPSS	}:	Statistical Package for the Social Sciences\\
-\textbf{STDEV}:		Standard Deviation\\
-\textbf{SWIR}: 		Short Wave InfraRed\\
-\textbf{TIR}: 		Thermal InfraRed\\
-\textbf{TIROS}: 	Television and InfraRed Observation Satellite\\
-\textbf{UML}:		Unified Modelling Language\\
-\textbf{UV}:		UltraViolet (10 nm to 400 nm)\\
-\textbf{UVA}:		UltraViolet A, or long waves (315 nm-400 nm)\\
-\textbf{UVB}:		 UltraViolet B, or medium waves (280 nm-315 nm)\\
-\textbf{VIS}:		VISible\\
-\textbf{VNIR}:		Visible and Near-InfraRed\\
-\textbf{WASI}:		WAter colour SImulator
+%\singlespacing
+\begin{acronym}
+	\acro{4AOP}{\href{http://www.noveltis.fr/4AOP/interface/index.php}{Automatized Atmospheric Absorption Atlas Operational Release}} 
+	\acro{6SV1}{Second Simulation of a Satellite Signal in the Solar Spectrum Version1} 
+	\acro{ASCII}{\href{http://en.wikipedia.org/wiki/ASCII}{American Standard Code for Information Interchange}}
+	\acro{ANOVA}{\href{http://en.wikipedia.org/wiki/Anova}{ANalysis of VAriance}} 
+	\acro{ASTER}{\href{http://asterweb.jpl.nasa.gov/}{Advanced Spaceborne Thermal Emission and Reflection Radiometer}} 
+	%\acro{BRDF}{Bidirectional Reflectance Distribution Function}
+	\acro{CASI}{\href{http://www.borstad.com/casi.html}{Compact Airborne Spectrographic Imager}}
+	\acro{CNES}{\href{http://www.cnes.fr/}{Centre National d'Etudes Spatiales (of France)}}
+	\acro{CRTM}{\href{http://www.jcsda.noaa.gov/projects_crtm.php}{Community Radiative Transfer Model}}
+	\acro{CZCS}{\href{http://oceancolor.gsfc.nasa.gov/CZCS/}{Coastal Zone Color Scanner}}
+	\acro{DISORT}{\href{ftp://climate1.gsfc.nasa.gov/wiscombe/Multiple_Scatt/DISORT1.2/}{Discrete Ordinates Radiative Transfer Program for a Multi-Layered Plane-Parallel Medium}}
+	\acro{ENVISAT}{\href{http://envisat.esa.int/instruments/meris/}{ENVIronmental SATellite}}
+	\acro{ESA}{\href{http://www.esa.int/}{European Space Agency}}
+	%\acro{ERS}{European Remote Sensing satellite}
+	\acro{GIS}{Geographic Information System}
+	%\acro{GNU}{GNU's Not Unix}
+	\acro{GloVis}{\href{http://glovis.usgs.gov/}{Global Visualization Viewer}}
+	\acro{GPS}{Global Positioning System}
+	\acro{GRASS}{\href{http://grass.fbk.eu/}{Geographic Resources Analysis Support System}}
+	%\acro{GRETL}{GNU Regression, Econometrics and Time-series Library}
+	\acro{HyMap}{\href{http://www.hyvista.com/}{Hyperspectral Mapper}}
+	\acro{HyperOCR}{\href{http://www.satlantic.com/Hyperspectral_Radiometers/Hyperspectral_Radiometers.asp}{Hyperspectral Ocean Colour Radiometer}}
+	\acro{ILWIS}{\href{http://www.ilwis.org/}{Integrated Land and Water Information System}}
+	\acro{iPAQ}{\href{http://welcome.hp.com/country/us/en/prodserv/handheld.html}{Internet Pocket PC by CompAQ}}
+	\acro{KOPRA}{\href{http://www.imk-asf.kit.edu/english/312.php}{Karlsruhe Optimized and Precise Radiative transfer Algorithm}}
+	\acro{LAI}{\href{http://en.wikipedia.org/wiki/Leaf_Area_Index}{Leaf Area Index}}
+	\acro{Landsat TM}{\href{http://landsat.gsfc.nasa.gov/}{Landsat Thematic Mapper}}
+	\acro{Landsat ETM+}{\href{http://landsat.gsfc.nasa.gov/}{Landsat Enhanced Thematic Mapper Plus}}
+	\acro{MERIS}{\href{http://envisat.esa.int/instruments/meris/}{MEdium Resolution Imaging Spectrometer}}
+	\acro{MIPAS}{\href{http://envisat.esa.int/instruments/mipas/}{Michelson Interferometer for Passive Atmospheric Sounding}}
+	\acro{MODIS}{\href{http://modis.gsfc.nasa.gov/}{Moderate Resolution Imaging Spectroradiometer}}
+	\acro{NASA}{\href{http://www.nasa.gov/}{National Aeronautics and Space Administration}}
+	\acro{NIR}{Near-Infra-Red}
+	\acro{NOAA}{\href{http://www.osdpd.noaa.gov/ml/index.html}{National Oceanic and Atmospheric Administration}}
+	\acro{OBC}{On Board Calibration}
+	\acro{Olympus ST}{\href{http://www.olympusamerica.com/}{Olympus Stylus Tough}}
+	\acro{RRTM}{\href{http://rtweb.aer.com/}{Rapid Radiative Transfer Model}}
+	\acro{RTTOV-9}{\href{http://research.metoffice.gov.uk/research/interproj/nwpsaf/rtm/}{Radiative Transfer for TIROS (Television and InfraRed Observation Satellite) Operational Vertical Sounder}}
+	\acro{RTM}{Radiative Transfer Model}
+	\acro{SAM}{Scanning Acoustic Microscope}
+	\acro{SCUBA}{\href{http://www.padi.com/scuba/}{Self Contained Underwater Breathing Apparatus}}
+	\acro{SeaWiFS}{\href{http://oceancolor.gsfc.nasa.gov/SeaWiFS/}{Sea-viewing Wide Field-of-view Sensor}}
+	\acro{SPOT}{\href{http://www.spotimage.fr/}{Satellite Pour l'Observation de la Terre}}
+	\acro{SPSS}{ \href{http://www.spss.com/}{Statistical Package for the Social Sciences}}
+	\acro{STDEV}{Standard Deviation}
+	\acro{SWIR}{Short Wave InfraRed}
+	\acro{TIR}{Thermal InfraRed}
+	\acro{Trios-RAMSES}{\href{http://trios.de/index.php?option=com_content&view=category&layout=trios&id=47&Itemid=76&lang=en}{RAdiance Measurement SEnSor}}
+	\acro{UML}{Unified Modelling Language}
+	\acro{USGS}{\href{http://www.usgs.gov/}{U.S. Geological Survey}}
+	\acro{UV}{UltraViolet (10 nm to 400 nm)}
+	\acro{UVA}{UltraViolet A, or long waves (315 nm-400 nm)}
+	\acro{UVB}{UltraViolet B, or medium waves (280 nm-315 nm)}
+	\acro{VIS}{VISible}
+	\acro{VNIR}{Visible and Near-InfraRed}
+	\acro{WASI}{\href{http://www.filewatcher.com/b/ftp/ftp.dfd.dlr.de/pub/WASI.0.0.html}{WASI Water Color Simulator}}
+\end{acronym}
 \pagebreak
+
 \singlespace
 \section*{List of Tools}\label{sec:0}
 	\markright{List of Tools}
@@ -272,18 +290,18 @@ An Index is placed in the end of the Document to help the reader find what he is
 	\textbf{Main Tools}:
 	\begin{itemize}
 		\item \href{http://www.esri.com/software/arcgis/index.html}{ArcGIS 10.0}: mapping, data integration and spatial analysis
-		\item \href{http://www.ilwis.org/}{ILWIS} , \href{http://www.erdas.com/products/ERDASIMAGINE/ERDASIMAGINE/Details.aspx}{Erdas Imagine}: imagery processing and classification
+		\item \href{http://www.ilwis.org/}{ILWIS}, \href{http://www.erdas.com/products/ERDASIMAGINE/ERDASIMAGINE/Details.aspx}{Erdas Imagine}: imagery processing and classification
 		\item \href{http://www.filewatcher.com/b/ftp/ftp.dfd.dlr.de/pub/WASI.0.0.html}{WASI Water Color Simulator}, for modelling optical water 					properties under changing environment
-		\item \href{http://welcome.hp.com/country/us/en/prodserv/handheld.html}{iPAQ} and GPS for data capture during the fieldwork
+		\item \href{http://welcome.hp.com/country/us/en/prodserv/handheld.html}{iPAQ} and \ac{GPS} for data capture during the fieldwork
 		\item \href{http://www.bibtex.org/de/}{BibTeX}, for management of bibliography and reference database
 		\item \href{http://www.latex-project.org/}{\LaTeX}, for document typesetting, formatting and performing pdf output
 		\item \href{http://www.python.org/}{Python language}, for writing auxiliary scripts (e.g. raw data interpolation)
 		\item \href{http://www.gnuplot.info/}{Gnuplot} for plotting graphs
-		\item \href{http://www.openoffice.org/}{Open Office} : document typesetting, data pre-processing and preliminary statistical evaluation
+		\item \href{http://www.openoffice.org/}{Open Office}: document typesetting, data pre-processing and preliminary statistical evaluation
 		
-		\item \href{http://www.spss.com/}{SPSS (PASW Statistics 18)} : statistical data edition and analysis 
+		\item \href{http://www.spss.com/}{SPSS (PASW Statistics 18)}: statistical data edition and analysis 
 		\item \href{http://gretl.sourceforge.net/}{Gretl: Gnu Regression, Econometrics and Time-series Library} for statistic analysis
-		\item \href{http://staruml.sourceforge.net/en/}{StarUML} , \href{http://live.gnome.org/Dia}{Dia} , \href{http://argouml.tigris.org/}						{ArgoUML}: diagramming flowcharts for work algorithms
+		\item \href{http://staruml.sourceforge.net/en/}{StarUML}, \href{http://live.gnome.org/Dia}{Dia}, \href{http://argouml.tigris.org/}						{ArgoUML}: \ac{UML} diagram tool for creating flowcharts of work algorithms
 		\item \href{http://inkscape.org/}{Inkscape}: drawing
 	\end{itemize}
 	
@@ -291,7 +309,7 @@ An Index is placed in the end of the Document to help the reader find what he is
 	\textbf{Auxiliary Tools}:
 	\begin{itemize}
 		\item \href{http://www.lyx.org/}{LyX} for exporting \LaTeX document to the Word .doc format via HTML
-		\item \href{http://calc2latex.sourceforge.net/}{Calc2LaTeX} : converting spreadsheets into \LaTeX environment
+		\item \href{http://calc2latex.sourceforge.net/}{Calc2LaTeX}: converting spreadsheets into \LaTeX environment
 		\item \href{http://openev.sourceforge.net/}{OpenEV}: used for raster Google Earth imagery viewing, visualisation and preliminary analysis
 		\item \href{http://www.notepad-plus-plus.org/}{Notepad++}: auxiliary text editing and raw data formatting
 	\end{itemize}
@@ -354,8 +372,8 @@ It plays an important role in a number
 of geomorphological and ecological processes. Namely, it is a source of food for herbivorous fauna as
 well as shelter zones for fish and other marine organisms; it contributes to the nutrient recycling; it
 provides sediments stability by reducing the degree of water movements, etc \cite{Francour99}\label{Francour99}.\\
-The purpose of current MSc research work aims to apply methods of remote sensing analysis, including Radiative Transfer Models (RTM), 
-GIS-based spatial analysis, processing and classification of satellite and aerial photos, as well as videometric underwater footage, towards mapping and environmental monitoring of seagrass \textit{P. oceanica} along the selected locations of the northern coasts of Crete island, Greece. The technical implementation is based on WASI RTM software, GIS (ILWIS, Erdas Imagine and ArcGIS), using aerial and satellite images and the results of the underwater videometric measurements. 
+The purpose of current MSc research work aims to apply methods of remote sensing analysis, including \ac{RTM}, 
+\ac{GIS}-based spatial analysis, processing and classification of satellite and aerial photos, as well as videometric underwater footage, towards mapping and environmental monitoring of seagrass \textit{P. oceanica} along the selected locations of the northern coasts of Crete island, Greece. The technical implementation is based on \ac{WASI} RTM software, \ac{GIS} (ILWIS, Erdas Imagine and ArcGIS), using aerial and satellite images and the results of the underwater videometric measurements. 
 
 \subsection{Background}
 \subsubsection{Global distribution of the seagrasses}
@@ -570,7 +588,7 @@ mapping is based on the classifying the pixels on the image according to their s
 values \cite{Fornes06} \label{Fornes06}, so that the seafloor can be divided into several types: sand, rock, P.
 oceanica, other vegetation, etc.
 Other example of monitoring of \textit{P.oceanica} using remote sensing techniques \cite{Calvo03}\label{Calvo03}
-reports the application of the CZCS images towards the case study of the Italian coast and shows
+reports the application of the \ac{CZCS} images towards the case study of the Italian coast and shows
 successful results of the neural-based classification using Isodata method of supervised classification.
 In case of \textit{P.oceanica} meadows aerial and satellite images are particularly suited for the surveying
 shallow waters \cite{Pasqualini98b}\label{Pasqualini98b} enabling to distinguish seagrass formations and dynamics of
@@ -590,7 +608,7 @@ coverage of the seagrass along the track log. Besides, the underwater observatio
 equipment have been conducted for the measurements of depths.
 
 \subsection{Research objective}\index{Research!objective}
-The current MSc research aims to explore the environmental conditions for the spatial distribution of \textit{P.oceanica} seagrass along the northern coast of Crete Island, based on the remote sensing and GIS techniques, knowledge about the coastal environment in Crete and integration of various data
+The current MSc research aims to explore the environmental conditions for the spatial distribution of \textit{P.oceanica} seagrass along the northern coast of Crete Island, based on the remote sensing and \ac{GIS} techniques, knowledge about the coastal environment in Crete and integration of various data
 from the following sources \index{Data}:
 	\begin{itemize}
 		\item[] i) spectra of \textit{P.oceanica}, carbonate sand, silt and other seafloor types
@@ -599,12 +617,12 @@ from the following sources \index{Data}:
 		\item[] iv) \textit{in-situ} fieldwork data of underwater videographic measurements
 		\item[] v) vector GIS layers.
 	\end{itemize}
-The research aims to explore the limitations of the application of the Radiative Transfer Models (further RTMs) and remote sensing techniques 
+The research aims to explore the limitations of the application of the \ac{RTM} and remote sensing techniques 
 towards the study of the environmental properties of the \textit{P.oceanica} meadows distribution
 over the selected locations of northern Crete. The main research objective is monitoring the seagrass \textit{P.oceanica} in selected areas of Crete and analyzing the environmental conditions for the growth of \textit{P.oceanica}. \\
 This research is supported by the \textit{in-situ} measurements in two selected locations of the northern coast
 of Crete (Ligaria beach in Agia Pelagia district and Xerocampos), using following methods of the
-remote sensing techniques: spectral modelling by means of the RTM Water Colour Simulator WASI,  underwater videometric measurements made by Olympus camera, aerial Google Earth and satellite images from different sources, spatial GIS and statistical analysis.
+remote sensing techniques: spectral modelling by means of the\ac{RTM} \ac{WASI},  underwater videometric measurements made by \ac{Olympus ST}camera, aerial Google Earth and satellite images from different sources, spatial \ac{GIS} and statistical analysis.
 
 \subsubsection{General objective}\index{Research!objective!general}
 The main objective of this study is to analyse the optical properties of the seagrass \textit{P.oceanica} and other seafloor types, and to apply the remote sensing techniques towards the investigation of the seagrass distribution in the selected locations along the northern coast of Crete.
@@ -617,8 +635,8 @@ General objectives:
 \subsubsection{Specific objectives}\index{Research!objective!specific}
 	\begin{itemize}	
 		\item[]1.	To study narrow-band spectral reflectance properties of \textit{P.oceanica} and other seafloor cover types (sand and silt) using WASI water colour simulation software 
-		\item[]2.	To use methods of the in situ diving observations and underwater videometric measurements by Olympus camera in order to receive large-scale imagery of the P.oceanica mattes 
-		\item[]3.	To apply remote sensing data (Google Earth aerial images, Landsat TM and ETM+ satellite images) for the monitoring of the seagrass meadows distribution 
+		\item[]2.	To use methods of the in situ diving observations and underwater videometric measurements by \ac{Olympus ST}camera in order to receive large-scale imagery of the P.oceanica mattes 
+		\item[]3.	To apply remote sensing data (Google Earth aerial images, \ac{Landsat TM} and ETM+ satellite images) for the monitoring of the seagrass meadows distribution 
 		\item[]4.	To perform supervised images classification for the thematic mapping of the \textit{P.oceanica} seagrass distribution along the selected locations over the coasts of northern Crete. 
 	\end{itemize}
 
@@ -640,7 +658,7 @@ The alternative Hypothesis Ha claims the opposite statement: seagrass is spectra
 distinct with varying \textit{in-situ} conditions, Ho: μ$\neq$μ2$\neq$μ3$\neq$ ... $\neq$μn.
 The distribution of the spectral responses at every spectral band is assumed to be normal as well as
 the equality of the statistical variances.
-The hypothesis testing is suggested to be carried out using the ANOVA statistical test. The purpose of
+The hypothesis testing is suggested to be carried out using the \ac{ANOVA} statistical test. The purpose of
 ANOVA test is to visualize in an effective and quick way the spectral differences between seagrass
 species and their spatial distribution. Thus, the key hypotheses of the research will be tested to prove
 whether the results of the research are accurate, reasonable and correct.
@@ -773,36 +791,34 @@ characteristics and adjusted for different purposes, e.g. portable and miniature
 \href{http://www.satlantic.com}{Satlantic}, traceable spectroradiometers by \href{http://www.orboptronix.com}{Orbotronix} 
 and lots of others. Among other radiometers there are ones designed by the \href{http://www.trios.de/}{Trios company} producing
 optical sensors, GER-Series Field portable spectroradiometers from
-\href{http://www.spectrapartners.nl/}{SpectraPartners}, etc. Trios-RAMSES\index{Seawater optical properties!spectroradiometers!Trios-RAMSES} hyperspectral radiometers
-(Trios-RAMSES Hyperspectral UVA/UVB Irradiance Sensor and RAMSES-ARC Hyperspectral UV-
-VIS Radiance Sensor) are small-sized, low power-consuming, flexible for fieldwork yet with high
+\href{http://www.spectrapartners.nl/}{SpectraPartners}, etc. \ac{Trios-RAMSES}\index{Seawater optical properties!spectroradiometers!Trios-RAMSES} hyperspectral radiometers
+(\ac{Trios-RAMSES} Hyperspectral \ac{UVA}/\ac{UVB} Irradiance Sensor and \ac{Trios-RAMSES}-ARC Hyperspectral \ac{UV}-\ac{VIS} Radiance Sensor) are small-sized, low power-consuming, flexible for fieldwork yet with high
 level of precision, specially calibrated for air and for water application as well as color
 measurements  (Fig.\ref{fig:2.1}). These products have been used for the radiance and irradiance
 measurements in Agia Pelagia bay, Crete Island, 2009.
 
 \subsection[Radiative Transfer Models (RTM)]{Radiative Transfer Models (RTM) for the simulation of water optical properties: a brief review of existing tools}
 
-Understanding radiance distribution within a water colum\index{Seawater optical properties!RTM}n is necessary for the studies of the underwater visibility, because scattering properties of the water body naturally vary with changing depth, wavelength and environmental conditions.  Simulation of the radiance quantities for natural water bodies enables to analyse seafloor color remote sensing properties. Therefore, the artificial modelling of the seawater optical properties by means of the Radiative Transfer Modelling (further RTM) is used when water optics is studied under changing environment (e.g., depths, sun angle, suspended particles in water column). \\ In such cases a retrieval of water optical parameters from the remote measurements should be tested and analyzed. 
+Understanding radiance distribution within a water colum\index{Seawater optical properties!RTM}n is necessary for the studies of the underwater visibility, because scattering properties of the water body naturally vary with changing depth, wavelength and environmental conditions.  Simulation of the radiance quantities for natural water bodies enables to analyse seafloor color remote sensing properties. Therefore, the artificial modelling of the seawater optical properties by means of the \ac{RTM} is used when water optics is studied under changing environment (e.g., depths, sun angle, suspended particles in water column). \\ In such cases a retrieval of water optical parameters from the remote measurements should be tested and analyzed. 
 \newline
 We briefly discuss below the most effective RTM software and algorithms from a range of various best-known up-to-date tools. 
 	\begin{itemize}
-		\item [*] The \textit{Second Simulation of a Satellite Signal in the Solar Spectrum}, version 1 \href{http://6s.ltdri.org/}{(6SV1)}\index{Seawater optical properties!RTM!6SV1} is a US atmospheric correction algorithm, developed in the University of Maryland; adjusted for the \href{http://modis.gsfc.nasa.gov/}{NASA MODIS} satellite imagery lookup tables. The 6S algorithm has been implemented by the \href{http://grass.osgeo.org/grass64/manuals/html64_user/i.atcorr.html}{GRASS} software for the atmospheric correction 						\pagebreak				 
-		\item [*] Another example of the RTM adjusted for a specific imagery is a German \href{http://www.imk-asf.kit.edu/english/312.php}{\textit{KOPRA RTM}}\index{Seawater optical properties!RTM!KOPRA}, fitted for \href{http://envisat.esa.int/instruments/meris/}{MIPAS/ENVISAT} imagery.
+		\item [*] The \ac{6SV1} \index{Seawater optical properties!RTM!6SV1} is a US atmospheric correction algorithm, developed in the University of Maryland; adjusted for the \ac{MODIS} satellite imagery lookup tables. The 6S algorithm has been \href{http://grass.osgeo.org/grass64/manuals/html64_user/i.atcorr.html}{implemented} by the \ac{GRASS} software for the atmospheric correction 				 
+		\item [*] Another example of the RTM adjusted for a specific imagery is a German \ac{KOPRA}\index{Seawater optical properties!RTM!KOPRA}, fitted for \ac{MIPAS} and \ac{ENVISAT} imagery.
 		\item [*]  The \href{http://www.sequoiasci.com/products/Hydrolight.aspx}{\textit{HydroLight RTM}} commercial software is an advanced model for oceanic radiative transfer calculations, developed by the Sequoia Scientific, Inc., USA. It is designed to solve a wide range of problems in optical oceanography and limnology.   
-		\item [*] The British \href{http://research.metoffice.gov.uk/research/interproj/nwpsaf/rtm/}{\textit{RTTOV-9 RTM}}\index{Seawater optical properties!RTM!RTTOV-9} is a radiative transfer model, developed for nadir viewing atmospheric sounders and imagers. It includes a number of useful tolls, e.g. can compute sea-surface emissivity for each channel, enables, to specify cloudiness for radiance calculations, etc.  This program runs under Unix/Linux platforms and is open source. 
-		\item [*] The \href{http://rtweb.aer.com/}{\textit{Rapid Radiative Transfer Model (RRTM)}}\index{Seawater optical properties!RTM!RRTM} is one more RTM freeware, designed in the USA, Massachusetts. 
-		\item [*] The \href{http://www.modtran.org/}{\textit{MODTRAN}}\index{Seawater optical properties!RTM!MODTRAN}, a commercial software from Spectral Sciences Inc., is another example of the RTM. Among its newest updates is generation of atmospheric correction data; it also has an option to write spectral output in binary, and convert it to ASCII.
-		\item [*] A \textit{Discrete Ordinates Radiative Transfer Program for a Multi-Layered Plane-Parallel Medium} \href{ftp://climate1.gsfc.nasa.gov/wiscombe/Multiple_Scatt/DISORT1.2/}{(DISORT)}\index{Seawater optical properties!RTM!DISORT}  is another RTM freeware , developed as an algorithm for calculation radiance of the scattering and absorbing Earth's atmosphere and transmissivity computations within the waveband range from UV to radar.  
-		\item [*] The \textit{Community Radiative Transfer Model}, \href{http://www.jcsda.noaa.gov/projects_crtm.php}{CRTM}\index{Seawater optical properties!RTM!CRTM} is designed by the  (\href{http://www.jcsda.noaa.gov/}{JCSDA, NASA}) and includes Surface Emissivity/Reflectivity Models, Cloud Absorption/Scattering Model and Gaseous Absorption Model.
-		\item [*] An \textit{Automatized Atmospheric Absorption Atlas Operational Release} \href{http://www.noveltis.fr/4AOP/}{(4AOP)}\index{Seawater optical properties!RTM!4AOP} is a French RTM freeware, designed in cooperation by \href{http://www.noveltis.fr/fr/index.php}{Noveltis} and \href{http://www.cnes.fr/}{CNES} (the French Space Agency). Being a fine program which enables accurate computations of the radiance, defining other emissivity functions and other set up, it is however, particularly designed for the infrared waves (thus, not quite suitable in our case). To the advantages of this freeware we would count its user friendly interface and open source accessibility for the academic purposes. 
+		\item [*] The British \ac{RTTOV-9}\index{Seawater optical properties!RTM!RTTOV-9} is a radiative transfer model, developed for nadir viewing atmospheric sounders and imagers. It includes a number of useful tolls, e.g. can compute sea-surface emissivity for each channel, enables, to specify cloudiness for radiance calculations, etc.  This program runs under Unix/Linux platforms and is open source. 
+		\item [*] The \ac{RRTM}\index{Seawater optical properties!RTM!RRTM} is one more RTM freeware, designed in the USA, Massachusetts. 
+		\item [*] The \href{http://www.modtran.org/}{\textit{MODTRAN}}\index{Seawater optical properties!RTM!MODTRAN}, a commercial software from Spectral Sciences Inc., is another example of the RTM. Among its newest updates is generation of atmospheric correction data; it also has an option to write spectral output in binary, and convert it to \ac{ASCII}.
+		\item [*] A \ac{DISORT}\index{Seawater optical properties!RTM!DISORT}  is another RTM freeware , developed as an algorithm for calculation radiance of the scattering and absorbing Earth's atmosphere and transmissivity computations within the waveband range from UV to radar.  
+		\item [*] The \ac{CRTM} \index{Seawater optical properties!RTM!CRTM} is designed by the  (\href{http://www.jcsda.noaa.gov/}{JCSDA}, \ac{NASA}) and includes Surface Emissivity/Reflectivity Models, Cloud Absorption/Scattering Model and Gaseous Absorption Model.
+		\item [*] An \ac{4AOP}\index{Seawater optical properties!RTM!4AOP} is a French RTM freeware, designed in cooperation by \href{http://www.noveltis.fr/fr/index.php}{Noveltis} and \href{http://www.cnes.fr/}{the French Space Agency} (\ac{CNES}). Being a fine program which enables accurate computations of the radiance, defining other emissivity functions and other set up, it is however, particularly designed for the infrared waves (thus, not quite suitable in our case). To the advantages of this freeware we would count its user friendly interface and open source accessibility for the academic purposes. 
 	\end{itemize}
-For our purpose we have chosen the \href{http://www.filewatcher.com/b/ftp/ftp.dfd.dlr.de/pub/WASI.0.0.html}{\textit{WASI Water Color Simulator}}\index{Seawater optical properties!RTM!WASI} RTM software, due to its effectiveness, adaptability for the Mediterranean environment, open source availability, coverage of necessary wavebands and clear, user friendly interface, enabling to adjust various environmental parameters.
-\pagebreak
+For our purpose we have chosen the \ac{WASI}\index{Seawater optical properties!RTM!WASI} \ac{RTM} software, due to its effectiveness, adaptability for the Mediterranean environment, open source availability, coverage of necessary wavebands and clear, user friendly interface, enabling to adjust various environmental parameters.
 
 \subsection[\textit{In-situ} observations of the seagrass]{The \textit{in-situ} observations of the seagrass}
 The traditional methods of \textit{in-situ} seagrass monitoring include in general the following standard
 scheme \cite{McKenzieetal03} \label{McKenzieetal03}. The seagrass is being sampled on the selected sites using transect lines,
-quadrant frame, single point markers, markers, GPS and other equipment. The seagrass sampling is
+quadrant frame, single point markers, markers, \ac{GPS} and other equipment. The seagrass sampling is
 taken on the regular way with observation points covering the study area with normal distribution.
 During the measurement process, the vertical photograph of the measurements frame is taken, and the
 following points are traditionally estimated: percentage of the seagrass cover within the quadrate,
@@ -822,23 +838,17 @@ techniques is that they are not effective at identifying the composition or even
 submerged aquatic vegetation such as seagrasses and seaweeds \cite{Werdell03}\label{Werdell03}, because
 initially acoustic methods were intended for the bathymetric surveying, i.e. they are not adjusted for
 the benthic habitat discrimination. The results of the \textit{in-situ} measurements and observation are usually
-managed and treated using integrated GIS approach, as, e.g. reported by Schmieder \cite{Schmieder97}\label{Schmieder97}.
+managed and treated using integrated \ac{GIS} approach, as, e.g. reported by Schmieder \cite{Schmieder97}\label{Schmieder97}.
 
 \subsection[Application of the remote sensing...]{Application of the remote sensing data towards seagrass mapping}\index{Remote sensing}
 Various methods and approaches have been applied towards mapping of the seagrasses, based on
-digitized aerial photographs, GPS data, remote sensing and SCUBA-based fieldwork measurements.
-SCUBA-based \textit{in-situ} observations, though providing high resolution and accuracy results in seagrass
+digitized aerial photographs, \ac{GPS} data, remote sensing and \ac{SCUBA}-based fieldwork measurements.
+\ac{SCUBA}-based \textit{in-situ} observations, though providing high resolution and accuracy results in seagrass
 mapping, is limited in application, because of their time consumption, weather-dependency and
 unsuitability for the case of monitoring large areas of water for small-scale mapping. 
-The underwater videography\index{Remote sensing!underwater videography} with a GPS\index{Remote sensing!GPS} is a tool of seagrass monitoring which has certain advantages, i.e.
+The underwater videography\index{Remote sensing!underwater videography} with a \ac{GPS}\index{Remote sensing!GPS} is a tool of seagrass monitoring which has certain advantages, i.e.
 high spatial and visual resolution, non-destructive sampling, effectiveness at all depths and rapid data
-collection in the field \cite{Schultz08}\label{Schultz08}. However, it cannot cover large areas for small-scale mapping.
-Remote sensing techniques offer clear advantages over other methods of \textit{in-situ} field measurements
-and seagrass observations, mentioned above. Preference of the remote sensing methods consists in
-their weather-independence, cost-effectiveness, accuracy and spatial coverage, which enables
-periodic monitoring of the seagrass meadows and gives access to the distant and unapproachable
-areas. Integrated together with GIS vector layers and maps, remote sensing data enable historical
-mapping \cite{Carter08,Ardizzone06}\label{Carter08} \label{Ardizzone06} and assessment of change detection.
+collection in the field \cite{Schultz08}\label{Schultz08}. 
 
 \begin{wrapfigure}{r}{0.4\textwidth}
 	\centering
@@ -848,10 +858,26 @@ mapping \cite{Carter08,Ardizzone06}\label{Carter08} \label{Ardizzone06} and asse
 	\label{fig:13}
 \end{wrapfigure}
 
+However, it cannot cover large areas for small-scale mapping.
+Remote sensing techniques offer clear advantages over other methods of \textit{in-situ} field measurements
+and seagrass observations, mentioned above. Preference of the remote sensing methods consists in
+their weather-independence, cost-effectiveness, accuracy and spatial coverage, which enables
+periodic monitoring of the seagrass meadows and gives access to the distant and unapproachable
+areas. Integrated together with \ac{GIS} vector layers and maps, remote sensing data enable historical
+mapping \cite{Carter08,Ardizzone06}\label{Carter08} \label{Ardizzone06} and assessment of change detection.
 However, application of the remote sensing techniques for mapping of submerged vegetation,
 seafloor cover types and benthic vegetation, \textit{inter alia} seagrasses, are still in their development.
 Approaches and methods for the seagrass protection and monitoring still remain location-specific or, at
 least, nation-specific, depending to large extent on the tools available for the researchers \cite{Mellors09a}\label{Mellors09a}.
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+	\centering
+	\includegraphics[scale=0.25]{Fig-12.jpg}
+	\caption{Difference between broadband multispectral and hyperspectral resolution of
+		spectral signatures. Source: \cite{Clark99}\label{Clark99}}
+	\label{fig:2.3}
+\end{wrapfigure}
+
 Universal, international, standardized methods for seagrass directly for seagrasses
 as such still should be developed. Various case studies have been performed, yet their mostly report
 methods adjusted for particular areas, without evaluating standard general algorithms that could be
@@ -862,15 +888,6 @@ turn, reflectivity of the sediments is affected by the water optical properties 
 example, Stephens \cite{Stephens03}\label{Stephens03} prove that microalgae biomass and community structure affect
 hyperspectral reflectance of sediments, which enable to estimate total microalgae biomass from
 measurements of hyperspectral reflectance. 
-
-\begin{wrapfigure}{r}{0.5\textwidth}
-	\centering
-	\includegraphics[scale=0.25]{Fig-12.jpg}
-	\caption{Difference between broadband multispectral and hyperspectral resolution of
-		spectral signatures. Source: \cite{Clark99}\label{Clark99}}
-	\label{fig:2.3}
-\end{wrapfigure}
-
 Spectral measurements\index{Remote sensing!spectral measurements} of the target objects are made
 by means of the radiometers, which receive and register the amounts of energy (radiance and
 irradiance) from the objects. Measuring optical properties of of the seawater allows to calculate spectra of the
@@ -885,7 +902,7 @@ the terrestrial plants, aquatic vegetation, \textit{inter alia} seagrass, cannot
 spectrum, as these wavelengths are significantly absorbed by water \cite{Kirk94}\label{Kirk94}, as well as by
 scattering and absorption by phytoplankton. Some authors \cite{Dierssen03}\label{Dierssen03} also use
 spectrally based radiative transfer approach to quantitatively estimate shallow-water bathymetry and
-leaf area index (LAI) of the seagrass. The spectral reflectance in general is the
+leaf area index (\ac{LAI}) of the seagrass. The spectral reflectance in general is the
 result of the spectral absorption in different bands, typical for each target object.
 
 \begin{table}[htbp]
@@ -921,7 +938,7 @@ seagrass mapping \cite{Mumby99}\label{Mumby99}, and is especially useful for the
 capturing is unavailable.
 Seagrass meadows may reach spatial scales from several up to hundreds of metres, therefore they are
 susceptible by the means of satellite imagery from remote sensors, both with moderate resolution
-(e.g., \href{http://landsat.gsfc.nasa.gov/}{Landsat MSS, Landsat TM, Landsat ETM+}, \href{http://envisat.esa.int/instruments/meris/}{MERIS}, \href{http://asterweb.jpl.nasa.gov/}{ASTER}, \href{http://modis.gsfc.nasa.gov/}{MODIS}) and high resolution as
+(e.g., \href{http://landsat.gsfc.nasa.gov/}{Landsat MSS, Landsat TM, Landsat ETM+}, \href{http://envisat.esa.int/instruments/meris/}{MERIS} from \ac{ESA}, \href{http://asterweb.jpl.nasa.gov/}{ASTER}, \href{http://modis.gsfc.nasa.gov/}{MODIS}) and high resolution as
 well (e.g., \href{http://www.satimagingcorp.com/gallery-ikonos.html}{IKONOS}, \href{http://www.digitalglobe.com/index.php/85/QuickBird}{Quickbird}, \href{http://www.spotimage.fr/}{SPOT}, \href{http://www.itres.com/products/imagers/casi550}{CASI}). The possibility of their application towards seagrass mapping varies and is limited by the technical characteristics (Table \ref{tab:1}) and resolution of these sensors  (Fig.\ref{fig:2.3}).
 In the next paragraphs (\nameref{sec:2.4.1} and \nameref{sec:2.4.2}) we will briefly discuss research experience of the application of satellite imagery towards seagrass mapping, its advantages and limitations, reported by various researchers.
 
@@ -942,23 +959,23 @@ landscapes.
 	\label{fig:2.4}
 \end{wrapfigure}
 
-The Landsat TM\index{Remote sensing!multispectral imagery!Landsat TM} and Landsat ETM+\index{Remote sensing!multispectral imagery!Landsat ETM+} data, with the most recent from sensor Landsat 7 - an advanced
+The \ac{Landsat TM}\index{Remote sensing!multispectral imagery!Landsat TM} and \ac{Landsat ETM+}\index{Remote sensing!multispectral imagery!Landsat ETM+} data, with the most recent from sensor Landsat 7 - an advanced
 and multispectral scanning, launched in 1999, prove to be feasible and useful for the mapping of
 submerged vegetation, such as seagrasses or coral reefs. The successful applications of the imagery
-Landsat TM towards the seagrass mapping, were reported in numerous research works \cite{Palandro03,Gullstroom06,Wabnitz08,Bierwirth93,Ferguson97,Rasib97}\label{Palandro03}\label{Gullstroom06}\label{Wabnitz08}\label{Bierwirth93}\label{Ferguson97}\label{Rasib97}.\\ The Landsat data are particularly suitable for the
+\ac{Landsat TM} towards the seagrass mapping, were reported in numerous research works \cite{Palandro03,Gullstroom06,Wabnitz08,Bierwirth93,Ferguson97,Rasib97}\label{Palandro03}\label{Gullstroom06}\label{Wabnitz08}\label{Bierwirth93}\label{Ferguson97}\label{Rasib97}.\\ The Landsat data are particularly suitable for the
 case of change detection of seagrass landscapes at a decade scale, because being the main sensor
 onboard the Landsat satellites, the Thematic Mapper (TM) provides the longest time series
 available for change detection analysis over submerged vegetation \cite{Palandro03}\label{Palandro03}.
-Another well-known multispectral sensor, SPOT\index{Remote sensing!multispectral imagery!SPOT} provides multispectral imagery with a spatial
+Another well-known multispectral sensor, \ac{SPOT}\index{Remote sensing!multispectral imagery!SPOT} provides multispectral imagery with a spatial
 resolution of 10 m, covering covers a surface area of 3600 km² (60*60 km swath), 26-day
 orbital repeat cycle for nadir viewing and imagery with a spatial resolution 20 - 2.5 m
-\cite{SPOT}\label{SPOT}. \href{http://www.spotimage.fr/}{SPOT} imagery was used for mapping beds of \textit{P.oceanica} in the
+\cite{SPOT}\label{SPOT}. \ac{SPOT} imagery was used for mapping beds of \textit{P.oceanica} in the
 Mediterranean Sea \cite{Pasqualini05} \label{Pasqualini05}. 
 The \href{http://www.satimagingcorp.com/gallery-ikonos.html}{IKONOS}\index{Remote sensing!multispectral imagery!IKONOS}, offering multispectral and panchromatic imagery, was the first to collect publicly
 available high-resolution imagery at 1- and 4-meter resolution from \href{http://www.geoeye.com}{Geoeye}. IKONOS
 imagery has been applied for the seagrass mapping due to its high resolution and accessibility. 
 
-\begin{wrapfigure}{r}{0.5\textwidth}[H]
+\begin{wrapfigure}{r}{0.5\textwidth}
 	\centering
 	\includegraphics[scale=0.30]{Fig-14.jpg}
 	\caption{Multispectral vs. hyperspectral band coverage. Source: \cite{Sabins97}\label{Sabins97}}
@@ -966,18 +983,32 @@ imagery has been applied for the seagrass mapping due to its high resolution and
 \end{wrapfigure}
 
 Thus, the results of image classification in case study of shallow-water marine environment \cite{Mumby02}\label{Mumby02}
-made using IKONOS, Landsat TM, and CASI\index{Remote sensing!multispectral imagery!CASI}, show that in the blue part of the
-spectrum, the best results are achieved by the IKONOS and CASI, while Landsat TM has not high
+made using IKONOS, \ac{Landsat TM}, and \ac{CASI}\index{Remote sensing!multispectral imagery!CASI}, show that in the blue part of the
+spectrum, the best results are achieved by the IKONOS and \ac{CASI}, while \ac{Landsat TM} has not high
 enough resolution. 
 It may be caused to some extent by the loss of the radiance contrast, atmospheric
 Rayleigh scattering and defects of scattering. However, comparing between CASI and IKONOS, the
-same authors prove that CASI enable to receive still more accurate results of the classification
+same authors prove that \ac{CASI} enable to receive still more accurate results of the classification
 than IKONOS \cite{Mumby02}\label{Mumby02}.
 Another comparative analysis of the application of \href{http://www.itres.com/products/imagers/casi550}{CASI}, Landsat and \href{http://www.digitalglobe.com/index.php/85/QuickBird}{Quickbird} imagery \cite{Phinn08}\label{Phinn08}
- demonstrates high suitability of CASI images for the fine-scale mapping of the seagrass
-landscapes. Thus, CASI and Quickbird-2\index{Remote sensing!multispectral imagery!Quickbird} images enable to identify even separate seagrass species
+ demonstrates high suitability of \ac{CASI} images for the fine-scale mapping of the seagrass
+landscapes. Thus, \ac{CASI} and Quickbird-2\index{Remote sensing!multispectral imagery!Quickbird} images enable to identify even separate seagrass species
 with small width and heterogeneous nature of the seagrass patches, which could not be detected using
 Landsat TM images with their 30*30m resolution.
+\ac{ASTER}\index{Remote sensing!multispectral imagery!ASTER}), launched in
+1999 on board Terra sensor\index{Remote sensing!multispectral imagery!Terra sensor}, provides high-resolution images of the Earth in 15 different bands of the
+electromagnetic spectrum, ranging from visible to thermal infrared light  (Fig.\ref{fig:2.4}). It has diverse
+subsystems for the \ac{VNIR} with 15 m resolution, shortwave infrared \ac{SWIR}, and
+\ac{TIR} wavelength regions \cite{Kalinowski04}\label{Kalinowski04}. For each channel there is separate
+on board calibration \ac{OBC} system, telescope with independent pointing and different detector technology \cite{Arai05}\label{Arai05}. 
+This makes \ac{ASTER} imagery especially suitable for the application towards detailed
+mapping of surface temperature, emissivity and reflectance of objects and bathymetric elevations as
+well. Successful application of the \ac{ASTER} imagery towards mapping of submerged vegetation
+reported, for example, by Hirose \cite{Hirose04}\label{Hirose04}. 
+Other multispectral images have also been used for the
+seagrass interpretation. For example, the success of using imagery from the multispectral airborne
+scanner Daedalus AADS1268 is reported by Heege et al \cite{Heege03}\label{Heege03} where they aim at classification of
+macrophytes in shallow waters of the Lake Constance. 
 
 \begin{wrapfigure}{r}{0.5\textwidth}
 	\centering
@@ -987,22 +1018,6 @@ Landsat TM images with their 30*30m resolution.
 	\label{fig:2.6}
 \end{wrapfigure}
 
-Advanced Spectrometer for Thermal Emission and Reflection Radiometer (\href{http://asterweb.jpl.nasa.gov/}{ASTER}\index{Remote sensing!multispectral imagery!ASTER}), launched in
-1999 on board Terra sensor\index{Remote sensing!multispectral imagery!Terra sensor}, provides high-resolution images of the Earth in 15 different bands of the
-electromagnetic spectrum, ranging from visible to thermal infrared light  (Fig.\ref{fig:2.4}). It has diverse
-subsystems for the visible near infrared (VNIR) with 15 m resolution, shortwave infrared (SWIR), and
-thermal infrared (TIR) wavelength regions \cite{Kalinowski04}\label{Kalinowski04}. For each channel there is separate
-on board calibration (OBC) system, telescope with independent pointing and different detector technology \cite{Arai05}\label{Arai05}. 
-This makes ASTER imagery especially suitable for the application towards detailed
-mapping of surface temperature, emissivity and reflectance of objects and bathymetric elevations as
-well. Successful application of the ASTER imagery towards mapping of submerged vegetation
-reported, for example, by Hirose \cite{Hirose04}\label{Hirose04}. 
-
-
-Other multispectral images have also been used for the
-seagrass interpretation. For example, the success of using imagery from the multispectral airborne
-scanner Daedalus AADS1268 is reported by Heege et al \cite{Heege03}\label{Heege03} where they aim at classification of
-macrophytes in shallow waters of the Lake Constance. 
 In regard to the methods chosen for the image interpretation, the supervised classifications proves to
 be the most worthy in a majority of case studies \cite{Palandro03,Peneva08}\label{Palandro03}\label{Peneva08}. While
 often methods of the unsupervised classification are used as a tool for classifying submerged object
@@ -1035,7 +1050,7 @@ scanner fit for detailed seagrass mapping would cover bands of 550-750 nm and ha
 resolution of 5-15 nm \cite{Fyfe04}\label{Fyfe04}, which exactly characterizes typical airborne and
 hyperspectral satellite scanners. Important features may be detected in the narrow
 wavelengths of hyperspectral imagery, while this information can be lost in the broader
-wavelengths of other sensors. With its 126 spectral bands, HyMap imagery enables to
+wavelengths of other sensors. With its 126 spectral bands, \ac{HyMap} imagery enables to
 distinguish features of interest, i.e. seagrass types \cite{Peneva07}\label{Peneva07}, which is the major
 advantage of the of hyperspectral data for mapping landscapes of the seagrasses.
 While comparing multispectral imagery with airborne hyperspectral, the last one showed higher
@@ -1065,12 +1080,12 @@ mapping benthic vegetation in areas where the spatial heterogeneity is very high
 \counterwithin{figure}{section}
 \counterwithin{table}{section}
 
-In the section \nameref{sec:2} we briefly discussed main existing cartographic methods and tools for seagrass mapping. In the current  research we try to combine various techniques from mentioned above for the assessment of the seagrass distribution in the Mediterranean environment, for the case study of Crete. We mentioned in the \nameref{sec:0} the software that we used for logically separated research sections, which required various approach. Thus, for example,  spectral analysis and assessment of spectral signatures is technically based on WASI, statistical analysis of series of experimental raw data has been made by means of statistical software, such as \href{http://gretl.sourceforge.net/}{Gretl} and \href{http://www.spss.com/}{SPSS}; mapping has been made using  \href{http://www.esri.com/software/arcgis/index.html}{ArcGIS}; images processing and classification were made using \href{http://www.erdas.com/products/ERDASIMAGINE/ERDASIMAGINE/Details.aspx}{Erdas Imagine} software by means of Google Earth and  \href{http://landsat.gsfc.nasa.gov/}{Landsat} imagery.
+In the section \nameref{sec:2} we briefly discussed main existing cartographic methods and tools for seagrass mapping. In the current  research we try to combine various techniques from mentioned above for the assessment of the seagrass distribution in the Mediterranean environment, for the case study of Crete. We mentioned in the \nameref{sec:0} the software that we used for logically separated research sections, which required various approach. Thus, for example,  spectral analysis and assessment of spectral signatures is technically based on \ac{WASI}, statistical analysis of series of experimental raw data has been made by means of statistical software, such as \href{http://gretl.sourceforge.net/}{Gretl} and \href{http://www.spss.com/}{SPSS}; mapping has been made using  \href{http://www.esri.com/software/arcgis/index.html}{ArcGIS}; images processing and classification were made using \href{http://www.erdas.com/products/ERDASIMAGINE/ERDASIMAGINE/Details.aspx}{Erdas Imagine} software by means of Google Earth and  \href{http://landsat.gsfc.nasa.gov/}{Landsat} imagery.
 \href{http://www.esri.com/software/arcgis/index.html}{ArcGIS 10.0} software is used for the spatial analysis, general mapping and cartographic layout
 presentation; the raster processing techniques are applied for the detection of seagrass spatial
 distribution using supervised classification.
-The research data include Google Earth aerial images and scenes from the \href{http://landsat.gsfc.nasa.gov/}{Landsat TM and ETM+}
-covering research period of 10 years in the same year time, taken from \href{http://www.usgs.gov/pubprod/}{USGS}, \href{http://glovis.usgs.gov/}{GloVis}, \href{http://www.osdpd.noaa.gov/ml/index.html}{NOAA} and \href{http://glcfapp.glcf.umd.edu:8080/esdi/index.jsp}{The Earth Science Data Interface}. 
+The research data include Google Earth aerial images and scenes from the \ac{Landsat TM} and \ac{Landsat ETM+}
+covering research period of 10 years in the same year time, taken from \ac{USGS}, \ac{GloVis}, \ac{NOAA} and \href{http://glcfapp.glcf.umd.edu:8080/esdi/index.jsp}{The Earth Science Data Interface}. 
 The satellite imagery provides
 vital information of the most recent changes in \textit{P.oceanica} within the coastal areas, as well as the
 condition (poor or destroyed).
@@ -1107,7 +1122,7 @@ areas:
 	\item [3.] Agia Pelagia, $36\,^{\circ}20\textquoteright N, 22\,^{\circ}59\textquoteright E$.
 \end{itemize}
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.10]{Fig-16.jpg}
 	\caption{Study area: Crete island}
@@ -1118,7 +1133,7 @@ areas:
 Seagrass sampling has been performed at two research stations at Crete Island - Ligaria beach
 ($36\,^{\circ}20\textquoteright N, 22\,^{\circ}59\textquoteright E$) and Xerocampos ($35\,^{\circ}12\textquoteright N, 26\,^{\circ}18\textquoteright E$), at depths lesser than 4 meters. 
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.25]{Fig-17.jpg}
 	\caption{Study area: Ligaria beach, Crete island}
@@ -1129,16 +1144,16 @@ The Ligaria Beach is a narrow, sandy and pebble beach (Fig.\ref{fig:3.2}), locat
 The \textit{in-situ} measurements were conducted during the fieldwork in the period 21.09.2010-11.10.2010.
 The fieldwork on seagrass monitoring included visual estimations and photo- and video footage of the
 above-ground seagrass patches, sediment seafloor cover types, species compositions, water depth and
-geographic locations recorded using GPS.
+geographic locations recorded using \ac{GPS}.
 
 \subsubsection{Fieldwork equipment}
-The research materials and equipment were provided by \href{http://www.nhmc.uoc.gr/index-2.htm}{the Natural History Museum of Crete}, the \href{http://www.uoc.gr/Department/index.html}{University of Crete} and the ITC, and included the following items (Fig.\ref{fig:3.3}): 1) three iPAQs (Fig.\ref{fig:3.3a}); 2)
-three GPS (Fig.\ref{fig:3.3c}); 3) Three underwater video cameras, Olympus ST 8000  (Fig.\ref{fig:3.3d}), suitable for
+The research materials and equipment were provided by \href{http://147.52.130.151/MFIK_en/}{the Natural History Museum of Crete}, the \href{http://www.uoc.gr/Department/index.html}{University of Crete} and the ITC, and included the following items (Fig.\ref{fig:3.3}): 1) three iPAQs (Fig.\ref{fig:3.3a}); 2)
+three GPS (Fig.\ref{fig:3.3c}); 3) Three underwater video cameras, \ac{Olympus ST} 8000  (Fig.\ref{fig:3.3d}), suitable for
 photographing up to up to 33 foot depths and high-resolution 12.0-Mpixel image sensor; 4)
 Markers and cords for the depths measurements; 5) Waterproof plastic Otterbox  (Fig.\ref{fig:3.3b})for keeping the
-iPAQ dry; 6) \href{http://www.padi.com/scuba/}{SCUBA Diving equipment}, taken from the Ligaria Diving Center; 7) Boat (Fig.\ref{fig:3.4}); 
+iPAQ dry; 6) \ac{SCUBA} Diving equipment, taken from the Ligaria Diving Center; 7) Boat (Fig.\ref{fig:3.4}); 
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
 	\subfloat [iPAQ, HP]{\label{fig:3.3a}\includegraphics[width=0.3\textwidth]{Fig-19a.jpg}}
 	\subfloat [Waterproof Otterbox for iPAQ]{\label{fig:3.3b}\includegraphics[width=0.3\textwidth]{Fig-19b.jpg}}
@@ -1148,8 +1163,8 @@ iPAQ dry; 6) \href{http://www.padi.com/scuba/}{SCUBA Diving equipment}, taken fr
 	\label{fig:3.3}
 \end{figure}
 
-A GPS and iPAQ have been used for detection of the geodetic coordinates and keeping the tracklogs
-along the boat route for GIS project.
+A \ac{GPS} and \ac{iPAQ} have been used for detection of the geodetic coordinates and keeping the tracklogs
+along the boat route for \ac{GIS} project.
 
 \subsubsection{Sampling design}
 The sampling design of the fieldwork was aimed at surveying of the spatial distribution of the
@@ -1165,7 +1180,7 @@ distribution of the seagrass patches from photo transects, in order to use for t
 Three underwater video cameras, located on the bottom of the boat, provided videometric measurements of the
 seafloor during the track, and resulted in a series of consequent overlapping images of the sea bottom under the
 boat path. The general locations of the sampling sites and routes were selected on the basis of the visual examination
-of the seagrass beds during snorkeling and SCUBA diving, recommendations from the Greek collaborators of the \textit{Natural History Museum of Crete}, and available maps covering the research area. To ensure even and objective selection of sampling sites
+of the seagrass beds during snorkeling and \ac{SCUBA} diving, recommendations from the Greek collaborators of the \textit{Natural History Museum of Crete}, and available maps covering the research area. To ensure even and objective selection of sampling sites
 we used transect sampling method, i.e. photographs were taken along the research path. 
 
 \begin{figure}[H]
@@ -1180,14 +1195,14 @@ enabling the occurrences of the seagrass meadows to be recorded and counted in a
 accurate way, detect spatial distribution of the single seagrass mattes to be properly identified,
 without location bias. 
 The videographic measurements and photos, enabling to detect types of the
-seafloor, were captured by means of three underwater digital video cameras Olympus ST 8000  (Fig.\ref{fig:3.3d}), at
+seafloor, were captured by means of three underwater digital video cameras \ac{Olympus ST} 8000  (Fig.\ref{fig:3.3d}), at
 five minutes interval along the tracklog path (Fig.\ref{fig:3.6}).
 research sampling design also included measurements of depths (Fig. \ref{fig:A.4}), because bathymetry is one of the
 most determining factors for the seagrass locations. Measurements of depths were performed during
-the fieldwork using cord, iPAQs, and markers in order to assure that the videometric measurements
+the fieldwork using cord, \ac{iPAQ}, and markers in order to assure that the videometric measurements
 are taken at depths not more than four meters, in the shelf area.
 As a result, nine transects were established of one m wide and 20 m long track, to cover seagrass beds
-with videographic measurements. The GPS allowed to capture measurement locations on the iPAQ,
+with videographic measurements. The \ac{GPS} allowed to capture measurement locations on the \ac{iPAQ},
 encapsulated in a plastic waterproof Otterbox (Fig \ref{fig:3.3b}). The camera were adjusted horizontally by a leveler and
  mounted under the bottom of the boat to capture video footage and imagery (Fig.\ref{fig:3.5}). The data
 were taken at proper weather conditions: sunny, serene and cloud-free days with glassy sea state. 
@@ -1217,7 +1232,7 @@ colour, texture and shapes of the depicted objects.
 Along the Ligaria beach there are several types of the seagrass landscapes, namely, seagrass meadows
 continuously covering vast areas (Fig.\ref{fig:A.3} (a)), aggregated seagrass patches, represented by separate mattes with short irregular channels between them (Fig.\ref{fig:A.3} (b)) and isolated seagrass patches, or mattes,
 which located separately from broad meadows (Fig.\ref{fig:A.3} (c)).
-The results of the underwater videometric measurements of the Olympus cameras made during the
+The results of the underwater videometric measurements of the \ac{Olympus ST} cameras made during the
 ship route include nine total tracklog routes in the selected research area, including series of
 consequent images, completely covering the area under the boat path. The received data contain
 information on seagrass presence within the study area, distribution of seagrass \textit{P.oceanica} meadows
@@ -1239,7 +1254,7 @@ interpolation we used script written on Python programming language that allowed
 detailed data by interpolating them from 3 and 4 nm step up to 2 nm (Fig.\ref{fig:A.8}).
 The interpolated data contained spectral measurements of the seagrass 	\textit{P.oceanica} (measured at Agia
 Pelagia beach, Crete), sand (measured at Agia Pelagia beach, Crete), silt and default artificial
-spectrum of constant albedo at WASI (Fig.\ref{fig:A.9}). 
+spectrum of constant albedo at \ac{WASI} (Fig.\ref{fig:A.9}). 
 We included measurements of the Thalassia seagrass
 (measured at Southern Chinese Sea by C.Yang \cite{Yang10} \label{Yang10}) for the comparison of the spectral reflectance of
 different seagrass species under various environmental conditions.
@@ -1293,7 +1308,7 @@ The overview of the collected data enables to summarize their following types:
 	\item[] 1. Optical spectra of \textit{P.oceanica}, carbonate sand, seawater with sediments and seawater measured in aquarium tank, without sediments, at different environmental conditions (e.g., Fig. \ref{fig:A.23})
 	\item[]2. Aerial imagery from the \href{http://www.google.com/earth/index.html}{Google Earth}
 	\item[]3. Satellite images from various open sources (e.g. Landsat, Tab \ref{tab:20}) (previews: Fig. \ref{fig:A.37})
-	\item[]4. Results of underwater videometric measurements of the Olympus cameras made during the ship route
+	\item[]4. Results of underwater videometric measurements of the \ac{Olympus ST} cameras made during the ship route
 \end{itemize}
 The available satellite imagery (Fig.\ref{fig:A.38}) and aerial images are read into the ArcGIS project.
 The available broadband and hyperspectral remote sensing data are used for the mapping of the
@@ -1308,15 +1323,15 @@ different satellite images for 2000-2010.
 	\label{fig:24}
 \end{figure}
 
-The spatial resolution of Landsat ETM+ image is 30 m in the visible and near infrared bands (bands
-1-5 and 7); the spatial resolution of ASTER 15 m for the visible and near-infrared bands. IKONOS
-acquires data in 3 visible channels and NIR, with spatial resolution of 1-4 meters. ASTER and
+The spatial resolution of \ac{Landsat ETM+} image is 30 m in the visible and near infrared bands (bands
+1-5 and 7); the spatial resolution of \ac{ASTER} 15 m for the visible and near-infrared bands. IKONOS
+acquires data in 3 visible channels and \ac{NIR}, with spatial resolution of 1-4 meters. \ac{ASTER} and
 IKONOS images are suggested to be included as soon as available, in addition to the Landsat. The
 research includes fieldwork \textit{in-situ} measurements of the seagrass distribution along the northern and
 south-eastern coasts of Crete in chosen locations.\\
 The optical measurements of the irradiance and radiance of the sea water and bottom cover types of
-the seafloor have been received by the means of the optical sensors Trios-RAMSES Hyperspectral
-UVA/UVB Irradiance Sensor and RAMSES-ARC Hyperspectral UV-VIS Radiance Sensor (Fig. \ref{fig:2.1}), both adjusted for the measurements of the irradiance and radiance (see \nameref{app}: Tab. \ref{tab:A.1}, Tab. \ref{tab:A.2}). \\
+the seafloor have been received by the means of the optical sensors \ac{Trios-RAMSES} Hyperspectral
+UVA/UVB Irradiance Sensor and \ac{Trios-RAMSES}-ARC Hyperspectral UV-VIS Radiance Sensor (Fig. \ref{fig:2.1}), both adjusted for the measurements of the irradiance and radiance (see \nameref{app}: Tab. \ref{tab:A.1}, Tab. \ref{tab:A.2}). \\
 The highest measured values are located in the diapason of 410-730 nm for the water irradiance (Fig. \ref{fig:A.18}) and 430-650 for the water radiance (Fig.\ref{fig:A.16}). 
 Afterwards, the measured values of the radiance and irradiance, respectively, have been used for the computation of the spectral reflectance
 properties of the sea water and bottom cover types (Fig.\ref{fig:A.15}). The spectral range of radiance
@@ -1341,10 +1356,10 @@ wavelength ranges.
 The values of their spectral reflectance are accepted as constant. The results of
 spectral measurements enable to analyze, whether P.Oceanica is spectrally distinct from other sea
 floor types with changing environmental conditions, using the differences in their spectral signatures
-on the graphs in a WASI, the Water Colour Simulator software. \\The Water Colour Simulator WASI, a
+on the graphs in a \ac{WASI} software. \\The \ac{WASI}, a
 software tool for analyzing and simulating the most common types of spectra \cite{Gege05}\label{Gege05}, is highly
 suitable for the seagrass spectral analysis.
-There are several environmental characteristics, included in WASI interface (Fig.\ref{fig:4.7}), which influence the
+There are several environmental characteristics, included in \ac{WASI} interface (Fig.\ref{fig:4.7}), which influence the
 results of water spectral reflectance, e.g. different bottom depths, concentration of suspended particles
 in water column, water temperature, sun angle, concentration of Gelbstoff (coloured dissolved organic
 matter), concentration of phytoplankton, aerosol scattering, exponent of backscattering by small
@@ -1431,7 +1446,7 @@ broadband remote sensing.
 
 The results enable to study reflectance properties of the seagrass and other
 seafloor types. Application of the optical radiative transfer model WASI is suggested to simulate
-remote sensing sensors (MODIS, ASTER, MERIS and SeaWiFS), (Fig.\ref{fig:4.6}).
+remote sensing sensors (\ac{MODIS}, \ac{ASTER}, \ac{MERIS} and \ac{SeaWiFS}), (Fig.\ref{fig:4.6}).
 
 \begin{figure}[h]
 	\centering
@@ -1632,7 +1647,7 @@ We applied various methods of statistical analysis towards data pool (some examp
 A probability distribution\index{Data!statistical analysis!probability distribution}, a mathematical statement about the possible values that the random observations of spectral reflectance can take on, displays the relative frequency with which each possible value of spectral reflectance is observed. 
 The \textit{least absolute deviations (LAD)}\index{Data!statistical analysis!LAD}, a popular optimization technique, were used to show the main trend of the distribution of spectral reflectance values along the spectra (Tab.\ref{tab:12}). Non-linear logistic analysis\index{Data!statistical analysis!non-linear logistic analysis} is applied to specify and estimate a model of spectral distribution, in which the dependent variable (i.e. the value of spectral reflectance for each single observation) is not continuous, but discrete and independent for each case (Tab.\ref{tab:11}). \\
 As the observations were made in a repeated way, we also analyzed the data pool using autocorrelation as well: Tab.\ref{tab:13} and Tab.\ref{tab:14} for \textit{P.oceanica} and Tab.\ref{tab:28} for carbonate sand. The \textit{autocorrelation}\index{Data!statistical analysis!autocorrelation}, a cross-correlation\index{Data!statistical analysis!cross-correlation} of an observed value with itself, made on two different days (14th and 15th October), shows the similarity between observations as a function of the time separation between them. 
-As can be seen on Fig.\ref{fig:A.21}, Fig.\ref{fig:A.22} and Fig.\ref{fig:A.29}, it is a useful tool for finding repeating patterns for a single value of observations, such as the presence of a periodic signal which has been buried under noise. The autocorrelation analysis has been performed using both SPSS and Gretl software. \\
+As can be seen on Fig.\ref{fig:A.21}, Fig.\ref{fig:A.22} and Fig.\ref{fig:A.29}, it is a useful tool for finding repeating patterns for a single value of observations, such as the presence of a periodic signal which has been buried under noise. The autocorrelation analysis has been performed using both \ac{SPSS} and \ac{Gretl} software. \\
 The method of \textit{least squares}\index{Data!statistical analysis!least squares, method of} minimizes the sum of the squares of the errors made in solving every single observation made. We tried different approaches of the \textit{least squares} methods: Tab.\ref{tab:15}, Tab.\ref{tab:18}, Tab.\ref{tab:27}.\\
 To focus on the relationship between a dependent variable (each single observation of the spectral reflectance) and independent variables (three various depths: 0.5, 1.5 and 2.5 meters) we used the \textit{regression analysis}, which enables modeling and analyzing values of the spectral reflectance at several depths: Tab.\ref{tab:5}, Tab.\ref{tab:6}, Tab.\ref{tab:7}. 
 The summary of the values of spectral reflectance properties on various depths is presented on the Tab.\ref{tab:A.7}.
@@ -1698,7 +1713,7 @@ As a result, we have mean values of spectral reflectance of \textit{P.oceanica} 
 independent of the individual sets 1-350. 
 
 \paragraph{ANOVA-testing}\index{Data!statistical analysis!ANOVA}
-We applied ANOVA (ANalysis Of Variance) testing for the analysis of the probability of the
+We applied \ac{ANOVA} (ANalysis Of Variance) testing for the analysis of the probability of the
 spectral reflectance of \textit{P.oceanica} to be more or less spectrally distinct from other seafloor cover
 types with changing depth. W are checking the statement Hypothesis Ho, is true, which is “the
 spectral distinguishability of the seagrass \textit{P.oceanica} from other seafloor types is not changing with
@@ -1706,7 +1721,7 @@ varying \textit{in-situ} conditions, Ho: μ1 =μ2 =μ3=...= μn.” which gives 
 P(reject H0|H0 is valid)= P(X$>$c|p=)=.05
 where c comes for critical values and p=probability.
 The result P=.05 is (Tab.\ref{tab:8}), hence, very small, which makes the statement of Hypothesis Ho highly unlikely
-(less than 1 in a 10 chance). The one-way ANOVA highlighted a significant difference between data
+(less than 1 in a 10 chance). The one-way \ac{ANOVA} highlighted a significant difference between data
 of spectral reflectances of \textit{P.oceanica} at different depths (Tab.\ref{tab:9}), i.e. true is the opposite statement:
 Hypothesis Ha=“the spectral discernibility of the seagrass \textit{P.oceanica} is distinctly changing with
 varying \textit{in-situ} conditions, i.e. increasing depth, Ho: μ$\neq$μ2$\neq$μ3$\neq$ ... $\neq$μn“.
@@ -1754,7 +1769,7 @@ measurements data: Table 2.
 
 where the abbreviations stand for the following values:
 Mean: Average of the data to be plotted, AVERAGE\index{Data!statistical analysis!average} {data}
-St Dev: Standard deviation\index{Data!statistical analysis!standard deviation}, STDEV{data}
+St Dev: Standard deviation\index{Data!statistical analysis!standard deviation}, \ac{STDEV} {data}
 Median: Median of the data, MEDIAN{data}
 Calculating interquartile ranges: Q1=First quartile, PERCENTILE({data}*0.25) and Q3=Third
 quartile, PERCENTILE({data}*0.75)
@@ -1770,7 +1785,7 @@ measurement data of spectral reflectance of under various environmental conditio
 
 \subsubsection{Results of the remote sensing application}
 The \textit{in situ} spectral reflectance data of \textit{P.oceanica} and sand were used to model these seafloor cover
-types as the different sensors would percept them: MODIS\index{Remote sensing!multispectral imagery!MODIS}, ASTER\index{Remote sensing!multispectral imagery!ASTER}, MERIS\index{Remote sensing!multispectral imagery!MERIS}, SeaWiFS\index{Remote sensing!multispectral imagery!SeaWiFS} and CZCS\index{Remote sensing!multispectral imagery!CZCS}.\\
+types as the different sensors would percept them: MODIS\index{Remote sensing!multispectral imagery!MODIS}, ASTER\index{Remote sensing!multispectral imagery!ASTER}, MERIS\index{Remote sensing!multispectral imagery!MERIS}, SeaWiFS\index{Remote sensing!multispectral imagery!SeaWiFS} and \ac{CZCS}\index{Remote sensing!multispectral imagery!CZCS}.\\
 These sensors possess over various percepting characteristics which we briefly illustrated in a small summary table (Tab.\ref{tab:1})
 These models simulate spectral views of the chosen sensors, how these sensors will "see" seagrass (Fig.\ref{fig:28}) and sand as
 pixels, with accepted default atmosphere and water column effects (given by WASI software). In such
@@ -1929,9 +1944,9 @@ To make further studies of \textit{P.oceanica} more effective we would suggest t
 		\item[Fifth:] To simulate various environmental conditions while modelling optical properties of different seafloor cover types. Not only the depths and 	the chemical content of the seawater should be considered, but also other factors determining the effect of the ecology and health of \textit{P.oceanica}.
 		\item[Sixth:] To consider seafloor geomorphology among other factors determining seagrass distribution. If possible, to find out bathymetric data for the research area, and to overlay them with existing images and maps, in order to analyse correlation between spatial distribution of seagrass \textit{P.oceanica} and underwater relief along Cretan coasts. 
 		\item[Seventh:] Other RTM software may be tested and the modelling outcomes compared.
-		\item[Eighth:] Application of various open source GIS (ILWIS, GRASS) could be very useful for the validation of the cartographic results, assessment of accuracy and comparison of various classification methods. 
+		\item[Eighth:] Application of various open source \ac{GIS} (\ac{ILWIS}, \ac{GRASS}) could be very useful for the validation of the cartographic results, assessment of accuracy and comparison of various classification methods. 
 		\item[Ninth:] The analysis of the health indicators of the seagrass (such as number of leaves per shoot, biomass estimation within the single shot, etc) was not considered in the current work, as it would go beyond the scope of the MSc thesis. However, ecological investigations could be used for the assessment of the vulnerability of the seagrass meadows in various locations on Crete. 
-		\item[Tenth:] A flexible combination of the multi-scale mapping and results of the fieldwork measurements with GPS-referenced underwater footage would enable more profound analysis of the coastal environment on Crete. 
+		\item[Tenth:] A flexible combination of the multi-scale mapping and results of the fieldwork measurements with \ac{GPS}-referenced underwater footage would enable more profound analysis of the coastal environment on Crete. 
 	\end{description}
 
 \section*{Keywords}
@@ -1976,7 +1991,7 @@ To make further studies of \textit{P.oceanica} more effective we would suggest t
 %\appendixname{\textbf{2:\\ Instrumental adjustment and tuning (Trios-RAMSES setup)}}
 
 \begin{table}[H]\footnotesize
-	\caption{Attributes of the Trios-RAMSES hyperspectral radiometer during measurement sets. Selected examples (14. X, set 1 and 15.X, set 4).}\label{tab:A.1}
+	\caption{Attributes of the Trios-RAMSES hyperspectral radiometer and \ac{SAM} during measurement sets. Selected examples (14. X, set 1 and 15.X, set 4).}\label{tab:A.1}
 	\centering
 	\rowcolors{1}{Ivory}{LightGoldenrodYellow}
 	  \begin{tabular}{| p{3cm} | p{3cm} | p{5cm} |}
@@ -2180,7 +2195,7 @@ To make further studies of \textit{P.oceanica} more effective we would suggest t
 
 \begin{table}[htbp]
 	\rowcolors{1}{Ivory}{GhostWhite}
-	\caption{Model summary of the \textit{regression} analysis: curve estimation and ANOVA table tested for single observations within one measurement set: spectral reflectance of \textit{P.oceanica}. \href{http://www.spss.com/}{SPSS}}
+	\caption{Model summary of the \textit{regression} analysis: curve estimation and ANOVA table tested for single observations within one measurement set: spectral reflectance of \textit{P.oceanica}.\ac{SPSS}}
 	\begin{center}
 		\begin{tabular}{|c|c|c|c|}
 			\hline\hline
@@ -2194,7 +2209,7 @@ To make further studies of \textit{P.oceanica} more effective we would suggest t
 
 \begin{table}[htbp]
 	\rowcolors{1}{Ivory}{GhostWhite}
-	\caption{\textit{ANOVA} table: exponential curve estimation in the regression analysis, tested for single observations within one measurement set: spectral reflectance of \textit{P.oceanica}. \href{http://www.spss.com/}{SPSS}}
+	\caption{\textit{ANOVA} table: exponential curve estimation in the regression analysis, tested for single observations within one measurement set: spectral reflectance of \textit{P.oceanica}. \ac{SPSS}}
 	\begin{center}
 		\begin{tabular}{|c|c|c|c| c|c|}
 			\hline\hline
@@ -2245,7 +2260,7 @@ To make further studies of \textit{P.oceanica} more effective we would suggest t
 
 \begin{table}[htbp]
 	\rowcolors{1}{Ivory}{GhostWhite}
-	\caption{Results of the \textit{ANOVA one-way} analysis: results of the \textit{single factor} (depth) testing of the radiance of \textit{P.oceanica} at various depths: 0.5, 1.5 and 2.5 meters. \href{http://www.spss.com/}{SPSS}}\label{tab:8}
+	\caption{Results of the \textit{ANOVA one-way} analysis: results of the \textit{single factor} (depth) testing of the radiance of \textit{P.oceanica} at various depths: 0.5, 1.5 and 2.5 meters. \ac{SPSS}}\label{tab:8}
 	\begin{center}
 	\begin{tabular}{|c|c|c|c|c|c|c|}
 		\hline\hline
@@ -3518,7 +3533,7 @@ Marine ecology Progress Series.Vol.146: 155-161. \pageref{}
 marine phanerogam \textit{Posidonia oceanica} in the Pagassitikos Gulf, Greece}. Journal of
 Biological Research 4: 203 – 211, 2005 J. \pageref{Amoutzopoulou-Schina05}
 \bibitem{Arai05}
-Arai K. and Tonooka H. 2005. \emph{Radiometric Performance Evaluation of ASTER VNIR, SWIR and TIR} 
+Arai K. and Tonooka H. 2005. \emph{Radiometric Performance Evaluation of \ac{ASTER} VNIR, \ac{SWIR} and \ac{TIR}} 
 IEEE Transactions on Geoscience and Remote Sensing, Vol. 43, No. 12, Dec. 2005. \pageref{Arai05}
 \bibitem{Ardizzone06}
 Ardizzone G., Belluscio A. and Maiorano L. 2006. \emph{Long-term change in the structure of

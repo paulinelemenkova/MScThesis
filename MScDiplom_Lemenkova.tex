@@ -6,6 +6,7 @@
 \usepackage{setspace}
 \usepackage[printonlyused,withpage]{acronym}
 \usepackage[a4paper, left=30mm,right=25mm,top=30mm,bottom=35mm]{geometry}
+%\usepackage{glossary}
 \usepackage{graphics}
 \usepackage{graphicx}
 \usepackage[numbers]{natbib}
@@ -16,8 +17,12 @@
 \usepackage[subfigure]{tocloft}
 %\usepackage[table]{xcolor}
 \usepackage{paralist}
-\usepackage{makeidx}
-\makeindex
+%\usepackage{makeidx}\makeindex
+%\usepackage[makeindex,protected]{splitidx}
+%\usepackage{index}
+\usepackage{imakeidx}
+\makeindex[name=concepts,title=Index of Concepts,intoc]
+\makeindex[name=people,title=Index of People,intoc,columns=3,columnseprule]
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \usepackage{fancyheadings}
@@ -43,7 +48,6 @@
 \usepackage[a4paper=true, ]{hyperref}
 \hypersetup{pdftitle={Seagrass mapping and monitoring along the coasts of Crete, Greece}, pdfauthor={Lemenkova Polina}, pdfsubject={MScThesis}, pdfcreator={Lemenkova Polina}, pdfproducer={Lemenkova Polina}, colorlinks=true,linkcolor=Navy, citecolor=Crimson, filecolor=magenta, urlcolor=blue}
 
-
 %%%%%%%%%%%%%%%%%%%%%%%% End Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%% Begin Lemenkova Polina's MSc Thesis Document%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -51,11 +55,21 @@
 \begin{document}
 \pagenumbering{roman}
 
+%\newcommand{\listpeoplename}{}
+%\newlistof{people}{peo}{\listpeoplename}
+%\newcommand{\people}[1]{\refstepcounter{people}}
+
+%\newindex[List of People]{person}
+%\setindexpreamble[person]{...}
+%\newcommand{\person}[2]{\sindex[person]{#2, #1}#2}% "Given Surname" in text
+
+\phantomsection	
+\addcontentsline{toc}{section}{Front Page}
 \begin{titlepage}
 	\centering
 	\title{Seagrass mapping and monitoring \\ along the coasts of Crete, Greece}
 	\author[1]{by Lemenkova Polina}
-	\affil[1]{\textit{University of Twente, Faculty of Geo-Information Science and Earth Observation (ITC)}, The Netherlands}
+	\affil[1]{MSc student at the \textit{University of Twente, Faculty of Geo-Information Science and Earth Observation (ITC)}, The Netherlands}
 	\date{\today}
 	\maketitle	
 \end{titlepage}
@@ -77,10 +91,10 @@
 \textbf{Consortium partners:} \\
 
 \begin{itemize}
-	\item[*] University of Southampton (UK)\\
-	\item[*] Lund University (Sweden)\\
-	\item[*] University of Warsaw (Poland)\\
-	\item[*] University of Twente, Faculty ITC (The Netherlands)
+	\item[*] \href{http://www.southampton.ac.uk/}{University of Southampton}, \href{http://www.southampton.ac.uk/geography/}{School of Geography} (UK)\\
+	\item[*] \href{http://www.lunduniversity.lu.se/}{Lund University}, \href{http://www.giscentrum.lu.se/english/index.htm}{GIS Centre} (Sweden)\\
+	\item[*] \href{http://www.uw.edu.pl/en/}{University of Warsaw} (Poland)\\
+	\item[*] \href{http://www.utwente.nl/en}{University of Twente}, \href{http://www.itc.nl/}{Faculty of Geo-Information Science and Earth Observation (ITC)} (The Netherlands)
 \end{itemize}
 
 \begin{figure}[H]
@@ -102,7 +116,7 @@
 \begin{center}
 \textbf{Seagrass mapping and monitoring along the coasts of Crete, Greece}\\
 \vspace{1em}
- {by Lemenkova Polina}
+by Lemenkova Polina\index[people]{Lemenkova, P.}
 \end{center}
 
 Thesis submitted to the University of Twente, Faculty ITC, in partial fulfillment of the requirements
@@ -113,15 +127,15 @@ Environmental Modelling and Management.\\
 \begin{itemize}
 	\item Name Examiner 1 (Chair)\dotfill
 	\item Name Examiner 2\dotfill
-	\item External Examiner \dotfill \\ \hfill{Dr.{\textit{Petter Pilesj\"o}}(Lund University, GIS Centre)}
+	\item External Examiner \dotfill \\ \hfill{Dr.{\textit{Petter Pilesj\"o}\index[people]{Pilesj\"o, P.}} (Lund University, GIS Centre)}
 \end{itemize}
 
 \vspace{2em}
 
 \textbf{Member Supervisors}: \\
 \begin{itemize}
-	\item[* ] Mr. \textit{Valentijn Venus} \dotfill \\ (Department of Natural Resource, ITC)
-	\item[* ] Dr. \textit{Albertus G. Toxopeus} \dotfill \\ (Department of Natural Resource, ITC)
+	\item[* ] Mr. \textit{Valentijn Venus}\index[people]{Venus, V.} \dotfill \\ (Department of Natural Resource, ITC)
+	\item[* ] Dr. \textit{Albertus G. Toxopeus}\index[people]{Toxopeus, A.G.} \dotfill \\ (Department of Natural Resource, ITC)
 \end{itemize}
 
 \begin{figure}[h]
@@ -147,20 +161,20 @@ Environmental Modelling and Management.\\
 
 This research was carried out at the University of Twente, \href{http://www.itc.nl/}{Faculty of Geo-Information Science and Earth Observation (ITC)}, Enschede, the Netherlands, under the financial support of the EU \href{http://ec.europa.eu/education/external-relation-programmes/doc72_en.htm}{Erasmus Mundus Scholarship}. 
 \vspace{1mm}\\
-I thank my scientific supervisors, Dr. \textit{Albertus G.Toxopeus}  and Mr. \textit{Valentijn Venus} from the ITC, Department of Natural Resources, for our successful scientific collaboration, help and discussions of my research work. \\
+I thank my scientific supervisors, Dr. \textit{Albertus G.Toxopeus}\index[people]{Toxopeus, A.G.}  and Mr. \textit{Valentijn Venus}\index[people]{Venus, V.} from the ITC, Department of Natural Resources, for our successful scientific collaboration, help and discussions of my research work. \\
 I also express them my most sincere appreciations for our fieldwork on Crete. \\ Besides scientific routine, we had an unforgettable time spent together. \\ Personally, I would like to mention that I have visited Greece the first time in my life, and I will always remember my Cretan period-2010 and Ligaria beach.\vspace{1mm}\\
-I extend my gratitude to the staff of the Museum of Natural History, the University of Crete, especially to Dr.\textit{Petros Limberakis} and his colleagues, for their assistance during our fieldwork, providing us with all necessary equipment (e.g. SCUBA gear diving, instruments for underwater measurements, etc). I also appreciate their very warm, personal attitude and interest towards our research. 
+I extend my gratitude to the staff of the Museum of Natural History, the University of Crete, especially to Dr.\textit{Petros Limberakis}\index[people]{Limberakis, Petros} and his colleagues, for their assistance during our fieldwork, providing us with all necessary equipment (e.g. SCUBA gear diving, instruments for underwater measurements, etc). I also appreciate their very warm, personal attitude and interest towards our research. 
 \vspace{1mm}\\
-My sincere gratitude goes again to Mr.\textit{Valentijn Venus} for his generous providing me with a lot of spatial data   relevant to my research (e.g. such as digital vector layers of Crete island, raster georeferenced maps for the whole island for my GIS project, Excel spreadsheets, etc). Without these vital data the implementation of this project would have hardly been possible. I am also thankful to him for the technical help in Google Earth imagery capturing, using GDAL technologies and assistance during the fieldwork (videometric underwater footage, consultancies in seagrass observation and monitoring, driving boat, etc). \\ My special thank to his personal, friendly support in various situations on Crete.\vspace{1mm}\\
-I am thankful to Dr.rer.nat.\textit{Peter Gege}, the software developer from the Earth Observation Centre of the German Space Agency, for his generous consultancies concerning the technical question about WASI that arose during my work. I am thankful for all his explanations and articles given to me via e-mail \vspace{1mm}\\
-My special thanks are addressed to my elder brother, Mr.\textit{Peter Lemenkov}, the software developer from the ipPort, for his priceless numerous advices and constant professional support throughout my career. He encouraged me to use various very useful software and tools, always gave me necessary recommendations and precious help, thus highly contributing to my professional growth. \\ My special thank for his help with Python scripting. \\
+My sincere gratitude goes again to Mr.\textit{Valentijn Venus}\index[people]{Venus, V.} for his generous providing me with a lot of spatial data   relevant to my research (e.g. such as digital vector layers of Crete island, raster georeferenced maps for the whole island for my GIS project, Excel spreadsheets, etc). Without these vital data the implementation of this project would have hardly been possible. I am also thankful to him for the technical help in Google Earth imagery capturing, using GDAL technologies and assistance during the fieldwork (videometric underwater footage, consultancies in seagrass observation and monitoring, driving boat, etc). \\ My special thank to his personal, friendly support in various situations on Crete.\vspace{1mm}\\
+I am thankful to Dr.rer.nat.\textit{Peter Gege}\index[people]{Gege P.}, the software developer from the Earth Observation Centre of the German Space Agency, for his generous consultancies concerning the technical question about WASI that arose during my work. I am thankful for all his explanations and articles given to me via e-mail \vspace{1mm}\\
+My special thanks are addressed to my elder brother, Mr.\textit{Peter Lemenkov}\index[people]{Lemenkov, P.}, the software developer from the ipPort, for his priceless numerous advices and constant professional support throughout my career. He encouraged me to use various very useful software and tools, always gave me necessary recommendations and precious help, thus highly contributing to my professional growth. \\ My special thank for his help with Python scripting. \\
 I am also heartfelt thankful to him for his personal friendship and support. 
 \vspace{1mm}\\
-I am grateful to Mr.\textit{Willem Nieuwenhuis}, the software developer from the ITC, Department of Natural Resources, for shared technology of Google Earth aerial imagery grabbing and for his consultancy with ASTER imagery. 
+I am grateful to Mr.\textit{Willem Nieuwenhuis}\index[people]{Nieuwenhuis, W.}, the software developer from the ITC, Department of Natural Resources, for shared technology of Google Earth aerial imagery grabbing and for his consultancy with ASTER imagery. 
 \vspace{1mm}\\
-I thank Dr. Ir. \textit{Cornelis A.J.M. de Bie} from the Department of Natural Resource, ITC, for his patient sharing of iPAQ knowledge during my Polish fieldwork in summer 2010. I used this skills on Crete. 
+I thank Dr. Ir. \textit{Cornelis A.J.M. de Bie}\index[people]{de Bie C.A.J.M.} from the Department of Natural Resource, ITC, for his patient sharing of iPAQ knowledge during my Polish fieldwork in summer 2010. I used this skills on Crete. 
 \vspace{1mm}\\
-Many thanks for Dr. \author{\textit{Dingtian Yang}} from the South China Sea Institute of Oceanology, our colleague in problem of seagrass monitoring and research, for his handing over the data of spectral reflectance of Thalassia seagrass, which enabled to compare spectra of various seagrass types. 
+Many thanks for Dr. \textit{Dingtian Yang}\index[people]{Yang D.} from the South China Sea Institute of Oceanology, our colleague in problem of seagrass monitoring and research, for his handing over the data of spectral reflectance of Thalassia seagrass, which enabled to compare spectra of various seagrass types. 
 
 \pagebreak
 
@@ -280,7 +294,7 @@ An Index is placed in the end of the Document to help the reader find what he is
 \singlespace
 \section*{List of Tools}\label{sec:0}
 	\markright{List of Tools}
-	\addcontentsline{toc}{section}{List of Tools}\index{Software used}
+	\addcontentsline{toc}{section}{List of Tools}\index[concepts]{Software used}
 
 	\vspace{2em}
 
@@ -344,7 +358,7 @@ The seagrasses, a unique group of aquatic plants growing submerged in the sea wa
 structures (rhizoms) buried in the sediments and vertical elongate leaves. A flowering plant,
 completely adapted to the marine environment, they are however, more closely related to the lily family
 (\textit{Liliaceae}) than to the true grass, despite their name \textit{seagrass}, caused by the ribbon-like, grassy leaves
-\cite{McKenzie08}\label{McKenzie08}. Seagrasses\index{Seagrasses} create unique, complex, extremely diversified and productive ecological systems in the
+\cite{McKenzie08}\label{McKenzie08}. Seagrasses\index[concepts]{Seagrasses} create unique, complex, extremely diversified and productive ecological systems in the
 littoral coastal zones between 0-50 meters in shallow waters all over the world \cite{Hogarth07}\label{Hogarth07}, and
 serve as valuable environmental indicators for the marine ecosystems health. Seagrasses are closely
 connected and linked with complex interactions to other vegetation types, e.g. mangroves, coral reefs,
@@ -377,7 +391,7 @@ The purpose of current MSc research work aims to apply methods of remote sensing
 
 \subsection{Background}
 \subsubsection{Global distribution of the seagrasses}
-Globally, there are 58 recognized and described seagrass species\index{Seagrasses!global species} (Fig. \ref{fig:2}), belonging to two orders
+Globally, there are 58 recognized and described seagrass species\index[concepts]{Seagrasses!global species} (Fig. \ref{fig:2}), belonging to two orders
 (\textit{Hydrocharitales} and \textit{Najadales}), four families (\textit{Hydrocharitaceae, Posidoniaceae, Cymodoceaceae
 and Zosteraceae}), and 12 genera (\textit{Enhalus, Thalassia, Halophila, Posidonia, Syringodium, Halodule,
 Cymodocea, Amphibolis, Thalassodendron, Zostera, Heterozostera} and \textit{Phyllospandix}) \cite{Kuo89}\label{Kuo89}.
@@ -390,10 +404,10 @@ Cymodocea, Amphibolis, Thalassodendron, Zostera, Heterozostera} and \textit{Phyl
 \end{wrapfigure}
 
 The distribution of the seagrasses is strongly influenced by several environmental factors, which
-include climate (mostly, tropical and temperate areas\index{Seagrasses!distribution of}), bathymetry (shallow shelf zones), hydrological
+include climate (mostly, tropical and temperate areas\index[concepts]{Seagrasses!distribution of}), bathymetry (shallow shelf zones), hydrological
 particularities (chemical content of water, nutrient availability and turbidity of waves), and geological 
 characteristics - sedimentation and cover types of the seafloor \cite{McKenzie06}\label{McKenzie06}.\\
-There are four European seagrass species \index{Seagrasses!Mediterranean species} in Mediterranean area \cite{Borum04}\label{Borum04}: \textit{Zostera marina,
+There are four European seagrass species \index[concepts]{Seagrasses!Mediterranean species} in Mediterranean area \cite{Borum04}\label{Borum04}: \textit{Zostera marina,
 Zostera noltii, Cymodocea nodosa} and \textit{P.oceanica}. In Greece the common species are \textit{P.oceanica}
 \textit{(L.) Delile, Cymodocea nodosa (Ucria) Ascherson, Zostera noltii Hornemann} and \textit{Halophila
 stipulacea} \cite{Amoutzopoulou-Schina05}\label{Amoutzopoulou-Schina05}. 
@@ -433,7 +447,7 @@ root system, while algae nourish directly from the water column \cite{Dixon05}\l
 differences between “seagrass” and “algae” but they go beyond the scope of this work.
 
 \subsubsection{Environmental vulnerability of the seagrasses}
-Meadows of \textit{P. oceanica} are subjected to the human activities\index{Seagrasses!ecological vulnerability}, as they occur in coastal areas, where
+Meadows of \textit{P. oceanica} are subjected to the human activities\index[concepts]{Seagrasses!ecological vulnerability}, as they occur in coastal areas, where
 they can be affected both directly \cite{Meinesz91}\label{Meinesz91} or indirectly, through the impact on the
 quality of waters and sediments \cite{Duarte02}\label{Duarte02}. As \textit{P.oceanica} is a long-living plant with a slow
 growth rate, the anthropogenic modifications of the coastal zone, happening more rapidly than the
@@ -462,11 +476,11 @@ to the deterioration of the environment in the Mediterranean Sea \cite{Ribed02}\
 \textit{P.oceanica} is a protected species since 1988 in some European countries \cite{Francour99}\label{Francour99}, and
 its presence serves as an indicator of a stable healthy environment. Among other negative factors,
 affecting both growth and status of the seagrasses the environmental contaminants can be mentioned,
-e.g. thermal, sewage, dredging and chemical pollution\index{Seagrasses!anthropogenic impacts on}  as well as any other kind of maritime works,
+e.g. thermal, sewage, dredging and chemical pollution\index[concepts]{Seagrasses!anthropogenic impacts on}  as well as any other kind of maritime works,
 e.g. trawling and anchoring of boats \cite{Ribed02}\label{Ribed02}. Other human activities that cause degrading of the
 seagrass are recreational boating, commercial overexploitation of coastal resources, eutrophication
 \cite{McKenzie06}\label{McKenzie06}.\\
-Besides anthropogenic factors, various biochemical, climatic and environmental processes\index{Seagrasses!natural impacts on} can cause
+Besides anthropogenic factors, various biochemical, climatic and environmental processes\index[concepts]{Seagrasses!natural impacts on} can cause
 negative influence on seagrass distribution. Seagrass is exposed to threats from the global climate and
 environmental change, i.e. increases in sea surface temperature; sea level rise; increased frequency
 and intensity of storms and waves; local decrease of water quality, increased sedimentation,
@@ -495,7 +509,7 @@ registered globally; since 1980s global losses of the seagrasses on our planet i
 fields per hour \cite{Mellors09b}\label{Mellors09b}.
 \pagebreak
 
-\subsubsection{General characteristics of \textit{P.oceanica}}\index{Seagrasses!\textit{P.oceanica}}
+\subsubsection{General characteristics of \textit{P.oceanica}}\index[concepts]{Seagrasses!\textit{P.oceanica}}
 The endemic Mediterranean seagrass \textit{Posidonia oceanica} (further \textit{P.oceanica}), is a main species in
 marine coastal environment of Greece, forming, despite its slow growth, the largest, most widespread,
 homogeneous and dense meadows in the Mediterranean between 5 and 40 m depth \cite{DenHartog70}\label{DenHartog70}.
@@ -509,10 +523,10 @@ homogeneous and dense meadows in the Mediterranean between 5 and 40 m depth \cit
 \end{wrapfigure}
 
 The dominant and most productive coastal ecosystem of the Mediterranean, \textit{P.oceanica} is
-spatially restricted to the Mediterranean area\index{Seagrasses!\textit{P.oceanica}!distribution} (Fig.\ref{fig:5}), 
+spatially restricted to the Mediterranean area\index[concepts]{Seagrasses!\textit{P.oceanica}!distribution} (Fig.\ref{fig:5}), 
 with its extension limited by the western part of the Mediterranean Sea where cold Atlantic waters enter Gibraltar and mix with warm
 Mediterranean waters, thus decreasing its temperature.
-Morphologically\index{Seagrasses!\textit{P.oceanica}!morphology}, \textit{P.oceanica} consists of long, 5-12 mm broad, “hairy-like” leaves, 3-4 mm thick roots and short rhizomes (0.5-2.0 mm). 
+Morphologically\index[concepts]{Seagrasses!\textit{P.oceanica}!morphology}, \textit{P.oceanica} consists of long, 5-12 mm broad, “hairy-like” leaves, 3-4 mm thick roots and short rhizomes (0.5-2.0 mm). 
 The leaves are, perhaps, the most particular characteristics of \textit{P.oceanica}, making it highly recognizable and distinguishable from other seagrasses (Fig.\ref{fig:8}(a)): having usual length of 20-40 cm, in some cases they can reach up to 1 m \cite{Borum04}\label{Borum04}  (Fig.\ref{fig:8}(c)).
 Growing \textit{P.oceanica} make a meadows which, in turn, consist of smaller patches, called \textit{matte}
 (Fig.\ref{fig:8}(b)), a monumental construction made by the growth of rhizomes and leaves with entangled roots
@@ -530,14 +544,14 @@ Representing one of the most productive Mediterranean ecosystems, \textit{P.ocea
 perfect biological indicator for the assessment of the quality of waters and environmental health
 \cite{Boudouresque89}\label{Boudouresque89}. Some authors \cite{Guidetti08,Montefalcone09}\label{Guidetti08} \label{Montefalcone09} used status and population dynamics of \textit{P.oceanica} as indicators for the evaluation of the meadow health status. 
 There are several environmental factors, determining the growth of the \textit{P.oceanica}. 
-The adaptation\index{Seagrasses!\textit{P.oceanica}!environmental adaptation}
+The adaptation\index[concepts]{Seagrasses!\textit{P.oceanica}!environmental adaptation}
 to dry-summer subtropical climate reduces its extension to Mediterranean area only (Fig.\ref{fig:5}).
 Besides, the distribution of the seagrasses changes with water depth: it is noticed \cite{Dural10}\label{Dural10} that
 the highest flowering density is usually in the 4-7 m depth. 
 \textit{P.oceanica} flowers appeared in shallow
 stands in September while in November only in stands deeper than 15 m. This time delay is caused by
 the different maximum summer temperatures at those depths \cite{Buia91}\label{Buia91}.
-The phenology\index{Seagrasses!\textit{P.oceanica}!phenology} of \textit{P.oceanica} is also affected by the coastal bathymetry: in the isolated meadows in shallow waters plants have shorter and falciform leaves, compared to ones in the deeper and central
+The phenology\index[concepts]{Seagrasses!\textit{P.oceanica}!phenology} of \textit{P.oceanica} is also affected by the coastal bathymetry: in the isolated meadows in shallow waters plants have shorter and falciform leaves, compared to ones in the deeper and central
 areas \cite{Dural10}\label{Dural10}. In \textit{P.oceanica} flower abundance is related to the structure of the meadow with
 the maximal flower density in the densest stands, while the occurrence of flowering is regulated by
 environmental factors \cite{Buia91}\label{Buia91}. Phenology of the \textit{P.oceanica} undergoes 
@@ -546,8 +560,8 @@ the number of leaves on the flowering shoots decrease. Changes of the leaf growt
 flowering shoots with longer oldest leaves and shorter and narrower leaves induced during the
 flowering \cite{Gobert01}\label{Gobert01}.
 
-\subsection{Research problem}\index{Research}
-Monitoring\index{Research!problem} of the marine benthic ecosystems of seagrasses is essential for the environmental
+\subsection{Research problem}\index[concepts]{Research}
+Monitoring\index[concepts]{Research!problem} of the marine benthic ecosystems of seagrasses is essential for the environmental
 assessment of the coastal zones. It increases our knowledge of the seagrass ecology, highlights 
 threats to the seagrass and preventing them from possible losses and degrading and improves
 techniques and methods of the underwater-based observations. Mapping the seagrass contributes to
@@ -607,9 +621,9 @@ the selected locations it becomes a useful tool for the assessment of the distri
 coverage of the seagrass along the track log. Besides, the underwater observations using scuba diving
 equipment have been conducted for the measurements of depths.
 
-\subsection{Research objective}\index{Research!objective}
+\subsection{Research objective}\index[concepts]{Research!objective}
 The current MSc research aims to explore the environmental conditions for the spatial distribution of \textit{P.oceanica} seagrass along the northern coast of Crete Island, based on the remote sensing and \ac{GIS} techniques, knowledge about the coastal environment in Crete and integration of various data
-from the following sources \index{Data}:
+from the following sources \index[concepts]{Data}:
 	\begin{itemize}
 		\item[] i) spectra of \textit{P.oceanica}, carbonate sand, silt and other seafloor types
 		\item[] ii) satellite imagery: Landsat TM, Landsat ETM+
@@ -624,7 +638,7 @@ This research is supported by the \textit{in-situ} measurements in two selected 
 of Crete (Ligaria beach in Agia Pelagia district and Xerocampos), using following methods of the
 remote sensing techniques: spectral modelling by means of the\ac{RTM} \ac{WASI},  underwater videometric measurements made by \ac{Olympus ST}camera, aerial Google Earth and satellite images from different sources, spatial \ac{GIS} and statistical analysis.
 
-\subsubsection{General objective}\index{Research!objective!general}
+\subsubsection{General objective}\index[concepts]{Research!objective!general}
 The main objective of this study is to analyse the optical properties of the seagrass \textit{P.oceanica} and other seafloor types, and to apply the remote sensing techniques towards the investigation of the seagrass distribution in the selected locations along the northern coast of Crete.
 General objectives:
 	\begin{itemize}
@@ -632,7 +646,7 @@ General objectives:
 		\item[*]Mapping spatial distribution of the seagrass \textit{P.oceanica} over selected locations along the northern coasts of Crete Island 
 	\end{itemize}
 
-\subsubsection{Specific objectives}\index{Research!objective!specific}
+\subsubsection{Specific objectives}\index[concepts]{Research!objective!specific}
 	\begin{itemize}	
 		\item[]1.	To study narrow-band spectral reflectance properties of \textit{P.oceanica} and other seafloor cover types (sand and silt) using WASI water colour simulation software 
 		\item[]2.	To use methods of the in situ diving observations and underwater videometric measurements by \ac{Olympus ST}camera in order to receive large-scale imagery of the P.oceanica mattes 
@@ -641,13 +655,13 @@ General objectives:
 	\end{itemize}
 
 
-\subsection{Research questions}\index{Research!questions}
+\subsection{Research questions}\index[concepts]{Research!questions}
 	\begin{itemize}	
 		\item Is \textit{P.oceanica} spectrally distinct from other seafloor cover types with varying \textit{in-situ} conditions ?
 		\item Whether broadband and hyperspectral remote sensing data can be used for the mapping of \textit{P.oceanica} ?
 	\end{itemize}
 
-\subsection{Hypotheses testing}\index{Research!questions!hypothesis}
+\subsection{Hypotheses testing}\index[concepts]{Research!questions!hypothesis}
 A statistical testing will be used to compare between the spectral responses of the different seafloor cover types (i.e. sand and \textit{P. oceanica}),
  whether it is spectrally distinct and at least one pair is statistically different at every spectral
 band.
@@ -663,7 +677,7 @@ ANOVA test is to visualize in an effective and quick way the spectral difference
 species and their spatial distribution. Thus, the key hypotheses of the research will be tested to prove
 whether the results of the research are accurate, reasonable and correct.
 
-\subsection{Research approach}\index{Research!approach}
+\subsection{Research approach}\index[concepts]{Research!approach}
 Seagrass consistent monitoring and mapping is necessary and important for the sustainable coastal
 development and conservation measures. Earlier, many seagrass meadows have been destroyed by
 human activities in the coastal zone, mainly due to the ignorance of their existence, because
@@ -713,7 +727,7 @@ Supervised, Maximum Likelihood).
 \counterwithin{figure}{section}
 \counterwithin{table}{section}
 
-\subsection{Seagrass global monitoring: history and perspectives}\index{Seagrasses!global monitoring}
+\subsection{Seagrass global monitoring: history and perspectives}\index[concepts]{Seagrasses!global monitoring}
 Mapping and monitoring the seagrass is important for the environmental assessment of the marine
 ecosystems in coastal areas. Regular tracking of current distribution of seagrass meadows, based on
 correct information and cartographic visualization of seagrasses, is a preventive environmental
@@ -725,7 +739,7 @@ has become a successful, rapidly developing and increasingly popular and challen
 Seagrasses can be mapped using various approaches, with the most popular method of the remote
 sensing application, enabling to detect and discriminate the substratum and various vegetation types
 growing on the seafloor.\\
-Several global seagrass surveys\index{Seagrasses!global surveys} organize and provide regular monitoring of the seagrass distribution,
+Several global seagrass surveys\index[concepts]{Seagrasses!global surveys} organize and provide regular monitoring of the seagrass distribution,
 health and species sustainability, amongst which the most world-known are, perhaps, the following
 ones: \href{http://www.seagrassnet.org/}{Global Seagrass Monitoring project}, \href{http://www.seagrasswatch.org/}{Seagrasswatch}, 
 located in Australia, two European-located institutions - \href{http://mediterranean.seagrassonline.org/}{the Mediterranean association Seagrass-2000} and \href{http://www.imedea.uib.es/index.php}{the Mediterranean Institute for Advanced Studies}, US American 
@@ -765,7 +779,7 @@ dependent on wavelengths, i.e. it is greater in blue wavelengths (400 nm) than i
 	\label{fig:2.1}
 \end{figure}
 
-The optical properties\index{Seawater optical properties} of the sea water vary with different environmental conditions and reflect
+The optical properties\index[concepts]{Seawater optical properties} of the sea water vary with different environmental conditions and reflect
 current chemical content and physical specifics of the water, revealing the variability and distribution
 of color of the sea waters, determined by the material in the water, e.g. chlorophyll, as well as its
 physical properties, e.g. water absorption, attenuation, backscattering \cite{Maffione01a}\label{Maffione01a}.
@@ -773,7 +787,7 @@ Shallow waters generally contain more dissolved substances and suspended particl
 influences the transparency and color of the waters of shelf zones \cite{Jerlov52}\label{Jerlov52}. Being highly
 dynamic environments, coastal waters experience a variety of processes which alter their optical
 properties incessantly. The effects of these processes influence application of the hyperspectral
-remote sensing\index{Seawater optical properties!hyperspectral measurements} and reinforce other processes \cite{Maffione01b}\label{Maffione01b}. Thus, waves and tides increase
+remote sensing\index[concepts]{Seawater optical properties!hyperspectral measurements} and reinforce other processes \cite{Maffione01b}\label{Maffione01b}. Thus, waves and tides increase
 sedimentation processes, which in turn, may change micro relief properties and topology. \\
 The optical properties of the water are best reflected in the values of its radiance and irradiance,
 which can be converted into spectral reflectance, or reflectivity. The spectral irradiance (E) is a
@@ -782,16 +796,16 @@ time ($W*m^{−2}*nm^{−1}$), while radiance (L) characterizes total emission o
 or is emitted from a particular area ($W*sr^{−1}*m^{−2}*nm^{−1}$). Therefore, the spectral reflectance, or the
 reflectivity of the object, can be estimated by the direct mathematical division of these first two
 characteristics, and is expressed in percentage.
-The irradiance\index{Seawater optical properties!irradiance} and radiance\index{Seawater optical properties!radiance} of the water thus should be measured, in order to estimate spectral
+The irradiance\index[concepts]{Seawater optical properties!irradiance} and radiance\index[concepts]{Seawater optical properties!radiance} of the water thus should be measured, in order to estimate spectral
 reflectance of the various seafloor cover types. \\
 The optical measurements of the irradiance and radiance of the sea water and bottom cover types of the seafloor can be received by the means of the
-optical sensors spectroradiometers\index{Seawater optical properties!spectroradiometers}. There are several companies producing radiometers with various
+optical sensors spectroradiometers\index[concepts]{Seawater optical properties!spectroradiometers}. There are several companies producing radiometers with various
 characteristics and adjusted for different purposes, e.g. portable and miniature spectrometers from
 \href{http://www.stellarnet.us}{StellarNet}, Hyperspectral Ocean Colour Radiometer (HyperOCR) sensor by
 \href{http://www.satlantic.com}{Satlantic}, traceable spectroradiometers by \href{http://www.orboptronix.com}{Orbotronix} 
 and lots of others. Among other radiometers there are ones designed by the \href{http://www.trios.de/}{Trios company} producing
 optical sensors, GER-Series Field portable spectroradiometers from
-\href{http://www.spectrapartners.nl/}{SpectraPartners}, etc. \ac{Trios-RAMSES}\index{Seawater optical properties!spectroradiometers!Trios-RAMSES} hyperspectral radiometers
+\href{http://www.spectrapartners.nl/}{SpectraPartners}, etc. \ac{Trios-RAMSES}\index[concepts]{Seawater optical properties!spectroradiometers!Trios-RAMSES} hyperspectral radiometers
 (\ac{Trios-RAMSES} Hyperspectral \ac{UVA}/\ac{UVB} Irradiance Sensor and \ac{Trios-RAMSES}-ARC Hyperspectral \ac{UV}-\ac{VIS} Radiance Sensor) are small-sized, low power-consuming, flexible for fieldwork yet with high
 level of precision, specially calibrated for air and for water application as well as color
 measurements  (Fig.\ref{fig:2.1}). These products have been used for the radiance and irradiance
@@ -799,21 +813,21 @@ measurements in Agia Pelagia bay, Crete Island, 2009.
 
 \subsection[Radiative Transfer Models (RTM)]{Radiative Transfer Models (RTM) for the simulation of water optical properties: a brief review of existing tools}
 
-Understanding radiance distribution within a water colum\index{Seawater optical properties!RTM}n is necessary for the studies of the underwater visibility, because scattering properties of the water body naturally vary with changing depth, wavelength and environmental conditions.  Simulation of the radiance quantities for natural water bodies enables to analyse seafloor color remote sensing properties. Therefore, the artificial modelling of the seawater optical properties by means of the \ac{RTM} is used when water optics is studied under changing environment (e.g., depths, sun angle, suspended particles in water column). \\ In such cases a retrieval of water optical parameters from the remote measurements should be tested and analyzed. 
+Understanding radiance distribution within a water colum\index[concepts]{Seawater optical properties!RTM}n is necessary for the studies of the underwater visibility, because scattering properties of the water body naturally vary with changing depth, wavelength and environmental conditions.  Simulation of the radiance quantities for natural water bodies enables to analyse seafloor color remote sensing properties. Therefore, the artificial modelling of the seawater optical properties by means of the \ac{RTM} is used when water optics is studied under changing environment (e.g., depths, sun angle, suspended particles in water column). \\ In such cases a retrieval of water optical parameters from the remote measurements should be tested and analyzed. 
 \newline
 We briefly discuss below the most effective RTM software and algorithms from a range of various best-known up-to-date tools. 
 	\begin{itemize}
-		\item [*] The \ac{6SV1} \index{Seawater optical properties!RTM!6SV1} is a US atmospheric correction algorithm, developed in the University of Maryland; adjusted for the \ac{MODIS} satellite imagery lookup tables. The 6S algorithm has been \href{http://grass.osgeo.org/grass64/manuals/html64_user/i.atcorr.html}{implemented} by the \ac{GRASS} software for the atmospheric correction 				 
-		\item [*] Another example of the RTM adjusted for a specific imagery is a German \ac{KOPRA}\index{Seawater optical properties!RTM!KOPRA}, fitted for \ac{MIPAS} and \ac{ENVISAT} imagery.
+		\item [*] The \ac{6SV1} \index[concepts]{Seawater optical properties!RTM!6SV1} is a US atmospheric correction algorithm, developed in the University of Maryland; adjusted for the \ac{MODIS} satellite imagery lookup tables. The 6S algorithm has been \href{http://grass.osgeo.org/grass64/manuals/html64_user/i.atcorr.html}{implemented} by the \ac{GRASS} software for the atmospheric correction 				 
+		\item [*] Another example of the RTM adjusted for a specific imagery is a German \ac{KOPRA}\index[concepts]{Seawater optical properties!RTM!KOPRA}, fitted for \ac{MIPAS} and \ac{ENVISAT} imagery.
 		\item [*]  The \href{http://www.sequoiasci.com/products/Hydrolight.aspx}{\textit{HydroLight RTM}} commercial software is an advanced model for oceanic radiative transfer calculations, developed by the Sequoia Scientific, Inc., USA. It is designed to solve a wide range of problems in optical oceanography and limnology.   
-		\item [*] The British \ac{RTTOV-9}\index{Seawater optical properties!RTM!RTTOV-9} is a radiative transfer model, developed for nadir viewing atmospheric sounders and imagers. It includes a number of useful tolls, e.g. can compute sea-surface emissivity for each channel, enables, to specify cloudiness for radiance calculations, etc.  This program runs under Unix/Linux platforms and is open source. 
-		\item [*] The \ac{RRTM}\index{Seawater optical properties!RTM!RRTM} is one more RTM freeware, designed in the USA, Massachusetts. 
-		\item [*] The \href{http://www.modtran.org/}{\textit{MODTRAN}}\index{Seawater optical properties!RTM!MODTRAN}, a commercial software from Spectral Sciences Inc., is another example of the RTM. Among its newest updates is generation of atmospheric correction data; it also has an option to write spectral output in binary, and convert it to \ac{ASCII}.
-		\item [*] A \ac{DISORT}\index{Seawater optical properties!RTM!DISORT}  is another RTM freeware , developed as an algorithm for calculation radiance of the scattering and absorbing Earth's atmosphere and transmissivity computations within the waveband range from UV to radar.  
-		\item [*] The \ac{CRTM} \index{Seawater optical properties!RTM!CRTM} is designed by the  (\href{http://www.jcsda.noaa.gov/}{JCSDA}, \ac{NASA}) and includes Surface Emissivity/Reflectivity Models, Cloud Absorption/Scattering Model and Gaseous Absorption Model.
-		\item [*] An \ac{4AOP}\index{Seawater optical properties!RTM!4AOP} is a French RTM freeware, designed in cooperation by \href{http://www.noveltis.fr/fr/index.php}{Noveltis} and \href{http://www.cnes.fr/}{the French Space Agency} (\ac{CNES}). Being a fine program which enables accurate computations of the radiance, defining other emissivity functions and other set up, it is however, particularly designed for the infrared waves (thus, not quite suitable in our case). To the advantages of this freeware we would count its user friendly interface and open source accessibility for the academic purposes. 
+		\item [*] The British \ac{RTTOV-9}\index[concepts]{Seawater optical properties!RTM!RTTOV-9} is a radiative transfer model, developed for nadir viewing atmospheric sounders and imagers. It includes a number of useful tolls, e.g. can compute sea-surface emissivity for each channel, enables, to specify cloudiness for radiance calculations, etc.  This program runs under Unix/Linux platforms and is open source. 
+		\item [*] The \ac{RRTM}\index[concepts]{Seawater optical properties!RTM!RRTM} is one more RTM freeware, designed in the USA, Massachusetts. 
+		\item [*] The \href{http://www.modtran.org/}{\textit{MODTRAN}}\index[concepts]{Seawater optical properties!RTM!MODTRAN}, a commercial software from Spectral Sciences Inc., is another example of the RTM. Among its newest updates is generation of atmospheric correction data; it also has an option to write spectral output in binary, and convert it to \ac{ASCII}.
+		\item [*] A \ac{DISORT}\index[concepts]{Seawater optical properties!RTM!DISORT}  is another RTM freeware , developed as an algorithm for calculation radiance of the scattering and absorbing Earth's atmosphere and transmissivity computations within the waveband range from UV to radar.  
+		\item [*] The \ac{CRTM} \index[concepts]{Seawater optical properties!RTM!CRTM} is designed by the  (\href{http://www.jcsda.noaa.gov/}{JCSDA}, \ac{NASA}) and includes Surface Emissivity/Reflectivity Models, Cloud Absorption/Scattering Model and Gaseous Absorption Model.
+		\item [*] An \ac{4AOP}\index[concepts]{Seawater optical properties!RTM!4AOP} is a French RTM freeware, designed in cooperation by \href{http://www.noveltis.fr/fr/index.php}{Noveltis} and \href{http://www.cnes.fr/}{the French Space Agency} (\ac{CNES}). Being a fine program which enables accurate computations of the radiance, defining other emissivity functions and other set up, it is however, particularly designed for the infrared waves (thus, not quite suitable in our case). To the advantages of this freeware we would count its user friendly interface and open source accessibility for the academic purposes. 
 	\end{itemize}
-For our purpose we have chosen the \ac{WASI}\index{Seawater optical properties!RTM!WASI} \ac{RTM} software, due to its effectiveness, adaptability for the Mediterranean environment, open source availability, coverage of necessary wavebands and clear, user friendly interface, enabling to adjust various environmental parameters.
+For our purpose we have chosen the \ac{WASI}\index[concepts]{Seawater optical properties!RTM!WASI} \ac{RTM} software, due to its effectiveness, adaptability for the Mediterranean environment, open source availability, coverage of necessary wavebands and clear, user friendly interface, enabling to adjust various environmental parameters.
 
 \subsection[\textit{In-situ} observations of the seagrass]{The \textit{in-situ} observations of the seagrass}
 The traditional methods of \textit{in-situ} seagrass monitoring include in general the following standard
@@ -840,13 +854,13 @@ initially acoustic methods were intended for the bathymetric surveying, i.e. the
 the benthic habitat discrimination. The results of the \textit{in-situ} measurements and observation are usually
 managed and treated using integrated \ac{GIS} approach, as, e.g. reported by Schmieder \cite{Schmieder97}\label{Schmieder97}.
 
-\subsection[Application of the remote sensing...]{Application of the remote sensing data towards seagrass mapping}\index{Remote sensing}
+\subsection[Application of the remote sensing...]{Application of the remote sensing data towards seagrass mapping}\index[concepts]{Remote sensing}
 Various methods and approaches have been applied towards mapping of the seagrasses, based on
 digitized aerial photographs, \ac{GPS} data, remote sensing and \ac{SCUBA}-based fieldwork measurements.
 \ac{SCUBA}-based \textit{in-situ} observations, though providing high resolution and accuracy results in seagrass
 mapping, is limited in application, because of their time consumption, weather-dependency and
 unsuitability for the case of monitoring large areas of water for small-scale mapping. 
-The underwater videography\index{Remote sensing!underwater videography} with a \ac{GPS}\index{Remote sensing!GPS} is a tool of seagrass monitoring which has certain advantages, i.e.
+The underwater videography\index[concepts]{Remote sensing!underwater videography} with a \ac{GPS}\index[concepts]{Remote sensing!GPS} is a tool of seagrass monitoring which has certain advantages, i.e.
 high spatial and visual resolution, non-destructive sampling, effectiveness at all depths and rapid data
 collection in the field \cite{Schultz08}\label{Schultz08}. 
 
@@ -888,13 +902,13 @@ turn, reflectivity of the sediments is affected by the water optical properties 
 example, Stephens \cite{Stephens03}\label{Stephens03} prove that microalgae biomass and community structure affect
 hyperspectral reflectance of sediments, which enable to estimate total microalgae biomass from
 measurements of hyperspectral reflectance. 
-Spectral measurements\index{Remote sensing!spectral measurements} of the target objects are made
+Spectral measurements\index[concepts]{Remote sensing!spectral measurements} of the target objects are made
 by means of the radiometers, which receive and register the amounts of energy (radiance and
 irradiance) from the objects. Measuring optical properties of of the seawater allows to calculate spectra of the
 objects and to discriminate them on the aerial and satellite images. Thus, various scientists report
 success in spectral discrimination of submerged vegetation and other seafloor cover types on imagery
 using hyperspectral optical properties of the sea water for the assessment of benthic habitats \cite{Lewis01,Louchard03,Dehouck08,Werdell03}\label{Lewis01}\label{Louchard03}\label{Dehouck08}\label{Werdell03}.
-Studies of spectral reflectance\index{Seawater optical properties!spectral reflectance} of the different seagrass species comparing to the spectra of sand and
+Studies of spectral reflectance\index[concepts]{Seawater optical properties!spectral reflectance} of the different seagrass species comparing to the spectra of sand and
 other seafloor cover types \cite{Vahtmae06}\label{Vahtmae06} prove that spectra of green, brown and red benthic
 macroalgae differ from each other, as well as from sand and deep water reflectance spectra. These
 differences are well detectable by the means of the remote sensing research methods. Comparing to
@@ -925,9 +939,9 @@ result of the spectral absorption in different bands, typical for each target ob
 	\label{tab:1}
 \end{table}
 
-Spectral reflectance\index{Seawater optical properties!spectral reflectance} of the seagrass  (Fig.\ref{fig:13}) is largely influenced by the water
+Spectral reflectance\index[concepts]{Seawater optical properties!spectral reflectance} of the seagrass  (Fig.\ref{fig:13}) is largely influenced by the water
 depth where it is located, and is generally decreasing in values by increasing depths.
-The most important spectral diapason\index{Seawater optical properties!spectral reflectance!spectral diapason} for marine mapping of submerged vegetation
+The most important spectral diapason\index[concepts]{Seawater optical properties!spectral reflectance!spectral diapason} for marine mapping of submerged vegetation
 and, particularly, for seagrass, is 350-800 nm \cite{Barille09}\label{Barille09}.
 Using airborne imagery for retrospective data (before 1970s) together with the most
 recent imagery allows to detect changes in seagrass distribution on over different years
@@ -942,7 +956,7 @@ susceptible by the means of satellite imagery from remote sensors, both with mod
 well (e.g., \href{http://www.satimagingcorp.com/gallery-ikonos.html}{IKONOS}, \href{http://www.digitalglobe.com/index.php/85/QuickBird}{Quickbird}, \href{http://www.spotimage.fr/}{SPOT}, \href{http://www.itres.com/products/imagers/casi550}{CASI}). The possibility of their application towards seagrass mapping varies and is limited by the technical characteristics (Table \ref{tab:1}) and resolution of these sensors  (Fig.\ref{fig:2.3}).
 In the next paragraphs (\nameref{sec:2.4.1} and \nameref{sec:2.4.2}) we will briefly discuss research experience of the application of satellite imagery towards seagrass mapping, its advantages and limitations, reported by various researchers.
 
-\subsubsection[Review of multispectral imagery...]{Review of multispectral imagery used for seagrass mapping}\label{sec:2.4.1}\index{Remote sensing!multispectral imagery} 
+\subsubsection[Review of multispectral imagery...]{Review of multispectral imagery used for seagrass mapping}\label{sec:2.4.1}\index[concepts]{Remote sensing!multispectral imagery} 
 Seagrass mapping using remotely sensed data from multispectral sensors is based on the classification
 and discrimination of the seafloor types using their spectral characteristics in different wavebands.
 Perhaps, the most known imagery, widely used in the remote sensing mapping, is received from the
@@ -959,19 +973,19 @@ landscapes.
 	\label{fig:2.4}
 \end{wrapfigure}
 
-The \ac{Landsat TM}\index{Remote sensing!multispectral imagery!Landsat TM} and \ac{Landsat ETM+}\index{Remote sensing!multispectral imagery!Landsat ETM+} data, with the most recent from sensor Landsat 7 - an advanced
+The \ac{Landsat TM}\index[concepts]{Remote sensing!multispectral imagery!Landsat TM} and \ac{Landsat ETM+}\index[concepts]{Remote sensing!multispectral imagery!Landsat ETM+} data, with the most recent from sensor Landsat 7 - an advanced
 and multispectral scanning, launched in 1999, prove to be feasible and useful for the mapping of
 submerged vegetation, such as seagrasses or coral reefs. The successful applications of the imagery
 \ac{Landsat TM} towards the seagrass mapping, were reported in numerous research works \cite{Palandro03,Gullstroom06,Wabnitz08,Bierwirth93,Ferguson97,Rasib97}\label{Palandro03}\label{Gullstroom06}\label{Wabnitz08}\label{Bierwirth93}\label{Ferguson97}\label{Rasib97}.\\ The Landsat data are particularly suitable for the
 case of change detection of seagrass landscapes at a decade scale, because being the main sensor
 onboard the Landsat satellites, the Thematic Mapper (TM) provides the longest time series
 available for change detection analysis over submerged vegetation \cite{Palandro03}\label{Palandro03}.
-Another well-known multispectral sensor, \ac{SPOT}\index{Remote sensing!multispectral imagery!SPOT} provides multispectral imagery with a spatial
+Another well-known multispectral sensor, \ac{SPOT}\index[concepts]{Remote sensing!multispectral imagery!SPOT} provides multispectral imagery with a spatial
 resolution of 10 m, covering covers a surface area of 3600 km² (60*60 km swath), 26-day
 orbital repeat cycle for nadir viewing and imagery with a spatial resolution 20 - 2.5 m
 \cite{SPOT}\label{SPOT}. \ac{SPOT} imagery was used for mapping beds of \textit{P.oceanica} in the
 Mediterranean Sea \cite{Pasqualini05} \label{Pasqualini05}. 
-The \href{http://www.satimagingcorp.com/gallery-ikonos.html}{IKONOS}\index{Remote sensing!multispectral imagery!IKONOS}, offering multispectral and panchromatic imagery, was the first to collect publicly
+The \href{http://www.satimagingcorp.com/gallery-ikonos.html}{IKONOS}\index[concepts]{Remote sensing!multispectral imagery!IKONOS}, offering multispectral and panchromatic imagery, was the first to collect publicly
 available high-resolution imagery at 1- and 4-meter resolution from \href{http://www.geoeye.com}{Geoeye}. IKONOS
 imagery has been applied for the seagrass mapping due to its high resolution and accessibility. 
 
@@ -983,7 +997,7 @@ imagery has been applied for the seagrass mapping due to its high resolution and
 \end{wrapfigure}
 
 Thus, the results of image classification in case study of shallow-water marine environment \cite{Mumby02}\label{Mumby02}
-made using IKONOS, \ac{Landsat TM}, and \ac{CASI}\index{Remote sensing!multispectral imagery!CASI}, show that in the blue part of the
+made using IKONOS, \ac{Landsat TM}, and \ac{CASI}\index{concepts}{Remote sensing!multispectral imagery!CASI}, show that in the blue part of the
 spectrum, the best results are achieved by the IKONOS and \ac{CASI}, while \ac{Landsat TM} has not high
 enough resolution. 
 It may be caused to some extent by the loss of the radiance contrast, atmospheric
@@ -992,11 +1006,11 @@ same authors prove that \ac{CASI} enable to receive still more accurate results 
 than IKONOS \cite{Mumby02}\label{Mumby02}.
 Another comparative analysis of the application of \href{http://www.itres.com/products/imagers/casi550}{CASI}, Landsat and \href{http://www.digitalglobe.com/index.php/85/QuickBird}{Quickbird} imagery \cite{Phinn08}\label{Phinn08}
  demonstrates high suitability of \ac{CASI} images for the fine-scale mapping of the seagrass
-landscapes. Thus, \ac{CASI} and Quickbird-2\index{Remote sensing!multispectral imagery!Quickbird} images enable to identify even separate seagrass species
+landscapes. Thus, \ac{CASI} and Quickbird-2\index[concepts]{Remote sensing!multispectral imagery!Quickbird} images enable to identify even separate seagrass species
 with small width and heterogeneous nature of the seagrass patches, which could not be detected using
 Landsat TM images with their 30*30m resolution.
-\ac{ASTER}\index{Remote sensing!multispectral imagery!ASTER}), launched in
-1999 on board Terra sensor\index{Remote sensing!multispectral imagery!Terra sensor}, provides high-resolution images of the Earth in 15 different bands of the
+\ac{ASTER}\index[concepts]{Remote sensing!multispectral imagery!ASTER}), launched in
+1999 on board Terra sensor\index[concepts]{Remote sensing!multispectral imagery!Terra sensor}, provides high-resolution images of the Earth in 15 different bands of the
 electromagnetic spectrum, ranging from visible to thermal infrared light  (Fig.\ref{fig:2.4}). It has diverse
 subsystems for the \ac{VNIR} with 15 m resolution, shortwave infrared \ac{SWIR}, and
 \ac{TIR} wavelength regions \cite{Kalinowski04}\label{Kalinowski04}. For each channel there is separate
@@ -1035,7 +1049,7 @@ application of multispectral imagery for the spectral discrimination of the seaf
 mapping the submerged landscapes on the basis of pixels classification, the application of data from
 hyperspectral sensors has better potential due to their higher resolution (Fig.\ref{fig:2.5}).
 
-\subsubsection[Review of hyperspectral imagery...]{Review of hyperspectral imagery used for seagrass mapping}\label{sec:2.4.2}\index{Remote sensing!hyperspectral imagery}
+\subsubsection[Review of hyperspectral imagery...]{Review of hyperspectral imagery used for seagrass mapping}\label{sec:2.4.2}\index[concepts]{Remote sensing!hyperspectral imagery}
 The application of the hyperspectral sensors is most effective and provide more accurate classification
 results  (Fig.\ref{fig:2.5}), due to their higher spectral resolution \cite{Bharathi03}\label{Bharathi03} with interval
 narrows to 10 nanometers, while broadband sensors are limited to the spectral width of ca
@@ -1054,7 +1068,7 @@ wavelengths of other sensors. With its 126 spectral bands, \ac{HyMap} imagery en
 distinguish features of interest, i.e. seagrass types \cite{Peneva07}\label{Peneva07}, which is the major
 advantage of the of hyperspectral data for mapping landscapes of the seagrasses.
 While comparing multispectral imagery with airborne hyperspectral, the last one showed higher
-overall accuracies \cite{Phinn08}\label{Phinn08}. Several, regular and narrow (10 nm) spectral bands\label{sec:2.4.2}\index{Remote sensing!hyperspectral imagery!spectral bands}, specific for
+overall accuracies \cite{Phinn08}\label{Phinn08}. Several, regular and narrow (10 nm) spectral bands\label{sec:2.4.2}\index[concepts]{Remote sensing!hyperspectral imagery!spectral bands}, specific for
 hyperspectral imagery, are strong tool enabling to detect even slight and subtle differences in the
 spectral reflectance between various seafloor types, e.g. different seagrass species at diverse depths,
 algae, corals, dark-coloured sands or other types of sediments \cite{Hochberg03a}\label{Hochberg03a}. 
@@ -1066,7 +1080,7 @@ hyperspectral imagery \cite{Peneva08}\label{Peneva08}, combined with fieldwork m
 mapping results with the maximum likelihood methods producing the best results. 
 Therefore, accurate mapping of the seagrass landscapes and other seafloor types using remote sensing
 approaches requires application of high-spatial resolution (higher than 5 m) or hyperspectral imagery.
-Comparative analysis of the application of hyperspectral\label{sec:2.4.2}\index{Remote sensing!hyperspectral imagery!application} and multispectral imagery towards the
+Comparative analysis of the application of hyperspectral\label{sec:2.4.2}\index[concepts]{Remote sensing!hyperspectral imagery!application} and multispectral imagery towards the
 seafloor types classification \cite{Hochberg03a}\label{Hochberg03a} demonstrates that coral, seagrasses and
 sand very well distinguishable in their spectra with an overall classification accuracy of 98 \%.
 However, the use of data from various sensors, both hyperspectral and multispectral, is possible and
@@ -1129,7 +1143,7 @@ areas:
 	\label{fig:3.1}
 \end{figure}
 
-\subsection{Fieldwork data collection}\index{Data!collection}
+\subsection{Fieldwork data collection}\index[concepts]{Data!collection}
 Seagrass sampling has been performed at two research stations at Crete Island - Ligaria beach
 ($36\,^{\circ}20\textquoteright N, 22\,^{\circ}59\textquoteright E$) and Xerocampos ($35\,^{\circ}12\textquoteright N, 26\,^{\circ}18\textquoteright E$), at depths lesser than 4 meters. 
 
@@ -1240,7 +1254,7 @@ and nature of the seafloor cover types: rocks, sandy, mixed (Fig. \ref{fig:A5}).
 Pelagia beach consist of 	extit{P.oceanica}. The types of sediment on the Ligaria vary from coarse sand,
 \textit{P.oceanica} patches, sand, mud, rock gravel and fine sand (Fig.\ref{fig:A.6}).
 
-\subsection{Data pre-processing}\index{Data!pre-processing}
+\subsection{Data pre-processing}\index[concepts]{Data!pre-processing}
 A collection of visible spectra of two seafloor cover types - \textit{P.oceanica} and carbonate sand - consist of multiple measurement sets of \textit{P.oceanica} made by means of RAMSES hyperspectral radiometer: 1-350 for 15th October (fragment on Tab. \ref{tab:A.8}), 1-445 for 14th October for 	\textit{P.oceanica}; 1-106 for water without sediments, measured in aquarium tank, 1-27 for seawater with sediments measured in aquarium tank; 1-75 for carbonate sand (Tab. \ref{tab:17}). All these data have been analyzed and statistically tested. We measured mean, extreme values (min-max), median and statistical quartiles, in order to visualize distribution of the values at various spectral wavelengths. Carbonate sand was measured at wavelengths 402-750 nm, while \textit{P.oceanica} - at the interval 318-951 nm. We visualized the behavior of different spectra on relevant graphs (Fig. \ref{fig:4.4}, \ref{fig:A.35}, \ref{fig:A.28}). 
 The available collected data were tested for the spectral variability and separability under varying conditions of different environmental
 constituents (e.g. depth, water content, sun angle), in order to determine the
@@ -1485,11 +1499,11 @@ has spectral reflectance much lesser than that of a carbonate sand, in general n
 10 \% reflectance in spectra of 500-600 nm, while sand has spectral reflectance approaching 33\% in its
 highest values.
 
-\subsubsection{Water color spectral simulation using WASI}\index{Data!processing}
+\subsubsection{Water color spectral simulation using WASI}\index[concepts]{Data!processing}
 The main aim of this part of research is to clarify if the bottom reflectance of the different seafloor types including patches of
 the seagrass \textit{P.oceanica} meadows, silt and carbonate sand differ and can be clearly discriminated while mapping. A study is
 based on three seafloor types containing silt, carbonate sand and seagrass, as well as mixed
-types, where the spectral signatures were examined. WASI software\index{Seawater optical properties!RTM!WASI} (Fig.\ref{fig:4.7}) is used to simulate
+types, where the spectral signatures were examined. WASI software\index[concepts]{Seawater optical properties!RTM!WASI} (Fig.\ref{fig:4.7}) is used to simulate
 spectral reflectance and colour discrimination of water, affected by presence of \textit{P.oceanica} and other factors, under various
 environmental conditions which influence its colour.
 
@@ -1577,7 +1591,7 @@ lesser than 4 meters (Fig.\ref{fig:4.9}).
 	\label{fig:4.9}
 \end{figure}
 
-An analysis of the spectral reflectance of \textit{P.oceanica} is done using the WASI simulations\index{Seawater optical properties!RTM!WASI} in order to
+An analysis of the spectral reflectance of \textit{P.oceanica} is done using the WASI simulations\index[concepts]{Seawater optical properties!RTM!WASI} in order to
 determine, which wavebands can be still used to identify \textit{P.oceanica}. The analysis of spectra shows
 that the appropriate wavebands for seagrass mapping lay between 500 and 600 nm and has
 also peaks at around 700 nm, ca between 680 and 710 nm (Fig.\ref{fig:4.10}). The highest values of the bottom
@@ -1611,7 +1625,7 @@ irradiance received in Agia Pelagia bay.
 \end{figure}
 \pagebreak
 
-\subsubsection{Statistical analysis of the observational data and hypothesis testing}\index{Data!statistical analysis}
+\subsubsection{Statistical analysis of the observational data and hypothesis testing}\index[concepts]{Data!statistical analysis}
 The total amount of measured data was large and included following datasets made using
 hyperspectral radiometer Ramses: 350 measurement sets of \textit{P.oceanica} reflectance for 14th Oct (Tab.\ref{tab:A.29}), 400
 sets of \textit{P.oceanica} reflectance for 15th Oct (Tab.\ref{tab:A.8}), 84 datasets for seawater reflectance with sediments, 105
@@ -1620,13 +1634,13 @@ A statistical approach is evidently necessary for the proper processing of such 
 The schematic view of the statistical approach used for the data processing  can be seen on Fig. \ref{fig:4.12}.
 Statistical pre-processing of large sets of serial data enables to generalize data by using the most typical and predicted values of
 spectral reflectance for further calculations, and to get rid of the extreme values, noise and errors.
-The statistical calculators were mainly made by means of Gretle\index{Data!statistical analysis!Gretl} and SPSS\index{Data!statistical analysis!SPSS}. 
+The statistical calculators were mainly made by means of Gretle\index[concepts]{Data!statistical analysis!Gretl} and SPSS\index[concepts]{Data!statistical analysis!SPSS}. 
 The Open Office was used for preliminary data view and preprocessing, and included following computations
 at each data set (for example, Fig.\ref{fig:A.11}) with summary outcome of mean, median, Q1 and Q3, standard deviation, min and max values (Tab.\ref{tab:4}). 
 The statistical pre-processing and analysis were made to display the mean values of spectral reflectance,
 which were used for comparison with reflectance data of various seafloor cover types as well as
 seawater with and without sediment (e.g. Fig..\ref{fig:A.16}).
-In the statistical analysis of the raw observed data pool\index{Data!measurements pool} of the values of spectral reflectance (about 400 single measurements for \textit{P.oceanica}, e.g. Tab.\ref{tab:A.8}), we summarize their complexity by concentrating on some simple numerical characteristics that they possess, i.e. parameters. Examples are the mean and variance of a probability distribution of measurements dataset (for example, Tab.\ref{tab:4.1}). We divided the total data pool into datasets of 25 measurements for more convenience and ease of use, both for \textit{P.oceanica} and carbonate sand. The mean of a probability distribution of spectral reflectance describes the average value of the random variable over all of its possible realizations (\nameref{app}). Conceptually, there are an infinite number of such realizations, therefore parameters are not known to us. However, in the statistical analysis of the observed data our goal is to estimate these parameters using a finite amount of information available to us: fieldwork observations. \\
+In the statistical analysis of the raw observed data pool\index[concepts]{Data!measurements pool} of the values of spectral reflectance (about 400 single measurements for \textit{P.oceanica}, e.g. Tab.\ref{tab:A.8}), we summarize their complexity by concentrating on some simple numerical characteristics that they possess, i.e. parameters. Examples are the mean and variance of a probability distribution of measurements dataset (for example, Tab.\ref{tab:4.1}). We divided the total data pool into datasets of 25 measurements for more convenience and ease of use, both for \textit{P.oceanica} and carbonate sand. The mean of a probability distribution of spectral reflectance describes the average value of the random variable over all of its possible realizations (\nameref{app}). Conceptually, there are an infinite number of such realizations, therefore parameters are not known to us. However, in the statistical analysis of the observed data our goal is to estimate these parameters using a finite amount of information available to us: fieldwork observations. \\
 
 \begin{figure}[H]
 	\centering
@@ -1642,27 +1656,27 @@ Since the actual values that measured variables of spectral reflectance take on 
 Thus, we analyzed the statistical distribution of the spectral reflectance values of seafloor cover types using common mathematical formulae, implemented in Gretl software (Tab.\ref{tab:19}). 
 Their probability expresses uncertainty about the possible values of the spectral reflectance of \textit{P.oceanica} and sand, respectively.
 There is a distinction to be made between variables whose values are not yet observed (random variables) and those whose values have been observed (observations). 
-Each time we observe the outcome of a random variable\index{Data!statistical analysis!variables} of spectral reflectance, we obtain an observation, which is hence no longer random. 
+Each time we observe the outcome of a random variable\index[concepts]{Data!statistical analysis!variables} of spectral reflectance, we obtain an observation, which is hence no longer random. 
 We applied various methods of statistical analysis towards data pool (some examples of the selected tables are in the \nameref{app}: Tab.\ref{tab:18}, Tab.\ref{tab:24}, Tab.\ref{tab:25}, Tab.\ref{tab:26}, Tab.\ref{tab:29}), in order to analyze the distribution of values of spectral reflectance of \textit{P.oceanica}. 
-A probability distribution\index{Data!statistical analysis!probability distribution}, a mathematical statement about the possible values that the random observations of spectral reflectance can take on, displays the relative frequency with which each possible value of spectral reflectance is observed. 
-The \textit{least absolute deviations (LAD)}\index{Data!statistical analysis!LAD}, a popular optimization technique, were used to show the main trend of the distribution of spectral reflectance values along the spectra (Tab.\ref{tab:12}). Non-linear logistic analysis\index{Data!statistical analysis!non-linear logistic analysis} is applied to specify and estimate a model of spectral distribution, in which the dependent variable (i.e. the value of spectral reflectance for each single observation) is not continuous, but discrete and independent for each case (Tab.\ref{tab:11}). \\
-As the observations were made in a repeated way, we also analyzed the data pool using autocorrelation as well: Tab.\ref{tab:13} and Tab.\ref{tab:14} for \textit{P.oceanica} and Tab.\ref{tab:28} for carbonate sand. The \textit{autocorrelation}\index{Data!statistical analysis!autocorrelation}, a cross-correlation\index{Data!statistical analysis!cross-correlation} of an observed value with itself, made on two different days (14th and 15th October), shows the similarity between observations as a function of the time separation between them. 
+A probability distribution\index[concepts]{Data!statistical analysis!probability distribution}, a mathematical statement about the possible values that the random observations of spectral reflectance can take on, displays the relative frequency with which each possible value of spectral reflectance is observed. 
+The \textit{least absolute deviations (LAD)}\index[concepts]{Data!statistical analysis!LAD}, a popular optimization technique, were used to show the main trend of the distribution of spectral reflectance values along the spectra (Tab.\ref{tab:12}). Non-linear logistic analysis\index[concepts]{Data!statistical analysis!non-linear logistic analysis} is applied to specify and estimate a model of spectral distribution, in which the dependent variable (i.e. the value of spectral reflectance for each single observation) is not continuous, but discrete and independent for each case (Tab.\ref{tab:11}). \\
+As the observations were made in a repeated way, we also analyzed the data pool using autocorrelation as well: Tab.\ref{tab:13} and Tab.\ref{tab:14} for \textit{P.oceanica} and Tab.\ref{tab:28} for carbonate sand. The \textit{autocorrelation}\index[concepts]{Data!statistical analysis!autocorrelation}, a cross-correlation\index[concepts]{Data!statistical analysis!cross-correlation} of an observed value with itself, made on two different days (14th and 15th October), shows the similarity between observations as a function of the time separation between them. 
 As can be seen on Fig.\ref{fig:A.21}, Fig.\ref{fig:A.22} and Fig.\ref{fig:A.29}, it is a useful tool for finding repeating patterns for a single value of observations, such as the presence of a periodic signal which has been buried under noise. The autocorrelation analysis has been performed using both \ac{SPSS} and \ac{Gretl} software. \\
-The method of \textit{least squares}\index{Data!statistical analysis!least squares, method of} minimizes the sum of the squares of the errors made in solving every single observation made. We tried different approaches of the \textit{least squares} methods: Tab.\ref{tab:15}, Tab.\ref{tab:18}, Tab.\ref{tab:27}.\\
+The method of \textit{least squares}\index[concepts]{Data!statistical analysis!least squares, method of} minimizes the sum of the squares of the errors made in solving every single observation made. We tried different approaches of the \textit{least squares} methods: Tab.\ref{tab:15}, Tab.\ref{tab:18}, Tab.\ref{tab:27}.\\
 To focus on the relationship between a dependent variable (each single observation of the spectral reflectance) and independent variables (three various depths: 0.5, 1.5 and 2.5 meters) we used the \textit{regression analysis}, which enables modeling and analyzing values of the spectral reflectance at several depths: Tab.\ref{tab:5}, Tab.\ref{tab:6}, Tab.\ref{tab:7}. 
 The summary of the values of spectral reflectance properties on various depths is presented on the Tab.\ref{tab:A.7}.
-The \textit{k-means cluster analysis}\index{Data!statistical analysis!k-means cluster analysis} has been used for partitioning observation sets into k clusters (Tab.\ref{tab:20}, Tab.\ref{tab:21}, Tab.\ref{tab:22}, Tab.\ref{tab:23}) in which each observation belongs to the cluster with the nearest mean.
+The \textit{k-means cluster analysis}\index[concepts]{Data!statistical analysis!k-means cluster analysis} has been used for partitioning observation sets into k clusters (Tab.\ref{tab:20}, Tab.\ref{tab:21}, Tab.\ref{tab:22}, Tab.\ref{tab:23}) in which each observation belongs to the cluster with the nearest mean.
 It enables to highlight the main areas of the location of values of spectral reflectance along the spectra.\\
-To estimate spectral density of a spectral reflectance measurements we used periodogram\index{Data!statistical analysis!periodogram} function (Tab.\ref{tab:30}), 
+To estimate spectral density of a spectral reflectance measurements we used periodogram\index[concepts]{Data!statistical analysis!periodogram} function (Tab.\ref{tab:30}), 
 which corresponds to the general spectrum of the observations with representation of a variable quantity.  
-Thus, the periodogram (Fig. \ref{fig:A.31}) of the series of observation\index{Data!statistical analysis!observations, series of} highlights so-called “dead spots” of low power between the frequencies we wish to
+Thus, the periodogram (Fig. \ref{fig:A.31}) of the series of observation\index[concepts]{Data!statistical analysis!observations, series of} highlights so-called “dead spots” of low power between the frequencies we wish to
 exclude (can be seen clearly at the end of the graphs, e.g. Fig.\ref{fig:A.12} ) 
 and the frequencies we want to retain (the general profile that lies in the 450-850 nm, Fig.\ref{fig:A.14}, enlarged part of 500-660nm).\\
 The visualization of the data plotting was made by means of Gnuplot software, which enables fine
 drawing and advanced displaying of large amounts of serial data, ultimate control over graph properties, 
 the simplicity of plotting and the ease of scripting (see Fig.\ref{fig:4.13}, \nameref{app}).
 The graphs illustrating spectral signatures of various seafloor cover types display the mean values and
-areas of quartiles\index{Data!statistical analysis!quartiles Q1-Q3} (Q1, Q3, shaded areas on graph, Fig. \ref{fig:4.10}, Fig.\ref{fig:4.14}), which cover most probable data distribution
+areas of quartiles\index[concepts]{Data!statistical analysis!quartiles Q1-Q3} (Q1, Q3, shaded areas on graph, Fig. \ref{fig:4.10}, Fig.\ref{fig:4.14}), which cover most probable data distribution
 (spectral reflectance) for each spectral band. In x-axis displayed are the areas of 400 – 950 nm in
 spectra, where the measurements were done; the y-axis was adjusted for the better visualization of the
 \textit{P.oceanica} spectra: as its spectral values are mostly located in the lower part of the spectra (usually no
@@ -1679,7 +1693,7 @@ Ligaria beach, Agia Pelagia.
 	\end{center}
 \end{figure}
 
-A statistical hypothesis\index{Data!statistical analysis!hypothesis testing} test has been applied for the making decision and controlling the wealth of the
+A statistical hypothesis\index[concepts]{Data!statistical analysis!hypothesis testing} test has been applied for the making decision and controlling the wealth of the
 observational data of the hyperspectral measurements of the water reflectance.
 The received results are statistically significant if they are unlikely to have occurred by chance alone,
 according to a pre-determined threshold probability, the significance level. Therefore, we applied
@@ -1712,7 +1726,7 @@ The outcome of this calculations is shown in the Tab.\ref{tab:5} and Tab.\ref{ta
 As a result, we have mean values of spectral reflectance of \textit{P.oceanica} for extreme, average, median and both quartiles,
 independent of the individual sets 1-350. 
 
-\paragraph{ANOVA-testing}\index{Data!statistical analysis!ANOVA}
+\paragraph{ANOVA-testing}\index[concepts]{Data!statistical analysis!ANOVA}
 We applied \ac{ANOVA} (ANalysis Of Variance) testing for the analysis of the probability of the
 spectral reflectance of \textit{P.oceanica} to be more or less spectrally distinct from other seafloor cover
 types with changing depth. W are checking the statement Hypothesis Ho, is true, which is “the
@@ -1726,7 +1740,7 @@ of spectral reflectances of \textit{P.oceanica} at different depths (Tab.\ref{ta
 Hypothesis Ha=“the spectral discernibility of the seagrass \textit{P.oceanica} is distinctly changing with
 varying \textit{in-situ} conditions, i.e. increasing depth, Ho: μ$\neq$μ2$\neq$μ3$\neq$ ... $\neq$μn“.
 
-\paragraph{Student-t testing}\index{Data!statistical analysis!Student-t testing}
+\paragraph{Student-t testing}\index[concepts]{Data!statistical analysis!Student-t testing}
 The Student-t test, one of the most commonly used techniques for testing a hypothesis on the basis
 of a difference between sample means, is used for the data analysis. In our case the Student t-test demonstrates, if the variation
 between two analyzed groups – values of spectral reflectance of seagrass \textit{P.oceanica} and sand - is
@@ -1768,15 +1782,15 @@ measurements data: Table 2.
 \end{table}
 
 where the abbreviations stand for the following values:
-Mean: Average of the data to be plotted, AVERAGE\index{Data!statistical analysis!average} {data}
-St Dev: Standard deviation\index{Data!statistical analysis!standard deviation}, \ac{STDEV} {data}
+Mean: Average of the data to be plotted, AVERAGE\index[concepts]{Data!statistical analysis!average} {data}
+St Dev: Standard deviation\index[concepts]{Data!statistical analysis!standard deviation}, \ac{STDEV} {data}
 Median: Median of the data, MEDIAN{data}
 Calculating interquartile ranges: Q1=First quartile, PERCENTILE({data}*0.25) and Q3=Third
 quartile, PERCENTILE({data}*0.75)
 Minimum: Minimum value,MIN{data}
 Maximum: Maximum value, MAX{data}
 25th Pct: Plotting value of first quartile = Q1
-50th Pct: Plotting value of median = Median\index{Data!statistical analysis!median}-Q1
+50th Pct: Plotting value of median = Median\index[concepts]{Data!statistical analysis!median}-Q1
 75th Pct: Plotting value of third quartile = Median-Q3
 Min: Lower error bar length=Q1 - Minimum
 Max: Upper error bar length=Maximum - Q3
@@ -1785,7 +1799,7 @@ measurement data of spectral reflectance of under various environmental conditio
 
 \subsubsection{Results of the remote sensing application}
 The \textit{in situ} spectral reflectance data of \textit{P.oceanica} and sand were used to model these seafloor cover
-types as the different sensors would percept them: MODIS\index{Remote sensing!multispectral imagery!MODIS}, ASTER\index{Remote sensing!multispectral imagery!ASTER}, MERIS\index{Remote sensing!multispectral imagery!MERIS}, SeaWiFS\index{Remote sensing!multispectral imagery!SeaWiFS} and \ac{CZCS}\index{Remote sensing!multispectral imagery!CZCS}.\\
+types as the different sensors would percept them: MODIS\index[concepts]{Remote sensing!multispectral imagery!MODIS}, ASTER\index[concepts]{Remote sensing!multispectral imagery!ASTER}, MERIS\index[concepts]{Remote sensing!multispectral imagery!MERIS}, SeaWiFS\index[concepts]{Remote sensing!multispectral imagery!SeaWiFS} and \ac{CZCS}\index[concepts]{Remote sensing!multispectral imagery!CZCS}.\\
 These sensors possess over various percepting characteristics which we briefly illustrated in a small summary table (Tab.\ref{tab:1})
 These models simulate spectral views of the chosen sensors, how these sensors will "see" seagrass (Fig.\ref{fig:28}) and sand as
 pixels, with accepted default atmosphere and water column effects (given by WASI software). In such
@@ -1799,7 +1813,7 @@ investigate the distribution of the seagrass \textit{P.oceanica} within the rese
 In the image processing part of the research supervised classification has been applied to the aerial
 and satellite images. Seagrass meadows and other seafloor cover types were evaluated through a
 detailed examination of the imagery. \\
-Seagrass beds are clearly visible in color aerial Google Earth\index{Remote sensing!aerial imagery!GoogleEarth}
+Seagrass beds are clearly visible in color aerial Google Earth\index[concepts]{Remote sensing!aerial imagery!GoogleEarth}
 photographs (Fig.\ref{fig:A.36}, Fig.\ref{fig:A.37}), contrasting against slightly-yellow and brownish sand bottom. The seagrass areas are
 detected using different bands combinations, masked and studied for the estimation of the changes in
 the areas. The classification is based on the spectral properties of the \textit{P.oceanica}, such as brightness,
@@ -1832,7 +1846,7 @@ has been completed using ENVI and Erdas Imagine software.
 
 \subsection{Seagrass mapping using ArcGIS}
 
-\subsubsection{Data integration}\index{Data!integration}
+\subsubsection{Data integration}\index[concepts]{Data!integration}
 The integrated approach used in this research work has high potential as a means to monitor changes
 in seagrass landscape occurring in shallow waters over Crete area.
 
@@ -1846,7 +1860,7 @@ in seagrass landscape occurring in shallow waters over Crete area.
 
 It encompasses the integration of
 high resolution aerial color Google Earth photography, spaceborne satellite imagery, assessment of
-spectral signatures using WASI software\index{Seawater optical properties!RTM!WASI}, image processing by means of Erdas Imagine (Fig.\ref{fig:39}) and Arc GIS
+spectral signatures using WASI software\index[concepts]{Seawater optical properties!RTM!WASI}, image processing by means of Erdas Imagine (Fig.\ref{fig:39}) and Arc GIS
 based mapping. The use of GIS for data incorporation (Fig.\ref{fig:4.17}), storage, analyses, visualizing and mapping
 enables to analyze environmental changes within seagrass landscapes based on data from various
 sources: aerial and satellite images, geographically referenced maps of Crete island and results of
@@ -1855,7 +1869,7 @@ The final mapping has been supported in ArcGIS through the data exporting, conve
 integration of various data in one GIS-project. Data collected during the fieldwork, imagery
 of the seagrass distribution are added into a GIS dataset for the assessment and spatial analysis.
 
-\subsubsection{Upscale mapping of the seagrass landscapes}\index{Seagrasses!spatial structure}
+\subsubsection{Upscale mapping of the seagrass landscapes}\index[concepts]{concepts}{Seagrasses!spatial structure}
 Although ocean pelagic landscapes have a high degree of spatial variance and less structurally
 complex, comparing to the terrestrial ones, the landscape-level phenomena have similar features, and
 there are accepted definitions of landscapes elements within the seagrass meadows \cite{Robbins94}\label{Robbins94}. 
@@ -3520,563 +3534,432 @@ To make further studies of \textit{P.oceanica} more effective we would suggest t
 \begin{thebibliography}{999}
 \addcontentsline{toc}{section}{\textbf{Bibliography}}\label{bib}
 \bibliographystyle{plainnat}
-\pagenumbering{roman}
+\pagenumbering{alph}
 \markright{Bibliography}
 
-\bibitem{Ackleson2003}Ackleson S. 2003. \emph{Light in shallow waters: A brief research review}. Limnol. Oceanogr.,
+\bibitem{Ackleson2003}Ackleson S.\index[people]{} 2003. \emph{Light in shallow waters: A brief research review}. Limnol. Oceanogr.,
 48(1, part 2), 2003, 323–328. American Society of Limnology and Oceanography, Inc. \pageref{Ackleson, 2003}
 \bibitem{Alcoverro1997} %
-Alcoverro T., Romero J., Duarte C.M., Lopez N. 1997. \emph{Spatial and temporal variations
+Alcoverro T.\index[people]{Alcoverro, T.}, Romero J.\index[people]{Romero J.}, Duarte C.M.\index[people]{Duarte C.M.}, Lopez N.\index[people]{Lopez, N.} 1997. \emph{Spatial and temporal variations
 in nutrient limitation of seagrass \textit{Posidonia oceanica} growth in the NW Mediterranean}.
 Marine ecology Progress Series.Vol.146: 155-161. \pageref{}
-\bibitem{Amoutzopoulou-Schina05}Amoutzopoulou-Schina H and S.Haritonidis. 2005. \emph{Distribution and phenology of the
-marine phanerogam \textit{Posidonia oceanica} in the Pagassitikos Gulf, Greece}. Journal of
+\bibitem{Amoutzopoulou-Schina05}Amoutzopoulou-Schina H.\index[people]{Amoutzopoulou-Schina, H.} and Haritonidis S.\index[people]{Haritonidis, S.} 2005. \emph{Distribution and phenology of the marine phanerogam \textit{Posidonia oceanica} in the Pagassitikos Gulf, Greece}. Journal of
 Biological Research 4: 203 – 211, 2005 J. \pageref{Amoutzopoulou-Schina05}
 \bibitem{Arai05}
-Arai K. and Tonooka H. 2005. \emph{Radiometric Performance Evaluation of \ac{ASTER} VNIR, \ac{SWIR} and \ac{TIR}} 
+Arai K.\index[people]{Arai, K.} and Tonooka H.\index[people]{Tonooka, H.} 2005. \emph{Radiometric Performance Evaluation of \ac{ASTER} VNIR, \ac{SWIR} and \ac{TIR}} 
 IEEE Transactions on Geoscience and Remote Sensing, Vol. 43, No. 12, Dec. 2005. \pageref{Arai05}
 \bibitem{Ardizzone06}
-Ardizzone G., Belluscio A. and Maiorano L. 2006. \emph{Long-term change in the structure of
+Ardizzone G.D.\index[people]{Ardizzone G.D.}, Belluscio A.\index[people]{Belluscio A.} and Maiorano L.\index[people]{Maiorano, L.} 2006. \emph{Long-term change in the structure of
 a \textit{Posidonia oceanica} landscape and its reference for a monitoring plan}. Marine Ecology.
 ISSN 0173-9565. \pageref{Ardizzone06}
 \bibitem{Ball09}
-Ball D., Soto-Berelov M., Young P. and Coots A. 2009. \emph{Baywide Seagrass Monitoring
-Program - Historical Seagrass Mapping}. Fisheries Victoria Technical Report Series No. 70. \pageref{Ball09}
+Ball D.\index[people]{Ball, D.}, Soto-Berelov M.\index[people]{Soto-Berelov, M.}, Young P.\index[people]{Young, P.} and Coots A.\index[people]{Coots, A.} 2009. \emph{Baywide Seagrass Monitoring Program - Historical Seagrass Mapping}. Fisheries Victoria Technical Report Series No. 70. \pageref{Ball09}
 \bibitem{Barille09}
-Barille L., Robin M., Harin N., Bargain A., Patrick L. 2009. \emph{Increase in seagrass
-distribution at Bourgneuf Bay (France) detected by spatial remote sensing}. Aquatic Botany. \pageref{Barille09}
+Barille L.\index[people]{Barille, L.}, Robin M.\index[people]{Robin, M.}, Harin N.\index[people]{Harin, N.}, Bargain A.\index[people]{Bargain, A.}, Patrick L.\index[people]{Patrick, L.} 2009. \emph{Increase in seagrass distribution at Bourgneuf Bay (France) detected by spatial remote sensing}. Aquatic Botany. \pageref{Barille09}
 \bibitem{Bakran-Petricioli06} %
-Bakran-Petricioli T., Antonic O., Bukovec D., Petricioli D., Janekovic I., Krizan J.,
-Kusan V. and Dujmovic S. 2006. \emph{Modelling spatial distribution of the Croatian marine
+Bakran-Petricioli T.\index[people]{Bakran-Petricioli, T.}, Antonic O.\index[people]{Antonic, O.}, Bukovec D.\index[people]{Bukovec, D.}, Petricioli D.\index[people]{Petricioli, D.}, Janekovic I.\index[people]{Janekovic, I.}, Krizan J.\index[people]{Krizan, J.}, Kusan V.\index[people]{Kusan, V.} and Dujmovic S.\index[people]{Dujmovic, S.} 2006. \emph{Modelling spatial distribution of the Croatian marine
 benthic habitats}. Ecological Modelling 191, 96–105. \pageref{Bakran-Petricioli06}
 \bibitem{Bell99}
-Bell S.S., Robbins B.D. and Jensen S.L. 1999. \emph{Gap Dynamics in a Seagrass Landscape}.
+Bell S.S.\index[people]{Bell S.S.}, Robbins B.D.\index[people]{Robbins B.D.} and Jensen S.L.\index[people]{Jensen S.L.} 1999. \emph{Gap Dynamics in a Seagrass Landscape}.
 Springer-Verlag. Ecosystems (1999) 2: 493–504. \pageref{Bell99}
 \bibitem{Bierwirth93}
-Bierwirth P. N., Lee T. J. and Burne R. V. 1993. \emph{Shalow sea-floor reflectance and water
+Bierwirth P. N.\index[people]{Bierwirth, P. N.}, Lee T. J.\index[people]{Lee, T. J.} and Burne R. V.\index[people]{Burne, R.V.} 1993. \emph{Shalow sea-floor reflectance and water
 depth derived by unmixing multispectral imagery}. Photogrammetric Engineering and Remote
 Sensing, vol. 59, No. 3, March, pp. 331-338. \pageref{Bierwirth93}
 \bibitem{Blake00}
-Blake S., Roob R. and Patterson E. 2000. \emph{Seagrass mapping of Victoria's Minor Inlets}.
+Blake S.\index[people]{Blake, S.}, Roob R.\index[people]{Roob, R.} and Patterson E.\index[people]{Patterson, E.} 2000. \emph{Seagrass mapping of Victoria's Minor Inlets}.
 Marine and Freshwater Resources Institute Report No. 28. \pageref{Blake00}
 \bibitem{Borum04}
-Borum J., Duarte C.M., Krause-Jensen D. and Greve T.M. 2004. \emph{European seagrasses:
-an introduction to monitoring and management}. The M and MS project. ISBN: 87-89143-21-3.
+Borum J.\index[people]{Borum, J.}, Duarte C.M.\index[people]{Duarte C.M.}, Krause-Jensen D.\index[people]{Krause-Jensen, D.} and Greve T.M.\index[people]{Greve, T.M} 2004. \emph{European seagrasses: an introduction to monitoring and management}. The M and MS project. ISBN: 87-89143-21-3.
 Internet version: Available at \href{http://www.seagrasses.org}{Seagrasses.org} \pageref{Borum04}
 \bibitem{Brown02}
-Brown C.J., Cooper K.M., Meadows W.J., Limpenny D.S., Rees H.L. 2002. \emph{Small scale
-mapping of sea bed assemblages in the eastern English Channel using sonar and remote
+Brown C.J.\index[people]{Brown, C.J.}, Cooper K.M.\index[people]{Cooper, K.M.}, Meadows W.J.\index[people]{Meadows, W.J.}, Limpenny D.S.\index[people]{Limpenny, D.S.}, Rees H.L.\index[people]{Rees, H.L.} 2002. \emph{Small scale mapping of sea bed assemblages in the eastern English Channel using sonar and remote
 sampling techniques}. Estuarine Coastal and Shelf Science, 54, 263-278. \pageref{Brown02}
 \bibitem{Boudouresque89}
-Boudouresque, C.F., Meinesz, A., Fresi, E. and Gravez, V., 1989. \emph{2nd International
-Workshop on \textit{Posidonia oceanica} Beds}. G.I.S. Posidonie, Oceanica, 2, 322 pp. \pageref{Boudouresque89}
+Boudouresque C.F.\index[people]{Boudouresque C.F.}, Meinesz, A.\index[people]{Meinesz A.}, Fresi, E.\index[people]{Fresi, E.} and Gravez, V.\index[people]{Gravez, V}, 1989. \emph{2nd International Workshop on \textit{Posidonia oceanica} Beds}. G.I.S. Posidonie, Oceanica, 2, 322 pp. \pageref{Boudouresque89}
 \bibitem{Bharathi03}
-Bharathi A.M, Kumar S.C, Kalliappan S. 2003. \emph{Target Identification in multispectral images
-using \textit{in-situ} hyperspectral reflectance}. The Geospatial Resource Portal. Remote Sensing.
+Bharathi A.M.\index[people]{Bharathi A.M.}, Kumar S.C.\index[people]{Kumar S.C.}, Kalliappan S.\index[people]{Kalliappan S.} 2003. \emph{Target Identification in multispectral images using \textit{in-situ} hyperspectral reflectance}. The Geospatial Resource Portal. Remote Sensing.
 \href{www.gisdevelopment.net}{gisdevelopment} \pageref{Bharathi03}
 \bibitem{Buia91}
-Buia M.C. and Mazzella L. 1991. \emph{Reproductive phenology of the Mediterranean
+Buia M.C.\index[people]{Buia M.C.} and Mazzella L.\index[people]{Mazzella L.} 1991. \emph{Reproductive phenology of the Mediterranean
 seagrasses \textit{Posidonia oceanica} (L.) Delile, Cymodocea nodosa ( Ucria ) Aschers., and
 Zostera noltii Hornem}. Aquatic Botany, 40 (1991) 343-362. Elsevier Science Publishers
 B.V., Amsterdam. \pageref{Buia91}
 \bibitem{Butler87}
-Butler 1987. \emph{Marine resource mapping: an introductory manual}. \pageref{Butler87}
+Butler\index[people]{Butler} 1987. \emph{Marine resource mapping: an introductory manual}. \pageref{Butler87}
 \bibitem{Cappo95}
-Cappo, M., Alongi, D.M., Williams, D. and Duke, N. 1995. \emph{A Review and Synthesis of
-Australian Fisheries Habitat Research: Major threats, issues and gaps in knowledge of
+Cappo M.\index[people]{Cappo, M.}, Alongi D.M.\index[people]{Alongi D.M.}, Williams D.\index[people]{Williams D.} and Duke N.\index[people]{Duke N.} 1995. \emph{A Review and Synthesis of Australian Fisheries Habitat Research: Major threats, issues and gaps in knowledge of
 coastal and marine fisheries habitats}. Fisheries Research and Development Corporation. \pageref{Cappo95}
 \bibitem{Carter08}
-Carter G.A., Criss G.A., Blossom G.A. and Biber P.D. 2008. \emph{Decadal-Scale Changes in
-Coverage on the Mississippi Barrier Islands, Northern Gulf of Mexico}.
+Carter G.A.\index[people]{Carter G.A.}, Criss G.A.\index[people]{Criss G.A.}, Blossom G.A.\index[people]{Blossom G.A.} and Biber P.D.\index[people]{Biber P.D.} 2008. \emph{Decadal-Scale Changes in Coverage on the Mississippi Barrier Islands, Northern Gulf of Mexico}.
 \href{http://precedings.nature.com/documents/3669/version/1/files/npre20093669-1.pdf}{precedings.nature.com} \pageref{Carter08}
 \bibitem{Calvo03}
-Calvo S., Ciraolo G. and Loggia G. la. 2003. \emph{Monitoring \textit{Posidonia oceanica} meadows
-in a Mediterranean coastal lagoon (Stagnone, Italy) by means of neural network and
+Calvo S.\index[people]{Calvo S.}, Ciraolo G.\index[people]{Ciraolo G.} and Loggia G. la\index[people]{Loggia G. la}. 2003. \emph{Monitoring \textit{Posidonia oceanica} meadows in a Mediterranean coastal lagoon (Stagnone, Italy) by means of neural network and
 ISODATA classification methods}. INT. J. REMOTE SENSING, 2003, VOL. 24, NO. 13,
 2703–2716 \pageref{Calvo03}
 \bibitem{Cambridge09}
-Cambridge M.L., Kendrick G.A. 2009. \emph{Contrasting responses of seagrass transplants
+Cambridge M.L.\index[people]{Cambridge M.L.}, Kendrick G.A.\index[people]{Kendrick G.A.} 2009. \emph{Contrasting responses of seagrass transplants
 (Posidonia australis) to nitrogen, phosphorus and iron addition in an estuary and a coastal
 embayment}. Journal of Experimental Marine Biology and Ecology. 371, 34–41. \pageref{Cambridge09}
 \bibitem{Choo06}
-Choo, C.K. 2006. \emph{Save our Seahorses}. First Edition. \href{www.sosmalaysia.org}{sosmalaysia} \pageref{Choo06}
+Choo, C.K.\index[people]{Choo, C.K.} 2006. \emph{Save our Seahorses}. First Edition. \href{www.sosmalaysia.org}{sosmalaysia} \pageref{Choo06}
 \bibitem{Clark99}
-Clark, R.N., 1999. \emph{Spectroscopy of rocks and minerals and principles of spectroscopy}.
-In: A.N. Rencz (ed.). Manual of Remote Sensing, Chapter 1, John Wiley and Sons, New
-York. 3-58. \pageref{Choo06}
+Clark, R.N.\index[people]{Clark, R.N.}, 1999. \emph{Spectroscopy of rocks and minerals and principles of spectroscopy}.
+In: A.N. Rencz (ed.). Manual of Remote Sensing, Chapter 1, John Wiley and Sons, New York. 3-58. \pageref{Choo06}
 \bibitem{Connell78}
-Connell J.H. 1978. \emph{Diversity in tropical rain forests and coral reefs}. Science 199:1302–
+Connell J.H.\index[people]{Connell J.H.} 1978. \emph{Diversity in tropical rain forests and coral reefs}. Science 199:1302–
 10. \pageref{Connell78}
 \bibitem{Dehouck08}
-Dehouck A., Martiny N., Froidefond J.-M., S\'en\'echal N. 2008. \emph{In-Water Reflectance
-Spectra Measured On Board a Jet-Ski Across a Complex Nearshore Zone of Case-2 Waters
-during the ECORS Experiment}. Manuscript published in "Ocean Optics XIX, Barga: Italie
+Dehouck A.\index[people]{Dehouck A.}, Martiny N.\index[people]{Martiny N.}, Froidefond J.-M.\index[people]{Froidefond J.-M.}, S\'en\'echal N.\index[people]{S\'en\'echal N.} 2008. \emph{In-Water Reflectance Spectra Measured On Board a Jet-Ski Across a Complex Nearshore Zone of Case-2 Waters during the ECORS Experiment}. Manuscript published in "Ocean Optics XIX, Barga: Italie
 (2008)" \pageref{Dehouck08}
 \bibitem{Dekker05a}
-Dekker A.G., Brando V.E., Anstee J.M. 2005. \emph{Retrospective seagrass change detection
-in a shallow coastal tidal Australian lake}. Remote Sensing of Environment 97:415-433. \pageref{Dekker05a}
+Dekker A.G.\index[people]{Dekker A.G.}, Brando V.E.\index[people]{Brando V.E.}, Anstee J.M.\index[people]{Anstee J.M.} 2005. \emph{Retrospective seagrass change detection in a shallow coastal tidal Australian lake}. Remote Sensing of Environment 97:415-433. \pageref{Dekker05a}
 \bibitem{Dekker05b}
-Dekker A., Brando V., Anstee J. 2005. \emph{Remote Sensing of Seagrass Ecosystems: Use of
-Spaceborne and Airborne Sensors}. SVNL083-Larkum. \pageref{Dekker05b}
+Dekker A.\index[people]{Dekker A.G.}, Brando V.E.\index[people]{Brando V.E.}, Anstee J.M.\index[people]{Anstee J.M.} 2005. \emph{Remote Sensing of Seagrass Ecosystems: Use of Spaceborne and Airborne Sensors}. SVNL083-Larkum. \pageref{05b}
 \bibitem{DiCarlo04}
-Di Carlo G. 2004. \emph{The natural recolonisation process of the seagrass Posidonia
+Di Carlo G.\index[people]{Di Carlo G.} 2004. \emph{The natural recolonisation process of the seagrass Posidonia
 oceanica (L.) Delile after the introduction of the Italo-Algerian methane pipeline in the SW
-Mediterranean sea}. 
-\pageref{DiCarlo04}
+Mediterranean sea}.\pageref{DiCarlo04}
 \bibitem{Diaz-Almela06}
-Diaz-Almela E., Marba N., Alvarez E., Santiago R., Holmer M., Grau A., Danovaro R.,
-Argyrou M., Karakassis I, Duarte C.M. 2006. \emph{Benthic inputs as predictors of seagrass 1
-(\textit{Posidonia oceanica}) fish farm-induced decline}. \href{http://arxiv.org/ftp/qbio/
+Diaz-Almela E.\index[people]{Diaz-Almela E.}, Marb\`a N.\index[people]{Marb\`a N.}, Alvarez E.\index[people]{Alvarez E.}, Santiago R.\index[people]{Santiago R.}, Holmer M.\index[people]{Holmer M.}, Grau A.\index[people]{Grau A.}, Danovaro R.\index[people]{Danovaro R.}, Argyrou M.\index[people]{Argyrou M.}, Karakassis I.\index[people]{Karakassis I.}, Duarte C.M.\index[people]{Duarte C.M.} 2006. \emph{Benthic inputs as predictors of seagrass (\textit{Posidonia oceanica}) fish farm-induced decline}. \href{http://arxiv.org/ftp/qbio/
 papers/0611/0611006.pdf}{arxiv.org} \pageref{Diaz-Almela06}
 \bibitem{Dierssen03}
-Dierssen H and Zimmerman R.C. 2003. \emph{Ocean color remote sensing of seagrass and
+Dierssen H.\index[people]{} and Zimmerman R.C.\index[people]{} 2003. \emph{Ocean color remote sensing of seagrass and
 bathymetry in the Bahamas Banks by high-resolution airborne imagery}. Limnol. Oceanogr.,
 48(1, part 2), 2003, 444–455, by the American Society of Limnology and Oceanography. \pageref{Dierssen03}
 \bibitem{Dixon05}
-Dixon R, editor. 2005. \emph{Watching the Seagrass Grow – a guide for community seagrass
+Dixon R.\index[people]{}, editor. 2005. \emph{Watching the Seagrass Grow – a guide for community seagrass
 monitoring in NSW (2nd Ed)}. Reference manual . The Community Environment Network,
 Ourimbah. \pageref{Dixon05}
 \bibitem{Duarte02}
-Duarte, C.M. 2002. \emph{The future of seagrass meadows}. Environmental Conservation 29
-(2), 192–206. \pageref{Duarte02}
+Duarte, C.M.\index[people]{Duarte C.M.} 2002. \emph{The future of seagrass meadows}. Environmental Conservation 29 (2), 192–206. \pageref{Duarte02}
 \bibitem{Dumay02}
-Dumay O., Fernandez C. and Pergent G. 2002. \emph{Primary production and vegetative cycle
-in \textit{Posidonia oceanica} when in competition with the green algae Caulerpa taxifolia nd
+Dumay O.\index[people]{Dumay O.}, Fernandez C.\index[people]{Fernandez C.} and Pergent G.\index[people]{Pergent G.} 2002. \emph{Primary production and vegetative cycle in \textit{Posidonia oceanica} when in competition with the green algae Caulerpa taxifolia nd
 Caulerpa racemosa}. J.Mar. Biol. Ass. UK, 82, 379-387. \pageref{Dumay02}
 \bibitem{Dural10}
-Dural B. 2010. \emph{Phenological observations on \textit{Posidonia oceanica} (L.) Delile medows
+Dural B.\index[people]{Dural B.} 2010. \emph{Phenological observations on \textit{Posidonia oceanica} (L.) Delile medows
 along the coast of Akkum (Sıgacık Bay, Aegean Sea, Turkey)}. J. Black Sea/Mediterranean
 Environment, Vol. 16 (1): 133-144. \pageref{Dural10}
 \bibitem{Edwards00}
-Edwards A.J. (ed.) 2000. \emph{Remote Sensing handbook for tropical coastal management}.
+Edwards A.J.\index[people]{Edwards A.J.} (ed.) 2000. \emph{Remote Sensing handbook for tropical coastal management}.
 \href{http://www.unesco.org/csi/pub/source/rs.htm}{UNESCO} \pageref{Edwards00}
 \bibitem{Ferguson97}
-Ferguson R.L. and Karl Korfmacher K. 1997 \emph{Remote sensing and GIS analysis of seagrass
-meadows in North Carolina, USA}. Aquatic Botany 58 (1997) 241-258. \pageref{Ferguson97}
+Ferguson R.L.\index[people]{Ferguson R.L.} and Karl Korfmacher K.\index[people]{Korfmacher Karl K.} 1997 \emph{Remote sensing and GIS analysis of seagrass meadows in North Carolina, USA}. Aquatic Botany 58 (1997) 241-258. \pageref{Ferguson97}
 \bibitem{Fletcher09}
-Fletcher R.S., Pulich Jr. W. and Hardegree B. 2009. \emph{A Semiautomated Approach for
-Monitoring Landscape Changes in Texas Seagrass Beds from Aerial Photography}. Coastal
+Fletcher R.S.\index[people]{Fletcher R.S.}, Pulich Jr. W.\index[people]{Pulich Jr. W.} and Hardegree B.\index[people]{Hardegree B.} 2009. \emph{A Semiautomated Approach for Monitoring Landscape Changes in Texas Seagrass Beds from Aerial Photography}. Coastal
 Education and Research Foundation, doi: 10.2112/07-0882.1 \pageref{Fletcher09}
 \bibitem{Fornes06}
-Fornes A., Basterretxea G., Orfila A., Jordi A., Alvarez A. and Tintore J. 2006. \emph{Mapping
+Fornes A.\index[people]{Fornes A.}, Basterretxea G.\index[people]{Basterretxea G.}, Orfila A.\index[people]{Orfila A.}, Jordi A.\index[people]{Jordi A.}, Alvarez A.\index[people]{Alvarez A.} and Tintore J.\index[people]{Tintore J.} 2006. \emph{Mapping
 \textit{Posidonia oceanica} from IKONOS}. ISPRS Journal of Photogrammetry and Remote Sensing
 60 (2006) 315–322. \pageref{Fornes06}
 \bibitem{Francour06}
-Francour, P., Magreau, J.F., Mannoni, P.A., Cottalorda, J.M., Gratiot, J., 2006.
-\emph{Management guide for Marine Protected Areas of the Mediterranean Sea, Permanent
-Ecological Moorings}. Universite de Nice-Sophia Antipolis and Parc National de Port-Cros,
+Francour, P.\index[people]{Francour P.}, Magreau, J.F.\index[people]{Magreau, J.F.}, Mannoni, P.A.\index[people]{Mannoni, P.A.}, Cottalorda, J.M.\index[people]{Cottalorda, J.M}, Gratiot, J.\index[people]{Gratiot, J.}, 2006.\emph{Management guide for Marine Protected Areas of the Mediterranean Sea, Permanent Ecological Moorings}. Universite de Nice-Sophia Antipolis and Parc National de Port-Cros,
 Nice, 68 pp. \pageref{Francour06}
 \bibitem{Francour99}
-Francour P., Ganteaume A. and M. Poulain. 1999. \emph{Effects of boats anchoring in
-\textit{Posidonia oceanica} seagrass beds in the Port-Cross National Park (north-western
+Francour P.\index[people]{Francour P.}, Ganteaume A.\index[people]{Ganteaume A.} and M. Poulain\index[people]{Poulain M.}. 1999. \emph{Effects of boats anchoring in \textit{Posidonia oceanica} seagrass beds in the Port-Cross National Park (north-western
 Mediterranean Sea)}. Aquatic conservation: Marine and Freshwater Ecosystems: 9: 391-400. \pageref{Francour99}
 \bibitem{Fyfe03}
-Fyfe S.K. 2003. \emph{Spatial and temporal variation in spectral reflectance: Are seagrass
+Fyfe S.K.\index[people]{Fyfe S.K.} 2003. \emph{Spatial and temporal variation in spectral reflectance: Are seagrass
 species spectrally distinct?} Limnology and Oceanography 48: 464–479. \pageref{Fyfe03}
 \bibitem{Fyfe04}
-Fyfe S.K. 2004. \emph{Hyperspectral studies of New South Wales with particular emphasis on
+Fyfe S.K.\index[people]{Fyfe S.K.} 2004. \emph{Hyperspectral studies of New South Wales with particular emphasis on
 the detection of light stress in Eelgrass Zostera capricorni. PhD Thesis}. The University of
 Wollongong. Research Online, \href{http://ro.uow.edu.au/theses/472/}{University of Wollongong Thesis Collection} \pageref{Fyfe03}
 \bibitem{Gege04}
-Gege P. 2004. \emph{The water color simulator WASI: an integrating software tool for analysis
+Gege P.\index[people]{Gege P.} 2004. \emph{The water color simulator WASI: an integrating software tool for analysis
 and simulation of optical in situ spectra}. Computers and Geosciences 30 (2004) 523–532. \pageref{Gege04}
 \bibitem{Gege05}
-Gege, P. 2005. \emph{The Water Colour Simulator WASI. User manual for version 3}. DLR
+Gege, P.\index[people]{Gege P.} 2005. \emph{The Water Colour Simulator WASI. User manual for version 3}. DLR
 Internal Report IB 564-01/05, 83 pp. \pageref{Gege05}
 \bibitem{Gobert06}
-Gobert S., Cambridge, M. L. Velimirov, B. Pergent, G. Lepoint, G. Bouquegneau, J. M.
-Dauby, P. Pergent-Martini, C. Walker, D. I. 2006. Biology of Posidonia. In Larkum A.W.D.,
-Orth, R.J., Duarte C.M. (eds.), \emph{Seagrasses: Biology, ecology and conservation}. Springer
-Verlag, Berlin, Pages 387–408. \pageref{Gobert06}
+Gobert S.\index[people]{Gobert S.}, Cambridge, M. L.\index[people]{Cambridge M.L.}, Velimirov, B.\index[people]{Velimirov B.}, Pergent, G.\index[people]{Pergent G.}, Lepoint, G.\index[people]{Lepoint G.}, Bouquegneau J.-M.\index[people]{Bouquegneau J.-M.}, Dauby, P.\index[people]{Dauby, P.}, Pergent-Martini, C.\index[people]{Pergent-Martini C.}, Walker, D. I.\index[people]{Walker, D.I.}. 2006. Biology of Posidonia. In Larkum A.W.D.\index[people]{Larkum A.W.D}, Orth, R.J.\index[people]{Orth R.J.}, Duarte C.M.\index[people]{Duarte C.M.} (eds.), \emph{Seagrasses: Biology, ecology and conservation}. Springer Verlag, Berlin, Pages 387–408. \pageref{Gobert06}
 \bibitem{Gobert01}
-Gobert S., Defawe O, Lepoint G, Demoulin V and Bouquegneau J-M. 2001. \emph{Anthesis
-effects on \textit{Posidonia oceanica} (L.) Delile phenology in the Bay of Calvi (Corsica,
-Mediterranean Sea)}. Hydrobiologia 455: 121–125. \pageref{Gobert01}
+Gobert S.\index[people]{Gobert S.}, Defawe O.\index[people]{Defawe O.}, Lepoint G.\index[people]{Lepoint G.}, Demoulin V.\index[people]{Demoulin V.} and Bouquegneau J.-M.\index[people]{Bouquegneau J.-M.} 2001. \emph{Anthesis effects on \textit{Posidonia oceanica} (L.) Delile phenology in the Bay of Calvi (Corsica, Mediterranean Sea)}. Hydrobiologia 455: 121–125. \pageref{Gobert01}
 \bibitem{Green96}
-Green, E.P., P.J. Mumby, A.J. Edwards, and C.D. Clark, 1996. \emph{A review of remote
-sensing for the assessment and management of tropical coastal resources}. Coast. Manag.,
+Green, E.P.\index[people]{Green E.P.}, Mumby P.J.\index[people]{Mumby P.J.}, Edwards  A.J.\index[people]{Edwards A.J.}, and Clark C.D.\index[people]{Clark C.D.}, 1996. \emph{A review of remote sensing for the assessment and management of tropical coastal resources}. Coast. Manag.,
 24(1):1-40. \pageref{Green96}
 \bibitem{Green03}
-Green E.P., Short F.T. 2003. \emph{World Atlas of Seagrasses}. University of California Press,
+Green E.P.\index[people]{Green E.P.}, Short F.T.\index[people]{Short F.T.} 2003. \emph{World Atlas of Seagrasses}. University of California Press,
 Berkeley, USA. \pageref{Green03}
 \bibitem{Guidetti08}
-Guidetti P. 2008. \emph{Population dynamics of the seagrass \textit{Posidonia oceanica} for
+Guidetti P.\index[people]{Guidetti P.} 2008. \emph{Population dynamics of the seagrass \textit{Posidonia oceanica} for
 evaluating meadow health status: a study case using reconstruction techniques}. Laboratory
 of Zoology and Marine Biology, DiSTeBA, CoNISMa, University of Lecce. \pageref{Guidetti08}
 \bibitem{Gullstroom06}
-Gullstroom M.,, Lunden B., Bodin M., Kangwe J., Ohman M.C., Mtolera M.S.P. and
-Bjork M. 2006. \emph{Assessment of changes in the seagrass-dominated submerged vegetation of
-tropical Chwaka Bay (Zanzibar) using satellite remote sensing}. Estuarine, Coastal and Shelf
+Gullstroom M.\index[people]{Gullstroom M.}, Lunden B.\index[people]{Lunden B.}, Bodin M.\index[people]{Bodin M.}, Kangwe J.\index[people]{Kangwe J.}, Ohman M.C.\index[people]{Ohman M.C.}, Mtolera M.S.P.\index[people]{Mtolera M.S.P.} and Bjork M.\index[people]{Bjork M.} 2006. \emph{Assessment of changes in the seagrass-dominated submerged vegetation of tropical Chwaka Bay (Zanzibar) using satellite remote sensing}. Estuarine, Coastal and Shelf
 Science 67 (2006) 399-408. \pageref{Gullstroom06}
 \bibitem{Haag08}
-Haag S.M., Kennish M., Sakowicz G.P. 2008. \emph{Seagrass Habitat Characterization in
-Estuarine Waters of the Jacques Cousteau National Estuarine Research Reserve Using
+Haag S.M.\index[people]{Haag S.M.}, Kennish M.\index[people]{Kennish M.}, Sakowicz G.P.\index[people]{Sakowicz G.P.} 2008. \emph{Seagrass Habitat Characterization in Estuarine Waters of the Jacques Cousteau National Estuarine Research Reserve Using
 Underwater Videographic Imaging Techniques}. Journal of Coastal Research, SI(55), 171–
 179. West Palm Beach (Florida), ISSN 0749-0208. \pageref{Haag08}
 \bibitem{DenHartog70}
-Den Hartog, C. 1970. \emph{The Seagrasses of the World}. North Holland Publishing Company,
+Den Hartog, C.\index[people]{Den Hartog C.} 1970. \emph{The Seagrasses of the World}. North Holland Publishing Company,
 Amsterdam, 275 pp. 31 plates. \pageref{DenHartog70}
 \bibitem{DenHartog77}
-Den Hartog, C., 1977. \emph{Structure, function, and classification in seagrass communities}.
-In: C.P. McRoy and C. Helfferich (Editors), Seagrass Ecosystems: a Scientific Perspective.
-Marcel Dekker, New York, pp. 89-121. \pageref{DenHartog77}
+Den Hartog, C.\index[people]{Den Hartog C.}, 1977. \emph{Structure, function, and classification in seagrass communities}.
+In: C.P. McRoy\index[people]{McRoy, C.P.} and C. Helfferich\index[people]{Helfferich C.} (Editors), Seagrass Ecosystems: a Scientific Perspective.
+Marcel, New York, pp. 89-121. \pageref{DenHartog77}
 \bibitem{Heege03}
-Heege T., Bogner A., Pinnel N. 2003. \emph{Mapping of submerged aquatic vegetation with a
-physically based process chain}. Proc. Remote Sensing, September 8-12 2--3/ Barcelona,
-Spain. Ed. by Kramer E. The International Society for Optical Engineering, Vol.5233. \pageref{Heege03}
+Heege T.\index[people]{Heege T.}, Bogner A.\index[people]{Bogner A.}, Pinnel N.\index[people]{Pinnel N.} 2003. \emph{Mapping of submerged aquatic vegetation with a physically based process chain}. Proc. Remote Sensing, September 8-12 2--3/ Barcelona,
+Spain. Ed. by Kramer E.\index[people]{Kramer E.} The International Society for Optical Engineering, Vol.5233. \pageref{Heege03}
 \bibitem{Hirose04}
-Hirose K., Syoji M., Hang H.T.M., Anh N.H., Triet T. and Nam V.N. 2004. \emph{Satellite
-data application for mangrove management}. International Symposium on Geoinfomatics for
-Spatial Infrastructure Development in Earth and Allied Sciences. \pageref{Hirose04} 
+Hirose K.\index[people]{Hirose K.}, Syoji M.\index[people]{Syoji M.}, Hang H.T.M.\index[people]{Hang H.T.M.}, Anh N.H.\index[people]{Anh N.H.}, Triet T.\index[people]{Triet T} and Nam V.N.\index[people]{Nam V.N.} 2004. \emph{Satellite data application for mangrove management}. International Symposium on Geoinfomatics for Spatial Infrastructure Development in Earth and Allied Sciences. \pageref{Hirose04} 
 \bibitem{Hochberg03a}
-Hochberg, E.J., Atkinson, M.J. 2003a. \emph{Capabilities of remote sensors to classify coral,
+Hochberg, E.J.\index[people]{Hochberg E.J.}, Atkinson, M.J.\index[people]{Atkinson, M.J.} 2003a. \emph{Capabilities of remote sensors to classify coral,
 algae, and sand as pure and mixed spectra}. Remote Sensing of Environment 85, 174–189. \pageref{Hochberg03a}
 \bibitem{Hochberg03b}
-Hochberg, E.J., Atkinson, M.J., Andrefouet, S., 2003b. \emph{Spectral reflectance of coral reef
-bottom-types worldwide and implications for coral reef remote sensing}. Remote Sensing of
+Hochberg, E.J.\index[people]{Hochberg E.J.}, Atkinson, M.J.\index[people]{Atkinson, M.J.}, Andr\'efou\"et, S.\index[people]{Andr\'efou\"et S.}, 2003b. \emph{Spectral reflectance of coral reef bottom-types worldwide and implications for coral reef remote sensing}. Remote Sensing of
 Environment 85, 159–173. \pageref{Hochberg03b}
 \bibitem{Hogarth07}
-Hogarth P. 2007. \emph{The Biology of Mangroves and Seagrasses}. Oxford University Press. \pageref{Hogarth07}
+Hogarth P.\index[people]{Hogarth P.} 2007. \emph{The Biology of Mangroves and Seagrasses}. Oxford University Press. \pageref{Hogarth07}
 \bibitem{Holmer09}
-Holmer M., Marba N, Lamote M and Duarte C. 2009\emph{Deterioration of Sediment Quality in
-Seagrass Meadows (\textit{Posidonia oceanica}) Invaded by Macroalgae (Caulerpa sp.)}. Estuaries
+Holmer M.\index[people]{Holmer M.}, Marb\`a N.\index[people]{Marb\`a N.}, Lamote M.\index[people]{Lamote M.} and Duarte C.\index[people]{Duarte C.M.} 2009\emph{Deterioration of Sediment Quality in Seagrass Meadows (\textit{Posidonia oceanica}) Invaded by Macroalgae (Caulerpa sp.)}. Estuaries
 and Coasts (2009) 32:456–466 DOI 10.1007/s12237-009-9133-4 \pageref{Hogarth07}
 \bibitem{Holmer08}
-Holmer M, Argyrou M, Dalsgaard T., Danovaro R, Diaz-Almela E, Duarte C,
-Frederiksen M, Grau A, Karakassis I, Marbà N, Mirto S, Pérez M, Pusceddu A, Tsapakis M.2008
+Holmer M.\index[people]{Holmer M.}, Argyrou M.\index[people]{Argyrou M.}, Dalsgaard T.\index[people]{Dalsgaard T.}, Danovaro R.\index[people]{Danovaro R.}, Diaz-Almela E.\index[people]{Diaz-Almela E.}, Duarte C.\index[people]{Duarte C.M.}, Frederiksen M.\index[people]{Frederiksen M.}, Grau A.\index[people]{Grau A.}, Karakassis I.\index[people]{Karakassis I.}, Marb\`a N.\index[people]{Marb\`a N.}, Mirto S.\index[people]{Mirto S.}, P\'erez M.\index[people]{P\'erez M}, Pusceddu A.\index[people]{Pusceddu A.}, Tsapakis M.\index[people]{Tsapakis M.}, 2008
 \emph{Effects of fish farm waste on \textit{Posidonia oceanica} meadows: Synthesis and provision of
 monitoring and management tools}. Marine Pollution Bulletin 56 (2008) 1618–1629. \pageref{Holmer08}
 \bibitem{Iverson86}
-Iverson R.L. and Bittaker H.F. 1986. \emph{Seagrass Distribution and Abundance in Eastern
+Iverson R.L.\index[people]{Iverson R.L.} and Bittaker H.F.\index[people]{Bittaker H.F.} 1986. \emph{Seagrass Distribution and Abundance in Eastern
 Gulf of Mexico Coastal Waters}. Estuarine, Coastal and Shelf Science, 22, 577-602. \pageref{Iverson86}
 \bibitem{Jackson07}
-Jackson J., Nemeth D.J. 2007. \emph{A New Method to Describe Seagrass Habitat Sampled
-During Fisheries-Independent Monitoring}. Estuaries and Coasts Vol. 30, No. 1,
-p. 171–178 February 2007 \pageref{Jackson07}
+Jackson J.\index[people]{Jackson J.}, Nemeth D.J.\index[people]{Nemeth D.J.} 2007. \emph{A New Method to Describe Seagrass Habitat Sampled
+During Fisheries-Independent Monitoring}. Estuaries and Coasts Vol. 30, No. 1, p. 171–178 February 2007 \pageref{Jackson07}
 \bibitem{Jensen01}
-Jensen S. and Bell S. 2001. \emph{Seagrass growth and patch dynamics: cross-scale
+Jensen S.\index[people]{Jensen S.L.} and Bell S.S.\index[people]{Bell S.S.} 2001. \emph{Seagrass growth and patch dynamics: cross-scale
 morphological plasticity}. Plant Ecology 155: 201–217, 2001. \pageref{Jensen01}
 \bibitem{Jensen95}
-Jensen J.R., Rutchey K, Koch M.S, Narumalani S. 1995. \emph{Inland wetland change
-detection in the everglades water conservation area 2a using a time-series of normalized
+Jensen J.R.\index[people]{Jensen J.R.}, Rutchey K.\index[people]{Rutchey K.}, Koch M.S.\index[people]{Koch M.S.}, Narumalani S.\index[people]{Narumalani S.} 1995. \emph{Inland wetland change detection in the everglades water conservation area 2a using a time-series of normalized
 remotely-sensed data}. Photogrammetric Eng Remote Sensing 61: 199–209 \pageref{Jensen95}
 \bibitem{Jerlov52}
-Jerlov N.G. 1952. \emph{Influence of suspended and dissolved matter on the transparency of
+Jerlov N.G.\index[people]{Jerlov N.G.} 1952. \emph{Influence of suspended and dissolved matter on the transparency of
 sea water}. Wiley online Library. TellusVolume 5, Issue 1, Published online: 2010. \pageref{Jerlov52}
 \bibitem{Kalinowski04}
-Kalinowski A. and Oliver S. \emph{2004 ASTER Mineral Index Processing Manual}. Remote
+Kalinowski A.\index[people]{Kalinowski A.} and Oliver S.\index[people]{Oliver S.} \emph{2004 ASTER Mineral Index Processing Manual}. Remote
 Sensing Applications. Geoscience Australia \pageref{Kalinowski04}
 \bibitem{Kelly80}
-Kelly, M.G., 1980. \emph{Remote sensing of seagrass beds, Handbook of Seagrass Biology: An
-Ecosystem Perspective} (R.C. Phillips and C.P. Mc Roy, editors), Garland STPM Press, New
+Kelly, M.G.\index[people]{Kelly, M.G.}, 1980. \emph{Remote sensing of seagrass beds, Handbook of Seagrass Biology: An
+Ecosystem Perspective} (R.C. Phillips\index[people]{Phillips, R.C.} and C.P. McRoy\index[people]{McRoy, C.P.}, editors), Garland STPM Press, New
 York, N.Y., pp. 69-86. \pageref{Kelly80}
 \bibitem{Kendrick00}
-Kendrick GA, Hegge BJ, Wyllie A, Davidson A, Lord DA. 2000. \emph{Changes in Seagrass
-Cover on Success and Parmelia Banks, Western Australia Between 1965 and 1995}.
-Estuarine, Coastal and Shelf Science, 50:341-353. \pageref{Kendrick00}
+Kendrick G.A.\index[people]{Kendrick G.A.}, Hegge B.J.\index[people]{Hegge B.J.}, Wyllie A.\index[people]{Wyllie A.}, Davidson A.\index[people]{Davidson A.}, Lord D.A.\index[people]{Lord D.A.}. 2000. \emph{Changes in Seagrass Cover on Success and Parmelia Banks, Western Australia Between 1965 and 1995}. Estuarine, Coastal and Shelf Science, 50:341-353. \pageref{Kendrick00}
 \bibitem{Kirk94}
-Kirk J.T.O. 1994. \emph{Light and photosynthesis in aquatic ecosystems}, pp 1–509. University
+Kirk J.T.O.\index[people]{Kirk J.T.O.} 1994. \emph{Light and photosynthesis in aquatic ecosystems}, pp 1–509. University
 Press, Cambridge, UK. \pageref{Kirk94}
 \bibitem{Kirkman96}
-Kirkman H. 1996. \emph{Baseline and Monitoring Methods for Seagrass Meadows}. Journal of
+Kirkman H.\index[people]{Kirkman H.} 1996. \emph{Baseline and Monitoring Methods for Seagrass Meadows}. Journal of
 Environmental Management (1996) 47, 191–201. \pageref{Kirkman96}
 \bibitem{Kuo89}
-Kuo J, McComb AJ, 1989. \emph{Seagrass taxonomy, structure and development. In: Larkum
-AWD, McComb AJ, Shepherd, eds. Biology of seagrasses: a treatise on the biology of
-seagrasses with special reference to the Australian region}. Elsevier, The Netherlands: 6-73. \pageref{Kuo89}
+Kuo J.\index[people]{Kuo J.}, McComb A.J.\index[people]{McComb A.J.}, 1989. \emph{Seagrass taxonomy, structure and development. In: Larkum
+A.W.D.\index[people]{Larkum A.W.D.}, McComb A.J.\index[people]{McComb A.J.}, Shepherd J.\index[people]{Shepherd J.}, eds. Biology of seagrasses: a treatise on the biology of seagrasses with special reference to the Australian region}. Elsevier, The Netherlands: 6-73. \pageref{Kuo89}
 \bibitem{Leoni06}
-Leoni V., Pasqualini V., Pergent-Martini Ch., Vela A., Pergent G. 2006. \emph{Morphological
-responses of \textit{	extit{Posidonia oceanica}} to experimental nutrient enrichment of the canopy water}.
-Journal of Experimental Marine Biology and Ecology xx (2006) xxx–xxx. \pageref{Leoni06}
+Leoni V.\index[people]{Leoni V.}, Pasqualini V.\index[people]{Pasqualini V.}, Pergent-Martini C.\index[people]{Pergent-Martini C.}, Vela A.\index[people]{Vela A.}, Pergent G.\index[people]{Pergent G.} 2006. \emph{Morphological responses of \textit{Posidonia oceanica} to experimental nutrient enrichment of the canopy water}. Journal of Experimental Marine Biology and Ecology xx (2006) xxx–xxx. \pageref{Leoni06}
 \bibitem{Leoni07}
-Leoni V., Pasqualini V., Pergent-Martini Ch., Vela A., Pergent G. 2007. \emph{Physiological
-responses of \textit{{Posidonia oceanica}} to experimental nutrient enrichment of the canopy water}.
-Journal of Experimental Marine Biology and Ecology 349, 73–83. \pageref{Leoni07}
+Leoni V.\index[people]{Leoni V.}, Pasqualini V.\index[people]{Pasqualini V.}, Pergent-Martini C.\index[people]{Pergent-Martini C.}, Vela A.\index[people]{Vela A.}, Pergent G.\index[people]{Pergent G.} 2007. \emph{Physiological responses of \textit{{Posidonia oceanica}} to experimental nutrient enrichment of the canopy water}. Journal of Experimental Marine Biology and Ecology 349, 73–83. \pageref{Leoni07}
 \bibitem{Leoni08}
-Leoni V., Vela A., Pasqualini V., Pergent-Martini Ch., Pergent G. 2008. \emph{Effects of
-experimental reduction of light and nutrient enrichments (N and P) on seagrasses: a review}.
+Leoni V.\index[people]{Leoni V.}, Vela A.\index[people]{Vela A.}, Pasqualini V.\index[people]{Pasqualini V.}, Pergent-Martini C.\index[people]{Pergent-Martini C.}, Pergent G.\index[people]{Pergent G.} 2008. \emph{Effects of experimental reduction of light and nutrient enrichments (N and P) on seagrasses: a review}.
 Aquatic Conservation: Marine and Freshwater Ecosystems, 18: 202–220. \pageref{Leoni08}
 \bibitem{Lewis01}
-Lewis M. 2001. \emph{Discriminating Vegetation with Hyperspectral Imagery - What is
+Lewis M.\index[people]{Lewis M.} 2001. \emph{Discriminating Vegetation with Hyperspectral Imagery - What is
 Possible?} \href{http://www.ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=00978199}{ieeexplore.ieee.org} Proceedings,
-International Geoscience and Remote Sensing Symposium, 9-13 July 2001, Sydney,
-Australia. ISBN 0-7803-7031-7 \pageref{Lewis01}
+International Geoscience and Remote Sensing Symposium, 9-13 July 2001, Sydney, Australia. ISBN 0-7803-7031-7 \pageref{Lewis01}
 \bibitem{Louchard03}
-Louchard E.M., Reid R.P., Stephens F.C., Davis C.O., Leathers R.A., Downes T.V.
-2003. \emph{Optical remote sensing of benthic habitats and bathymetry in coastal environments at
-Lee Stocking Island, Bahamas: A comparative spectral classification approach}. Limnology
+Louchard E.M.\index[people]{Louchard E.M.}, Reid R.P.\index[people]{Reid R.P.}, Stephens F.C.\index[people]{Stephens F.C.}, Davis C.O.\index[people]{Davis C.O.}, Leathers R.A.\index[people]{Leathers R.A.}, Downes T.V.\index[people]{Downes T.V.} 2003. \emph{Optical remote sensing of benthic habitats and bathymetry in coastal environments at Lee Stocking Island, Bahamas: A comparative spectral classification approach}. Limnology
 and Oceanography (2003) 48:511-521. \pageref{Louchard03}
 \bibitem{Luque04}
-Luque A. and Templado J.A. 2004. \emph{Praderas y bosques marinos de Andalucia
+Luque A.\index[people]{Luque A.} and Templado J.A.\index[people]{Templado J.A.} 2004. \emph{Praderas y bosques marinos de Andalucia
 Consejeria de Medio Ambiente, Junta de Andalucia} (in press). \pageref{Luque04}
 \bibitem{Lyzenga81}
-Lyzenga D.R. 1981. \emph{Remote sensing of bottom reflectance and water attenuation in
+Lyzenga D.R.\index[people]{Lyzenga D.R.} 1981. \emph{Remote sensing of bottom reflectance and water attenuation in
 shallow water using aircraft and Landsat data}. International Journal of Remote Sensing 2,
 71-82. \pageref{Lyzenga81}
 \bibitem{Maffione97}
-Maffione R.A. and Dana D.R. 1997 \emph{Instruments and methods for measuring the
+Maffione R.A.\index[people]{Maffione R.A.} and Dana D.R.\index[people]{Dana D.R.} 1997 \emph{Instruments and methods for measuring the
 backward-scattering coefficient of ocean waters}. Optical Society of America \pageref{Maffione97}
 \bibitem{Maffione01a}
-Maffione R.A. 2001a. \emph{Evolution and Revolution in Measuring Ocean Optical Properties}.
+Maffione R.A.\index[people]{Maffione R.A.} 2001a. \emph{Evolution and Revolution in Measuring Ocean Optical Properties}.
 Oceanography, Vol.14, No.3. \pageref{Maffione01a}
 \bibitem{Maffione01b}
-Maffione R.A. 2001b.\emph{Hyperspectral Optical Properties, Remote Sensing, and
+Maffione R.A.\index[people]{Maffione R.A.} 2001b.\emph{Hyperspectral Optical Properties, Remote Sensing, and
 Underwater Visibility}. Hydro-Optics, Biology, and Instrumentation Laboratories. \pageref{Maffione01b}
 \bibitem{Malthus03}
-Malthus T.J. and Karpouzli E. 2003. \emph{Integrating field and high spatial resolution
-satellite based methods for monitoring shallow submersed aquatic habitats in the Sound of
-Eriskay, Scotland, UK}. Int Journal Remote Sensing 24: 2585–2593. \pageref{Malthus03}
+Malthus T.J.\index[people]{Malthus T.J.} and Karpouzli E.\index[people]{Karpouzli E.} 2003. \emph{Integrating field and high spatial resolution
+satellite based methods for monitoring shallow submersed aquatic habitats in the Sound of Eriskay, Scotland, UK}. Int Journal Remote Sensing 24: 2585–2593. \pageref{Malthus03}
 \bibitem{Matarrese08}
-Matarrese R., Acquaro M., Morea A., Tijani K., Chiaradia M.T. 2008. \emph{Applications of
-remote sensing techniques for mapping \textit{{Posidonia oceanica}} meadows}. Geoscience and
-Remote Sensing Symposium. ISBN:978-1-4244-2807-6. \pageref{Matarrese08}
+Matarrese R.\index[people]{Matarrese R.}, Acquaro M.\index[people]{Acquaro M.}, Morea A.\index[people]{Morea A.}, Tijani K.\index[people]{Tijani K.}, Chiaradia M.T.\index[people]{Chiaradia M.T.} 2008. \emph{Applications of remote sensing techniques for mapping \textit{{Posidonia oceanica}} meadows}. Geoscience and Remote Sensing Symposium. ISBN:978-1-4244-2807-6. \pageref{Matarrese08}
 \bibitem{Matarrese06}
-Matarrese R., Acquaro M., Morea A., Khalid T., Chiaradia M.T. 2006 \emph{Applications of remote
-sensing techniques for mapping \textit{{Posidonia oceanica}} meadows}.
+Matarrese R.\index[people]{Matarrese R.}, Acquaro M.\index[people]{Acquaro M.}, Morea A.\index[people]{Morea A.}, Khalid T.\index[people]{Khalid T.}, Chiaradia M.T.\index[people]{Chiaradia M.T.} 2006 \emph{Applications of remote sensing techniques for mapping \textit{{Posidonia oceanica}} meadows}.
 \href{http://www.igarss08.org/Abstracts/pdfs/3888.pdf}{International Geoscience and Remote Sensing Symposium} \pageref{Matarrese06}
 \bibitem{McKenzie02}
-McKenzie L.J., Campbell S.J. 2002. \emph{Manual for Community (citizen) Monitoring of
-Seagrass Habitat}. Western Pacific Edition. Marine Plant Ecology Group, QDPI, Northern
-Fisheries Centre, Cairns. 43 pp. \pageref{McKenzie02}
+McKenzie L.J.\index[people]{McKenzie L.J.}, Campbell S.J.\index[people]{Campbell S.J.} 2002. \emph{Manual for Community (citizen) Monitoring of
+Seagrass Habitat}. Western Pacific Edition. Marine Plant Ecology Group, QDPI, Northern Fisheries Centre, Cairns. 43 pp. \pageref{McKenzie02}
 \bibitem{McKenzie03}
-McKenzie L.J., Campbell S.J. and Roder C.A. 2003. \emph{Seagrass-Watch: Manual for
-Mapping and Monitoring Seagrass Resources by Community (citizen) Volunteers}. 2nd
-Edition. QFS, NFC, Cairns. 100pp. \pageref{McKenzie03}
+McKenzie L.J.\index[people]{McKenzie L.J.}, Campbell S.J.\index[people]{Campbell S.J.} and Roder C.A.\index[people]{Roder C.A.} 2003. \emph{Seagrass-Watch: Manual for Mapping and Monitoring Seagrass Resources by Community (citizen) Volunteers}. 2nd Edition. QFS, NFC, Cairns. 100pp. \pageref{McKenzie03}
 \bibitem{McKenzieetal03}
-McKenzie L.J. 2003. \emph{Guidelines for the rapid assessment of seagrass habitats in the
-Western Pacific}. Marine Plant Ecology Group, QDPI, Northern Fisheries Centre, Cairns,
-\href{http://www.seagrasswatch.org}{seagrasswatch} \pageref{McKenzieetal03}
+McKenzie L.J.\index[people]{McKenzie L.J.} 2003. \emph{Guidelines for the rapid assessment of seagrass habitats in the
+Western Pacific}. Marine Plant Ecology Group, QDPI, Northern Fisheries Centre, Cairns, \href{http://www.seagrasswatch.org}{seagrasswatch} \pageref{McKenzieetal03}
 \bibitem{McKenzie06}
-McKenzie L.J., Campbell S.J. and F.Lasi 2006. \emph{Seagrasses and Mangroves}. In: Green
-A.P. Lokani W., Atu P., Ramonia P., Thomas P. and Almanmy J (eds). 2006 \emph{Solomon
-Islands Marine Assessment. Technical report of survey conducted May 13 to June 17 2004}.
-The Nature Conservancy, Indo-Pacific Resource Centre. Report No 1/06 \pageref{McKenzie06}
+McKenzie L.J.\index[people]{McKenzie L.J.}, Campbell S.J.\index[people]{Campbell S.J.} and F.Lasi\index[people]{Lasi, F.} 2006. \emph{Seagrasses and Mangroves}. In: Green A.P.\index[people]{Green A.P.}, Lokani W.\index[people]{Lokani W.}, Atu P.\index[people]{Atu P.}, Ramonia P.\index[people]{Ramonia P.}, Thomas P.\index[people]{Thomas P.} and Almanmy J.\index[people]{Almanmy J.} (eds). 2006 \emph{Solomon Islands Marine Assessment. Technical report of survey conducted May 13 to June 17 2004}. The Nature Conservancy, Indo-Pacific Resource Centre. Report No 1/06 \pageref{McKenzie06}
 \bibitem{McKenzie07}
-McKenzie L.J. and Yoshida R. 2007. \emph{Seagrass-Watch: Guidelines for Monitoring
-Seagrass Habitats in the Fiji Islands. Proceeding of a training workshop. Corpus Christi
-Teachers College Laucala Bay, Suva, Fiji, 16th June 2007}. Seagrass-Watch HQ Cairns, 42pp. \pageref{McKenzie07}
+McKenzie L.J.\index[people]{McKenzie L.J.} and Yoshida R.\index[people]{Yoshida R.} 2007. \emph{Seagrass-Watch: Guidelines for Monitoring
+Seagrass Habitats in the Fiji Islands. Proceeding of a training workshop. Corpus Christi Teachers College Laucala Bay, Suva, Fiji, 16th June 2007}. Seagrass-Watch HQ Cairns, 42pp. \pageref{McKenzie07}
 \bibitem{McKenzie08}
-McKenzie L.J. 2008. \emph{Seagrass-Watch. Proceedings of a Workshop for Mapping and
-Monitoring Seagrass Habitats in North East Arnhem Land, Northern Territory. 18-20
-October 2008}. Seagrass-Watch HQ, Cairns, 49pp. \pageref{McKenzie08}
+McKenzie L.J.\index[people]{McKenzie L.J.} 2008. \emph{Seagrass-Watch. Proceedings of a Workshop for Mapping and
+Monitoring Seagrass Habitats in North East Arnhem Land, Northern Territory. 18-20 October 2008}. Seagrass-Watch HQ, Cairns, 49pp. \pageref{McKenzie08}
 \bibitem{McKenzie09}
-McKenzie L.J., Yoshida R. 2009. Seagrass Watch. Proceedings of a Workshop for
-Monitoring Seagrass Habitats in Indonesia. The Nature Conservancy, Coral Triangle
-Centre, Sanur, Bali, Indonesia. \pageref{McKenzie09}
+McKenzie L.J.\index[people]{McKenzie L.J.}, Yoshida R.\index[people]{Yoshida R.} 2009. Seagrass Watch. Proceedings of a Workshop for
+Monitoring Seagrass Habitats in Indonesia. The Nature Conservancy, Coral Triangle Centre, Sanur, Bali, Indonesia. \pageref{McKenzie09}
 \bibitem{Meinesz91}
-Meinesz, A., Lefevre, J.R., Astier, J.M., 1991. \emph{Impact of coastal development on the
-infralittoral zone along the south-eastern Mediterranean shore of continental France}.
-Marine Pollution Bullettin 23, 343–347. \pageref{Meinesz91}
+Meinesz, A.\index[people]{Meinesz A.}, Lefevre, J.R.\index[people]{Lefevre, J.R.}, Astier, J.M.\index[people]{Astier, J.M.}, 1991. \emph{Impact of coastal development on the infralittoral zone along the south-eastern Mediterranean shore of continental France}. Marine Pollution Bullettin 23, 343–347. \pageref{Meinesz91}
 \bibitem{Mellors09a}
-Mellors J. and McKenzie L. 2009(a). \emph{Seagrass-Watch: Guidelines for Monitoring
-Seagrass Habitats. Proceedings of a workshop held on Thursday Island, Torres Strait 4-
-8.03.2009}. \pageref{Mellors09a}
+Mellors J.\index[people]{Mellors J.} and McKenzie L.\index[people]{McKenzie L.J.} 2009(a). \emph{Seagrass-Watch: Guidelines for Monitoring
+Seagrass Habitats. Proceedings of a workshop held on Thursday Island, Torres Strait 4-8.03.2009}. \pageref{Mellors09a}
 \bibitem{Mellors09b}
-Mellors J and McLenzie L. 2009(b). \emph{Seagrass-Watch: Seagrass Monitoring Guidelines
-for Torres Strait Communities. Meer Island. Proceedings of a workshop held on Meer
-Island, Torres Strait 14-15 September 2009}. 58 pp. \pageref{Mellors09b}
+Mellors J.\index[people]{Mellors J.} and McKenzie L.\index[people]{McKenzie L.J.} 2009(b). \emph{Seagrass-Watch: Seagrass Monitoring Guidelines
+for Torres Strait Communities. Meer Island. Proceedings of a workshop held on Meer Island, Torres Strait 14-15 September 2009}. 58 pp. \pageref{Mellors09b}
 \bibitem{Micheli05}
-Micheli C., Paganin P, Peirano A., G. Caye, Meinesz A. and Bianchi C.N. 2005. \emph{Genetic
-variability of \textit{{Posidonia oceanica}} (L.) Delile in relation to local factors and biogeographic
-patterns}. Aquatic Botany 82 (2005) 210–221 \pageref{Micheli05}
+Micheli C.\index[people]{Micheli C.}, Paganin P.\index[people]{Paganin P.}, Peirano A.\index[people]{Peirano A.}, Caye, G.\index[people]{Caye, G.}, Meinesz A.\index[people]{Meinesz A.} and Bianchi C.N.\index[people]{Bianchi C.N.} 2005. \emph{Genetic variability of \textit{{Posidonia oceanica}} (L.) Delile in relation to local factors and biogeographic patterns}. Aquatic Botany 82 (2005) 210–221 \pageref{Micheli05}
 \bibitem{Montefalcone09}
-Montefalcone M. 2009.\emph{Ecosystem health assessment using the Mediterranean seagrass
-\textit{{Posidonia oceanica}}: A review}. Ecological indicators 595 – 604 \pageref{Montefalcone09}
+Montefalcone M.\index[people]{Montefalcone M.} 2009.\emph{Ecosystem health assessment using the Mediterranean seagrass
+\textit{Posidonia oceanica}: A review}. Ecological indicators 595 – 604 \pageref{Montefalcone09}
 \bibitem{Montefalcone10}
-Montefalcone M., Albertelli G., Morri C. and Bianchi C.N. 2010. \emph{Patterns of wide-scale
-substitution within meadows of the seagrass \textit{{Posidonia oceanica}} in NW Mediterranean Sea:
+Montefalcone M.\index[people]{Montefalcone M.}, Albertelli G.\index[people]{Albertelli G.}, Morri C.\index[people]{Morri C.} and Bianchi C.N.\index[people]{Bianchi C.N.} 2010. \emph{Patterns of wide-scale substitution within meadows of the seagrass \textit{{Posidonia oceanica}} in NW Mediterranean Sea:
 invaders are stronger than natives}. Aquatic Conserv: Mar. Freshw. Ecosyst. 20: 507–515. \pageref{Montefalcone10}
 \bibitem{Montefalcone06}
-Montefalcone M., Albertelli G., Bianchi C.N., Mariani M., Morri C. 2006. \emph{A new
-synthetic index and a protocol for monitoring the status of \textit{{Posidonia oceanica}} meadows: a
-case study at Sanremo (Ligurian Sea, NW Mediterranean)}. Aquatic Conservation: Marine and
-Freshwater Ecosystems, 16, 29–42. \pageref{Montefalcone06}
+Montefalcone M.\index[people]{Montefalcone M.}, Albertelli G.\index[people]{Albertelli G.}, Bianchi C.N.\index[people]{Bianchi C.N.}, Mariani M.\index[people]{Mariani M.}, Morri C.\index[people]{Morri C.} 2006. \emph{A new synthetic index and a protocol for monitoring the status of \textit{{Posidonia oceanica}} meadows: a case study at Sanremo (Ligurian Sea, NW Mediterranean)}. Aquatic Conservation: Marine and Freshwater Ecosystems, 16, 29–42. \pageref{Montefalcone06}
 \bibitem{Mount03}
-Mount R. 2003. \emph{The application of digital aerial photography to shallow water seabed
-mapping and monitoring – how deep can you see? Coastal GIS 2003: and integrated
-approach to Australian coastal issues, 7th - 8th July 2003}. Wollongong, University of
-Wollongong, pp. 139-156. \pageref{Mount03}
+Mount R.\index[people]{Mount R.} 2003. \emph{The application of digital aerial photography to shallow water seabed
+mapping and monitoring – how deep can you see? Coastal GIS 2003: and integrated approach to Australian coastal issues, 7th - 8th July 2003}. Wollongong, University of Wollongong, pp. 139-156. \pageref{Mount03}
 \bibitem{Mumby99}
-Mumby P.G., Green E.P., Edwards A.J. and Clark C.D. 1999. \emph{The cost-effectiveness of
-remote sensing for tropical coastal resources assessment and management}. Journal of
-Environmental Management Volume 55, Issue 3, March 1999, Pages 157-166 \pageref{Mumby99}
+Mumby P.J.\index[people]{Mumby P.J.}, Green E.P.\index[people]{Green E.P.}, Edwards A.J.\index[people]{Edwards A.J.} and Clark C.D.\index[people]{Clark C.D.} 1999. \emph{The cost-effectiveness of remote sensing for tropical coastal resources assessment and management}. Journal of Environmental Management Volume 55, Issue 3, March 1999, Pages 157-166 \pageref{Mumby99}
 \bibitem{Mumby02}
-Mumby, P. J. and Edwards, A. J. 2002. \emph{Mapping marine environments with IKONOS
-imagery: Enhanced spatial resolution can deliver greater thematic accuracy}. Remote
-Sensing of Environment, 82, 248–257 \pageref{Mumby02}
+Mumby, P.J.\index[people]{Mumby P.J.} and Edwards A.J.\index[people]{Edwards A.J.} 2002. \emph{Mapping marine environments with IKONOS
+imagery: Enhanced spatial resolution can deliver greater thematic accuracy}. Remote Sensing of Environment, 82, 248–257 \pageref{Mumby02}
 \bibitem{Mumby04}
-Mumby P.J. Skirving W., Strong A.E., Hardy J.T., LeDrew E.F., Hochberg E.J., Stumpf
-R.P. and David L.T. 2004. \emph{Remote sensing of coral reefs and their physical environment}.
-Marine Pollution Bulletin, 48:219-228. \pageref{Mumby04}
+Mumby P.J.\index[people]{Mumby P.J.}, Skirving W.\index[people]{Skirving W.}, Strong A.E.\index[people]{Strong A.E.}, Hardy J.T.\index[people]{Hardy J.T.}, LeDrew E.F.\index[people]{LeDrew E.F.}, Hochberg E.J.\index[people]{Hochberg E.J.}, Stumpf R.P.\index[people]{Stumpf R.P.} and David L.T.\index[people]{David L.T.} 2004. \emph{Remote sensing of coral reefs and their physical environment}. Marine Pollution Bulletin, 48:219-228. \pageref{Mumby04}
 \bibitem{Nagelkerken00}
-Nagelkerken I., van der Velde G., Gorissen M.W., Meijer G.J., van’t Hofc T. and den
-Hartog C. 2000. \emph{Importance of Mangroves, Seagrass Beds and the Shallow Coral Reef as a
-Nursery for Important Coral Reef Fishes, Using a Visual Census Technique}. Estuarine,
+Nagelkerken I.\index[people]{Nagelkerken I.}, van der Velde G.\index[people]{van der Velde G.}, Gorissen M.W.\index[people]{Gorissen M.W.}, Meijer G.J.\index[people]{Meijer G.J}, van’t Hofc T.\index[people]{van’t Hofc T.} and Den Hartog C.\index[people]{Den Hartog C.} 2000. \emph{Importance of Mangroves, Seagrass Beds and the Shallow Coral Reef as a Nursery for Important Coral Reef Fishes, Using a Visual Census Technique}. Estuarine,
 Coastal and Shelf Science 51, 31–44 doi:10.1006/ecss.2000.0617 \pageref{Nagelkerken00}
 \bibitem{Noralez10}
-Noralez S. 2010. \emph{Exploring the Limits of Mapping Seagrass. A case study for P.
-oceanica}. MSc Thesis. ITC. Netherlands. \pageref{Noralez10}
+Noralez S.\index[people]{Noralez S.} 2010. \emph{Exploring the Limits of Mapping Seagrass. A case study for P. oceanica}. MSc Thesis. ITC. Netherlands. \pageref{Noralez10}
 \bibitem{Norris97}
-Norris J.G., Wyllie-Echeverria S., Mumford T., Bailey A. and Turner T. 1997.
-\emph{Estimating basal area coverage of subtidal seagrass beds using underwater videography}.
+Norris J.G.\index[people]{Norris J.G.}, Wyllie-Echeverria S.\index[people]{Wyllie-Echeverria S.}, Mumford T.\index[people]{Mumford T.}, Bailey A.\index[people]{Bailey A.} and Turner T.\index[people]{Turner T.} 1997. \emph{Estimating basal area coverage of subtidal seagrass beds using underwater videography}.
 Aquatic Botany 58 (1997) 269-287 \pageref{Noralez10}
 \bibitem{SPOT} 
 \emph{SPOT, Official Website} \href{http://www.spotimage.com/web/en/172-spot-images.php}{SPOT} \pageref{SPOT}
 \bibitem{Orth06}
-Orth R. J., Carruthers T.J.B., Dennison W.C., Duarte C. M., Fourqurean J.W. , Heck Jr.
-K. L. , Hughes A. R., Kendrick G. A., Kenworthy W. J., Olyarnik S., Short F.T., Waycott
-M. and Williams S. L. 2006. \emph{A Global Crisis for Seagrass Ecosystems}. Vol. 56 No. 12,
-BioScience 987. \pageref{Orth06}
+Orth R.J.\index[people]{Orth R.J.}, Carruthers T.J.B.\index[people]{Carruthers T.J.B.}, Dennison W.C.\index[people]{Dennison W.C.}, Duarte C.M.\index[people]{Duarte C.M.}, Fourqurean J.W.\index[people]{Fourqurean J.W.}, Heck Jr.K. L.\index[people]{Heck Jr.K. L.}, Hughes A. R.\index[people]{Hughes A. R.}, Kendrick G. A.\index[people]{Kendrick G.A.}, Kenworthy W. J.\index[people]{Kenworthy W. J.}, Olyarnik S.\index[people]{Olyarnik S.}, Short F.T.\index[people]{Short F.T}, Waycott M.\index[people]{Waycott M.} and Williams S. L.\index[people]{Williams S.L.} 2006. \emph{A Global Crisis for Seagrass Ecosystems}. Vol. 56 No. 12, BioScience 987. \pageref{Orth06}
 \bibitem{Palandro03}
-Palandro D., Andréfouët S., Muller-Karger F. E., Dustan Ph., Hu Ch., and Hallock P.
-2003. \emph{Detection of changes in coral reef communities using Landsat-5 TM and Landsat-7
-ETM+ data}. Can. J. Remote Sensing, Vol. 29, No. 2, pp. 201–209. \pageref{Palandro03}
+Palandro D.\index[people]{Palandro D.}, Andr\'efou\"et S.\index[people]{Andr\'efou\"et S.}, Muller-Karger F. E.\index[people]{Muller-Karger F. E.}, Dustan Ph.\index[people]{Dustan Ph}, Hu Ch.\index[people]{Hu Ch.}, and Hallock P.\index[people]{Hallock P.} 2003. \emph{Detection of changes in coral reef communities using Landsat-5 TM and Landsat-7 ETM+ data}. Can. J. Remote Sensing, Vol. 29, No. 2, pp. 201–209. \pageref{Palandro03}
 \bibitem{Pasqualini98a}
-Pasqualini V., Pergent-Martini C. and Pergent, G. 1998(a). \emph{Use of remote sensing for the
-characterization of the Mediterranean coastal environment – the case of Posidonia
+Pasqualini V.\index[people]{Pasqualini V.}, Pergent-Martini C.\index[people]{Pergent-Martini C.} and Pergent, G.\index[people]{Pergent G.} 1998(a). \emph{Use of remote sensing for the characterization of the Mediterranean coastal environment – the case of Posidonia
 oceanica}. Journal of Coastal Conservation 4: 59-66, 1998, EUCC; Opulus Press Uppsala. \pageref{Pasqualini98a}
 \bibitem{Pasqualini98b}
-Pasqualini V., Pergent-Martini C., Clabaut P., Pergent G. 1998(b). \emph{Mapping of
-\textit{{Posidonia oceanica}} using aerial photographs and side scan sonar: Application off the
+Pasqualini V.\index[people]{Pasqualini V.}, Pergent-Martini C.\index[people]{Pergent-Martini C.}, Clabaut P.\index[people]{Clabaut P.}, Pergent G.\index[people]{Pergent G.} 1998(b). \emph{Mapping of \textit{{Posidonia oceanica}} using aerial photographs and side scan sonar: Application off the
 island of Corsica (France)}. Estuarine Coastal Shelf Sci 47:359–367. \pageref{Pasqualini98b}
 \bibitem{Pasqualini99}
-Pasqualini V, Pergent-Martini C, Pergent G. 1999. \emph{Environmental impact identification
-along the Corsican coast (Mediterranean Sea) using image processing}. Aquatic Botany,
+Pasqualini V.\index[people]{Pasqualini V.}, Pergent-Martini C.\index[people]{Pergent-Martini C.}, Pergent G.\index[people]{Pergent G.} 1999. \emph{Environmental impact identification along the Corsican coast (Mediterranean Sea) using image processing}. Aquatic Botany,
 65:311-320. \pageref{Pasqualini99}
 \bibitem{Pasqualini01}
-Pasqualini V., Pergent-Martini C, Clabaut P, Marteel H., and Pergent G. 2001.
-\emph{Integration of Aerial Remote Sensing, Photogrammetry, and GIS Technologies in Seagrass
-Mapping}. Photogrammetric Engineering and Remote Sensing Vol. 67, No. 1, January 2001,
-pp. 99-105. \pageref{Pasqualini01}
+Pasqualini V.\index[people]{Pasqualini V.}, Pergent-Martini C.\index[people]{Pergent-Martini C.}, Clabaut P.\index[people]{Clabaut P.}, Marteel H.\index[people]{Marteel H.}, and Pergent G.\index[people]{Pergent G.} 2001. \emph{Integration of Aerial Remote Sensing, Photogrammetry, and GIS Technologies in Seagrass
+Mapping}. Photogrammetric Engineering and Remote Sensing Vol. 67, No. 1, January 2001, pp. 99-105. \pageref{Pasqualini01}
 \bibitem{Pasqualini05}
-Pasqualini V., Pergent-Martini C, Pergent G., Agreila M., Skoufas G., Sourbes L. and
-Tsirika A. 2005. \emph{Use of SPOT 5 for mapping seagrasses: An application to Posidonia
-oceanica}. Remote Sensing of Environment, 94:39-45. \pageref{Pasqualini05}
+Pasqualini V.\index[people]{Pasqualini V.}, Pergent-Martini C.\index[people]{Pergent-Martini C.}, Pergent G.\index[people]{Pergent G.}, Agreila M.\index[people]{Agreila M.}, Skoufas G.\index[people]{Skoufas G.}, Sourbes L.\index[people]{Sourbes L.} and Tsirika A.\index[people]{Tsirika A.} 2005. \emph{Use of SPOT 5 for mapping seagrasses: An application to Posidonia oceanica}. Remote Sensing of Environment, 94:39-45. \pageref{Pasqualini05}
 \bibitem{Peneva08}
-Peneva E., Griffith J.A. and Carter G.A. 2008. \emph{Seagrass Mapping in the Northern Gulf
-of Mexico using Airborne Hyperspectral Imagery: A Comparison of Classification Methods}.
-Journal of Coastal Research, Number 244:850-856. 2008. Published By: Coastal Education
-and Research Foundation DOI: 10.2112/06-0764.1 \pageref{Peneva08}
+Peneva E.\index[people]{Peneva E.I.}, Griffith J.A.\index[people]{Griffith J.A.} and Carter G.A.\index[people]{Carter G.A.} 2008. \emph{Seagrass Mapping in the Northern Gulf of Mexico using Airborne Hyperspectral Imagery: A Comparison of Classification Methods}. Journal of Coastal Research, Number 244:850-856. 2008. Published By: Coastal Education and Research Foundation DOI: 10.2112/06-0764.1 \pageref{Peneva08}
 \bibitem{Peneva07}
-Peneva E.I., Griffith J.A. and Carter G.A. 2007. \emph{Mapping seagrass distribution on Horn
-Island}, MS using hyperspectral imagery.
+Peneva E.I.\index[people]{Peneva E.I.}, Griffith J.A.\index[people]{Griffith J.A.} and Carter G.A.\index[people]{Carter G.A.} 2007. \emph{Mapping seagrass distribution on Horn Island}, MS using hyperspectral imagery.
 \href{ftp://ftp.ecn.purdue.edu/jshan/proceedings/asprs2005/Files/0134.pdf}{ecn.purdue.edu} \pageref{Peneva07}
 \bibitem{Pergent90}
-Pergent G. 1990. \emph{Lepidochronological analysis of the seagrass \textit{{Posidonia oceanica}} (L.)
-Delile: a standardized approach}. Aquatic Botany, 37 (1990) 39-54 39 Elsevier Science
-Publishers B.V., Amsterdam -- Printed in The Netherlands \pageref{Pergent90}
+Pergent G.\index[people]{Pergent G.} 1990. \emph{Lepidochronological analysis of the seagrass \textit{{Posidonia oceanica}} (L.)
+Delile: a standardized approach}. Aquatic Botany, 37 (1990) 39-54 39 Elsevier Science Publishers B.V., Amsterdam -- Printed in The Netherlands \pageref{Pergent90}
 \bibitem{Pergent-Martini06}
-Pergent-Martini C., Pasqualini V., Ferrat L and Pergent G. 2006. \emph{Ecological Data in
-Integrated Coastal Zone Management: Case Study of \textit{{Posidonia oceanica}} Meadows Along
+Pergent-Martini C.\index[people]{Pergent-Martini C.}, Pasqualini V.\index[people]{Pasqualini V.}, Ferrat L.\index[people]{Ferrat L.} and Pergent G.\index[people]{Pergent G.} 2006. \emph{Ecological Data in Integrated Coastal Zone Management: Case Study of \textit{{Posidonia oceanica}} Meadows Along
 the Corsican Coastline (Mediterranean Sea)}. Environ Manage (2006) 38:889–895 DOI
 10.1007/s00267-005-0056-y. \pageref{Pergent-Martini06}
 \bibitem{Pergent-Martini05}
-Pergent-Martini C, Leoni V., Pasqualini V., Ardizzone G.D., Balestri E., Bedini R.,
-Belluscio A., Belsher T., Borg J., Boudouresque C.F., Boumaza S., Bouquegneau J.M., Buia
-M.C., Calvo S., Cebrian J., Charbonnel E., Cinelli F., Cossu A., Di Maida G., Dural B.,
-Francour P., Gobert S., Lepoint G., Meinesz A., Molenaar H., Mansour H.M., Panayotidis
-P., Peirano A., Pergent G., Piazzi L, Pirrotta M, Relini G, Romero G, Sanchez-Lizaso J.L,
-Semroud R., Shembri P., Shili A., Tomasello A., Velimirov B. 2005. \emph{Descriptors of
-\textit{{Posidonia oceanica}} meadows: Use and application}. Ecological Indicators 5, 213–230. \pageref{Pergent-Martini05}
+Pergent-Martini C.\index[people]{Pergent-Martini C.}, Leoni V.\index[people]{Leoni V.}, Pasqualini V.\index[people]{Pasqualini V.}, Ardizzone G.D.\index[people]{Ardizzone G.D.}, Balestri E.\index[people]{Balestri E.}, Bedini R.\index[people]{Bedini R.}, Belluscio A.\index[people]{Belluscio A.}, Belsher T.\index[people]{Belsher T.}, Borg J.\index[people]{Borg J.}, Boudouresque C.F.\index[people]{Boudouresque C.F.}, Boumaza S.\index[people]{Boumaza S.}, Bouquegneau J.-M.\index[people]{Bouquegneau J.-M.}, Buia M.C.\index[people]{Buia M.C.}, Calvo S.\index[people]{Calvo S.}, Cebrian J.\index[people]{Cebrian J.}, Charbonnel E.\index[people]{Charbonnel E.}, Cinelli F.\index[people]{Cinelli F.}, Cossu A.\index[people]{Cossu A.}, Di Maida G.\index[people]{Di Maida G.}, Dural B.\index[people]{Dural B.}, Francour P.\index[people]{Francour P.}, Gobert S.\index[people]{Gobert S.}, Lepoint G.\index[people]{Lepoint G.}, Meinesz A.\index[people]{Meinesz A.}, Molenaar H.\index[people]{Molenaar H.}, Mansour H.M.\index[people]{Mansour H.M.}, Panayotidis P.\index[people]{Panayotidis P.}, Peirano A.\index[people]{Peirano A.}, Pergent G.\index[people]{Pergent G.}, Piazzi L.\index[people]{Piazzi L.}, Pirrotta M.\index[people]{Pirrotta M.}, Relini G.\index[people]{Relini G}, Romero J.\index[people]{Romero J.}, Sanchez-Lizaso J.L.\index[people]{Sanchez-Lizaso J.L.}, Semroud R.\index[people]{Semroud R.}, Shembri P.\index[people]{Shembri P.}, Shili A.\index[people]{Shili A.}, Tomasello A.\index[people]{Tomasello A.}, Velimirov B.\index[people]{Velimirov B.} 2005. \emph{Descriptors of \textit{{Posidonia oceanica}} meadows: Use and application}. Ecological Indicators 5, 213–230. \pageref{Pergent-Martini05}
 \bibitem{Phinn08}
-Phinn S, Roelfsema C, Dekker A, Brando V, Anstee J. 2008. \emph{Mapping seagrass species,
-cover and biomass in shallow waters: An assessment of satellite multi-spectral and airborne
-hyperspectral imaging systems in Moreton Bay (Australia)}. Remote Sensing of
-Environment, 112:3413-3425. \pageref{Phinn08}
+Phinn S.\index[people]{Phinn S.}, Roelfsema C.\index[people]{Roelfsema C.}, Dekker A.\index[people]{Dekker A.G.}, Brando V.E.\index[people]{Brando V.E.}, Anstee J.M.\index[people]{Anstee J.M.} 2008. \emph{Mapping seagrass species, cover and biomass in shallow waters: An assessment of satellite multi-spectral and airborne
+hyperspectral imaging systems in Moreton Bay (Australia)}. Remote Sensing of Environment, 112:3413-3425. \pageref{Phinn08}
 \bibitem{Ralph05}
-Ralph P.J., Macinnis-Ng C.M.O., Frankart C. 2005. \emph{Fluorescence imaging application:
-effect of leaf age on seagrass photokinetics}. Aquatic Botany 81 (2005) 69–84. \pageref{Ralph05}
+Ralph P.J.\index[people]{Ralph P.J.}, Macinnis-Ng C.M.O.\index[people]{Macinnis-Ng C.M.O.}, Frankart C.\index[people]{Frankart C.} 2005. \emph{Fluorescence imaging application: effect of leaf age on seagrass photokinetics}. Aquatic Botany 81 (2005) 69–84. \pageref{Ralph05}
 \bibitem{Rasib97}
-Rasib A.W. and Hashim M. 1997. \emph{Mapping Seagrass From Satellite Remote Sensing
+Rasib A.W.\index[people]{Rasib A.W.} and Hashim M.\index[people]{Hashim M.} 1997. \emph{Mapping Seagrass From Satellite Remote Sensing
 Data. Proceedings of Asian Conference on Remote Sensing}. \href{http://eprints.utm.my/2161/}{eprints.utm.my} \pageref{Rasib97}
 \bibitem{Ribed02}
-Ribed P.S. 2002. \emph{Submarine vegetation studies using remote sensing: importance in
-beach measurements}. Journal of Environmental Protection and Ecology, 3 No 4, 953-958
-(2002) \pageref{Ribed02}
+Ribed P.S.\index[people]{Ribed P.S.} 2002. \emph{Submarine vegetation studies using remote sensing: importance in beach measurements}. Journal of Environmental Protection and Ecology, 3 No 4, 953-958 (2002) \pageref{Ribed02}
 \bibitem{Richardson06}
-Richardson L.L., LeDrew Ellesworth F. 2006. \emph{Remote Sensing of Aquatic Costal
+Richardson L.L.\index[people]{Richardson L.L.}, LeDrew Ellesworth F.\index[people]{LeDrew E.F.} 2006. \emph{Remote Sensing of Aquatic Costal
 Ecosystems Processes}. Springer. Science and Management Applications. \pageref{Richardson06}
 \bibitem{Robbins94}
-Robbins B.D., Bell S.S. 1994. \emph{Seagrass landscapes: a terrestrial approach to the marine
+Robbins B.D.\index[people]{Robbins B.D.}, Bell S.S.\index[people]{Bell S.S.} 1994. \emph{Seagrass landscapes: a terrestrial approach to the marine
 subtidal environment}. TREE vol.9, no 8, doi:10.1016/0169-5347(94)90041-8 \pageref{Robbins94}
 \bibitem{Sabins97}
-Sabins F. 1997. \emph{Remote Sensing, Principles and Interpretation}. W.H. Freeman and
+Sabins F.\index[people]{Sabins F.} 1997. \emph{Remote Sensing, Principles and Interpretation}. W.H. Freeman and
 Company, New York. \pageref{Sabins97}
 \bibitem{Schmidt03}
-Schmidt K. and Skidmore A.K. 2003. \emph{Spectral discrimination of vegetation types in a
+Schmidt K.\index[people]{Schmidt K.} and Skidmore A.K.\index[people]{Skidmore A.K.} 2003. \emph{Spectral discrimination of vegetation types in a
 coastal wetland}. Remote Sensing of Environment. 85:92-108. \pageref{Schmidt03}
 \bibitem{Schmieder97}
-Schmieder K. 1997. \emph{Littoral zone - GIS of Lake Constance: a useful tool in lake
+Schmieder K.\index[people]{Schmieder K.} 1997. \emph{Littoral zone - GIS of Lake Constance: a useful tool in lake
 monitoring and autecological studies with submersed macrophytes}. Aquatic Botany 58
 (1997) 333-346 \pageref{Schmieder97}
 \bibitem{Schultz08}
-Schultz S.T. 2008. \emph{Seagrass monitoring by underwater videography: Disturbance
+Schultz S.T.\index[people]{Schultz S.T.} 2008. \emph{Seagrass monitoring by underwater videography: Disturbance
 regimes, sampling design, and statistical power}. Aquatic Botany 88 (2008) 228–238. \pageref{Schultz08}
 \bibitem{Short01}
-Short F.T. and Coles R.G. (eds). 2001. \emph{Global Seagrass Research Methods}, p 482.
+Short F.T.\index[people]{Short F.T.} and Coles R.G.\index[people]{Coles R.G.} (eds). 2001. \emph{Global Seagrass Research Methods}, p 482.
 Elsevier Publishing Co., Amsterdam \pageref{Short01}
 \bibitem{Shortis07}
-Shortis M., Harvey E., Seager J. 2007. \emph{A Review of the Status and Trends in Underwater
-Videometric Measurement}. SPIE Conference 6491, Videometrics IX,IS and T/SPIE Electronic
-Imaging, San Jose, California, U.S.A., 28 January–1 February 2007 \pageref{Shortis07}
+Shortis M.\index[people]{Shortis M.}, Harvey E.\index[people]{Harvey E.}, Seager J.\index[people]{Seager J.} 2007. \emph{A Review of the Status and Trends in Underwater Videometric Measurement}. SPIE Conference 6491, Videometrics IX,IS and T/SPIE Electronic Imaging, San Jose, California, U.S.A., 28 January–1 February 2007 \pageref{Shortis07}
 \bibitem{Stephens03}
-Stephens F.C., Louchard E.M., Reid R.P., Maffione R.A. 2003. \emph{Effects of microalgal
-communities on reflectance spectra of carbonate sediments in subtidal optically shallow
+Stephens F.C.\index[people]{Stephens F.C.}, Louchard E.M.\index[people]{Louchard E.M.}, Reid R.P.\index[people]{Reid R.P.}, Maffione R.A.\index[people]{Maffione R.A.} 2003. \emph{Effects of microalgal communities on reflectance spectra of carbonate sediments in subtidal optically shallow
 marine environments}. Limnology and Oceanography, 48:535-546. \pageref{Stephens03}
 \bibitem{Thorhaug07}
-Thorhaug, A., Richardson, A. D. and Berlyn, G. P. 2007. \emph{Spectral reflectance of the
-seagrasses: Thalassia testudinum, Halodule wrightii, Syringodium filiforme and five marine
+Thorhaug, A.\index[people]{Thorhaug, A.}, Richardson, A. D.\index[people]{Richardson, A.D.} and Berlyn, G.P.\index[people]{Berlyn, G.P.} 2007. \emph{Spectral reflectance of the seagrasses: Thalassia testudinum, Halodule wrightii, Syringodium filiforme and five marine
 algae}. International Journal of Remote Sensing, 28: 7, 1487 — 1501. \pageref{Thorhaug07}
 \bibitem{Toole00}
-Toole D.A., Siegel D.A., Menzies D.W., Neumann M.J. and Smith R.C. 2000. 
-\emph{Remote-sensing reflectance determinations in the coastal ocean
-environment: impact of instrumental characteristics and environmental variability}. Applied
-Optics 39(3), 456-469. \pageref{Toole00}
+Toole D.A.\index[people]{Toole D.A.}, Siegel D.A.\index[people]{Siegel D.A.}, Menzies D.W.\index[people]{Menzies D.W.}, Neumann M.J.\index[people]{Neumann M.J.} and Smith R.C.\index[people]{Smith R.C.} 2000. \emph{Remote-sensing reflectance determinations in the coastal ocean environment: impact of instrumental characteristics and environmental variability}. Applied Optics 39(3), 456-469. \pageref{Toole00}
 \bibitem{Vahtmae06}
-Vahtmae E, Kutser T, Martin G, Kotta J. 2006. \emph{Feasibility of hyperspectral remote
-sensing for mapping benthic macroalgal cover in turbid coastal waters - a Baltic Sea case
+Vahtmae E.\index[people]{Vahtmae E.}, Kutser T.\index[people]{Kutser T.}, Martin G.\index[people]{Martin G.}, Kotta J.\index[people]{Kotta J.}, 2006. \emph{Feasibility of hyperspectral remote sensing for mapping benthic macroalgal cover in turbid coastal waters - a Baltic Sea case
 study. Remote Sensing of Environment} (2006) 101:342-351. \pageref{Vahtmae06}
 \bibitem{Vahtmae07}
-Vahtmae E. and Kutser T. 2007. \emph{Mapping bottom type and water depth in shallow
-coastal waters with satellite remote sensing}. Journal of Coastal Research, SI 50 (Proceedings
-of the 9th International Coastal Symposium), 185 – 189. Gold Coast, Australia, ISSN
-0749.0208 \pageref{Vahtmae07}
+Vahtmae E.\index[people]{Vahtmae E.} and Kutser T.\index[people]{Kutser T.} 2007. \emph{Mapping bottom type and water depth in shallow
+coastal waters with satellite remote sensing}. Journal of Coastal Research, SI 50 (Proceedings of the 9th International Coastal Symposium), 185 – 189. Gold Coast, Australia, ISSN 0749.0208 \pageref{Vahtmae07}
 \bibitem{Villegas06}
-Villegas P. P. 2006. \emph{Magnitude of herbivory in \textit{Posidonia oceanica} (L.) Delile and
+Villegas P. P.\index[people]{Villegas P. P.} 2006. \emph{Magnitude of herbivory in \textit{Posidonia oceanica} (L.) Delile and
 factors responsible for spatial variation}. Available on web: \href{http://www.tesisenxarxa.net/}{tesisenxarxa} \pageref{Villegas06}
 \bibitem{Wabnitz08}
-Wabnitz C.C., Andréfouët S., Torres-Pulliza D., M\"uller-Karger F. E. and Kramer P.A.
-2008. \emph{Regional-scale seagrass habitat mapping in the Wider Caribbean region using
-Landsat sensors: Applications to conservation and ecology}. Remote Sensing of
-Environment Vol. 112, Issue 8, 15 August 2008, Pages 3455-3467 Earth Observations for
-Marine and Coastal Biodiversity and Ecosystems Special Issue. \pageref{Wabnitz08}
+Wabnitz C.C.\index[people]{Wabnitz C.C.}, Andr\'efou\"et S.\index[people]{Andr\'efou\"et S.}, Torres-Pulliza D.\index[people]{Torres-Pulliza D.}, M\"uller-Karger F. E.\index[people]{M\"uller-Karger F. E.} and Kramer P.A.\index[people]{Kramer P.A.}, 2008. \emph{Regional-scale seagrass habitat mapping in the Wider Caribbean region using Landsat sensors: Applications to conservation and ecology}. Remote Sensing of Environment Vol. 112, Issue 8, 15 August 2008, Pages 3455-3467 Earth Observations for Marine and Coastal Biodiversity and Ecosystems Special Issue. \pageref{Wabnitz08}
 \bibitem{Walker89}
-Walker, D.I., 1989. \emph{Methods for monitoring seagrass habitat}. Proceedings Rep.
-Workshop, 20-22 June 1988, Melbourne, Australia, VIMS Working Paper 18, pp. 1-26. \pageref{Walker89}
+Walker, D.I.\index[people]{Walker, D.I.}, 1989. \emph{Methods for monitoring seagrass habitat}. Proceedings Rep. Workshop, 20-22 June 1988, Melbourne, Australia, VIMS Working Paper 18, pp. 1-26. \pageref{Walker89}
 \bibitem{Werdell03}
-Werdell P.J. and Roesler C.S. 2003. \emph{Remote assessment of benthic substrate composition
-in shallow waters using multispectral reflectance}. Limnol. Oceanogr., 48 (1, part 2), 557–
-567 \pageref{Werdell03}
+Werdell P.J.\index[people]{Werdell P.J.} and Roesler C.S.\index[people]{Roesler C.S.} 2003. \emph{Remote assessment of benthic substrate composition
+in shallow waters using multispectral reflectance}. Limnol. Oceanogr., 48 (1, part 2), 557–567 \pageref{Werdell03}
 \bibitem{Yang10}
-Yang Ch., Yang D., Cao W., Zhao J., Wang G., Sun Zh., Xu Zh., Kumar M. S. R. 2010. 
-\emph{Analysis of seagrass reflectivity by using a water column correction algorithm}. International
-Journal of Remote Sensing. 31: 17, 4595 — 4608. \pageref{Yang10}
+ Yang Ch.\index[people]{Yang Ch.}, Yang D.\index[people]{Yang D.}, Cao W.\index[people]{Cao W.}, Zhao J.\index[people]{Zhao J.}, Wang G.\index[people]{Wang G.}, Sun Zh.\index[people]{Sun Zh.}, Xu Zh.\index[people]{Xu Zh.}, Kumar M. S. R.\index[people]{Kumar M. S. R.} 2010. 
+\emph{Analysis of seagrass reflectivity by using a water column correction algorithm}. International Journal of Remote Sensing. 31: 17, 4595 — 4608. \pageref{Yang10}
 
 \end{thebibliography}
 
-\cleardoublepage
+
+%\cleardoublepage
 \newpage
-\section*{List of People}
-\markright{List of People}
-\addcontentsline{toc}{section}{List of People}
+\singlespacing
+%\section*{List of People}
+%\markright{List of People}
+%\addcontentsline{toc}{section}{List of People}
+%\indexsetup{level=\section,toclevel=section}
+\printindex[people]
 \pagebreak
 
-\singlespacing
+
 \cleardoublepage
 \newpage
-\phantomsection
-\addcontentsline{toc}{section}{Index}
-\printindex
+%\phantomsection
+%\addcontentsline{toc}{section}{Index}
+\printindex[concepts]
 
 
 \end{document}

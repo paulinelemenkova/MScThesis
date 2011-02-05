@@ -313,16 +313,14 @@ An Index of Concepts is placed in the end of the Document to help the reader fin
 		\item \href{http://www.ilwis.org/}{ILWIS}, \href{http://www.erdas.com/products/ERDASIMAGINE/ERDASIMAGINE/Details.aspx}{Erdas Imagine}: imagery processing and classification
 		\item \href{http://www.filewatcher.com/b/ftp/ftp.dfd.dlr.de/pub/WASI.0.0.html}{WASI Water Color Simulator}, for modelling optical water 					properties under changing environment
 		\item \href{http://welcome.hp.com/country/us/en/prodserv/handheld.html}{iPAQ} and \ac{GPS} for data capture during the fieldwork
-		\item \href{http://www.bibtex.org/de/}{BibTeX}, for management of bibliography and reference database
 		\item \href{http://www.latex-project.org/}{\LaTeX}, for document typesetting, formatting and performing pdf output
-		\item \href{http://www.python.org/}{Python language}, for writing auxiliary scripts (e.g. raw data interpolation)
-		\item \href{http://www.gnuplot.info/}{Gnuplot} for plotting graphs
-		\item \href{http://www.openoffice.org/}{Open Office}: document typesetting, data pre-processing and preliminary statistical evaluation
-		
+		\item \href{http://www.bibtex.org/de/}{BibTeX}, for management of bibliography and reference database
+		\item \href{http://www.gnuplot.info/}{GNUplot} for plotting graphs
+		\item \href{http://gretl.sourceforge.net/}{Gretl: GNU Regression, Econometrics and Time-series Library} for statistic analysis
+		\item \href{http://www.openoffice.org/}{Open Office}: document typesetting, data pre-processing and preliminary statistical evaluation		
 		\item \href{http://www.spss.com/}{SPSS (PASW Statistics 18)}: statistical data edition and analysis 
-		\item \href{http://gretl.sourceforge.net/}{Gretl: Gnu Regression, Econometrics and Time-series Library} for statistic analysis
+		
 		\item \href{http://staruml.sourceforge.net/en/}{StarUML}, \href{http://live.gnome.org/Dia}{Dia}, \href{http://argouml.tigris.org/}						{ArgoUML}: \ac{UML} diagram tool for creating flowcharts of work algorithms
-		\item \href{http://inkscape.org/}{Inkscape}: drawing
 	\end{itemize}
 	
 	\vspace{1ex}
@@ -330,8 +328,10 @@ An Index of Concepts is placed in the end of the Document to help the reader fin
 	\begin{itemize}
 		\item \href{http://www.lyx.org/}{LyX} for exporting \LaTeX document to the Word .doc format via HTML
 		\item \href{http://calc2latex.sourceforge.net/}{Calc2LaTeX}: converting spreadsheets into \LaTeX environment
+		\item \href{http://www.python.org/}{Python language}, for writing auxiliary scripts (e.g. raw data interpolation)
 		\item \href{http://openev.sourceforge.net/}{OpenEV}: used for raster Google Earth imagery viewing, visualisation and preliminary analysis
 		\item \href{http://www.notepad-plus-plus.org/}{Notepad++}: auxiliary text editing and raw data formatting
+		\item \href{http://inkscape.org/}{Inkscape} and \href{http://www.gimp.org/}{Gimp: GNU Image Manipulation Program} for auxiliary drawing
 	\end{itemize}
 	
 \pagebreak
@@ -700,7 +700,7 @@ images, GIS-based spatial analysis and ground \textit{in-situ} surveys.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.48]{UML_ClassDiagram.jpg}
-	\caption{General methodological approach for the analysis of spectral signatures. \href{http://argouml.tigris.org/}{ArgoUML}}
+	\caption{General methodological approach for the analysis of spectral signatures. \href{http://argouml.tigris.org/}{ArgoUML}, \href{http://www.gimp.org/}{Gimp}}
 	\label{fig:1.10}
 \end{figure}
 The current study is based on the application of the remote sensing data, broadband satellite imagery,
@@ -1380,6 +1380,13 @@ particle \cite{Gege04}\label{Gege04}.
 
 \begin{figure}[H]
 	\centering
+	\includegraphics[scale=0.35]{GNU-20-new.jpg}
+	\caption{Statistical comparison of spectral reflectance of \textit{P.oceanica} and carbonate sand. Selected measurements sets. \href{http://www.gnuplot.info/}{Gnuplot} graph}
+	\label{fig:28}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
 	\includegraphics[scale=0.5]{GNU-17.jpg}
 	\caption{Optical properties of the sea water with sediments, measured in aquarium tank. Agia Pelagia district, Crete. \href{http://www.gnuplot.info/}				{Gnuplot}}\label{fig:4.2}
 \end{figure}
@@ -1391,27 +1398,11 @@ underwater visibility \cite{Maffione97}\label{Maffione97}. WASI enables simulati
 water, large and small particles. The values of all these parameters can be redacted and changed
 manually. However, the most important, major factors affecting the \textit{in-situ} conditions are water depth (Fig.\ref{fig:4.9})
 and cover fraction of the seafloor types: \textit{P.oceanica} and carbonate sand.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.27]{GNU-18.jpg}
-	\caption{Multiplot showing spectral reflectance of the seawater with sediments, measured in aquarium tank, Agia Pelagia district, Crete. \href{http://www.gnuplot.info/}{Gnuplot} \\Two complimentary graphs below show the results of the statistical analysis.}
-	\label{fig:4.4}
-\end{figure}
-
 Seagrass \textit{P.oceanica} can be mapped using remotely acquired spectral imagery, but only if it has distinctive
 reflectance signatures at different depths. Therefore, the depths of the shelf area are the first variable
 condition for this research question. The depths values chosen for the current research are lesser than
 3.5 meters, covering shelf zone, and providing the best environmental conditions for the seagrass
 \textit{P.oceanica}: 0.5, 2.0 and 3.5 meters with an interval of 1.5 meters. 
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.3]{GNU-20-new.jpg}
-	\caption{Statistical comparison of spectral reflectance of \textit{P.oceanica} and carbonate sand. Selected measurements sets. \href{http://www.gnuplot.info/}{Gnuplot} graph}
-	\label{fig:28}
-\end{figure}
-
 The 3.5 m depth limit was chosen based on the analysis of the separability of seagrass reflectance signatures, received by the means of
 previous \textit{in-situ} measurements (year 2009) of the radiance and irradiance of water in Agia Pelagia
 bay, which indicated that \textit{P.oceanica} seagrass could be only well separated within depths of 3.5 m.
@@ -1420,6 +1411,13 @@ research question: whether the 	extit{P.oceanica} spectra is spectrally distinct
 conditions, and if \textit{P.oceanica} remains spectrally distinct with the increasing water column depth.
 To answer this research question, different seafloor cover types are discriminated using data of the
 broadband remote sensing.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.3]{GNU-18-legend.png}
+	\caption{Multiplot showing spectral reflectance of the seawater with sediments, measured in aquarium tank, Agia Pelagia district, Crete. \href{http://www.gnuplot.info/}{Gnuplot} \\Two complimentary graphs below show the results of the statistical analysis.}
+	\label{fig:4.4}
+\end{figure}
 
 \begin{table}[htbp]
 	\rowcolors{1}{LightSteelBlue}{Honeydew}
@@ -1620,13 +1618,13 @@ irradiance received in Agia Pelagia bay.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.40]{GNU-19.jpg}
-	\caption{Statistical analysis of the spectral reflectance of \textit{P.oceanica}: min-max, average values (red bold points), Q1-Q3 areas (green vertical dashed) and 			measured values (dotted): multiplot of measurement sets 200-300. \href{http://www.gnuplot.info/}{Gnuplot}}
+	\caption{Statistical analysis of the spectral reflectance of \textit{P.oceanica}: min-max, average values (red bold points), Q1-Q3 areas (green vertical dashed) and 	measured values (dotted): multiplot of measurement sets 200-300. \href{http://www.gnuplot.info/}{Gnuplot}}
 	\label{fig:4.10}
 \end{figure}
 \begin{figure}[H]
 	\centering
 	\subfloat [Sand]{\label{fig:34a}\includegraphics[width=0.4\textwidth]{Fig-27a.jpg}}
-	\subfloat [\textit{	extit{P.oceanica}}]{\label{fig:34b}\includegraphics[width=0.4\textwidth]{Fig-27b.jpg}}
+	\subfloat [\textit{P.oceanica}]{\label{fig:34b}\includegraphics[width=0.4\textwidth]{Fig-27b.jpg}}
 	\caption{Bottom albedo of carbonate sand and \textit{P.oceanica}, Agia Pelagia}
 	\label{fig:4.11}
 \end{figure}
@@ -1765,7 +1763,7 @@ measurements data: Table 2.
 
 \begin{table}
 \rowcolors{1}{Khaki}{LightYellow}
-\caption{Statistical analysis of the measurements of spectral reflectance of 	extit{P.oceanica} (fragment)}
+\caption{Statistical analysis of the measurements of spectral reflectance of \textit{P.oceanica} (fragment)}
 \centering
   \begin{tabular}{| c | c | c | c | c |}
     \hline

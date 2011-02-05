@@ -1465,17 +1465,14 @@ broadband remote sensing.
 
 The results enable to study reflectance properties of the seagrass and other
 seafloor types. Application of the optical radiative transfer model WASI is suggested to simulate
-remote sensing sensors (\ac{MODIS}, \ac{ASTER}, \ac{MERIS} and \ac{SeaWiFS}), (Fig.\ref{fig:4.6}).
+remote sensing sensors (\ac{MODIS}, \ac{ASTER}, \ac{MERIS} and \ac{SeaWiFS}), (Fig.\ref{fig:4.6}, Fig.\ref{fig:4.6W}).
 
-\begin{figure}[h]
+\begin{wrapfigure}{r}{0.5\textwidth}
 	\centering
-	\subfloat [CZCS]{\label{fig:29a}\includegraphics[width=0.4\textwidth]{Fig-35a.jpg}}
-	\subfloat [MERIS]{\label{fig:29b}\includegraphics[width=0.4\textwidth]{Fig-35b.jpg}}\\
-	\subfloat [MODIS]{\label{fig:29c}\includegraphics[width=0.4\textwidth]{Fig-35c.jpg}}
-	\subfloat [SeaWiFS]{\label{fig:29d}\includegraphics[width=0.4\textwidth]{Fig-35d.jpg}}
-	\caption{Simulated remote sensing reflectance of \textit{P.oceanica} at various sensors}
+	\includegraphics[scale=0.45]{Sensors.png}
+	\caption{Combined plots of simulated remote sensing reflectance of \textit{P.oceanica} at various sensors: MODIS, MERIS, SeaWiFS and CZCS.}
 	\label{fig:4.6}
-\end{figure}
+\end{wrapfigure}
 
 In order to focus on the factors of primary importance, other and less influencing factors are excluded,
 i.e. sun angle, concentration of the suspected particles in the water column, content of gelbstoff, etc.
@@ -2699,12 +2696,22 @@ To make further studies of \textit{P.oceanica} more effective we would suggest t
 \pagebreak
 %%% Gretl end
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=0.22]{GNU-10.jpg}
 		\caption{Spectral reflectance of the seawater without sediments. Interpolation graph. \href{http://www.gnuplot.info/}{Gnuplot} display­}
 		\label{fig:A.24}
 	\end{center}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\subfloat [CZCS]{\label{fig:29a}\includegraphics[width=0.4\textwidth]{Fig-35a.jpg}}
+	\subfloat [MERIS]{\label{fig:29b}\includegraphics[width=0.4\textwidth]{Fig-35b.jpg}}\\
+	\subfloat [MODIS]{\label{fig:29c}\includegraphics[width=0.4\textwidth]{Fig-35c.jpg}}
+	\subfloat [SeaWiFS]{\label{fig:29d}\includegraphics[width=0.4\textwidth]{Fig-35d.jpg}}
+	\caption{WASI-simulated remote sensing reflectance of \textit{P.oceanica} at various sensors}
+	\label{fig:4.6W}
 \end{figure}
 
 %%% Gretl start

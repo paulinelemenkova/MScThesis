@@ -51,7 +51,7 @@
 %\floatstyle{boxed} 
 \restylefloat{figure}
 \usepackage{hyperref}
-\hypersetup{pdftitle={Seagrass mapping and monitoring along the coasts of Crete, Greece}, pdfauthor={Lemenkova Polina}, pdfsubject={MScThesis}, pdfcreator={Lemenkova Polina}, pdfproducer={Lemenkova Polina}, colorlinks=true,linkcolor=Navy, citecolor=Crimson, filecolor=magenta, urlcolor=blue}
+\hypersetup{pdftitle={Seagrass mapping and monitoring along the coasts of Crete, Greece}, pdfauthor={Lemenkova Polina}, pdfsubject={MScThesis}, pdfcreator={Lemenkova Polina}, pdfproducer={Lemenkova Polina}, colorlinks=true,linkcolor=Navy, citecolor=Crimson, filecolor=magenta, urlcolor=blue,pdfkeywords={P.oceanica, seagrass, spectral reflectance, remote sensing, WASI, RTM, Google Earth, mapping, Crete}}
 
 %%%%%%%%%%%%%%%%%%%%%%%% End Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -161,6 +161,20 @@ Environmental Modelling and Management.\\
 	\tableofcontents 
 \pagebreak
 
+\clearpage
+\section*{Dedication}
+	\markright{Dedication}
+	\addcontentsline{toc}{section}{Dedication}
+%\begin{flushright}
+\newenvironment{dedication}
+    {\vspace{16em}\begin{quotation}\begin{center}\begin{em}}
+    {\par\end{em}\end{center}\end{quotation}}
+\begin{dedication}
+\large{\textsc{To my elder brother and best friend, \textbf{Peter Lemenkov}\index[people]{Lemenkov, P.}}}
+\end{dedication}
+%\end{flushright}
+\pagebreak
+
 \section*{Acknowledgements}
 	\markright{Acknowledgements}
 	\addcontentsline{toc}{section}{Acknowledgements}
@@ -169,7 +183,7 @@ This research was carried out at the University of Twente, \href{http://www.itc.
 \vspace{1mm}\\
 I thank my scientific supervisors, Dr. \textit{Albertus G.Toxopeus}\index[people]{Toxopeus, A.G.}  and Mr. \textit{Valentijn Venus}\index[people]{Venus, V.} from the ITC, Department of Natural Resources, for our successful scientific collaboration, help and discussions of my research work. 
 I also express them my most sincere appreciations for our fieldwork on Crete. \\ Besides scientific routine, we had an unforgettable time spent together. \\ Personally, I would like to mention that I have visited Greece the first time in my life, and I will always remember my Cretan period-2010 and Ligaria beach.\vspace{1mm}\\
-I extend my gratitude to the staff of the Museum of Natural History, the University of Crete, especially to Dr.\textit{Petros Limberakis}\index[people]{Limberakis, Petros} and his colleagues, for their assistance during our fieldwork, providing us with all necessary equipment (e.g. SCUBA gear diving, instruments for underwater measurements, etc). I also appreciate their very warm, personal attitude and interest towards our research. 
+I extend my gratitude to the staff of the Museum of Natural History, Department of Zoology of the University of Crete, especially to Dr.\textit{Petros Lymberakis}\index[people]{Lymberakis, P.} and his colleagues, for their assistance during our fieldwork, providing us with all necessary equipment (e.g. SCUBA gear diving, instruments for underwater measurements, etc). I also appreciate their very warm, personal attitude and interest towards our research. 
 \vspace{1mm}\\
 My sincere gratitude goes again to Mr.\textit{Valentijn Venus}\index[people]{Venus, V.} for his generous providing me with a lot of spatial data   relevant to my research (e.g. such as digital vector layers of Crete island, raster georeferenced maps for the whole island for my GIS project, Excel spreadsheets, etc). Without these vital data the implementation of this project would have hardly been possible. I am also thankful to him for the technical help in Google Earth imagery capturing, using GDAL technologies and assistance during the fieldwork (videometric underwater footage, consultancies in seagrass observation and monitoring, driving boat, etc). \\ My special thank to his personal, friendly support in various situations on Crete.\vspace{1mm}\\
 I am thankful to Dr.rer.nat.\textit{Peter Gege}\index[people]{Gege P.}, the software developer from the Earth Observation Centre of the German Space Agency, for his generous consultancies concerning the technical question about WASI that arose during my work. I am thankful for all his explanations and articles given to me via e-mail \vspace{1mm}\\
@@ -214,6 +228,12 @@ The current MSc thesis focuses on the monitoring of seagrass \textit{P.oceanica}
 This research was articulated in two parts, where the first one involves an ecological approach to the seagrass distribution in various regions around the globe and the experience of seagrass monitoring nowadays. The second part of this work has technical character and investigates the application of the remote sensing techniques towards seagrass mapping. It, furthermore, focuses on the optical properties of the \textit{P.oceanica} and other seafloor cover types, and studies distinguishability of various seafloor cover types. Studies of the optical characteristics of separate seafloor cover types were made with purpose to clarify, whether their spectral properties change with varying environmental conditions. \\
 Special attention has been drawn on the role of environmental factors on the distribution of \textit{P.oceanica} along the coasts of Crete, and in particular, how the optical properties of the seafloor cover types, i.e. spectral reflectance, are being changed under varying external conditions, e.g. water column, amount of suspended particles and sediments in the seawater, and water temperature. For this purpose we studied differences in the spectral reflectance of \textit{P.oceanica} and other bottom cover types at three distinct depths. The diverse spectral values entail variations in optical properties of the seafloor cover types at changing environmental conditions. We applied \ac{WASI} simulation techniques for the modelling of the optical parameters of various seafloor cover types by various spaceborne imaging spectrometers (\ac{MERIS}, \ac{SeaWiFS}, \ac{CZCS} and \ac{MODIS}), in order to understand their suitability and possible limitations for the seagrass mapping.\\
 Fieldwork research sites were presented by separate locations on the northern coast of Crete region (Ligaria, Agia Pelagia, Xerocampos). The additional measurements of the reflectance spectra of the seawater with and without sediments have been made in aquarium tank in 2009 by means of Trios-RAMSES spectroradiometer. Parallel to the collection of spectra signatures, we captured the imagery for the seagrass mapping, which consists of the aerial images from the Google Earth website and the satellite Landsat TM and ETM+ scenes. 
+
+\section*{Keywords}
+\markright{Keywords}
+\addcontentsline{toc}{section}{Keywords}
+\textit{P.oceanica}, seagrass monitoring, spectral reflectance, remote sensing, WASI, Google Earth, Crete
+
 \pagebreak
 
 \section*{Document Outline}
@@ -246,12 +266,14 @@ An Index of Concepts is placed in the end of the Document to help the reader fin
 	\acro{ASTER}{\href{http://asterweb.jpl.nasa.gov/}{Advanced Spaceborne Thermal Emission and Reflection Radiometer}} 
 	%\acro{BRDF}{Bidirectional Reflectance Distribution Function}
 	\acro{CASI}{\href{http://www.borstad.com/casi.html}{Compact Airborne Spectrographic Imager}}
+	\acro{CDOM}{\href{http://en.wikipedia.org/wiki/CDOM}{Colored Dissolved Organic Matter}}
 	\acro{CNES}{\href{http://www.cnes.fr/}{Centre National d'Etudes Spatiales (of France)}}
 	\acro{CRTM}{\href{http://www.jcsda.noaa.gov/projects_crtm.php}{Community Radiative Transfer Model}}
 	\acro{CZCS}{\href{http://oceancolor.gsfc.nasa.gov/CZCS/}{Coastal Zone Color Scanner}}
 	\acro{DISORT}{\href{ftp://climate1.gsfc.nasa.gov/wiscombe/Multiple_Scatt/DISORT1.2/}{Discrete Ordinates Radiative Transfer Program for a Multi-Layered Plane-Parallel Medium}}
 	\acro{ENVISAT}{\href{http://envisat.esa.int/instruments/meris/}{ENVIronmental SATellite}}
 	\acro{ESA}{\href{http://www.esa.int/}{European Space Agency}}
+	\acro{FOV}{\href{http://en.wikipedia.org/wiki/FOV}{Field Of View}}
 	%\acro{ERS}{European Remote Sensing satellite}
 	\acro{GIS}{Geographic Information System}
 	%\acro{GNU}{GNU's Not Unix}
@@ -320,7 +342,7 @@ An Index of Concepts is placed in the end of the Document to help the reader fin
 		\item \href{http://gretl.sourceforge.net/}{Gretl: GNU Regression, Econometrics and Time-series Library} for statistic analysis
 		\item \href{http://www.openoffice.org/}{Open Office}: document typesetting, data pre-processing and preliminary statistical evaluation		
 		\item \href{http://www.spss.com/}{SPSS (PASW Statistics 18)}: statistical data edition and analysis 
-		
+		\item \href{http://fwtools.maptools.org/}{FWTools}: for operating images formats	
 		\item \href{http://staruml.sourceforge.net/en/}{StarUML}, \href{http://live.gnome.org/Dia}{Dia}, \href{http://argouml.tigris.org/}						{ArgoUML}: \ac{UML} diagram tool for creating flowcharts of work algorithms
 	\end{itemize}
 	
@@ -729,6 +751,9 @@ glint and depth effects correction as recommended \cite{Matarrese08}\label{Matar
 working step the training sites for the supervised classification methods are designed, as well as its
 control and trials of different classification approaches (Unsupervised, K-means or Isodata;
 Supervised, Maximum Likelihood).
+
+\subsection{Research assumptions}\index[concepts]{Research!assumptions}
+The wind roughening the water surface causes sun glitter, and the values spectral reflectance may contain disturbances and noisy if the solar zenith angle is too high, say approaching 60-70 degrees. Therefore, the measurements should be made at midday (noon) with as low zenith angle (Fig.\ref{fig:A.2-1})\label{zenith} as possible.
 \pagebreak
 
 %%%%%%%%%%%%%%%%%  Section2   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -771,7 +796,7 @@ research and reporting various approaches for the monitoring and mapping of the 
 sensing applications. Their reports and guidelines were used for references in the current research. 
 
 
-\subsection[Measuring water optical properties]{Measuring water optical properties: \\hyperspectral radiometers}
+\subsection[Measuring water optical properties]{Measuring water optical properties: \\hyperspectral radiometers}\label{sec:2-2}
 Among various research approaches for the seagrass mapping the most popular methods are based on application of the remote sensing techniques,
  enabling to detect and discriminate the substratum and various vegetation types growing on the seafloor.
 The application of the remote sensing data for seagrass mapping is based on our knowledge of the
@@ -825,7 +850,7 @@ level of precision, specially calibrated for air and for water application as we
 measurements  (Fig.\ref{fig:2.1}). These products have been used for the radiance and irradiance
 measurements in Agia Pelagia bay, Crete Island, 2009.
 
-\subsection[Radiative Transfer Models (RTM)]{Radiative Transfer Models (RTM) for the simulation of water optical properties: a brief review of existing tools}
+\subsection[Radiative Transfer Models (RTM)]{Radiative Transfer Models (RTM) for the simulation of water optical properties: a brief review of existing tools}\label{sec:2-3}
 
 Understanding radiance distribution within a water colum\index[concepts]{Seawater optical properties!RTM}n is necessary for the studies of the underwater visibility, because scattering properties of the water body naturally vary with changing depth, wavelength and environmental conditions.  Simulation of the radiance quantities for natural water bodies enables to analyse seafloor color remote sensing properties. Therefore, the artificial modelling of the seawater optical properties by means of the \ac{RTM} is used when water optics is studied under changing environment (e.g., depths, sun angle, suspended particles in water column). \\ In such cases a retrieval of water optical parameters from the remote measurements should be tested and analyzed. 
 \newline
@@ -1326,9 +1351,7 @@ detailed habitat and seafloor types discrimination, comparing with images
 acquired from the space-borne satellite platforms.\\
 The spatial coverage of the Google imagery is lesser comparing to spaceborne images, but this can be solved as
 well: while in general providing smaller area coverage than satellites images, the Google Earth
-images can be stitched to the composite maps of the acceptable spatial extent, using Google grabbing
-process which allows multiple overlapping of single images over the flight paths, and generates
-mosaics.
+images can be stitched to the composite maps of the acceptable spatial extent, using script written on Python for the \textit{Google Earth} aerial imagery grabbing process (Fig.\ref{fig:A.1} and Fig.\ref{fig:A.2})\label{gdal} which allows multiple overlapping of single images over the flight paths into one swath, and generates imagery mosaics.
 
 %%%%%%%%%%%%%%%%%  Section  4  %%%%%%%%%%%%%%%%%%%%%%%
 \section{Results}\label{sec:4}
@@ -1918,8 +1941,8 @@ deposition of sediments during and after floods\cite{Bell99}\label{Bell99}.
 Increased nutrient sedimentation, especially phosphorus, were explored \cite{Jensen01}\label{Jensen01} as a
 potential mechanism for increasing patch dynamics and morphological plasticity within seagrass
 meadows. Finally, increasing the degree of fragmentation of the landscapes of 	extit{P.oceanica} meadows
-can be caused by the invasion of alien species, such as Cymodocea nodosa, Caulerpa prolifera,
-Caulerpa taxifolia. Invaders are in general strong colonizers comparing to native \textit{P.oceanica}: they
+can be caused by the invasion of alien species, such as \textit{Cymodocea nodosa, Caulerpa prolifera,
+Caulerpa taxifolia}. Invaders are in general strong colonizers comparing to native \textit{P.oceanica}: they
 occupy much greater habitat space within the regressed meadows of stressed native seagrass
 \cite{Montefalcone10}\label{Montefalcone10}. However, on the northern coasts of Crete the only dominating seagrass
 species is \textit{P.oceanica}.
@@ -1928,13 +1951,20 @@ the different-scale mapping. Therefore, the investigation of the seagrass meadow
 performed using underwater videometric measurements, aerial and satellite imagery.
 
 \section{Discussion}\label{sec:5}
-An approach of the seagrass spectral analysis, monitoring and mapping has been taken in this work, which integrates various research techniques and tools, combining remote sensing methods of spectral analysis of the seafloor cover types, and knowledge of the ecology of \textit{P.oceanica}, with the aim to develop a method of seagrass spectral optical discrimination for the seagrass mapping based on imagery classification.\vspace{1ex}\\
-The ecological variables, specific to the field environmental conditions, were factored into the \ac{WASI}-based simulation models. Through the \ac{WASI} simulation process, imitating spectral properties of \textit{P.oceanica} and carbonate sand for various broadband and narrowband sensors, models were created that accounted for not only atmospheric conditions (i.e. sun zenith angle), but also height of water column, thus approaching it to the Mediterranean conditions, and chemical content of the seawater (i.e. amount of suspended particles, Gelbstoff, etc), which results in models of optical properties of ``seawater with sediments" and ``seawater without sediments".\vspace{1ex}\\
-The \textit{in-situ} field large-scale matte-level level of seafloor monitoring was then upscaled to airborne Google Earth aerial imagery interpretation, to provide a meadow-level view of seagrass landscapes. An attempt of the small-scale mapping is designed on an example of Landsat satellite imagery. However, in upscaling to this third, small-scale mapping level further environmental variables need to be considered: health conditions of the seagrass, presence of other underwater vegetation (e.g. other seagrass species), hydrological specifications (e.g. direction and speed of currents, amplitude of tidal waves, etc), season, date and times of the image taken. Therefore, we focused on the first two levels in the current work. These different levels have been individually considered in terms of the seagrass spectral discernibility for monitoring and mapping, from which the first two levels have been brought together, to provide a roundup of the achieved results and an overview of what still has to be done in \textit{P.oceanica} seagrass mapping by future researchers (see Recommendations). \vspace{1ex}\\
-The finding of \textit{Chapter 4}, \nameref{sec:4} showed that the relationship between the spectral reflectance of various seafloor cover types was tied to depth, i.e. water column height. Thus, the results of the in-situ fieldwork measurements revealed that spectral reflectance of P.oceanica undergo alterations at depths of 0.5, 2.0 and 3.5m (Fig.\ref{fig:4.9}), which positively answers the first research question of this thesis (``Is \textit{P.oceanica} spectrally distinct from other seafloor cover types with varying in-situ conditions ?"). \vspace{1ex}\\
-Further in \textit{Chapter 4}, \nameref{sec:4}, studies of the broadband versus narrowband sensors demonstrate that simulated spectra of the seagrass, made using \ac{WASI} modeller, have the best results at \ac{CZCS} scanner, especially devoted to the measurement of ocean color. The spectrum of \textit{P.oceanica} reflectance, simulated for \ac{CZCS}, covers the wavelength interval of 400-800 nm, and is distinctive for various depths. Other remote sensors (\ac{MODIS}, \ac{SeaWiFS}) may also be used for the seagrass mapping, because their technical characteristics enable to spectrally discriminate \textit{P.oceanica} seagrass from other seafloor cover types (Fig.\ref{fig:4.6}), particularly carbonate sand as tested in the current work. Therefore, the second research question of this MSc thesis (``Can broadband and hyperspectral remote sensing data be used for the mapping of \textit{P.oceanica}: what sensor yields enough radiometric details to discriminate seagrass from other seafloor cover types?") is answered with ``yes'', and the most suitable sensor is the Coastal Zone Color Scanner \ac{CZCS}.\vspace{1ex}\\
-The graphs showing optical properties of seawater with and without sediments (Fig.\ref{fig:4.4}, Fig.\ref{fig:27}, Fig.\ref{fig:4.2}) focused on spectral variability of the water with changed physical and chemical content. The alterations in the individual spectral signatures of single measurements (e.g. on Fig.\ref{fig:4.13}, Fig.\ref{fig:A.25}, Fig.\ref{fig:A.27}, Fig.\ref{fig:A.28}) reflect individual health properties of leaves: different nitrogen and chlorophyll content causing diverse colour pigmentation and light absorption, water content in leaves, plant physiological conditions, which vary across seagrass meadow, shoot morphology, etc. The differences in spectral reflectance values of the measurements taken on various days might have been caused by the impact of atmospheric conditions, such as solar radiation and sun illumination by different zenith angle.
-
+An approach of the seagrass spectral analysis, monitoring and mapping has been taken in this work, which integrates various research techniques and tools, combining remote sensing methods of spectral analysis of the seafloor cover types, and knowledge of the ecology of \textit{P.oceanica}, with the aim to develop a method of seagrass spectral optical discrimination for the seagrass mapping based on the aerial imagery classification.\vspace{1ex}\\
+In \textit{Chapter 1:} \nameref{sec:1} we discusses main objective of this MSc thesis, which was to study possibilities of seagrass mapping, based on the application of the remote sensing measurement of the seawater optical properties using hyperspectral radiometers. 
+The relationship between the optical properties (spectral reflectance) of the seafloor cover types and hydrological parameters of the environment has been studied in order to analyse limitations and capabilities of broadband and narrowband sensors under the conditions of altering environmental parameters. For the retrieval of hydrological parameters - seawater radiance, irradiance and spectral reflectance of various seafloor cover types, - spectral optical field measurements were carried out in 2009 at the testing sites in Agia Pelagia, Heraklion and Ligaria beach, Crete Island using \ac{Trios-RAMSES} spectroradiometers.\\
+Further in \textit{Chapter 1:} 1.8 Research assumptions, we assume the constant values of the optical properties of the seawater, phytoplankton, total amount of suspended particles and solids, atmospheric conditions, as well as \ac{CDOM}, which have been set up in modelling part of this work, during \ac{WASI} simulations of various remote sensors.\vspace{1ex}\\
+The second \textit{Chapter 2:} \nameref{sec:2} starts from the review of the available research resources and then discusses various \nameref{sec:2-3} and concludes with reported experience of the remote sensing application towards seagrass mapping: \nameref{sec:2.4.1}. In section 2.2 of \textit{Chapter 2:} \nameref{sec:2}, \nameref{sec:2-2}, Measuring water optical properties: hyperspectral radiometers, the \ac{Trios-RAMSES}-ACC-\ac{UV} and \ac{Trios-RAMSES}-ARC spectroradiometers of \ac{Trios-RAMSES} Hyperspectral Sensor series are described. \\
+The instruments \ac{Trios-RAMSES} have been used during the fieldwork measurements-2009 for the collection of the reflectance spectra. The \ac{Trios-RAMSES}-ACC-\ac{UV} measures spectra in the wavelength domain between 280 nm and 500nm, the \ac{Trios-RAMSES}-ARC, suitable for UV and visible spectra, covers diapason of 320-950 nm with spectral accuracy of 0.3nm (better than 6\%), typical saturation (at 200nm) of  $1Wm^{-2}*nm^{-1}*sr^{-1}$ in 256 channels with a sampling interval of 3.3 nm/pixel and a \ac{FOV} is 7 degrees. The spectral reflectance of the seawater with and without sediments, respectively, was calculated by the ratio of the radiance and irradiance values. \\
+The reflectance spectra of \textit{P.oceanica} show (Fig.\ref{fig:4.10}, Fig.\ref{fig:A.12}, Fig. \ref{fig:A.12}, Fig.\ref{fig:A.13}, Fig.\ref{fig:A.25}, Fig. \ref{fig:A.26}) a values maximum between 450 nm and 600 nm, first, because of the chlorophyll absorption peak at 465 and 665nm (Fig. \ref{fig:A.2-2})\label{chlorophyll}, secondly, because of the weakening of \ac{CDOM} (or Gelbstoff) in the blue part of the \ac{VIS} spectrum, as it most strongly absorbs short wavelength light in blue to ultraviolet range, and finally, because the absorption of the seawater increases in the red part of the \ac{VIS} spectra. The decrease in spectral reflectance values of \textit{P.oceanica} after 660 nm (Fig.\ref{fig:A.13}) is caused by the second absorption peak of phytoplankton. The magnitude of the reflectance maximum slightly varies at single variables between about 8 \% and 12 \% (as on Fig.\ref{fig:A.12}) and is probably related to the individual pigmentation and colour composition of single leaves, their structure and geometric orientation, which naturally causes variations in radiance values. \\
+The ecological variables, specific to the field environmental conditions, were factored into the \ac{WASI}-based simulation models. Through the \ac{WASI} simulation process, imitating spectral properties of \textit{P.oceanica} and carbonate sand for various broadband and narrowband sensors, models were created that accounted for not only atmospheric conditions (i.e. sun zenith angle), but also height of water column, thus approaching it to the Mediterranean conditions, and chemical content of the seawater (i.e. amount of suspended particles, Gelbstoff, etc), which results in models of optical properties of ``seawater with sediments" and ``seawater without sediments".\\
+The \textit{in-situ} field large-scale matte-level level of seafloor monitoring was then upscaled to airborne Google Earth aerial imagery interpretation, to provide a meadow-level view of seagrass landscapes. An attempt of the small-scale mapping is designed on an example of Landsat satellite imagery. However, in upscaling to this third, small-scale mapping level further environmental variables need to be considered: health conditions of the seagrass, presence of other underwater vegetation (e.g. other seagrass species), hydrological specifications (e.g. direction and speed of currents, amplitude of tidal waves, etc), season, date and times of the image taken. Therefore, we focused on the first two levels in the current work. These different scale levels have been individually considered in terms of the seagrass spectral discernibility for monitoring and mapping, and have been brought together, to provide a roundup of the achieved results and an overview of what still has to be done in \textit{P.oceanica} seagrass mapping by future researchers (see \nameref{sec:7}). \vspace{1ex}\\
+In \textit{Chapter 3}: \nameref{sec:3}, describing data collection, a videographic approach tested in previous works, has been applied during the summer fieldwork, when we captured imagery and video footage of the seafloor on several routes of the boat in the Ligaria beach.\\
+The finding of \textit{Chapter 4}, \nameref{sec:4} showed that the relationship between the spectral reflectance of various seafloor cover types was tied to depth, i.e. water column height. Thus, the results of the in-situ fieldwork measurements revealed that spectral reflectance of \textit{P.oceanica} undergo alterations at depths of 0.5, 2.0 and 3.5m (Fig.\ref{fig:4.9}). These results indicate that seagrass \textit{P.oceanica} can in general be detected and discriminated from other seafloor cover types with varying environmental conditions, i.e. water column height, by hyperspectral spectroradiometers (\ac{Trios-RAMSES}), which positively answers the \textbf{first research question} of this thesis (``Is \textit{P.oceanica} spectrally distinct from other seafloor cover types with varying in-situ conditions ?"). \vspace{1ex}\\
+Further in \textit{Chapter 4}, \nameref{sec:4}, studies of the broadband versus narrowband sensors demonstrate that simulated spectra of the seagrass, made using \ac{WASI} modeller, have the best results at \ac{CZCS} scanner, especially devoted to the measurement of ocean color. The spectrum of \textit{P.oceanica} reflectance, simulated for \ac{CZCS}, covers the wavelength interval of 400-800 nm, and is distinctive for various depths. Other remote sensors (\ac{MODIS}, \ac{SeaWiFS}) may also be used for the seagrass mapping, because their technical characteristics enable to spectrally discriminate \textit{P.oceanica} seagrass from other seafloor cover types (Fig.\ref{fig:4.6}), particularly carbonate sand as tested in the current work. Therefore, the \textbf{second research question} of this MSc thesis (``Can broadband and hyperspectral remote sensing data be used for the mapping of \textit{P.oceanica}: what sensor yields enough radiometric details to discriminate seagrass from other seafloor cover types?") is answered with ``yes'', and the most suitable sensor is the Coastal Zone Color Scanner \ac{CZCS}.\vspace{1ex}\\
+The graphs showing optical properties of seawater with and without sediments (Fig.\ref{fig:4.4}, Fig.\ref{fig:27}, Fig.\ref{fig:4.2}) focused on spectral variability of the water with changed physical and chemical content. The alterations in the individual spectral signatures of single measurements (e.g. on Fig.\ref{fig:4.13}, Fig.\ref{fig:A.25}, Fig.\ref{fig:A.27}, Fig.\ref{fig:A.28}) reflect individual health properties of leaves: different nitrogen and chlorophyll content causing diverse colour pigmentation and light absorption, water content in leaves, plant physiological conditions, which vary across seagrass meadow, shoot morphology, etc. The differences in spectral reflectance values of the measurements taken on various days might have been caused by the impact of atmospheric conditions, such as solar radiation and sun illumination by different zenith angle.\vspace{1ex}\\
+For further development of the  remote sensing based monitoring and mapping of the seagrass and other seafloor cover types it is desirable to consider the substratum and underwater relief in a more detailed way, i.e. bathymetric properties of the testing sizes, because changes in relief directly cause and reinforce the colonisation process of \textit{P.oceanica} meadows. Thus, the depression and valleys in relief in general stimulate increase of the sedimentation process. In turn, it enables accumulation of necessary nutrient for seagrass plant growth, increases resource allocation to the seagrass roots for better exploitation of pore-water nutrients by the \textit{P.oceanica} shoots. As for patchiness in seagrass landscapes, besides natural reasons, the anthropogenic disturbances (e.g. ocean trawling) still remain a main cause for landscapes fragmentation.
 \pagebreak
 
 \section{Conclusion}\label{sec:6}
@@ -1964,10 +1994,6 @@ To make further studies of \textit{P.oceanica} more effective we would suggest t
 		\item[Eleventh:] A flexible combination of the multi-scale mapping and results of the fieldwork measurements with \ac{GPS}-referenced underwater footage would enable more profound analysis of the coastal environment on Crete. 
 	\end{description}
 
-\section*{Keywords}
-\markright{Keywords}
-\addcontentsline{toc}{section}{Keywords}
-\textit{P.oceanica}, seagrass monitoring, spectral reflectance, remote sensing, WASI, Google Earth, Crete
 \pagebreak
 
 %%%%%%%%%%%%%%%%%%%  Appendix  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1981,28 +2007,43 @@ To make further studies of \textit{P.oceanica} more effective we would suggest t
 %\renewcommand{\thetable}{A-\arabic{table}}
 
 \section{appendices}\label{app}
-
-\subsection{\textit{Appendix-1}. Capturing aerial imagery from the Google Earth: grabbing process}
+\subsection{\textit{Appendix-1} \footnote{The page where the illustration is explained in the main text of MSc thesis is given in angle brackets (e.g., $<$10$>$).}. Capturing aerial imagery from the Google Earth}
 %\appendixname{\textbf{1: \\Capturing aerial imagery from the Google Earth: grabbing process}}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.6]{Fig-22.jpg}
-	\caption{Capturing aerial imagery from the Google Earth: grabbing process}
-	\label{fig:A.1}
+	\includegraphics[scale=0.55]{Fig-22.jpg}
+	\caption{Capturing aerial imagery from the Google Earth: grabbing process. Page: $<$\pageref{gdal}$>$}\label{fig:A.1}
 \end{figure}
 \pagebreak
 
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=0.4]{Script_Gdal.jpg}
-		\caption{Script command of FWTools2.4.7 enabling to reduce the size of the aerial images, from .tif to .ecw format.}
+		\caption{Script command of \href{http://fwtools.maptools.org/}{FWTools} enabling to reduce the size of the aerial images, from .tif to .ecw format. Page: $<$\pageref{gdal}$>$}\label{fig:A.2}
+	\end{center}	
+\end{figure}
+
+\subsection{\textit{Appendix-2}. Illustrations of some concepts and principles of the remote sensing, relevant for this work}
+%\appendixname{\textbf{2:\\ Instrumental adjustment and tuning (Trios-RAMSES setup)}}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.65]{Zenith.jpg}
+		\caption{Schematic illustration of the \textbf{solar zenith angle} and viewing zenith angle for observations from satellite-based instrument. Source: \href{http://sacs.aeronomie.be/}{Support to Aviation Control Service (SACS)}. Page: $<$\pageref{zenith}$>$}\label{fig:A.2-1}
 	\end{center}
-	\label{fig:A.2}
 \end{figure}
 \pagebreak
 
-\subsection[\textit{Appendix-2}. Instrumental adjustment and tuning]{\textit{Appendix-2}. Instrumental adjustment and tuning \\ (Trios-RAMSES setup)}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.6]{Chlorophyll.jpg}
+		\caption{Absorbance spectra of free chlorophyll a (green) and b (red) in a solvent. The spectra of chlorophyll molecules are slightly modified in vivo depending on specific pigment-protein interactions. \\ Source: \href{http://en.wikipedia.org/wiki/Portal:Contents/Quick_index}{Wikipedia.org}. Page: $<$\pageref{chlorophyll}$>$}\label{fig:A.2-2}
+	\end{center}
+\end{figure}
+\pagebreak
+
+\subsection[\textit{Appendix-3}. Instrumental adjustment and tuning]{\textit{Appendix-3}. Instrumental adjustment and tuning \\ (Trios-RAMSES setup)}
 %\appendixname{\textbf{2:\\ Instrumental adjustment and tuning (Trios-RAMSES setup)}}
 
 \begin{table}[H]\footnotesize
@@ -3490,6 +3531,7 @@ To make further studies of \textit{P.oceanica} more effective we would suggest t
 \newpage
 
 \subsection{\textit{Appendix-8}. Analysis and classification of the satellite and aerial images}
+%\appendixname{\textbf{8:\\ Satellite and aerial images covering research area of Crete island: selected examples}}
 
 \begin{figure}[H]
 	\begin{center}
@@ -3532,12 +3574,51 @@ To make further studies of \textit{P.oceanica} more effective we would suggest t
 \pagebreak
 
 \subsection{\textit{Appendix-9}. Research general workflow}
+%%%%%%%%%%%%%%%%%%%\appendixname{\textbf{9}}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.57]{UML_GIS.png}
 	\caption{General methodological research approach. \href{http://inkscape.org/}{Inkscape}}
 	\label{fig:1.11}
 \end{figure}
+\pagebreak
+
+\subsection{\textit{Appendix-10}. Some snapshots of the working process}
+%%%%%%%%%%%%%%%%%%%\appendixname{\textbf{10}}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{photo-1.jpg}
+	\caption{Google Earth aerial imagery grabbing, Heraklion, the University of Crete}
+	\label{fig:A.47}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{photo-2.jpg}
+	\caption{Adjusting waterproof Olympus cameras for underwater seafloor videometric measurements.\\Dr. \textit{Petros Lymberakis}\index[people]{Lymberakis, P.} (left) and Dr. \textit{Bert Toxopeus}\index[people]{Toxopeus, A.G.} (right)}
+	\label{fig:A.48}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{photo-3.jpg}
+	\caption{Sticking the marker into the seafloor bottom in mattte of \textit{P.oceanica} for depth measurements}
+	\label{fig:A.48}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{photo-5.jpg}
+	\caption{Placing the 0.5m circle and depth marker in the mattte of \textit{P.oceanica} for photo capture}
+	\label{fig:A.48}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{photo-4.jpg}
+	\caption{Monitoring different seafloor cover types: mattte of \textit{P.oceanica} vs carbonate sand. Ligaria beach.}
+	\label{fig:A.48}
+\end{figure}
+
 
 \end{appendices}
 \pagebreak

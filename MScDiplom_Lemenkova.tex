@@ -28,8 +28,10 @@
 \usepackage{imakeidx}
 \makeindex[name=concepts,title=Index of Concepts,intoc]
 \makeindex[name=people,title=Index of People,intoc,columns=3,columnseprule]
+\usepackage[fit]{truncate}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
+\fancyhead[RO,LE]{\truncate{.95\headwidth}{\leftmark}}
 \usepackage{fancyheadings}
 \topmargin = 1pt
 \headheight=10mm
@@ -690,25 +692,33 @@ General objectives:
 
 \subsection{Research questions}\index[concepts]{Research!questions}
 	\begin{itemize}	
-		\item Is \textit{P.oceanica} spectrally distinct from other seafloor cover types with varying \textit{in-situ} conditions ?
-		\item Can broadband and hyperspectral remote sensing data be used for the mapping of \textit{P.oceanica}: what sensor yields enough radiometric details to discriminate seagrass from other seafloor cover types ?
+		\item Is \textit{P.oceanica} spectrally distinct from carbonate sand with varying \textit{in-situ} conditions ?
+		\item Do broadband and hyperspectral sensors provide enough radiometric information for spectral discrimination of seagrass, and therefore, can be used for mapping of \textit{P.oceanica} ?
 	\end{itemize}
 
-\subsection{Hypotheses testing}\index[concepts]{Research!questions!hypothesis}
+\subsection{Hypotheses}\index[concepts]{Research!questions!hypothesis}
 A statistical testing will be used to compare between the spectral responses of the different seafloor cover types (i.e. sand and \textit{P. oceanica}),
  whether it is spectrally distinct and at least one pair is statistically different at every spectral
-band.
-Hypothesis $H_o$: seagrass types are not spectrally distinct from other seafloor types with
-varying \textit{in-situ} conditions, which means
-$H_o$: μ1 =μ2 =μ3=...= μn.
+band.\vspace{1ex}\\
+For the \emph{Research Question 1} the Hypothesis $H_o$ claims: seagrass types are not spectrally distinct from other seafloor types with
+varying \textit{in-situ} conditions, which means $H_o: \mu1 =\mu2 =\mu3=...= \mu n$.
 The alternative Hypothesis $H_a$ claims the opposite statement: seagrass is spectrally
-distinct with varying \textit{in-situ} conditions, $H_o$: μ$\neq$μ2$\neq$μ3$\neq$ ... $\neq$μn.
+distinct with varying \textit{in-situ} conditions, $H_o:\mu1\neq\mu2\neq\mu3\neq...\neq\mu n$.\vspace{1ex}\\
+For the \emph{Research Question 2} the Hypothesis $H_o$ claims: broadband and hyperspectral remote sensing data can be used for the mapping of \textit{P.oceanica}, because they do not provide enough radiometric information to discriminate sand from seagrass, which means $H_o:\mu1=\mu2=\mu3=...=\mu n$. The alternative Hypothesis $H_a$ claims the opposite statement: broadband and hyperspectral sensors do prove to provide enough radiometric information to discriminate sand from seagrass, 
+$H_o: \mu1\neq\mu2\neq\mu3\neq ... \neq\mu n$.\vspace{1ex}\\
 The distribution of the spectral responses at every spectral band is assumed to be normal as well as
 the equality of the statistical variances.
 The hypothesis testing is suggested to be carried out using the \ac{ANOVA} statistical test. The purpose of
 \ac{ANOVA} test is to visualize in an effective and quick way the spectral differences between seagrass
 species and their spatial distribution. Thus, the key hypotheses of the research will be tested to prove
 whether the results of the research are accurate, reasonable and correct.
+
+\subsection{Assumptions}\index[concepts]{Research!assumptions}
+The general research assumption, used in this work, in order to make feasible application of the remote sensing methods, includes some statements about the \textit{in-situ} atmospheric conditions, viewing angle, wave backscattering and other optical properties of the environment. They all definitely play a certain role and impact final results of optical measurements, but for practical reasons we have chosen to ignore their contribution in the spectral separability of seafloor cover types. We briefly list below general research assumptions for the optical properties of the environmental variables used in this study. \vspace{1ex}\\
+Weather conditions for the measurements are assumed to be ideal: clear, sunny, windless day. Otherwise wind roughens water surface causing sun glitter, and values of spectral reflectance may contain disturbances. \\ Sky radiance might be influenced by multiple reflectance between the sea surface albedo and the atmosphere and in general, sky radiance increases rapidly while viewing zenith angle is near to $90\,^{\circ}$ (i.e. in the evening hours). Therefore, ideally measurements should be done at noon, with as low zenith angle (Fig.\ref{fig:A.2-1})\label{zenith} as possible; otherwise, if the solar zenith angle is too high (e.g. approaching $60-70\,^{\circ}$), received data may contain noise. For \ac{WASI} simulations reflection factor of sky radiance is taken as 0.0201 with simulated ideal conditions: viewing angle ($0\,^{\circ}$ = nadir). The interval of water temperature taken as default lies in the diapason $17-25\,^{\circ}$ as to simulate the conditions of the Mediterranean Sea. However, in real time conditions the sun zenith angle of $45\,^{\circ}$ has been accepted as suitable. 
+The accepted model-specific parameters of the \ac{WASI} simulator are shown in the Table \ref{tab:3}.\label{page-10} \vspace{1ex}\\
+The anisotropy factor of upwelling radiation or the quality (Q-) factor, showing the directionally dependency of the radiance, is taken as 5. We accepted some values of model-specific optical parameters as default values at \ac{WASI} simulator, which are shown in the Table \ref{tab:3}. Thus, concentration of phytoplankton is accepted at the interval of $0.035-0.089 mg^{-1}$ and concentration of large suspended particles is given to 8. Reference wavelength for \ac{CDOM}, or Gelbstoff, absorption is equal to 440. The backscattering (Fig.\ref{fig:backscat}) is accepted to be $0.00144m^{-1}$. The coefficient of attenuation remains equal to 1.0546, as set up by default at \ac{WASI}.\vspace{1ex}\\
+We also assume that concentration of non-chlorophyll particles (absorption at 0) as well as concentration of small suspended particles is equal to zero, so we do not count them in this work. Exponent of \ac{CDOM} (Gelbstoff) absorption is accepted as 0.0140. Finally, the \ac{BRDF} of bottom reflectance (sand), which defines the reflection of light  is at an opaque surface (Fig.\ref{fig:BRDF})\label{page-11}, is assumed to be 0.318 $sr^{-1}$.
 
 \subsection{Research approach}\index[concepts]{Research!approach}
 Seagrass consistent monitoring and mapping is necessary and important for the sustainable coastal
@@ -738,8 +748,7 @@ substrate which can be read from their spectral signatures \cite{Werdell03}\labe
 	\label{fig:1.10}
 \end{figure}
 
-The spectral reflectance, distinct for each seafloor cover type, enables their discrimination on the image. The pre-processing
-of the images includes imagery corrections for atmospheric noises and effects of the water
+The pre-processing of the images includes imagery corrections for atmospheric noises and effects of the water
 column. Reflectance spectra of the seagrass canopy at different depths of the water-column are
 analysed for the discrimination of their spectral signatures, enabling to separate various seafloor types
 during classification. The results of the of imagery classification are analysed for the detection of the
@@ -756,18 +765,9 @@ control and trials of different classification approaches (Unsupervised, K-means
 Supervised, Maximum Likelihood).
 \pagebreak
 
-\subsection{Research assumptions}\index[concepts]{Research!assumptions}
-The general research assumption that is used for further applications of the remote sensing methods of this work is that optical properties of the spectral reflectance of the seawater with different bottom substrata enable to discriminate seafloor cover types using remote sensing products from broadband sensors.\vspace{1ex}\\
-The accepted model-specific parameters of the \ac{WASI} simulator are described in Table 4.2. The weather conditions for the measurements are assumed to be perfect: clear, sunny, windless days, because wind roughen water surface causing sun glitter, therefore, values of spectral reflectance may contain disturbances. \\ Sky radiance might be influenced by multiple reflectance between the sea surface albedo and the atmosphere and in general, sky radiance increases rapidly while viewing zenith angle is near to $90\,^{\circ}$ (i.e. in the evening hours). Therefore, ideally measurements should be done at noon, with as low zenith angle (Fig.\ref{fig:A.2-1})\label{zenith} as possible; otherwise, if the solar zenith angle is too high (e.g. approaching $60-70\,^{\circ}$), received data may contain noise. For \ac{WASI} simulations reflection factor of sky radiance is taken as 0.0201 with simulated ideal conditions: viewing angle ($0\,^{\circ}$ = nadir). The interval of water temperature taken as default lies in the diapason $17-25\,^{\circ}$ as to simulate the conditions of the Mediterranean Sea. However, in real time conditions the sun zenith angle of $45\,^{\circ}$ has been accepted as suitable.\vspace{1ex}\\
-The anisotropy factor of upwelling radiation or the quality (Q-) factor, showing the directionally dependency of the radiance, is taken as 5. We accept some values of optical parameters as default values at \ac{WASI}. Thus, concentration of phytoplankton is accepted at the interval of $0.035-0.089 mg^{-1}$ and concentration of large suspended particles is given to 8. Reference wavelength for \ac{CDOM} (Gelbstoff) absorption is equal to 440. The coefficient of attenuation remains equal to 1.0546, as set up by default at \ac{WASI}.\vspace{1ex}\\
-We also assume that concentration of non-chlorophyll particles (absorption at 0) as well as concentration of small suspended particles is equal to zero, so we do not count them in this work. Exponent of \ac{CDOM} (Gelbstoff) absorption is accepted as 0.0140. Finally, the \ac{BRDF} of bottom reflectance (sand), which defines the reflection of light  is at an opaque surface (Fig.A.2.5), is assumed to be 0.318 $sr^{-1}$.
-
-
-\pagebreak
-
 %%%%%%%%%%%%%%%%%  Section2   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section[Overview of literature]{Seagrass monitoring: overview of literature and research resources} \label{sec:2}
-\markright{II. Seagrass monitoring: overview of literature and research resources}
+\section[Seagrass monitoring: overview of literature and research resources]{Seagrass monitoring: overview of literature and research resources} \label{sec:2}
+\markright{Seagrass monitoring: overview of literature and research resources}
 \renewcommand{\headrulewidth}{0.4pt}
 \counterwithin{figure}{section}
 \counterwithin{table}{section}
@@ -805,7 +805,11 @@ research and reporting various approaches for the monitoring and mapping of the 
 sensing applications. Their reports and guidelines were used for references in the current research. 
 
 
-\subsection[Measuring water optical properties]{Measuring water optical properties: \\hyperspectral radiometers}\label{sec:2-2}\label{page-12}
+\subsection[Measuring optical properties of benthic vegetation: hyperspectral radiometers]{Measuring optical properties of benthic vegetation: hyperspectral radiometers%
+\sectionmark{Measuring optical properties}}
+\sectionmark{Overview of literature...}\label{sec:2-2}\label{page-12}
+
+
 Among various research approaches for the seagrass mapping the most popular methods are based on application of the remote sensing techniques,
  enabling to detect and discriminate the substratum and various vegetation types growing on the seafloor.
 The application of the remote sensing data for seagrass mapping is based on our knowledge of the
@@ -859,7 +863,11 @@ level of precision, specially calibrated for air and for water application as we
 measurements  (Fig.\ref{fig:2.1})\label{page-13}. These products have been used for the radiance and irradiance
 measurements in Agia Pelagia bay, Crete Island, 2009.
 
-\subsection[Radiative Transfer Models (RTM)]{Radiative Transfer Models (RTM) for the simulation of water optical properties: a brief review of existing tools}\label{sec:2-3}
+%\subsection[Radiative Transfer Models (RTM)]{Radiative Transfer Models (RTM) for the simulation of water optical properties: a brief review of existing software tools}\label{sec:2-3}
+
+\subsection[Radiative Transfer Models (RTM) for the simulation of water optical properties: a brief review of existing software tools]{Radiative Transfer Models (RTM) for the simulation of water optical properties: a brief review of existing software tools%
+\subsectionmark{Radiative Transfer Models (RTM)}}
+\sectionmark{Overview of literature...}\label{sec:2-3}
 
 Understanding radiance distribution within a water colum\index[concepts]{Seawater optical properties!RTM}n is necessary for the studies of the underwater visibility, because scattering properties of the water body naturally vary with changing depth, wavelength and environmental conditions.  Simulation of the radiance quantities for natural water bodies enables to analyse seafloor color remote sensing properties. Therefore, the artificial modelling of the seawater optical properties by means of the \ac{RTM} is used when water optics is studied under changing environment (e.g., depths, sun angle, suspended particles in water column). \\ In such cases a retrieval of water optical parameters from the remote measurements should be tested and analyzed. 
 \newline
@@ -895,7 +903,8 @@ Other methods of seagrass \textit{in-situ} monitoring are based on the applicati
 techniques is that, initially intended for the bathymetric surveying, acoustic equipment is mostly designed for the geomorphological and geological studies of the underwater substratum and are, therefore, more adjusted for the benthic habitat discrimination, and they are not effective for the identifying of the biological species composition or even the presence of aquatic vegetation such as seagrasses and seaweeds \cite{Werdell03}\label{Werdell03}. The results of the \textit{in-situ} measurements and observation are usually
 managed and treated using integrated \ac{GIS} approach, as, e.g. reported by Schmieder \cite{Schmieder97}\label{Schmieder97}.
 
-\subsection[Application of the remote sensing...]{Application of the remote sensing data towards seagrass mapping}\index[concepts]{Remote sensing}\label{page-15}
+\subsection[Application of the remote sensing data towards seagrass mapping]{Application of the remote sensing data towards seagrass mapping}\index[concepts]{Remote sensing}\label{page-15}
+
 Various methods and approaches have been applied towards mapping of the seagrasses, based on
 digitized aerial photographs, \ac{GPS} data, remote sensing and \ac{SCUBA}-based (Fig.\ref{fig:A.52}) fieldwork measurements.
 \ac{SCUBA}-based \textit{in-situ} observations, though providing high resolution and accuracy results in seagrass
@@ -979,8 +988,7 @@ scattering and absorption by phytoplankton. Some authors \cite{Dierssen03}\label
 spectrally based radiative transfer approach to quantitatively estimate shallow-water bathymetry and
 leaf area index (\ac{LAI}) of the seagrass. The spectral reflectance in general is the
 result of the spectral absorption in different bands, typical for each target object.
-Spectral reflectance\index[concepts]{Seawater optical properties!spectral reflectance} of the seagrass  (Fig.\ref{fig:13})\label{page-17} is largely influenced by the water
-depth where it is located, and is generally decreasing in values by increasing depths.
+Spectral reflectance\index[concepts]{Seawater optical properties!spectral reflectance} of the seagrass  (Fig.\ref{fig:13})\label{page-17} is largely influenced by the water depth where it is located, and is generally decreasing in values by increasing depths.
 The most important spectral diapason\index[concepts]{Seawater optical properties!spectral reflectance!spectral diapason} for marine mapping of submerged vegetation and, particularly, for seagrass, is 350-800 nm \cite{Barille09}\label{Barille09}.
 Using airborne imagery for retrospective data (before 1970s) together with the most
 recent imagery allows to detect changes in seagrass distribution on over different years
@@ -995,7 +1003,8 @@ susceptible by the means of satellite imagery from remote sensors, both with mod
 well (e.g., \href{http://www.satimagingcorp.com/gallery-ikonos.html}{IKONOS}, \href{http://www.digitalglobe.com/index.php/85/QuickBird}{Quickbird}, \href{http://www.spotimage.fr/}{SPOT}, \href{http://www.itres.com/products/imagers/casi550}{CASI}). The possibility of their application towards seagrass mapping varies and is limited by the technical characteristics (Table \ref{tab:1}) and resolution of these sensors  (Fig.\ref{fig:2.3}).
 In the next paragraphs (\nameref{sec:2.4.1} and \nameref{sec:2.4.2}) we will briefly discuss research experience of the application of satellite imagery towards seagrass mapping, its advantages and limitations, reported by various researchers.
 
-\subsubsection[Review of multispectral imagery...]{Review of multispectral imagery used for seagrass mapping}\label{sec:2.4.1}\index[concepts]{Remote sensing!multispectral imagery} 
+\subsubsection[Review of multispectral imagery used for seagrass mapping]{Review of multispectral imagery used for seagrass mapping}\subsectionmark{Review of multispectral imagery used for seagrass mapping}\label{sec:2.4.1}\index[concepts]{Remote sensing!multispectral imagery}
+
 Seagrass mapping using remotely sensed data\label{page-18} from multispectral sensors is based on the classification
 and discrimination of the seafloor types using their spectral characteristics in different wavebands.
 
@@ -1087,7 +1096,8 @@ application of multispectral imagery for the spectral discrimination of the seaf
 mapping the submerged landscapes on the basis of pixels classification, the application of data from
 hyperspectral sensors has better potential due to their higher resolution (Fig.\ref{fig:2.5})\label{page-20}.
 
-\subsubsection[Review of hyperspectral imagery...]{Review of hyperspectral imagery used for seagrass mapping}\label{sec:2.4.2}\index[concepts]{Remote sensing!hyperspectral imagery}
+\subsubsection[Review of hyperspectral imagery used for seagrass mapping]{Review of hyperspectral imagery used for seagrass mapping}\subsectionmark{Review of hyperspectral imagery used for seagrass mapping}\label{sec:2.4.2}\index[concepts]{Remote sensing!hyperspectral imagery}
+
 The application of the hyperspectral sensors \label{page-20} is most effective and provide more accurate classification
 results  (Fig.\ref{fig:2.5}), due to their higher spectral resolution \cite{Bharathi03}\label{Bharathi03} with interval
 narrows to 10 nanometers, while broadband sensors are limited to the spectral width of ca
@@ -1126,7 +1136,7 @@ Thus, the use of multispectral imagery
 with high spatial resolution is preferable to using hyperspectral medium resolution data in case of
 mapping benthic vegetation in areas where the spatial heterogeneity is very high \cite{Vahtmae07}\label{Vahtmae07}.
 
-\subsubsection{Comparison of seagrass spectra }\label{sec:2.5.3}
+\subsubsection[Comparison of seagrass spectra]{Comparison of seagrass spectra}\subsectionmark{Comparison of seagrass spectra}\label{sec:2.5.3}
 
 The reflectance spectra from different seagrass species reported in various research works demonstrate diverse spectral signatures which are dependent on the mixture of environmental conditions as well as individual characteristics of the seagrass. 
 In the current work we have compiled an extensive measurements dataset (up to 400 single spectral profiles) of the reflectance spectra from various seafloor cover types (P.oceanica and carbonate sand) in the coastal waters of Crete Island, which is partly visualized on the plotted graphs (Fig.\ref{fig:4.2}, Fig.\ref{fig:4.10}, \ref{fig:A.12}, \ref{fig:A.13}, \ref{fig:A.15}, \ref{fig:A.25}, \ref{fig:A.26}).
@@ -1287,7 +1297,7 @@ mounted under the bottom of the boat Fig.\ref{fig:A.51}\label{page-27} to captur
 were taken at proper weather conditions: sunny, serene and cloud-free days with glassy sea state. 
 The locations of the route were randomly selected in the areas of the Ligaria beach, to ensure most dense
 coverage of the seagrass meadows in the research area. The underwater measurements of the seagrass
-coverage were carried out by taking video footage and photos of ca 0.5 m2 size each (Fig.\ref{fig:A.7}, Fig.\ref{fig:A.55}).
+coverage were carried out by taking video footage and photos of ca 0.5 $m^2$ size each (Fig.\ref{fig:A.7}, Fig.\ref{fig:A.55}).
 The results of the underwater videometric measurements include series of digital images helping to
 classify seafloor cover types (Fig.\ref{fig:A.56}) and seagrass meadows, according to the differences in the structure,
 colour, texture and shapes of the depicted objects\label{page-27}.
@@ -1455,8 +1465,7 @@ software tool for analyzing and simulating the most common types of spectra \cit
 suitable for the seagrass spectral analysis.
 There are several environmental characteristics, included in \ac{WASI} interface (Fig.\ref{fig:4.7}), which influence the
 results of water spectral reflectance, e.g. different bottom depths, concentration of suspended particles
-in water column, water temperature, sun angle, concentration of Gelbstoff (\ac{CDOM}), concentration of phytoplankton, aerosol scattering, exponent of backscattering by small
-particle \cite{Gege04}\label{Gege04}. 
+in water column, water temperature, sun angle, concentration of Gelbstoff (\ac{CDOM}), concentration of phytoplankton, aerosol scattering, exponent of backscattering by small particles \cite{Gege04}\label{Gege04}. 
 
 \begin{figure}[H]
 	\centering
@@ -1607,7 +1616,7 @@ Although seagrass \textit{P.oceanica} can be found until depth limits down to 40
 
 \begin{table}[H]\footnotesize
 	\rowcolors{1}{Aquamarine}{Azure}
-	\caption{Model-specific parameters of water WASI adjusted to simulate environment of the Mediterranean Sea along Crete. Page: $<$\pageref{page-36}$>$}
+	\caption{Model-specific parameters of water WASI adjusted to simulate environment of the Mediterranean Sea along Crete. Pages: $<$\pageref{page-10}$>$, $<$\pageref{page-36}$>$} \label{tab:3}
 	\centering
 	 \begin{tabular}{|  p{2cm} | p{6cm} | p{25mm} | }
 	    \hline
@@ -1633,8 +1642,7 @@ Although seagrass \textit{P.oceanica} can be found until depth limits down to 40
 		    C-Y & Concentration of \ac{CDOM} Gelbstoff (absorption at $\lambda_0$) & 0.400 \\ \hline
 		    Bn & BDRF of bottom reflectance (sand) & 0.318 $sr^{-1}$\\
 	    \hline
-	  \end{tabular}
-	   \label{tab:3}
+	  \end{tabular}	  
 \end{table}
 
 The increase of depths (zB) influences weakening of light and thus directly affects
@@ -2008,7 +2016,7 @@ To make further studies of \textit{P.oceanica} more effective we would suggest t
 	\end{center}	
 \end{figure}
 
-\subsection{Illustrations of some concepts and principles of the remote sensing, relevant for this work}
+\subsection{Illustrations of remote sensing principles used for seagrass monitoring}
 %%%%%%%%%%  \appendixname{Illustrations of some concepts and principles of the remote sensing}  %%%%%%%%%%%%%%
 
 \begin{figure}[H]
@@ -2037,19 +2045,19 @@ mapping seagrasses habitat boundaries. \\ Source: \href{http://kurrawa.gbrmpa.go
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=0.6]{backscattering.jpg}
-		\caption{Example of wave backscattering from the vegetation (here: rice). Source: \href{http://cse.niaes.affrc.go.jp/miwa/esid/highlight/microwave-backscatter.html}{Yoshio Inoue}}.\label{fig:backscat}
+		\caption{Example of wave backscattering from the vegetation. Source: \href{http://cse.niaes.affrc.go.jp/miwa/esid/highlight/microwave-backscatter.html}{Yoshio Inoue}. Page: $<$\pageref{page-11}$>$}.\label{fig:backscat}
 	\end{center}
 \end{figure}
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=0.4]{BRDF.jpg}
-		\caption{BRDF is a ratio of reflected radiance along $\omega_o$ to the irradiance from direction $\omega_i$, all parameterized by azimuth angle $\phi$ and zenith angle $\theta$. Source: \href{http://en.wikipedia.org/wiki/Portal:Contents/Quick_index}{Wikipedia.org}}.\label{fig:BRDF}
+		\caption{BRDF is a ratio of reflected radiance along $\omega_o$ to the irradiance from direction $\omega_i$, all parameterized by azimuth angle $\phi$ and zenith angle $\theta$. Source: \href{http://en.wikipedia.org/wiki/Portal:Contents/Quick_index}{Wikipedia.org}. Page: $<$\pageref{page-11}$>$}.\label{fig:BRDF}
 	\end{center}
 \end{figure}
 
 \pagebreak
 
-\subsection[Instrumental adjustment and tuning]{Instrumental adjustment and tuning. (Trios-RAMSES setup)}
+\subsection[Instrumental adjustment and tuning: Trios-RAMSES setup]{Instrumental adjustment and tuning: Trios-RAMSES setup}
 %\appendixname{\textbf{2:\\ Instrumental adjustment and tuning (Trios-RAMSES setup)}}
 
 \begin{table}[H]\footnotesize
@@ -2133,7 +2141,7 @@ mapping seagrasses habitat boundaries. \\ Source: \href{http://kurrawa.gbrmpa.go
 \end{table}
 \pagebreak
 
-\subsection[Types of seagrass structural patterns]{Types of seagrass structural patterns, Ligaria beach, Crete}
+\subsection[Types of seagrass structural patterns: Ligaria beach, Crete]{Types of seagrass structural patterns: Ligaria beach, Crete}
 %\appendixname{\textbf{3: \\Types of seagrass structural patterns, Ligaria beach, Crete}}
 
 \begin{figure}[h]

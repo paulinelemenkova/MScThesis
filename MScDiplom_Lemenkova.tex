@@ -871,17 +871,15 @@ measurements in Agia Pelagia bay, Crete Island, 2009.
 
 Understanding radiance distribution within a water colum\index[concepts]{Seawater optical properties!RTM}n is necessary for the studies of the underwater visibility, because scattering properties of the water body naturally vary with changing depth, wavelength and environmental conditions.  Simulation of the radiance quantities for natural water bodies enables to analyse seafloor color remote sensing properties. Therefore, the artificial modelling of the seawater optical properties by means of the \ac{RTM} is used when water optics is studied under changing environment (e.g., depths, sun angle, suspended particles in water column). \\ In such cases a retrieval of water optical parameters from the remote measurements should be tested and analyzed. 
 \newline
-We briefly discuss below the most effective RTM software and algorithms from a range of various best-known up-to-date tools. 
+We briefly discuss below the most effective RTM software and algorithms, suitable for underwater radiance simulations, from a range of various best-known up-to-date tools. 
 	\begin{itemize}
-		\item [*] The \ac{6SV1} \index[concepts]{Seawater optical properties!RTM!6SV1} is a US atmospheric correction algorithm, developed in the University of Maryland; adjusted for the \ac{MODIS} satellite imagery lookup tables. The 6S algorithm has been \href{http://grass.osgeo.org/grass64/manuals/html64_user/i.atcorr.html}{implemented} by the \ac{GRASS} software for the atmospheric correction 				 
+		\item [*] The \ac{6SV1} \index[concepts]{Seawater optical properties!RTM!6SV1} is a US atmospheric correction algorithm, developed in the University of Maryland; adjusted for the \ac{MODIS} satellite imagery lookup tables. The 6S algorithm has been \href{http://grass.osgeo.org/grass64/manuals/html64_user/i.atcorr.html}{implemented} by the \ac{GRASS} software for the atmospheric correction 	 
 		\item [*] Another example of the RTM adjusted for a specific imagery is a German \ac{KOPRA}\index[concepts]{Seawater optical properties!RTM!KOPRA}, fitted for \ac{MIPAS} and \ac{ENVISAT} imagery.
 		\item [*]  The \href{http://www.sequoiasci.com/products/Hydrolight.aspx}{\textit{HydroLight RTM}} commercial software is an advanced model for oceanic radiative transfer calculations, developed by the Sequoia Scientific, Inc., USA. It is designed to solve a wide range of problems in optical oceanography and limnology.   
 		\item [*] The British \ac{RTTOV-9}\index[concepts]{Seawater optical properties!RTM!RTTOV-9} is a radiative transfer model, developed for nadir viewing atmospheric sounders and imagers. It includes a number of useful tolls, e.g. can compute sea-surface emissivity for each channel, enables, to specify cloudiness for radiance calculations, etc.  This program runs under Unix/Linux platforms and is open source. 
 		\item [*] The \ac{RRTM}\index[concepts]{Seawater optical properties!RTM!RRTM} is one more RTM freeware, designed in the USA, Massachusetts. 
 		\item [*] The \href{http://www.modtran.org/}{\textit{MODTRAN}}\index[concepts]{Seawater optical properties!RTM!MODTRAN}, a commercial software from Spectral Sciences Inc., is another example of the RTM. Among its newest updates is generation of atmospheric correction data; it also has an option to write spectral output in binary, and convert it to \ac{ASCII}.
-		\item [*] A \ac{DISORT}\index[concepts]{Seawater optical properties!RTM!DISORT}  is another RTM freeware , developed as an algorithm for calculation radiance of the scattering and absorbing Earth's atmosphere and transmissivity computations within the waveband range from UV to radar.  
 		\item [*] The \ac{CRTM} \index[concepts]{Seawater optical properties!RTM!CRTM} is designed by the  (\href{http://www.jcsda.noaa.gov/}{JCSDA}, \ac{NASA}) and includes Surface Emissivity/Reflectivity Models, Cloud Absorption/Scattering Model and Gaseous Absorption Model.
-		\item [*] An \ac{4AOP}\index[concepts]{Seawater optical properties!RTM!4AOP} is a French RTM freeware, designed in cooperation by \href{http://www.noveltis.fr/fr/index.php}{Noveltis} and \href{http://www.cnes.fr/}{the French Space Agency}, \ac{CNES}. Being a fine program which enables accurate computations of the radiance, defining other emissivity functions and other set up, it is however, particularly designed for the infrared waves (thus, not quite suitable in our case). To the advantages of this freeware we would count its user friendly interface and open source accessibility for the academic purposes. 
 	\end{itemize}
 For our purpose we have chosen the \ac{WASI}\index[concepts]{Seawater optical properties!RTM!WASI} \ac{RTM} software, due to its effectiveness, adaptability for the Mediterranean environment, open source availability, coverage of necessary wavebands and clear, user friendly interface, enabling to adjust various environmental parameters.
 
@@ -898,23 +896,18 @@ seagrass researchers. Applications of the \textit{in-situ} seagrass observations
 community composition in the \textit{P.oceanica} ecosystems in Mediterranean Sea is, for example,
 described by Villegas \cite{Villegas06}\label{Villegas06}. Realization of traditional methods for mapping seagrass usually
 involves intensive and time-consuming \textit{in-situ} observations during the fieldwork, as, for example,
-reported by Iverson and Bittaker \cite{Iverson86}\label{Iverson86}. \\
+reported by Iverson and Bittaker \cite{Iverson86}\label{Iverson86}.  The results of the \textit{in-situ} measurements and observation are usually
+managed and treated using integrated \ac{GIS} approach, as, e.g. reported by Schmieder \cite{Schmieder97}\label{Schmieder97}.\\
 Other methods of seagrass \textit{in-situ} monitoring are based on the application of the active hydro-acoustic sonar sensors that send towards a sea floor a signal of energy and then collect the return echoes for the analysis (Fig.\ref{fig:sonar}). One of the examples of the acoustic sonar sensor designed for seabed classification is the British \href{http://sonavision.co.uk/products.asp?cat_id=1}{RoxAnn} system, which application for the seafloor mapping is \href{http://www.ozcoasts.org.au/geom_geol/toolkit/Tech_CA_asc.jsp}{very well described} on the \href{http://www.ozcoasts.org.au/}{OzCoasts website}.\\ However, the applications of the acoustic methods requires specialized expensive equipment and is mostly used in the deep open waters, combined with bathymetric measurements. Another limitation of the acoustic
-techniques is that, initially intended for the bathymetric surveying, acoustic equipment is mostly designed for the geomorphological and geological studies of the underwater substratum and are, therefore, more adjusted for the benthic habitat discrimination, and they are not effective for the identifying of the biological species composition or even the presence of aquatic vegetation such as seagrasses and seaweeds \cite{Werdell03}\label{Werdell03}. The results of the \textit{in-situ} measurements and observation are usually
-managed and treated using integrated \ac{GIS} approach, as, e.g. reported by Schmieder \cite{Schmieder97}\label{Schmieder97}.
+techniques is that, initially intended for the bathymetric surveying, acoustic equipment is mostly designed for the geomorphological and geological studies of the underwater substratum and are, therefore, more adjusted for the benthic habitat discrimination, and they are not effective for the identifying of the biological species composition or even the presence of aquatic vegetation such as seagrasses and seaweeds \cite{Werdell03}\label{Werdell03}.\\
+The current study is based on the application of the remote sensing optical measurement techniques, due to their effectiveness, non-destructive nature and availability of necessary tools: spectral radiometers and \ac{RTM}.
 
 \subsection[Application of the remote sensing data towards seagrass mapping]{Application of the remote sensing data towards seagrass mapping}\index[concepts]{Remote sensing}\label{page-15}
 
 Various methods and approaches have been applied towards mapping of the seagrasses, based on
 digitized aerial photographs, \ac{GPS} data, remote sensing and \ac{SCUBA}-based (Fig.\ref{fig:A.52}) fieldwork measurements.
-\ac{SCUBA}-based \textit{in-situ} observations, though providing high resolution and accuracy results in seagrass
-mapping, is limited in application, because of their time consumption, weather-dependency and
-unsuitability for the case of monitoring large areas of water for small-scale mapping. 
-The underwater videography\index[concepts]{Remote sensing!underwater videography} with a \ac{GPS}\index[concepts]{Remote sensing!GPS} is a tool of seagrass monitoring which has certain advantages, i.e.
-high spatial and visual resolution, non-destructive sampling, effectiveness at all depths and rapid data
-collection in the field \cite{Schultz08}\label{Schultz08}. 
 
-\begin{wrapfigure}{r}{0.4\textwidth}
+\begin{wrapfigure}{r}{0.4\textwidth}[H]
 	\centering
 	\includegraphics[scale=0.35]{Fig-11.jpg}
 	\caption{\textit{In situ} optical reflectance spectra of seagrass. Shaded areas - \% of spectra lying within the range of reflectance. 
@@ -922,19 +915,22 @@ collection in the field \cite{Schultz08}\label{Schultz08}.
 	\label{fig:13}
 \end{wrapfigure}
 
+\ac{SCUBA}-based \textit{in-situ} observations, though providing high resolution and accuracy results in seagrass
+mapping, is limited in application, because of their time consumption, weather-dependency and
+unsuitability for the case of monitoring large areas of water for small-scale mapping. 
+The underwater videography\index[concepts]{Remote sensing!underwater videography} with a \ac{GPS}\index[concepts]{Remote sensing!GPS} is a tool of seagrass monitoring which has certain advantages, i.e.
+high spatial and visual resolution, non-destructive sampling, effectiveness at all depths and rapid data
+collection in the field \cite{Schultz08}\label{Schultz08}. 
 However, it cannot cover large areas for small-scale mapping.
 Remote sensing techniques offer clear advantages over other methods of \textit{in-situ} field measurements
 and seagrass observations, mentioned above. Preference of the remote sensing methods consists in
 their weather-independence, cost-effectiveness, accuracy and spatial coverage, which enables
 periodic monitoring of the seagrass meadows and gives access to the distant and unapproachable
-areas. Integrated together with \ac{GIS} vector layers and maps, remote sensing data enable historical
+areas. 
+Integrated together with \ac{GIS} vector layers and maps, remote sensing data enable historical
 mapping \cite{Carter08,Ardizzone06}\label{Carter08} \label{Ardizzone06} and assessment of change detection.
-However, application of the remote sensing techniques for mapping of submerged vegetation,
-seafloor cover types and benthic vegetation, \textit{inter alia} seagrasses, are still in their development.
-Approaches and methods for the seagrass protection and monitoring still remain location-specific or, at
-least, nation-specific, depending to large extent on the tools available for the researchers \cite{Mellors09a}\label{Mellors09a}.
 
-\begin{wrapfigure}{r}{0.5\textwidth}
+\begin{wrapfigure}{r}{0.4\textwidth}[H]
 	\centering
 	\includegraphics[scale=0.25]{Fig-12.jpg}
 	\caption{Difference between broadband multispectral and hyperspectral resolution of
@@ -942,6 +938,10 @@ least, nation-specific, depending to large extent on the tools available for the
 	\label{fig:2.3}
 \end{wrapfigure}
 
+However, application of the remote sensing techniques for mapping of submerged vegetation,
+seafloor cover types and benthic vegetation, \textit{inter alia} seagrasses, are still in their development.
+Approaches and methods for the seagrass protection and monitoring still remain location-specific or, at
+least, nation-specific, depending to large extent on the tools available for the researchers \cite{Mellors09a}\label{Mellors09a}.
 Universal, international, standardized methods for seagrass directly for seagrasses
 as such still should be developed. Various case studies have been performed, yet their mostly report
 methods adjusted for particular areas, without evaluating standard general algorithms that could be
@@ -959,7 +959,7 @@ objects and to discriminate them on the aerial and satellite images. Thus, vario
 success in spectral discrimination of submerged vegetation and other seafloor cover types on imagery
 using hyperspectral optical properties of the sea water for the assessment of benthic habitats \cite{Lewis01,Louchard03,Dehouck08,Werdell03}\label{Lewis01}\label{Louchard03}\label{Dehouck08}\label{Werdell03}.
 
-\begin{table}[htbp]
+\begin{table}[htbp]\footnotesize
 	\caption{Characteristics of selected ocean-colour sensors. Page: $<$\pageref{page-47}$>$}
 	\begin{center}
 		\rowcolors{1}{OldLace}{FloralWhite}
@@ -1028,13 +1028,6 @@ submerged vegetation, such as seagrasses or coral reefs. The successful applicat
 case of change detection of seagrass landscapes at a decade scale, because being the main sensor
 onboard the Landsat satellites, the Thematic Mapper (TM) provides the longest time series
 available for change detection analysis over submerged vegetation \cite{Palandro03}\label{Palandro03}.
-Another well-known multispectral sensor, \ac{SPOT}\index[concepts]{Remote sensing!multispectral imagery!SPOT} provides multispectral imagery with a spatial resolution of 10 m (Fig.\ref{fig:2.4}), covering covers a surface area of 3600 km² (60*60 km swath), 26-day
-orbital repeat cycle for nadir viewing and imagery with a spatial resolution 20 - 2.5 m
-\cite{SPOT}\label{SPOT}. \ac{SPOT} imagery was used for mapping beds of \textit{P.oceanica} in the
-Mediterranean Sea \cite{Pasqualini05} \label{Pasqualini05}. 
-The \href{http://www.satimagingcorp.com/gallery-ikonos.html}{IKONOS}\index[concepts]{Remote sensing!multispectral imagery!IKONOS}, offering multispectral and panchromatic imagery, was the first to collect publicly
-available high-resolution imagery at 1- and 4-meter resolution from \href{http://www.geoeye.com}{Geoeye}. IKONOS
-imagery has been applied for the seagrass mapping due to its high resolution and accessibility. 
 
 \begin{wrapfigure}{r}{0.4\textwidth}
 	\centering
@@ -1043,6 +1036,13 @@ imagery has been applied for the seagrass mapping due to its high resolution and
 	\label{fig:2.5}
 \end{wrapfigure}
 
+Another well-known multispectral sensor, \ac{SPOT}\index[concepts]{Remote sensing!multispectral imagery!SPOT} provides multispectral imagery with a spatial resolution of 10 m (Fig.\ref{fig:2.4}), covering covers a surface area of 3600 km² (60*60 km swath), 26-day
+orbital repeat cycle for nadir viewing and imagery with a spatial resolution 20 - 2.5 m
+\cite{SPOT}\label{SPOT}. \ac{SPOT} imagery was used for mapping beds of \textit{P.oceanica} in the
+Mediterranean Sea \cite{Pasqualini05} \label{Pasqualini05}. 
+The \href{http://www.satimagingcorp.com/gallery-ikonos.html}{IKONOS}\index[concepts]{Remote sensing!multispectral imagery!IKONOS}, offering multispectral and panchromatic imagery, was the first to collect publicly
+available high-resolution imagery at 1- and 4-meter resolution from \href{http://www.geoeye.com}{Geoeye}. IKONOS
+imagery has been applied for the seagrass mapping due to its high resolution and accessibility. 
 Thus, the results of image classification in case study of shallow-water marine environment \cite{Mumby02}\label{Mumby02}
 made using IKONOS, \ac{Landsat TM}, and \ac{CASI}\index[concepts]{Remote sensing!multispectral imagery!CASI}, show that in the blue part of the
 spectrum, the best results are achieved by the IKONOS and \ac{CASI}, while \ac{Landsat TM} has not high
@@ -1051,6 +1051,15 @@ It may be caused to some extent by the loss of the radiance contrast, atmospheri
 Rayleigh scattering and defects of scattering. However, comparing between CASI and IKONOS, the
 same authors prove that \ac{CASI} enable to receive still more accurate results of the classification
 than IKONOS \cite{Mumby02}\label{Mumby02}.
+
+\begin{wrapfigure}{r}{0.4\textwidth}
+	\centering
+	\includegraphics[scale=0.15]{Fig-15.jpg}
+	\caption{Reflectance spectra of \textit{Thalassia} seagrass; Rrs(0-) - subsurface RS reflectance; Rrs b - the bottom
+		reflectance. Source:\cite{Yang10}\label{Yang10}. Pages: $<$\pageref{page-21}$>$, $<$\pageref{page-22}$>$, $<$\pageref{page-54}$>$}
+	\label{fig:2.6}
+\end{wrapfigure}
+
 Another comparative analysis of the application of \href{http://www.itres.com/products/imagers/casi550}{CASI}, Landsat and \href{http://www.digitalglobe.com/index.php/85/QuickBird}{Quickbird} imagery \cite{Phinn08}\label{Phinn08}
  demonstrates high suitability of \ac{CASI} images for the fine-scale mapping of the seagrass
 landscapes. Thus, \ac{CASI} and Quickbird-2\index[concepts]{Remote sensing!multispectral imagery!Quickbird} images enable to identify even separate seagrass species
@@ -1070,15 +1079,6 @@ Other multispectral images have also been used for the
 seagrass interpretation. For example, the success of using imagery from the multispectral airborne
 scanner Daedalus AADS1268 is reported by Heege et al \cite{Heege03}\label{Heege03} where they aim at classification of
 macrophytes in shallow waters of the Lake Constance. 
-
-\begin{wrapfigure}{r}{0.4\textwidth}
-	\centering
-	\includegraphics[scale=0.15]{Fig-15.jpg}
-	\caption{Reflectance spectra of \textit{Thalassia} seagrass; Rrs(0-) - subsurface RS reflectance; Rrs b - the bottom
-		reflectance. Source:\cite{Yang10}\label{Yang10}. Pages: $<$\pageref{page-21}$>$, $<$\pageref{page-22}$>$, $<$\pageref{page-54}$>$}
-	\label{fig:2.6}
-\end{wrapfigure}
-
 In regard to the methods chosen for the image interpretation, the supervised classifications proves to
 be the most worthy in a majority of case studies \cite{Palandro03,Peneva08}\label{Palandro03}\label{Peneva08}. While
 often methods of the unsupervised classification are used as a tool for classifying submerged object
@@ -1088,9 +1088,11 @@ optical signal coming from the various types of the seafloor is strongly influen
 water column, its depth and chemical properties. Yet methods of the unsupervised classification
 overleap mixed spectral effects of the water column which shift the real values of the spectra, with the
 pure reflectance from the benthos; as a result, it may cause significant errors \cite{Dierssen03}\label{Dierssen03}.
-Therefore, for the accurate assessments of various seafloor cover types, water
+For the accurate assessments of various seafloor cover types, water
 column depth and its optical properties, methods of supervised classification should be preferably
-used as being more suitable in classification and interpretations of imagery.
+used as being more suitable in classification and interpretations of imagery. 
+However, it is only true if spectrally distinct regions of the spectrum are covered by a space-born sensor
+ and if the atmospheric distortion and viewing geometry is not degrading the radiometric quality at essential wavelengths.
 While this and other studies \cite{Phinn08}\label{Phinn08} demonstrated the advantages and success of the
 application of multispectral imagery for the spectral discrimination of the seafloor cover types and
 mapping the submerged landscapes on the basis of pixels classification, the application of data from

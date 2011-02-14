@@ -1354,7 +1354,7 @@ south-eastern coasts of Crete in chosen locations.\\
 The optical measurements of the irradiance and radiance of the sea water and bottom cover types of
 the seafloor have been received by the means of the optical sensors \ac{Trios-RAMSES} Hyperspectral
 \ac{UVA}/\ac{UVB} Irradiance Sensor and \ac{Trios-RAMSES}-ARC Hyperspectral \ac{UV}-\ac{VIS} Radiance Sensor (Fig. \ref{fig:2.1}), both adjusted for the measurements of the irradiance and radiance (see \nameref{app}: Tab. \ref{tab:A.1}, Tab. \ref{tab:A.2}). 
-These products have been used for the radiance and irradiance measurements in at the \ac{HCMR} at the Institute of Aquaculture, Crete Island, 2009 by Ms Sylvia Noralez using following workflow. The spectrometer was adjusted for automatic measurements mode, with measurements taken as fast as possible. The spectrometer head was held submerged, and the sampling was controlled by an operator on the surface boat. The head of the sensor was pointed downward at an angle of $0\,^{\circ}$ (nadir) in order to capture the spatial discernability in the radiance for the benthic cover types. The frame was held at $45\,^{\circ}$ angle in order to keep sensor looking down at $0\,^{\circ}$ (nadir view). A waterproof camera was attached to the platform to assist with the identification of the target object  being measured (\cite{Noralez10}\label{Noralez10}).
+These products have been used for the radiance and irradiance measurements in at the \ac{HCMR} at the Institute of Aquaculture, Crete Island, 2009 by Ms Sylvia Noralez using following workflow. The spectrometer was adjusted for automatic measurements mode, with measurements taken as fast as possible. The spectrometer head was held submerged, and the sampling was controlled by an operator on the surface boat. The head of the sensor was pointed downward at an angle of $0\,^{\circ}$ (nadir) in order to capture the spatial discernibility in the radiance for the benthic cover types. The frame was held at $45\,^{\circ}$ angle in order to keep sensor looking down at $0\,^{\circ}$ (nadir view). A waterproof camera was attached to the platform to assist with the identification of the target object  being measured (\cite{Noralez10}\label{Noralez10}).
 The highest measured values are located in the diapason of 410-730 nm for the water irradiance (Fig. \ref{fig:A.18}) and 430-650 for the water radiance (Fig.\ref{fig:A.16}). 
 Afterwards, the measured values of the radiance and irradiance, respectively, have been used for the computation of the spectral reflectance
 properties of the sea water and bottom cover types (Fig.\ref{fig:A.15}). The spectral range of radiance
@@ -1409,7 +1409,7 @@ The adjusted averages evaluate mean values, needed for statistical analysis of t
 The outcome of this calculations is shown in the Tab.\ref{tab:5} and Tab.\ref{tab:6} (\nameref{app}). \\
 As a result, we received mean values of spectral reflectance of \textit{P.oceanica} for extreme, average, median and both quartiles,
 independent of the individual sets 1-350. \\
-We used several statistical methods to asses data received as a result of measurements. 
+We used several statistical methods (Fig.\ref{fig:4.12})\label{stan} to asses data received as a result of measurements. 
 The Student-t test\index[concepts]{Data!statistical analysis!Student-t testing},
 one of the most commonly used techniques for testing a hypothesis on the basis
 of a difference between sample means, is used for the data analysis. In our case the Student t-test demonstrates, if the variation
@@ -1419,6 +1419,87 @@ reflectance of \textit{P.oceanica} and sand, respectively, with samples collecte
 another. The Student-t test can be performed knowing just the means, standard deviation, and number
 of data points. Therefore, we used the data (\nameref{app}) of means of spectral reflectance of the both
  cover types within data sets, their standard deviation, and the number of data points.
+\pagebreak
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5, angle=90]{UML_StatAn.jpg}
+	\caption{Work Flowchart Diagram illustrating algorithm of the Statistical Analysis applied towards the observation dataset (\href{http://staruml.sourceforge.net/en/}{StarUML}). Page: $<$\pageref{page-40}$>$, $<$\pageref{stan}$>$}
+	\label{fig:4.12}
+\end{figure}
+
+\subsection{Spectral simulation of aquatic objects}\index[concepts]{Data!processing}\label{page-35}
+The main aim of this part of research is to clarify if the bottom reflectance of the different seafloor types including patches of
+the seagrass \textit{P.oceanica} meadows, silt and carbonate sand differ and can be clearly discriminated while mapping. A study is
+based on three seafloor types containing silt, carbonate sand and seagrass, as well as mixed
+types, where the spectral signatures were examined. \ac{WASI} software\index[concepts]{Seawater optical properties!RTM!WASI} (Fig.\ref{fig:4.7}) is used to simulate
+spectral reflectance and colour discrimination of water, affected by presence of \textit{P.oceanica} and other factors, under various
+environmental conditions which influence its colour.
+The data provided with the model was determined at freshwater of the Boddensee \cite{Gege05}\label{Gege05}, 
+yet the model was adjusted for the marine environment, so that its parameters (concentration of chlorophyll, concentration of small particles,
+yellow substance, etc) now perfectly simulate the Mediterranean water conditions.
+The remote sensing reflectance has been compared under the conditions of different water depths and
+cover fraction of the seafloor, in order to assess spectral signatures of the seagrass and carbonate sand
+as major seafloor types. \ac{WASI} enables to use forward or inverse calculation for the spectrum types at
+a diapason of 350-800 nm with a 1nm spectral resolution. For the spectral analysis we applied
+forward calculations, i.e. a computing and plotting of series of spectra according to specified
+parameter settings, with exactly defined depths and cover fraction. 
+
+\begin{figure}[H]
+	\centering
+	\subfloat [Concentration of Gelbstoff at depths 0.5 – 8.0 m]{\label{fig:31a}\includegraphics[width=0.4\textwidth]{Fig-31a.jpg}}
+	\subfloat [Bottom reflectance at depth 0.5-4.0 meters]{\label{fig:31b}\includegraphics[width=0.4\textwidth]{Fig-31b.jpg}}
+	\caption{Sea water physical properties, modeled by \ac{WASI}. Page: $<$\pageref{page-36}$>$}
+	\label{fig:4.8}
+\end{figure}
+
+The specific parameters have been chosen for the simulation of the environmental conditions where seagrass
+grow. The adaptations to life in salt sea water requires various physical and chemical parameters
+which include salinity, temperature of $17-25\,^{\circ}C$, light requirements with 10-20 \% on average, ranging
+from 4.4 \%  minimal up to 29 \% \cite{McKenzie09}\label{McKenzie09}, so that the zenith angle is taken as $35-45\,^{\circ}$
+and reflection factor 0.0201. \textit{P.oceanica}\label{page-36}. These values, simulating the environment of the Mediterranean Sea, are fixed (Tab.\ref{tab:3}) among WASI user-defined parameters.
+The calculations are done for the spectrum 350-800 nm, covering the most important part of the RS spectrum: 1) Blue-green 0.45 - 0.5 μm; 2) Green 0.5 - 0.6 μm; 3) Red 0.6 - 0.7 μm; 4) Red-NIR 0.7 - 0.8 μm (Fig.\ref{fig:4.8}).
+
+\subsubsection{Model parameters: depth and bottom cover fraction}
+Although seagrass \textit{P.oceanica} can be found until depth limits down to 40 m depth \cite{DenHartog70}\label{DenHartog70}, the most preferable limits of its distribution in the Mediterranean Sea are shallow waters until
+4 meters of depth. 
+
+\begin{table}[H]\footnotesize
+	\rowcolors{1}{Aquamarine}{Azure}
+	\caption{Model-specific parameters of water WASI adjusted to simulate environment of the Mediterranean Sea along Crete. Pages: $<$\pageref{page-10}$>$, $<$\pageref{page-36}$>$} \label{tab:3}
+	\centering
+	 \begin{tabular}{|  p{2cm} | p{6cm} | p{25mm} | }
+	    \hline
+		    \textbf{Parameter, WASI} & \textbf{Name and description} & \textbf{Values} \\ \hline\hline
+		    C-L & Concentration of large suspended particles & 8 \\ \hline
+		   C(i), i=0..5 & Concentration of Phytoplankton & 0.035 -0.089 $ug^{-1}$ \\ \hline
+		    bbS & Specific backscattering for small particles & 0.005 $m^2g^{-1}$ \\ \hline
+		   T-W & Temperature of water & $17-25\,^{\circ}C$ \\ \hline
+		    n & Exponent of Backscattering by small particles & 0.005 $m^2g^{-1}$ \\ \hline
+		    Q &Anisotropy factor of upwelling radiation ("Q-factor") & 5.00 \\ \hline
+		    sigma-L & Reflection factor of sky radiance & 0.0201 \\ \hline
+		    b1 & Backscattering coefficient of saline waters & 0.00144 $m^{-1}$ \\ \hline
+		    λ0 & Reference Wavelength for \ac{CDOM} (Gelbstoff) absorption & 440 \\ \hline
+		    sun & Sun zenith angle & 45.0 \\ \hline
+		    zB & Bottom depth & 4.00 \\ \hline
+		   f(i), i=0...5 & Areal fraction of bottom surface type number n & 01/10/10 \\ \hline
+		    K0 & Coefficient of Attenuation & 1.0546 \\ \hline
+		   view & Viewing angle (0 = nadir) & 0\\ \hline
+		    C-X & Concentration of non-chlorophyll particles (absorption at $\lambda_0$) & 0 \\ \hline
+		   λS & Reference wavelength for scattering of small particles & 500 \\ \hline
+		    C-S & Concentration of small suspended particles & 0 \\ \hline
+		   S & Exponent of \ac{CDOM} absorption & 0.0140 \\ \hline
+		    C-Y & Concentration of \ac{CDOM} Gelbstoff (absorption at $\lambda_0$) & 0.400 \\ \hline
+		    Bn & BDRF of bottom reflectance (sand) & 0.318 $sr^{-1}$\\
+	    \hline
+	  \end{tabular}	  
+\end{table}
+
+The increase of depths (zB) influences weakening of light and thus directly affects
+production of chlorophyll, because when light passes through the water and suspended particles, it is
+being largely modified through the absorption and scattering before it finally reaches plant canopy of
+the seagrass. Therefore, the most healthy and suitable areas for the seagrass grow are located at depths
+lesser than 4 meters (Fig.\ref{fig:4.9})\label{page-37}.
 
 \subsection[Google Earth aerial imagery]{Google Earth aerial imagery for the seagrass mapping}
 Apart from the satellite imagery, the aerial photographs from the Google Earth provide
@@ -1552,78 +1633,7 @@ components increase the absorption and scattering of light which, in its turn, r
 relationship between their concentrations and the radiance of water that finally influence its spectral
 reflectance.
 
-\subsubsection{Spectral simulation of aquatic objects}\index[concepts]{Data!processing}\label{page-35}
-The main aim of this part of research is to clarify if the bottom reflectance of the different seafloor types including patches of
-the seagrass \textit{P.oceanica} meadows, silt and carbonate sand differ and can be clearly discriminated while mapping. A study is
-based on three seafloor types containing silt, carbonate sand and seagrass, as well as mixed
-types, where the spectral signatures were examined. \ac{WASI} software\index[concepts]{Seawater optical properties!RTM!WASI} (Fig.\ref{fig:4.7}) is used to simulate
-spectral reflectance and colour discrimination of water, affected by presence of \textit{P.oceanica} and other factors, under various
-environmental conditions which influence its colour.
-The data provided with the model was determined at freshwater of the Boddensee \cite{Gege05}\label{Gege05}, 
-yet the model was adjusted for the marine environment, so that its parameters (concentration of chlorophyll, concentration of small particles,
-yellow substance, etc) now perfectly simulate the Mediterranean water conditions.
-The remote sensing reflectance has been compared under the conditions of different water depths and
-cover fraction of the seafloor, in order to assess spectral signatures of the seagrass and carbonate sand
-as major seafloor types. \ac{WASI} enables to use forward or inverse calculation for the spectrum types at
-a diapason of 350-800 nm with a 1nm spectral resolution. For the spectral analysis we applied
-forward calculations, i.e. a computing and plotting of series of spectra according to specified
-parameter settings, with exactly defined depths and cover fraction. 
-
-\begin{figure}[H]
-	\centering
-	\subfloat [Concentration of Gelbstoff at depths 0.5 – 8.0 m]{\label{fig:31a}\includegraphics[width=0.4\textwidth]{Fig-31a.jpg}}
-	\subfloat [Bottom reflectance at depth 0.5-4.0 meters]{\label{fig:31b}\includegraphics[width=0.4\textwidth]{Fig-31b.jpg}}
-	\caption{Sea water physical properties, modeled by \ac{WASI}. Page: $<$\pageref{page-36}$>$}
-	\label{fig:4.8}
-\end{figure}
-
-The specific parameters have been chosen for the simulation of the environmental conditions where seagrass
-grow. The adaptations to life in salt sea water requires various physical and chemical parameters
-which include salinity, temperature of $17-25\,^{\circ}C$, light requirements with 10-20 \% on average, ranging
-from 4.4 \%  minimal up to 29 \% \cite{McKenzie09}\label{McKenzie09}, so that the zenith angle is taken as $35-45\,^{\circ}$
-and reflection factor 0.0201. \textit{P.oceanica}\label{page-36}. These values, simulating the environment of the Mediterranean Sea, are fixed (Tab.\ref{tab:3}) among WASI user-defined parameters.
-The calculations are done for the spectrum 350-800 nm, covering the most important part of the RS spectrum: 1) Blue-green 0.45 - 0.5 μm; 2) Green 0.5 - 0.6 μm; 3) Red 0.6 - 0.7 μm; 4) Red-NIR 0.7 - 0.8 μm (Fig.\ref{fig:4.8}).
-
-\paragraph{Model parameters: depth and bottom cover fraction}
-Although seagrass \textit{P.oceanica} can be found until depth limits down to 40 m depth \cite{DenHartog70}\label{DenHartog70}, the most preferable limits of its distribution in the Mediterranean Sea are shallow waters until
-4 meters of depth. 
-
-\begin{table}[H]\footnotesize
-	\rowcolors{1}{Aquamarine}{Azure}
-	\caption{Model-specific parameters of water WASI adjusted to simulate environment of the Mediterranean Sea along Crete. Pages: $<$\pageref{page-10}$>$, $<$\pageref{page-36}$>$} \label{tab:3}
-	\centering
-	 \begin{tabular}{|  p{2cm} | p{6cm} | p{25mm} | }
-	    \hline
-		    \textbf{Parameter, WASI} & \textbf{Name and description} & \textbf{Values} \\ \hline\hline
-		    C-L & Concentration of large suspended particles & 8 \\ \hline
-		   C(i), i=0..5 & Concentration of Phytoplankton & 0.035 -0.089 $ug^{-1}$ \\ \hline
-		    bbS & Specific backscattering for small particles & 0.005 $m^2g^{-1}$ \\ \hline
-		   T-W & Temperature of water & $17-25\,^{\circ}C$ \\ \hline
-		    n & Exponent of Backscattering by small particles & 0.005 $m^2g^{-1}$ \\ \hline
-		    Q &Anisotropy factor of upwelling radiation ("Q-factor") & 5.00 \\ \hline
-		    sigma-L & Reflection factor of sky radiance & 0.0201 \\ \hline
-		    b1 & Backscattering coefficient of saline waters & 0.00144 $m^{-1}$ \\ \hline
-		    λ0 & Reference Wavelength for \ac{CDOM} (Gelbstoff) absorption & 440 \\ \hline
-		    sun & Sun zenith angle & 45.0 \\ \hline
-		    zB & Bottom depth & 4.00 \\ \hline
-		   f(i), i=0...5 & Areal fraction of bottom surface type number n & 01/10/10 \\ \hline
-		    K0 & Coefficient of Attenuation & 1.0546 \\ \hline
-		   view & Viewing angle (0 = nadir) & 0\\ \hline
-		    C-X & Concentration of non-chlorophyll particles (absorption at $\lambda_0$) & 0 \\ \hline
-		   λS & Reference wavelength for scattering of small particles & 500 \\ \hline
-		    C-S & Concentration of small suspended particles & 0 \\ \hline
-		   S & Exponent of \ac{CDOM} absorption & 0.0140 \\ \hline
-		    C-Y & Concentration of \ac{CDOM} Gelbstoff (absorption at $\lambda_0$) & 0.400 \\ \hline
-		    Bn & BDRF of bottom reflectance (sand) & 0.318 $sr^{-1}$\\
-	    \hline
-	  \end{tabular}	  
-\end{table}
-
-The increase of depths (zB) influences weakening of light and thus directly affects
-production of chlorophyll, because when light passes through the water and suspended particles, it is
-being largely modified through the absorption and scattering before it finally reaches plant canopy of
-the seagrass. Therefore, the most healthy and suitable areas for the seagrass grow are located at depths
-lesser than 4 meters (Fig.\ref{fig:4.9})\label{page-37}.
+\subsection{Spectral discrimination of \textit{P.oceanica}}
 
 \begin{figure}[H]
 	\centering
@@ -1640,10 +1650,8 @@ that the appropriate wavebands for seagrass mapping lay between 500 and 600 nm a
 also peaks at around 700 nm, ca between 680 and 710 nm (Fig.\ref{fig:4.10}). The highest values of the bottom
 reflectance are at spectra of 500-600 nm. The most appropriate depths at which the spectral signatures of the seagrass
 could still be discriminated are lesser than 2.5 meters.
-
-\paragraph{Spectral discrimination of \textit{P.oceanica}}\label{page-39}
 The patches of white sandy bottoms of the seafloor, studied in the fieldwork in Ligaria beach, are
-much brighter than mattes of \textit{P.oceanica} (Fig.\ref{fig:A.6}, \ref{fig:A.5}): seafloor types in Ligaria), which can be clearly seen
+much brighter than mattes of \textit{P.oceanica} (Fig.\ref{fig:A.6}, \ref{fig:A.5})\label{page-39}: seafloor types in Ligaria), which can be clearly seen
 at the graph comparing values of the spectral reflectance of the carbonate sand (Fig.\ref{fig:A.35}) and that of \textit{P.oceanica} (Fig.\ref{fig:A.28}).
 
 \begin{figure}[H]
@@ -1690,14 +1698,6 @@ A probability distribution\index[concepts]{Data!statistical analysis!probability
 The \ac{LAD}\index[concepts]{Data!statistical analysis!LAD}, a popular optimization technique, were used to show the main trend of the distribution of spectral reflectance values along the spectra (Tab.\ref{tab:12}). Non-linear logistic analysis\index[concepts]{Data!statistical analysis!non-linear logistic analysis} is applied to specify and estimate a model of spectral distribution, in which the dependent variable (i.e. the value of spectral reflectance for each single observation) is not continuous, but discrete and independent for each case (Tab.\ref{tab:11}). \\
 As the observations were made in a repeated way, we also analyzed the data pool using autocorrelation as well: Tab.\ref{tab:13} and Tab.\ref{tab:14} for \textit{P.oceanica} and Tab.\ref{tab:28} for carbonate sand. The \textit{autocorrelation}\index[concepts]{Data!statistical analysis!autocorrelation}, a cross-correlation\index[concepts]{Data!statistical analysis!cross-correlation} of an observed value with itself, made on two different days (14th and 15th October), shows the similarity between observations as a function of the time separation between them. 
 As can be seen on Fig.\ref{fig:A.21}\label{A-23}, Fig.\ref{fig:A.22}\label{A-24} and Fig.\ref{fig:A.29}, it is a useful tool for finding repeating patterns for a single value of observations, such as the presence of a periodic signal which has been buried under noise. The autocorrelation analysis has been performed using both \ac{SPSS} and \ac{GRETL} software. 
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.5, angle=90]{UML_StatAn.jpg}
-	\caption{Work Flowchart Diagram illustrating algorithm of the Statistical Analysis applied towards the observation dataset (\href{http://staruml.sourceforge.net/en/}{StarUML}). Page: $<$\pageref{page-40}$>$}
-	\label{fig:4.12}
-\end{figure}
-
 The method of \textit{least squares}\index[concepts]{Data!statistical analysis!least squares, method of} minimizes the sum of the squares of the errors made in solving every single observation made. We tried different approaches of the \textit{least squares} methods: Tab.\ref{tab:15}, Tab.\ref{tab:18}, Tab.\ref{tab:27}.\\
 To focus on the relationship between a dependent variable (each single observation of the spectral reflectance) and independent variables (three various depths: 0.5, 1.5 and 2.5 meters) we used the \textit{regression analysis}, which enables modeling and analyzing values of the spectral reflectance at several depths: Tab.\ref{tab:5}, Tab.\ref{tab:6}, Tab.\ref{tab:7}. 
 The summary of the values of spectral reflectance properties on various depths is presented on the Tab.\ref{tab:A.7}.

@@ -967,7 +967,7 @@ success in spectral discrimination of submerged vegetation and other seafloor co
 using hyperspectral optical properties of the sea water for the assessment of benthic habitats \cite{Lewis01,Louchard03,Dehouck08,Werdell03}\label{Lewis01}\label{Louchard03}\label{Dehouck08}\label{Werdell03}.
 
 \begin{table}[htbp]\footnotesize
-	\caption{Characteristics of selected ocean-colour sensors. Page: $<$\pageref{page-47}$>$}
+	\caption{Characteristics of selected ocean-colour sensors. Pages: $<$\pageref{page-intmap}$>$, $<$\pageref{page-47}$>$}
 	\begin{center}
 		\rowcolors{1}{OldLace}{FloralWhite}
 		\begin{tabular}{|p{2cm}|p{20mm}|p{15mm}|p{17mm}|p{15mm}|p{15mm}|p{15mm}|}
@@ -1383,9 +1383,10 @@ spectrum of constant albedo at \ac{WASI} (Fig.\ref{fig:A.9}).
 \subsubsection{Modelling method: WASI water colour simulator}
 To estimate and further analyze particularities of the P.oceanica remote sensing reflectance spectra over regions with different bathymetry (0.5, 1.5 and 2.5 meters column depth) we used \ac{WASI} \ac{RTM} software, which incorporates measurements of the seafloor reflectance and water column optical properties. We have chosen \ac{WASI} \ac{RTM} software among other aquatic \ac{RTM} (2.3.\nameref{sec:2-3}) due to its effective cognitive approach and because it is specifically adjusted and developed for the purpose of aquatic optical modelling. Consistency of simple and logical \ac{GUI} (Fig.\ref{fig:4.7})\label{GUI} let the researcher to easily define model parameters, which can be changed directly in the main window tools menu, and to choose between forward or inverse 
 calculations. Besides other important advantages of \ac{WASI} we would mention its learnability: available documentation, supporting materials, learning curve with hints and tips, as well as its user-friendly \ac{GUI}, enabling to learn this product in a most effective and prompt way in a tight schedule of MSc studies. Technically, \ac{WASI} need for system memory is minimised and the installation is simple and easy.\\
-We included measurements of the \textit{Thalassia} seagrass
-(measured at Southern Chinese Sea by C.Yang and D.Yang \cite{Yang10} \label{Yang10}) for the comparison of the spectral reflectance of
-different seagrass species under various environmental conditions.
+To create sensor-specific reflectance spectra using \ac{WASI}, spectral responses of \ac{MERIS}, \ac{MODIS}, \ac{CZCS} and \ac{SeaWiFS} sensors were applied for simulation of seagrass spectral signatures in full-resolution spectra.\\
+We also included measurements of other seagrass species - \textit{Thalassia} seagrass
+(measured at Southern Chinese Sea by C.Yang and D.Yang \cite{Yang10} \label{Yang10}) in order to compare spectral reflectance of
+different seagrasses under various environmental conditions.
 The most suitable wavebands for the seagrass monitoring usually lay between 400 and 700 nm,
 which can be concluded by the visual examination, comparison and analysis of the different spectra of
 the seagrasses. Therefore, we chosen the spectra 400-750 as the most appropriate range for
@@ -1814,12 +1815,11 @@ measurement data of spectral reflectance of under various environmental conditio
 \subsubsection{Remote sensing application}
 The \textit{in situ} spectral reflectance data of \textit{P.oceanica} and sand were used to model these seafloor cover
 types as the different sensors would percept them: \ac{MODIS}\index[concepts]{Remote sensing!multispectral imagery!MODIS}, \ac{ASTER}\index[concepts]{Remote sensing!multispectral imagery!ASTER}, \ac{MERIS}\index[concepts]{Remote sensing!multispectral imagery!MERIS}, \ac{SeaWiFS}\index[concepts]{Remote sensing!multispectral imagery!SeaWiFS} and \ac{CZCS}\index[concepts]{Remote sensing!multispectral imagery!CZCS}.\\
-These sensors possess over various percepting characteristics which we briefly illustrated in a small summary table (Tab.\ref{tab:1})
+These sensors vary in technical characteristics and therefore, have different spectral sensitivity, 
+which we briefly illustrated in a small summary table (Tab.\ref{tab:1})\label{page-intmap}
 These models simulate spectral views of the chosen sensors, how these sensors will ``see" seagrass (Fig.\ref{fig:28}) and sand as
 pixels, with accepted default atmosphere and water column effects (given by \ac{WASI} software). In such
-a way we defined an empirical upper limit to the discriminative potential of these sensors. To create
-these sensor-specific reflectance spectra, spectral responses of each of these sensors were applied for
-the spectral signature of seafloor cover types in full-resolution spectra.
+a way we defined an empirical upper limit to the discriminative potential of these sensors. 
 
 \subsection{Integrated mapping of seagrass}
 

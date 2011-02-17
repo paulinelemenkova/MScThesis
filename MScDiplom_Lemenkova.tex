@@ -79,7 +79,7 @@
 	\centering
 	\title{Seagrass mapping and monitoring \\ along the coasts of Crete, Greece}
 	\author[1]{by Lemenkova Polina}
-	\affil[1]{MSc student at the \textit{University of Twente, Faculty of Geo-Information Science and Earth Observation (ITC)}, The Netherlands}
+	%\affil[1]{MSc student at the \textit{University of Twente, Faculty of Geo-Information Science and Earth Observation (ITC)}, The Netherlands}
 	\date{\today}
 	\maketitle	
 \end{titlepage}
@@ -326,6 +326,7 @@ An Index of Concepts is placed in the end of the Document to help the reader fin
 	\acro{VIS}{VISible}
 	\acro{VNIR}{Visible and Near-InfraRed}
 	\acro{WASI}{\href{http://www.filewatcher.com/b/ftp/ftp.dfd.dlr.de/pub/WASI.0.0.html}{WASI Water Color Simulator}}
+	\acro{WLS}{\href{http://en.wikipedia.org/wiki/Weighted_least_squares}{Weighted Least Squares}}
 \end{acronym}
 \pagebreak
 
@@ -710,13 +711,11 @@ A statistical testing will be used to compare between the spectral responses of 
  whether it is spectrally distinct and at least one pair is statistically different at every spectral
 band.\vspace{1ex}\\
 For the \emph{Research Question 1} the Hypothesis $H_o$ claims: seagrass types are not spectrally distinct from other seafloor types with
-varying \textit{in-situ} conditions, which means $H_o: \mu1 =\mu2 =\mu3=...= \mu n$.
+varying \textit{in-situ} conditions, which means $H_o: \mu1 =\mu2 =\mu3=...= \mu n$.\\
 The alternative Hypothesis $H_a$ claims the opposite statement: seagrass is spectrally
 distinct with varying \textit{in-situ} conditions, $H_o:\mu1\neq\mu2\neq\mu3\neq...\neq\mu n$.\vspace{1ex}\\
-For the \emph{Research Question 2} the Hypothesis $H_o$ claims: broadband and hyperspectral remote sensing data can be used for the mapping of \textit{P.oceanica}, because they do not provide enough radiometric information to discriminate sand from seagrass, which means $H_o:\mu1=\mu2=\mu3=...=\mu n$. The alternative Hypothesis $H_a$ claims the opposite statement: broadband and hyperspectral sensors do prove to provide enough radiometric information to discriminate sand from seagrass, 
-$H_o: \mu1\neq\mu2\neq\mu3\neq ... \neq\mu n$.\vspace{1ex}\\
-The distribution of the spectral responses at every spectral band is assumed to be normal as well as
-the equality of the statistical variances.
+For the \emph{Research Question 2} the Hypothesis $H_o$ claims: broadband and hyperspectral remote sensing data cannot be used for the mapping of \textit{P.oceanica}, because they do not provide enough radiometric information to discriminate sand from seagrass, which means $H_o:\mu1=\mu2=\mu3=...=\mu n$. \\ The alternative Hypothesis $H_a$ claims the opposite statement: broadband and hyperspectral sensors do prove to provide enough radiometric information to discriminate sand from seagrass, $H_o: \mu1\neq\mu2\neq\mu3\neq ... \neq\mu n$.\vspace{1ex}, and can therefore, be used for the seagrass mapping.\\
+The distribution of the spectral responses at every spectral band is assumed to be normal as well as the equality of the statistical variances.
 The hypothesis testing is suggested to be carried out using the \ac{ANOVA} statistical test. The purpose of
 \ac{ANOVA} test is to visualize in an effective and quick way the spectral differences between seagrass
 species and their spatial distribution. Thus, the key hypotheses of the research will be tested to prove
@@ -1684,7 +1683,7 @@ Statistical pre-processing of large sets of serial data enables to generalize da
 spectral reflectance for further calculations, and to get rid of the extreme values, noise and errors.
 The statistical calculators were mainly made by means of \ac{GRETL}\index[concepts]{Data!statistical analysis!Gretl} and SPSS\index[concepts]{Data!statistical analysis!SPSS}. 
 The Open Office was used for preliminary data view and preprocessing, and included following computations
-at each data set (for example, Fig.\ref{fig:A.11}) with summary outcome of mean, median, Q1 and Q3, standard deviation, min and max values (Tab.\ref{tab:4}). 
+at each data set (for example, Fig.\ref{fig:A.11}) with summary outcome of mean, median, Q1 and Q3, standard deviation, min and max values (Tab.\ref{tab:4}, Tab.\ref{tab-16}).\label{page-sumstat} 
 The statistical pre-processing\label{page-40} and analysis were made to display the mean values of spectral reflectance,
 which were used for comparison with reflectance data of various seafloor cover types as well as
 seawater with and without sediment (e.g. Fig.\ref{fig:A.16}).
@@ -1700,10 +1699,10 @@ A probability distribution\index[concepts]{Data!statistical analysis!probability
 The \ac{LAD}\index[concepts]{Data!statistical analysis!LAD}, a popular optimization technique, was used to show the main trend of the distribution of spectral reflectance values along the spectra (Tab.\ref{tab:12})\label{page-tab12}. Non-linear logistic analysis\index[concepts]{Data!statistical analysis!non-linear logistic analysis} is applied to specify and estimate a model of spectral distribution, in which the dependent variable (i.e. the value of spectral reflectance for each single observation) is not continuous, but discrete and independent for each case (Tab.\ref{tab:11}). \\
 As the observations were made in a repeated way, we also analyzed the data pool using autocorrelation as well: Tab.\ref{tab:13} and Tab.\ref{tab:14} for \textit{P.oceanica} and Tab.\ref{tab:28} for carbonate sand. The \textit{autocorrelation}\index[concepts]{Data!statistical analysis!autocorrelation}, a cross-correlation\index[concepts]{Data!statistical analysis!cross-correlation} of an observed value with itself, made on two different days (14th and 15th October), shows the similarity between observations as a function of the time separation between them. 
 As can be seen on Fig.\ref{fig:A.21}\label{A-23}, Fig.\ref{fig:A.22}\label{A-24} and Fig.\ref{fig:A.29}, it is a useful tool for finding repeating patterns for a single value of observations, such as the presence of a periodic signal which has been buried under noise. The autocorrelation analysis has been performed using both \ac{SPSS} and \ac{GRETL} software (Fig.\ref{tab:28}\label{page-a-c}). 
-The method of \textit{least squares}\index[concepts]{Data!statistical analysis!least squares, method of} minimizes the sum of the squares of the errors made in solving every single observation made. We tried different approaches of the \textit{least squares} methods: Tab.\ref{tab:15}, Tab.\ref{tab:18}, Tab.\ref{tab:27}, \ac{OLS}: Fig.\ref{tab:15}\label{page-OLS}\\
+The method of \textit{least squares}\index[concepts]{Data!statistical analysis!least squares, method of} minimizes the sum of the squares of the errors made in solving every single observation made. We tried different approaches of the \textit{least squares} methods: Tab.\ref{tab:15}, Tab.\ref{tab:18}, \ac{WLS}: Tab.\ref{tab:27}\label{page-WLS}, \ac{OLS}: Fig.\ref{tab:15}\label{page-OLS}\\
 To focus on the relationship between a dependent variable (each single observation of the spectral reflectance) and independent variables (three various depths: 0.5, 1.5 and 2.5 meters) we used the \textit{regression analysis}, which enables modeling and analyzing values of the spectral reflectance at several depths: Tab.\ref{tab:5}\label{page-reg}, Tab.\ref{tab:6}, Tab.\ref{tab:7}. 
 The summary of the values of spectral reflectance properties on various depths is presented on the Tab.\ref{tab:A.7}.
-The \textit{k-means cluster analysis}\index[concepts]{Data!statistical analysis!k-means cluster analysis} has been used for partitioning observation sets into k clusters (Tab.\ref{tab:20}, Tab.\ref{tab:21}, Tab.\ref{tab:22}, Tab.\ref{tab:23}) in which each observation belongs to the cluster with the nearest mean.
+The \textit{k-means cluster analysis}\index[concepts]{Data!statistical analysis!k-means cluster analysis} has been used for partitioning observation sets into k clusters (Tab.\ref{tab:20}, Tab.\ref{tab:21}, Tab.\ref{tab:22}, Tab.\ref{tab:23})\label{page-fincc} in which each observation belongs to the cluster with the nearest mean.
 It enables to highlight the main areas of the location of values of spectral reflectance along the spectra.\\
 To estimate spectral density of a spectral reflectance measurements we used periodogram\index[concepts]{Data!statistical analysis!periodogram} function (Tab.\ref{tab:30})\label{page-period}, which corresponds to the general spectrum of the observations with representation of a variable quantity.  
 Thus, the periodogram (Fig.\ref{fig:A.31})\label{page-A31} of the series of observation\index[concepts]{Data!statistical analysis!observations, series of} highlights so-called “dead spots” of low power between the frequencies we wish to exclude (can be seen clearly at the end of the graphs, e.g. Fig.\ref{fig:A.12} ) 
@@ -1712,8 +1711,7 @@ The visualization of the data plotting was made by means of Gnuplot software, wh
 drawing and advanced displaying of large amounts of serial data, ultimate control over graph properties, 
 the simplicity of plotting and the ease of scripting (see Fig.\ref{fig:4.13}, \nameref{app}).
 The graphs illustrating spectral signatures of various seafloor cover types display the mean values and
-areas of quartiles\index[concepts]{Data!statistical analysis!quartiles Q1-Q3} (Q1 - Q3, Fig.\ref{fig:A.30}\label{page-A30}, and shaded Q-Q areas on graph, Fig. \ref{fig:4.10}, Fig.\ref{fig:4.14}), which cover most probable data distribution (spectral reflectance) for each spectral band. In x-axis displayed are the areas of 400 – 950 nm in
-spectra, where the measurements were done; the y-axis was adjusted for the better visualization of the
+areas of quartiles\index[concepts]{Data!statistical analysis!quartiles Q1-Q3} (Q1 - Q3, Fig.\ref{fig:A.30}\label{page-A30}, and shaded Q-Q areas on graph, Fig. \ref{fig:4.10}, Fig.\ref{fig:4.14}), which cover most probable data distribution (spectral reflectance) for each spectral band. In x-axis displayed are the areas of 400 – 950 nm in spectra, where the measurements were done; the y-axis was adjusted for the better visualization of the
 \textit{P.oceanica} spectra: as its spectral values are mostly located in the lower part of the spectra (usually no
 more than 0.20 nm, except for borders), we did not extend the y-scale up to 100 percent, in order to
 focus on the most necessary area of spectral values (Fig.\ref{fig:4.14}, Fig.\ref{fig:4.4} and \nameref{app}). The mean values are
@@ -1764,11 +1762,13 @@ where c comes for critical values and p=probability.
 The result P=.05 is (Tab.\ref{tab:8}), hence, very small, which makes the statement of Hypothesis $H_o$ highly unlikely
 (less than 1 in a 10 chance). The one-way \ac{ANOVA} highlighted a significant difference between data
 of spectral reflectances of \textit{P.oceanica} at different depths (Tab.\ref{tab:9}), i.e. true is the opposite statement:
-Hypothesis $H_a$=“the spectral discernibility of the seagrass \textit{P.oceanica} is distinctly changing with
-varying \textit{in-situ} conditions, i.e. increasing depth, $H_o: \mu\neq\mu2\neq\mu3\neq ... \neq\mu n$.
+Hypothesis $H_a$=“the spectral discernibility of the seagrass \textit{P.oceanica} is distinctly changing, 
+and seagrass can be spectrally discriminated from carbonate sand with varying \textit{in-situ} conditions,
+ i.e. increasing depth, $H_o: \mu\neq\mu2\neq\mu3\neq ... \neq\mu n$.
 As a result of the statistical testing, we came to the following conclusion.
 The Hypothesis $H_a$ is true, which claims that the spectral discernibility of the seagrass \textit{P.oceanica} is
-distinctly changing with varying \textit{in-situ} conditions, i.e. increasing depth, $H_o: \mu1\neq\mu2\neq\mu3\neq...\neq\mu n$ .
+distinctly changing and can be discriminated from from other seafloor cover types (carbonate sand) with varying \textit{in-situ} conditions, 
+i.e. increasing depth, $H_o: \mu1\neq\mu2\neq\mu3\neq...\neq\mu n$, which positively answers first research question.
 Statistical results are illustrated with Error bars made using Excel's vertical box and Whisker Charts
 (Box Plots).
 The graphs were plotted on the basis of the following statistical data calculated from the sampling
@@ -2862,7 +2862,7 @@ Page: $<$\pageref{page-31}$>$­}
 \begin{table}[H]
 	\rowcolors{1}{Thistle}{MintCream}
 	\begin{center}
-		\caption{Summary statistics of measurements set: 301-325. \\ Example of selected variables 12-22. \href{http://gretl.sourceforge.net/}{Gretl}­}\label{tab:16}
+		\caption{Summary statistics of measurements set: 301-325. \\ Example of selected variables 12-22. \href{http://gretl.sourceforge.net/}{Gretl}. Page: $<$\pageref{page-sumstat}$>$­}\label{tab:16}
 		Summary Statistics, using the observations 301--325\\
 	
 	\vspace{2em}
@@ -3042,7 +3042,7 @@ Page: $<$\pageref{page-31}$>$­}
 
 \begin{table}[H]
 	\rowcolors{1}{Ivory}{GhostWhite}
-	\caption{Final Cluster Centers: results of the \textit{K-means} analysis of the measurement set 201-236 of the spectral reflectance of \textit{P.oceanica} (15.X.).  \href{http://www.spss.com/}{SPSS}}
+	\caption{Final Cluster Centers: results of the \textit{K-means} analysis of the measurement set 201-236 of the spectral reflectance of \textit{P.oceanica} (15.X.).  \href{http://www.spss.com/}{SPSS}. Page: $<$\pageref{page-fincc}$>$}\label{tab:23}
 	\begin{center}
 	\begin{tabular}{|c|c|c|c|c|c|}
 	\hline\hline
@@ -3064,8 +3064,7 @@ Page: $<$\pageref{page-31}$>$­}
 		V15 &	0.140563 &	0.026211 &	V29 &	0.214436 &	0.038433 \\ \hline
 		 &	 &	 &	V30	 & 0.299183	 & 0.053451 \\ \hline
 	\end{tabular}
-	\end{center}
-	\label{tab:23}
+	\end{center}	
 \end{table}
 \pagebreak
 
@@ -3185,7 +3184,7 @@ Page: $<$\pageref{page-31}$>$­}
 \begin{table}[H]
 	\rowcolors{1}{Gainsboro}{MintCream}
 	\begin{center}
-	\caption{Results of the \textit{Weighted Least Squares Analysis} applied towards variables 12-20 from the selected dataset 301-325 of the spectral reflectance of \textit{P.oceanica}. \href{http://gretl.sourceforge.net/}{Gretl}}
+	\caption{Results of the \textit{Weighted Least Squares Analysis} applied towards variables 12-20 from the selected dataset 301-325 of the spectral reflectance of \textit{P.oceanica}. \href{http://gretl.sourceforge.net/}{Gretl}. Page: $<$\pageref{page-WLS}$>$}\label{tab:27}
 		Model 1: WLS, using observations 1--95\\
 		Dependent variable: v20\\
 		Variable used as weight: v12
@@ -3215,7 +3214,6 @@ Page: $<$\pageref{page-31}$>$­}
 		Mean dependent var &  0.136154 & S.D. dependent var &  0.149193 \\
 		Sum squared resid &  5.689669 & S.E. of regression &  0.247344 \\
 	\end{tabular}
-	\label{tab:27}
 	\end{center}
 \end{table}
 %%%Gretl end
@@ -3501,7 +3499,7 @@ Page: $<$\pageref{page-31}$>$­}
 \pagebreak
 
 \begin{table}[H]\footnotesize
-	\caption{Available broadband Landsat satellite images covering the research area of Crete island. Page: $<$\pageref{page-30}$>$}\label{tab:34}
+	\caption{Available broadband Landsat satellite images covering the research area of Crete Island. Page: $<$\pageref{page-30}$>$}\label{tab:34}
 	\centering
 	\rowcolors{1}{Ivory}{GhostWhite}
 	 \begin{tabular}{| p{1cm} | p{3cm} | p{2cm} | p{5cm} |}

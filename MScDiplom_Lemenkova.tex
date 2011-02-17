@@ -1433,8 +1433,7 @@ of data points. Therefore, we used the data (\nameref{app}) of means of spectral
 The main aim of this part of research is to clarify if the bottom reflectance of the different seafloor types including patches of
 the seagrass \textit{P.oceanica} meadows, silt and carbonate sand differ and can be clearly discriminated while mapping. A study is
 based on three seafloor types containing silt, carbonate sand and seagrass, as well as mixed
-types, where the spectral signatures were examined. \ac{WASI} software\index[concepts]{Seawater optical properties!RTM!WASI} (Fig.\ref{fig:4.7}) is used to simulate
-spectral reflectance and colour discrimination of water, affected by presence of \textit{P.oceanica} and other factors, under various
+types, where the spectral signatures were examined. \ac{WASI} software\index[concepts]{Seawater optical properties!RTM!WASI} (Fig.\ref{fig:4.7}) is used to simulate spectral reflectance and colour discrimination of water, affected by presence of \textit{P.oceanica} and other factors, under various
 environmental conditions which influence its colour.
 The data provided with the model was determined at freshwater of the Boddensee \cite{Gege05}\label{Gege05}, 
 yet the model was adjusted for the marine environment, so that its parameters (concentration of chlorophyll, concentration of small particles,
@@ -1615,7 +1614,7 @@ remote sensing sensors (\ac{MODIS}, \ac{ASTER}, \ac{MERIS} and \ac{SeaWiFS}), (F
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.5]{Sensors.jpg}
-	\caption{Combined plots of simulated remote sensing reflectance of \textit{P.oceanica} at various sensors: \ac{MODIS}, \ac{MERIS}, \ac{SeaWiFS} and \ac{CZCS}, iterated over three depths, as stripes shown spectral bands covered by these sensors. Pages: $<$\pageref{page-21}$>$, $<$\pageref{page-22}$>$, $<$\pageref{page-33}$>$}
+	\caption{Combined plots of simulated remote sensing reflectance of \textit{P.oceanica} at various sensors: \ac{MODIS}, \ac{MERIS}, \ac{SeaWiFS} and \ac{CZCS}, iterated over three depths, as stripes shown spectral bands covered by these sensors. Pages: $<$\pageref{page-21}$>$, $<$\pageref{page-22}$>$, $<$\pageref{page-33}$>$, $<$\pageref{secondq}$>$}
 	\label{fig:4.6}
 \end{figure}
 
@@ -1721,7 +1720,7 @@ Ligaria beach, Agia Pelagia.
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=0.50]{GNU-13.jpg}
-		\caption{Multiplot of spectral reflectance of \textit{P.oceanica}. Series 1-100. Shown mid-spread of the statistical quartiles Q1 and Q3 (vertical dashes) and mean value within the range (red bold dots). \href{http://www.gnuplot.info/}{Gnuplot}­. Pages: $<$\pageref{page-21}$>$, $<$\pageref{page-41}$>$}
+		\caption{Multiplot of spectral reflectance of \textit{P.oceanica}. Series 1-100. Shown mid-spread of the statistical quartiles Q1 and Q3 (vertical dashes) and mean value within the range (red bold dots). \href{http://www.gnuplot.info/}{Gnuplot}­. Pages: $<$\pageref{page-21}$>$, $<$\pageref{page-41}$>$, $<$\pageref{secondq}$>$}
 		\label{fig:4.13}
 	\end{center}
 \end{figure}
@@ -1746,7 +1745,7 @@ Two statistical approaches have been tested for confirmatory data analysis and h
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=0.5]{GNU-14.jpg}
-		\caption{Multiplot of spectral reflectance of \textit{P.oceanica}. Series 126-150. Shown mid-spread of the statistical quartiles Q1 and Q3 (vertical dashes) and mean value within the range (red bold dots). \href{http://www.gnuplot.info/}{Gnuplot} visualization. Page: $<$\pageref{page-39}$>$­}
+		\caption{Multiplot of spectral reflectance of \textit{P.oceanica}. Series 126-150. Shown mid-spread of the statistical quartiles Q1 and Q3 (vertical dashes) and mean value within the range (red bold dots). \href{http://www.gnuplot.info/}{Gnuplot} visualization. Pages: $<$\pageref{page-39}$>$­, $<$\pageref{secondq}$>$­}
 		\label{fig:A.27}
 	\end{center}
 \end{figure}
@@ -1819,6 +1818,7 @@ which we briefly illustrated in a small summary table (Tab.\ref{tab:1})\label{pa
 These models simulate spectral views of the chosen sensors, how these sensors will ``see" seagrass (Fig.\ref{fig:28}) and sand as
 pixels, with accepted default atmosphere and water column effects (given by \ac{WASI} software). In such
 a way we defined an empirical upper limit to the discriminative potential of these sensors. 
+The analysis of the remote sensing reflectance simulated by these sensors shows that the measured spectra of seagrass \textit{P.oceanica} (Fig.\ref{fig:4.13}, Fig.\ref{fig:A.27}) were statistically different at most of the spectral bands (Fig.\ref{fig:A.25}, Fig.\ref{fig:A.26}), with a 95\% confidence level (p value $< 0. 05$).  The F values of the test (F=8.477 as on Tab.\ref{tab:6}) are greater than F critical value, which is 2.64 at 0.05 confidence level. This proves that broadband and hyperspectral sensors enable spectral discrimination of seagrass, i.e. $H_o: \mu1\neq\mu2\neq\mu3\neq ... \neq\mu n$. Therefore, we answer the second research question positively, i.e. broadband and hyperspectral sensors (Fig.\ref{fig:4.6} and Fig.\ref{fig:4.6W}) provide enough radiometric information for spectral discrimination of seagrass and can therefore be used for mapping of seagrass \textit{P.oceanica}.\label{secondq}
 
 \subsection{GIS mapping of seagrass}
 
@@ -1868,10 +1868,11 @@ The reflectance spectra of \textit{P.oceanica} show (Fig.\ref{fig:4.10}, Fig.\re
 
 The ecological variables, specific to the field environmental conditions, were factored into the \ac{WASI}-based simulation models. Through the \ac{WASI} simulation process, imitating spectral properties of \textit{P.oceanica} and carbonate sand for various broadband and narrowband sensors, models were created that accounted for not only atmospheric conditions (i.e. sun zenith angle), but also height of water column, thus approaching it to the Mediterranean conditions, and chemical content of the seawater (i.e. amount of suspended particles, Gelbstoff, etc), which results in models of optical properties of ``seawater with sediments" and ``seawater without sediments".\\
 The \textit{in-situ} field large-scale matte-level level of seafloor monitoring was then upscaled to airborne Google Earth aerial imagery interpretation, to provide a meadow-level view of seagrass landscapes. An attempt of the small-scale mapping is designed on an example of Landsat satellite imagery. However, in upscaling to this third, small-scale mapping level further environmental variables need to be considered: health conditions of the seagrass, presence of other underwater vegetation (e.g. other seagrass species), hydrological specifications (e.g. direction and speed of currents, amplitude of tidal waves, etc), season, date and times of the image taken. Therefore, we focused on the first two levels in the current work. These different scale levels have been individually considered in terms of the seagrass spectral discernibility for monitoring and mapping, and have been brought together, to provide a roundup of the achieved results and an overview of what still has to be done in \textit{P.oceanica} seagrass mapping by future researchers (see \nameref{sec:7}). \vspace{1ex}\\
-In \textit{Chapter 3}: \nameref{sec:3}, describing data collection, a videographic approach tested in previous works, has been applied during the summer fieldwork, when we captured imagery and video footage of the seafloor on several routes of the boat in the Ligaria beach.\\
+In \textit{Chapter 3}: \nameref{sec:3}, describing data collection, a videographic approach tested in previous works, has been applied during the summer fieldwork, when we captured imagery and video footage of the seafloor on several routes of the boat in the Ligaria beach.\vspace{1ex}\\
 The finding of \textit{Chapter 4}, \nameref{sec:4} showed that the relationship between the spectral reflectance of various seafloor cover types was tied to depth, i.e. water column height. Thus, the results of the in-situ fieldwork measurements revealed that spectral reflectance of \textit{P.oceanica} undergo alterations at depths of 0.5, 2.0 and 3.5m (Fig.\ref{fig:4.9}). The analysis of the spectral signatures of the seagrass \textit{P.oceanica} and sand clearly shows (Fig.\ref{fig:27}) that seagrass has spectral reflectance much lesser than that of a carbonate sand, in general not increasing values of
-10 \% reflectance in spectra of 500-600 nm, while sand has spectral reflectance approaching 33\% in its highest values. These results indicate that seagrass \textit{P.oceanica} can in general be detected and discriminated from other seafloor cover types with varying environmental conditions, i.e. water column height, by hyperspectral spectroradiometers (\ac{Trios-RAMSES}), which positively answers the \textbf{first research question} of this thesis (``Is \textit{P.oceanica} spectrally distinct from other seafloor cover types with varying in-situ conditions ?"). \vspace{1ex}\\
-Further in \textit{Chapter 4}, \nameref{sec:4}, studies of the broadband versus narrowband sensors demonstrate that simulated spectra of the seagrass, made using \ac{WASI} modeller, have the best results at \ac{CZCS} scanner, especially devoted to the measurement of ocean color. The spectrum of \textit{P.oceanica} reflectance, simulated for \ac{CZCS}, covers the wavelength interval of 400-800 nm, and is distinctive for various depths. Other remote sensors (\ac{MODIS}, \ac{SeaWiFS}) may also be used for the seagrass mapping, because their technical characteristics enable to spectrally discriminate \textit{P.oceanica} seagrass from other seafloor cover types (Fig.\ref{fig:4.6}), particularly carbonate sand as tested in the current work. Therefore, the \textbf{second research question} of this MSc thesis (``Can broadband and hyperspectral remote sensing data be used for the mapping of \textit{P.oceanica}: what sensor yields enough radiometric details to discriminate seagrass from other seafloor cover types?") is answered with ``yes'', and the most suitable sensor is the Coastal Zone Color Scanner \ac{CZCS}.\vspace{1ex}\\
+10 \% reflectance in spectra of 500-600 nm, while sand has spectral reflectance approaching 33\% in its highest values. These results indicate that seagrass \textit{P.oceanica} can in general be detected and discriminated from other seafloor cover types (carbonate sand) with varying environmental conditions, i.e. water column height, by hyperspectral spectroradiometers (\ac{Trios-RAMSES}), which positively answers the \textbf{first research question} of this thesis (``Is \textit{P.oceanica} spectrally distinct from carbonate sand with varying \textit{in-situ} conditions ?").
+Further in \textit{Chapter 4}, \nameref{sec:4}, studies of the broadband and narrowband sensors demonstrate that simulated spectra of the seagrass, made using \ac{WASI} modeller, have the best results at \ac{CZCS} scanner, especially devoted to the measurement of ocean color. The spectrum of \textit{P.oceanica} reflectance, simulated for \ac{CZCS}, covers the wavelength interval of 400-800 nm, and is distinctive for various depths. Other remote sensors (\ac{MODIS}, \ac{SeaWiFS}) may also be used for the seagrass mapping, because their technical characteristics enable to spectrally discriminate \textit{P.oceanica} seagrass from other seafloor cover types (Fig.\ref{fig:4.6}), particularly carbonate sand as tested in the current work. Therefore, the \textbf{second research question} of this MSc thesis (``Do broadband and hyperspectral sensors provide enough radiometric information for spectral discrimination of seagrass, 
+and therefore, can be used for mapping of \textit{P.oceanica} ?") is answered with ``yes'', and the most suitable sensor is the Coastal Zone Color Scanner \ac{CZCS}.\vspace{1ex}\\
 The graphs showing optical properties of seawater with and without sediments (Fig.\ref{fig:4.4}, Fig.\ref{fig:27}, Fig.\ref{fig:4.2}) focused on spectral variability of the water with changed physical and chemical content. The alterations in the individual spectral signatures of single measurements (e.g. on Fig.\ref{fig:4.13}, Fig.\ref{fig:A.25}, Fig.\ref{fig:A.27}, Fig.\ref{fig:A.28}) reflect individual health properties of leaves: different nitrogen and chlorophyll content causing diverse colour pigmentation and light absorption, water content in leaves, plant physiological conditions, which vary across seagrass meadow, shoot morphology, etc. The differences in spectral reflectance values of the measurements taken on various days might have been caused by the impact of atmospheric conditions, such as solar radiation and sun illumination by different zenith angle.\vspace{1ex}\\
 For further development of the remote sensing based monitoring and mapping of the seagrass and other seafloor cover types it is desirable to consider upscale mapping with concern to bathymetry. Studies of the substratum and underwater relief in a more detailed way, i.e. bathymetric properties of the testing sizes, gives information about seagrass landscape distribution, because changes in relief directly cause and reinforce the colonisation process of \textit{P.oceanica} meadows.  Thus, the depression and valleys in relief in general stimulate increase of the sedimentation process. In turn, it enables accumulation of necessary nutrient for seagrass plant growth, increases resource allocation to the seagrass roots for better exploitation of pore-water nutrients by the \textit{P.oceanica} shoots. As for patchiness in seagrass landscapes, besides natural reasons, the anthropogenic disturbances (e.g. ocean trawling) still remain a main cause for landscapes fragmentation.
 
@@ -2395,7 +2396,7 @@ mapping seagrasses habitat boundaries. \\ Source: \href{http://kurrawa.gbrmpa.go
 
 \begin{table}[H]\footnotesize
 	\rowcolors{1}{Ivory}{GhostWhite}
-	\caption{Model summary of the \textit{regression} analysis: curve estimation and ANOVA table tested for single observations within one measurement set: spectral reflectance of \textit{P.oceanica}. \ac{SPSS}. Page: $<$\pageref{page-reg}$>$}
+	\caption{Model summary of the \textit{regression} analysis: curve estimation and ANOVA table tested for single observations within one measurement set: spectral reflectance of \textit{P.oceanica}. \ac{SPSS}. Page: $<$\pageref{page-reg}$>$}\label{tab:5}
 	\begin{center}
 		\begin{tabular}{|c|c|c|c|}
 			\hline\hline
@@ -2403,13 +2404,12 @@ mapping seagrasses habitat boundaries. \\ Source: \href{http://kurrawa.gbrmpa.go
 			.277 1 & .077 & .068126692 & .462 \\ \hline
 		\end{tabular}
 	\end{center}
-	The independent variable is wavelength. 
-	\label{tab:5}
+	The independent variable is wavelength. 	
 \end{table}
 
 \begin{table}[H]\footnotesize
 	\rowcolors{1}{Ivory}{GhostWhite}
-	\caption{\textit{ANOVA} table: exponential curve estimation in the regression analysis, tested for single observations within one measurement set: spectral reflectance of \textit{P.oceanica}. \ac{SPSS}. Page: $<$\pageref{page-reg}$>$}
+	\caption{\textit{ANOVA} table: exponential curve estimation in the regression analysis, tested for single observations within one measurement set: spectral reflectance of \textit{P.oceanica}. \ac{SPSS}. Pages: $<$\pageref{page-reg}$>$, $<$\pageref{secondq}$>$}\label{tab:6}
 	\begin{center}
 		\begin{tabular}{|c|c|c|c| c|c|}
 			\hline\hline
@@ -2419,13 +2419,12 @@ mapping seagrasses habitat boundaries. \\ Source: \href{http://kurrawa.gbrmpa.go
 			Total & 23.592 & 103 & & & \\ \hline
 		\end{tabular}
 	\end{center}
-	The independent variable is wavelength. 
-	\label{tab:6}
+	The independent variable is wavelength. 	
 \end{table}
 
 \begin{table}[H]\footnotesize
 	\rowcolors{1}{Ivory}{GhostWhite}
-	\caption{Coefficients of the \textit{regression analysis} (exponential curve estimation) of the spectral reflectance of \textit{P.oceanica}. \href{http://www.spss.com/}{SPSS}. Page: $<$\pageref{page-reg}$>$}
+	\caption{Coefficients of the \textit{regression analysis} (exponential curve estimation) of the spectral reflectance of \textit{P.oceanica}. \href{http://www.spss.com/}{SPSS}. Page: $<$\pageref{page-reg}$>$}\label{tab:7}
 	\begin{center}
 		\begin{tabular}{| c | c | p{2cm}| c | c | c |}
 			\hline\hline
@@ -2437,8 +2436,7 @@ mapping seagrasses habitat boundaries. \\ Source: \href{http://kurrawa.gbrmpa.go
 		\end{tabular}
 	\end{center}
 	The underlying process assumed is independence (white noise).\\
-	 Based on the asymptotic chi-square approximation.
-	\label{tab:7}
+	 Based on the asymptotic chi-square approximation.	
 \end{table}
 
 \begin{figure}[H]
@@ -2852,7 +2850,7 @@ Page: $<$\pageref{page-31}$>$­}
 	\subfloat [MERIS]{\label{fig:29b}\includegraphics[width=0.4\textwidth]{Fig-35b.jpg}}\\
 	\subfloat [MODIS]{\label{fig:29c}\includegraphics[width=0.4\textwidth]{Fig-35c.jpg}}
 	\subfloat [SeaWiFS]{\label{fig:29d}\includegraphics[width=0.4\textwidth]{Fig-35d.jpg}}
-	\caption{WASI-simulated remote sensing reflectance of \textit{P.oceanica} at various sensors. Page: $<$\pageref{page-33}$>$}
+	\caption{WASI-simulated remote sensing reflectance of \textit{P.oceanica} at various sensors. Pages: $<$\pageref{page-33}$>$, $<$\pageref{secondq}$>$}
 	\label{fig:4.6W}
 \end{figure}
 
@@ -2922,7 +2920,7 @@ Page: $<$\pageref{page-31}$>$­}
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=0.35]{GNU-11.jpg}
-		\caption{Spectral reflectance of \textit{P.oceanica}. Measurement series 25-50. \\ \href{http://www.gnuplot.info/}{Gnuplot} display. Pages: $<$\pageref{page-21}$>$, $<$\pageref{dataprep}$>$­}
+		\caption{Spectral reflectance of \textit{P.oceanica}. Measurement series 25-50. \\ \href{http://www.gnuplot.info/}{Gnuplot} display. Pages: $<$\pageref{page-21}$>$, $<$\pageref{dataprep}$>$­, $<$\pageref{secondq}$>$}
 		\label{fig:A.25}
 	\end{center}
 \end{figure}
@@ -2931,7 +2929,7 @@ Page: $<$\pageref{page-31}$>$­}
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=0.35]{GNU-12.jpg}
-		\caption{Remote sensing reflectance of \textit{P.oceanica}. Series 1-25. \\Shown midspread of the statistical quartiles Q1 and Q3 (vertical dashes) and mean value within the range. \\ \href{http://www.gnuplot.info/}{Gnuplot}­. Page: $<$\pageref{page-21}$>$}
+		\caption{Remote sensing reflectance of \textit{P.oceanica}. Series 1-25. \\Shown midspread of the statistical quartiles Q1 and Q3 (vertical dashes) and mean value within the range. \\ \href{http://www.gnuplot.info/}{Gnuplot}­. Page: $<$\pageref{page-21}$>$, $<$\pageref{secondq}$>$}
 		\label{fig:A.26}
 	\end{center}
 \end{figure}

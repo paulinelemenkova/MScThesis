@@ -80,7 +80,7 @@
 	\title{Seagrass mapping and monitoring \\ along the coasts of Crete, Greece}
 	\author[1]{by Lemenkova Polina}
 	%\affil[1]{MSc student at the \textit{University of Twente, Faculty of Geo-Information Science and Earth Observation (ITC)}, The Netherlands}
-	\date{\today}
+	\date{March 2011}
 	\maketitle	
 \end{titlepage}
 \pagebreak
@@ -655,6 +655,7 @@ research area, however it provides with detailed monitoring along the route of t
 the selected locations it becomes a useful tool for the assessment of the distribution, density and
 coverage of the seagrass along the track log. Besides, the underwater observations using scuba diving
 equipment have been conducted for the measurements of depths.
+\pagebreak
 
 \subsection{Research objective}\index[concepts]{Research!objective}
 The current MSc research aims to explore the environmental conditions for the spatial distribution of \textit{P.oceanica} seagrass along the northern coast of Crete Island, based on the remote sensing and \ac{GIS} techniques, knowledge about the coastal environment in Crete and integration of various data
@@ -682,6 +683,7 @@ over the selected locations of northern Crete. The main research objective is mo
 This research is supported by the \textit{in-situ} measurements in two selected locations of the northern coast
 of Crete (Ligaria beach in Agia Pelagia district and Xerocampos), using following methods of the
 remote sensing techniques: spectral modelling by means of the \ac{RTM} \ac{WASI}, underwater videometric measurements made by \ac{Olympus ST} camera, aerial Google Earth and satellite images from different sources, spatial \ac{GIS} and statistical analysis.
+\pagebreak
 
 \subsubsection{General objective}\index[concepts]{Research!objective!general}
 The main objective of this study is to analyse the optical properties of the seagrass \textit{P.oceanica} and other seafloor types, and to apply the remote sensing techniques towards the investigation of the seagrass distribution in the selected locations along the northern coast of Crete.
@@ -698,7 +700,6 @@ General objectives:
 		\item[]3.	To apply remote sensing data (Google Earth aerial images, \ac{Landsat TM} and \ac{Landsat ETM+} satellite images) for the monitoring of the seagrass meadows distribution 
 		\item[]4.	To perform supervised images classification for the thematic mapping of the \textit{P.oceanica} seagrass distribution along the selected locations over the coasts of northern Crete. 
 	\end{itemize}
-\pagebreak
 
 \subsection{Research questions}\index[concepts]{Research!questions}
 	\begin{itemize}	
@@ -726,7 +727,7 @@ The general research assumption, used in this work, in order to make feasible ap
 Weather conditions for the measurements are assumed to be ideal: clear, sunny, windless day. Otherwise wind roughens water surface causing sun glitter, and values of spectral reflectance may contain disturbances. \\ Sky radiance might be influenced by multiple reflectance between the sea surface albedo and the atmosphere and in general, sky radiance increases rapidly while viewing zenith angle is near to $90\,^{\circ}$ (i.e. in the evening hours). Therefore, ideally measurements should be done at noon, with as low zenith angle (Fig.\ref{fig:A.2-1})\label{zenith} as possible; otherwise, if the solar zenith angle is too high (e.g. approaching $60-70\,^{\circ}$), received data may contain noise. For \ac{WASI} simulations reflection factor of sky radiance is taken as 0.0201 with simulated ideal conditions: viewing angle ($0\,^{\circ}$ = nadir). The interval of water temperature taken as default lies in the diapason $17-25\,^{\circ}$ as to simulate the conditions of the Mediterranean Sea. However, in real time conditions the sun zenith angle of $45\,^{\circ}$ has been accepted as suitable. 
 The accepted model-specific parameters of the \ac{WASI} simulator are shown in the Table \ref{tab:3}.\label{page-10} \vspace{1ex}\\
 The anisotropy factor of upwelling radiation or the quality (Q-) factor, showing the directionally dependency of the radiance, is taken as 5. We accepted some values of model-specific optical parameters as default values at \ac{WASI} simulator, which are shown in the Table \ref{tab:3}. Thus, concentration of phytoplankton is accepted at the interval of $0.035-0.089 mg^{-1}$ and concentration of large suspended particles is given to 8. Reference wavelength for \ac{CDOM}, or Gelbstoff, absorption is equal to 440. The backscattering (Fig.\ref{fig:backscat}) is accepted to be $0.00144m^{-1}$. The coefficient of attenuation remains equal to 1.0546, as set up by default at \ac{WASI}.\vspace{1ex}\\
-We also assume that concentration of non-chlorophyll particles (absorption at 0) as well as concentration of small suspended particles is equal to zero, so we do not count them in this work. Exponent of \ac{CDOM} (Gelbstoff) absorption is accepted as 0.0140. Finally, the \ac{BRDF} of bottom reflectance (sand), which defines the reflection of light  is at an opaque surface (Fig.\ref{fig:BRDF})\label{page-11}, is assumed to be 0.318 $sr^{-1}$.
+We also assume that concentration of non-chlorophyll particles (absorption at $\lambda_0$) as well as concentration of small suspended particles is equal to zero, so we do not count them in this work. Exponent of \ac{CDOM} (Gelbstoff) absorption is accepted as 0.0140. Finally, the \ac{BRDF} of bottom reflectance (sand), which defines reflection of light  is at an opaque surface (Fig.\ref{fig:BRDF})\label{page-11}, is assumed to be 0.318 $sr^{-1}$.
 
 \subsection{Research approach}\index[concepts]{Research!approach}
 Seagrass consistent monitoring and mapping is necessary and important for the sustainable coastal
@@ -748,14 +749,6 @@ mapping  (Fig.\ref{fig:1.11})\label{page-9}. Image classification is based on th
 signatures of various seafloor cover types  (Fig.\ref{fig:1.10})\label{page-9}. The spectrum of light coming up from the ocean surface in
 shallow waters keeps information on the optical properties of the seawater components and benthic
 substrate which can be read from their spectral signatures \cite{Werdell03}\label{Werdell03}. 
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.63]{UML_ClassDiagram.jpg}
-	\caption{General methodological approach for the analysis of spectral signatures. \href{http://argouml.tigris.org/}{ArgoUML}, \href{http://www.gimp.org/}{Gimp}. \\ Page: $<$\pageref{page-9}$>$}
-	\label{fig:1.10}
-\end{figure}
-
 The pre-processing of the images includes imagery corrections for atmospheric noises and effects of the water
 column. Reflectance spectra of the seagrass canopy at different depths of the water-column are
 analysed for the discrimination of their spectral signatures, enabling to separate various seafloor types
@@ -771,6 +764,12 @@ glint and depth effects correction as recommended \cite{Matarrese08}\label{Matar
 working step the training sites for the supervised classification methods are designed, as well as its
 control and trials of different classification approaches (Unsupervised, K-means or Isodata;
 Supervised, Maximum Likelihood).
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.63]{UML_ClassDiagram.jpg}
+	\caption{General methodological approach for the analysis of spectral signatures. \href{http://argouml.tigris.org/}{ArgoUML}, \href{http://www.gimp.org/}{Gimp}. \\ Page: $<$\pageref{page-9}$>$}
+	\label{fig:1.10}
+\end{figure}
 \pagebreak
 
 %%%%%%%%%%%%%%%%%  Section2   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1554,7 +1553,7 @@ has been completed using Erdas Imagine software.
 %
 \subsection{Analysis of spectral signatures}
 The distinguishing spectral signatures for various seafloor types (e.g. seagrass species, coral reefs,
-various types of sand, mud, other sediments, (Fig.\ref{fig:4.4})\label{page-31} exist in well-defined and narrow (10–20 nm)
+various types of sand, mud, other sediments, (Fig.\ref{fig:4.4})\label{page-31} exist in well-defined and narrow ($10 - 20$ nm)
 wavelength ranges. 
 The values of their spectral reflectance are accepted as constant. The results of
 spectral measurements enable to analyze, whether \textit{P.oceanica} is spectrally distinct from other sea
@@ -1682,7 +1681,7 @@ Statistical pre-processing of large sets of serial data enables to generalize da
 spectral reflectance for further calculations, and to get rid of the extreme values, noise and errors.
 The statistical calculators were mainly made by means of \ac{GRETL}\index[concepts]{Data!statistical analysis!Gretl} and SPSS\index[concepts]{Data!statistical analysis!SPSS}. 
 The Open Office was used for preliminary data view and preprocessing, and included following computations
-at each data set (for example, Fig.\ref{fig:A.11}) with summary outcome of mean, median, Q1 and Q3, standard deviation, min and max values (Tab.\ref{tab:4}, Tab.\ref{tab-16}).\label{page-sumstat} 
+at each data set (for example, Fig.\ref{fig:A.11}) with summary outcome of mean, median, Q1 and Q3, standard deviation, min and max values (Tab.\ref{tab:4}, Tab.\ref{tab:A.8}).\label{page-sumstat} 
 The statistical pre-processing\label{page-40} and analysis were made to display the mean values of spectral reflectance,
 which were used for comparison with reflectance data of various seafloor cover types as well as
 seawater with and without sediment (e.g. Fig.\ref{fig:A.16}).
@@ -1696,21 +1695,20 @@ Each time we observe the outcome of a random variable\index[concepts]{Data!stati
 We applied various methods of statistical analysis towards data pool (some examples of the selected tables are in the \nameref{app}\label{page-41}: Tab.\ref{tab:18}, Tab.\ref{tab:24}, Tab.\ref{tab:25}, Tab.\ref{tab:26}, Tab.\ref{tab:29}), in order to analyze the distribution of values of spectral reflectance of \textit{P.oceanica}. 
 A probability distribution\index[concepts]{Data!statistical analysis!probability distribution}, a mathematical statement about the possible values that the random observations of spectral reflectance can take on, displays the relative frequency with which each possible value of spectral reflectance is observed. 
 The \ac{LAD}\index[concepts]{Data!statistical analysis!LAD}, a popular optimization technique, was used to show the main trend of the distribution of spectral reflectance values along the spectra (Tab.\ref{tab:12})\label{page-tab12}. Non-linear logistic analysis\index[concepts]{Data!statistical analysis!non-linear logistic analysis} is applied to specify and estimate a model of spectral distribution, in which the dependent variable (i.e. the value of spectral reflectance for each single observation) is not continuous, but discrete and independent for each case (Tab.\ref{tab:11}). \\
-As the observations were made in a repeated way, we also analyzed the data pool using autocorrelation as well: Tab.\ref{tab:13} and Tab.\ref{tab:14} for \textit{P.oceanica} and Tab.\ref{tab:28} for carbonate sand. The \textit{autocorrelation}\index[concepts]{Data!statistical analysis!autocorrelation}, a cross-correlation\index[concepts]{Data!statistical analysis!cross-correlation} of an observed value with itself, made on two different days (14th and 15th October), shows the similarity between observations as a function of the time separation between them. 
-As can be seen on Fig.\ref{fig:A.21}\label{A-23}, Fig.\ref{fig:A.22}\label{A-24} and Fig.\ref{fig:A.29}, it is a useful tool for finding repeating patterns for a single value of observations, such as the presence of a periodic signal which has been buried under noise. The autocorrelation analysis has been performed using both \ac{SPSS} and \ac{GRETL} software (Fig.\ref{tab:28}\label{page-a-c}). 
+As the observations were made in a repeated way, we also analyzed the data pool using autocorrelation as well: Tab.\ref{tab:13} and Tab.\ref{tab:14} for \textit{P.oceanica} and Tab.\ref{tab:28} for carbonate sand. The \textit{autocorrelation}\index[concepts]{Data!statistical analysis!autocorrelation}, a cross-correlation\index[concepts]{Data!statistical analysis!cross-correlation} of an observed value with itself, made on two different days (14th and 15th October), shows the similarity between observations as a function of the time separation between them, 
+as can be seen on Fig.\ref{fig:A.21}\label{A-23}, Fig.\ref{fig:A.22}\label{A-24} and Fig.\ref{fig:A.29}, it is a useful tool for finding repeating patterns for a single value of observations, such as the presence of a periodic signal which has been buried under noise. The autocorrelation analysis has been performed using both \ac{SPSS} and \ac{GRETL} software (Fig.\ref{tab:28}\label{page-a-c}). 
 The method of \textit{least squares}\index[concepts]{Data!statistical analysis!least squares, method of} minimizes the sum of the squares of the errors made in solving every single observation made. We tried different approaches of the \textit{least squares} methods: Tab.\ref{tab:15}, Tab.\ref{tab:18}, \ac{WLS}: Tab.\ref{tab:27}\label{page-WLS}, \ac{OLS}: Fig.\ref{tab:15}\label{page-OLS}\\
 To focus on the relationship between a dependent variable (each single observation of the spectral reflectance) and independent variables (three various depths: 0.5, 1.5 and 2.5 meters) we used the \textit{regression analysis}, which enables modeling and analyzing values of the spectral reflectance at several depths: Tab.\ref{tab:5}\label{page-reg}, Tab.\ref{tab:6}, Tab.\ref{tab:7}. 
 The summary of the values of spectral reflectance properties on various depths is presented on the Tab.\ref{tab:A.7}.
 The \textit{k-means cluster analysis}\index[concepts]{Data!statistical analysis!k-means cluster analysis} has been used for partitioning observation sets into k clusters (Tab.\ref{tab:20}, Tab.\ref{tab:21}, Tab.\ref{tab:22}, Tab.\ref{tab:23})\label{page-fincc} in which each observation belongs to the cluster with the nearest mean.
 It enables to highlight the main areas of the location of values of spectral reflectance along the spectra.\\
-To estimate spectral density of a spectral reflectance measurements we used periodogram\index[concepts]{Data!statistical analysis!periodogram} function (Tab.\ref{tab:30})\label{page-period}, which corresponds to the general spectrum of the observations with representation of a variable quantity.  
-Thus, the periodogram (Fig.\ref{fig:A.31})\label{page-A31} of the series of observation\index[concepts]{Data!statistical analysis!observations, series of} highlights so-called “dead spots” of low power between the frequencies we wish to exclude (can be seen clearly at the end of the graphs, e.g. Fig.\ref{fig:A.12} ) 
-and the frequencies we want to retain (the general profile that lies in the 450-850 nm, Fig.\ref{fig:A.14}, enlarged part of 500-660nm).\\
+To estimate spectral density of optical measurements we used periodogram\index[concepts]{Data!statistical analysis!periodogram} function (Tab.\ref{tab:30})\label{page-period}, which corresponds to the general spectrum of the observations with representation of a variable quantity.  
+Thus, the periodogram (Fig.\ref{fig:A.31})\label{page-A31} of the series of observation\index[concepts]{Data!statistical analysis!observations, series of} highlights so-called “dead spots” of low power between the frequencies we wish to exclude (can be seen clearly at the end of the graphs, e.g. Fig.\ref{fig:A.12}) and the frequencies we want to retain (the general profile that lies in the 450-850 nm, Fig.\ref{fig:A.14}, enlarged part of 500-660nm).\\
 The visualization of the data plotting was made by means of Gnuplot software, which enables fine
 drawing and advanced displaying of large amounts of serial data, ultimate control over graph properties, 
 the simplicity of plotting and the ease of scripting (see Fig.\ref{fig:4.13}, \nameref{app}).
 The graphs illustrating spectral signatures of various seafloor cover types display the mean values and
-areas of quartiles\index[concepts]{Data!statistical analysis!quartiles Q1-Q3} (Q1 - Q3, Fig.\ref{fig:A.30}\label{page-A30}, and shaded Q-Q areas on graph, Fig. \ref{fig:4.10}, Fig.\ref{fig:4.14}), which cover most probable data distribution (spectral reflectance) for each spectral band. In x-axis displayed are the areas of 400 – 950 nm in spectra, where the measurements were done; the y-axis was adjusted for the better visualization of the
+areas of quartiles\index[concepts]{Data!statistical analysis!quartiles Q1-Q3} (Q1 - Q3, Fig.\ref{fig:A.30}\label{page-A30}, and shaded Q-Q areas on graph, Fig. \ref{fig:4.10}, Fig.\ref{fig:4.14}), which cover most probable data distribution (spectral reflectance) for each spectral band. In x-axis displayed are the areas of 400-950 nm in spectra, where the measurements were done; the y-axis was adjusted for the better visualization of the
 \textit{P.oceanica} spectra: as its spectral values are mostly located in the lower part of the spectra (usually no
 more than 0.20 nm, except for borders), we did not extend the y-scale up to 100 percent, in order to
 focus on the most necessary area of spectral values (Fig.\ref{fig:4.14}, Fig.\ref{fig:4.4} and \nameref{app}). The mean values are
@@ -1769,9 +1767,9 @@ distinctly changing and can be discriminated from from other seafloor cover type
 i.e. increasing depth, $H_o: \mu1\neq\mu2\neq\mu3\neq...\neq\mu n$, which positively answers first research question.
 Statistical results are illustrated with Error bars made using Excel's vertical box and Whisker Charts (Box Plots).
 The graphs were plotted on the basis of the following statistical data calculated from the sampling
-measurements data: Table 2.
+measurements data: Tab.\ref{tab:A.8}, Tab.\ref{tab:A.29}, Tab\ref{tab:4.1}.\label{last}
 
-\begin{table}
+\begin{table}[H]
 \rowcolors{1}{Khaki}{LightYellow}
 \caption{Statistical analysis of the measurements of spectral reflectance of \textit{P.oceanica} (fragment). Page: $<$\pageref{page-40}$>$}
 \centering
@@ -1794,7 +1792,7 @@ measurements data: Table 2.
    \label{tab:4}
 \end{table}
 
-where the abbreviations stand for the following values:
+The abbreviations stand for the following values:
 Mean: Average of the data to be plotted, AVERAGE\index[concepts]{Data!statistical analysis!average} {data}
 St Dev: Standard deviation\index[concepts]{Data!statistical analysis!standard deviation}, \ac{STDEV} {data}
 Median: Median of the data, MEDIAN{data}
@@ -1844,7 +1842,7 @@ The final mapping has been supported in ArcGIS through the data exporting, conve
 integration of various data in one \ac{GIS}-project (Fig.\ref{fig:4.17})\label{fig4-17}. Data collected during the fieldwork, imagery
 of the seagrass distribution are added into a \ac{GIS} dataset for the assessment and spatial analysis.
 \paragraph{Accuracy assessment}\label{page-50acc}
-We prepared the error confusion matrices (Fig.\ref{tab:kappa-1} and Fig.\ref{tab:kappa-2}) using $\kappa$ (Kappa) statistics to assess and evaluate accuracy of the classification. The accuracy assessment has been done using Erdas Imaging function Classifier/Accuracy Assessment. In the Accuracy Assessment viewer we have chosen utility Edit in order to generate random points throughout the classified image, and then chosen the Create or add random points dialog. After the points were generated, we entered the class values for the reference points from the supervised classification. In order to perform a proper accuracy assessment we needed about 300 points so that we defined the number of points for the selection. From the option parameters for points distribution we have chosen "stratified random" as better representing the variables. Then we evaluated the location of the points and determined their class value, which was done with ground truth points from Google Earth aerial photos for various data and seafloor imagery and with reference to the signature file, to find the numeric value that has been assigned to each class previously. Finally, to print the errors matrix, we selected Accuracy Assessment viewer again and chosen there Report/ Options with turned on Error Matrix, Kappa Statistics and Accuracy Total. The error matrix is just comparing reference points of various seafloor cover types to the classified points (i.e. seagrass, carbonate sand, various land cover types on the coast). The Kappa coefficient takes into account chance agreement and thus, shows the reduction in errors generated by a classification process compared with the errors which could be received by a completely random classification – in other words, it evaluates quality of the classification. The results of the classification can be seen on the Fig. (see appendices). The overall map accuracy is 68\%, which means that 68\% of the pixels are classified to the correctly chosen seafloor cover type.
+We prepared the error confusion matrices (Fig.\ref{tab:kappa-1} and Fig.\ref{tab:kappa-2}) using $\kappa$ (Kappa) statistics to assess and evaluate accuracy of the classification. The accuracy assessment has been done using Erdas Imaging function Classifier/Accuracy Assessment. In the Accuracy Assessment viewer we have chosen utility Edit in order to generate random points throughout the classified image, and then chosen the Create or add random points dialog. After the points were generated, we entered the class values for the reference points from the supervised classification. In order to perform a proper accuracy assessment we needed about 300 points so that we defined the number of points for the selection. From the option parameters for points distribution we have chosen "stratified random" as better representing the variables. Then we evaluated the location of the points and determined their class value, which was done with ground truth points from Google Earth aerial photos for various data and seafloor imagery and with reference to the signature file, to find the numeric value that has been assigned to each class previously. Finally, to print the errors matrix, we selected Accuracy Assessment viewer again and chosen there Report/ Options with turned on Error Matrix, Kappa Statistics and Accuracy Total. The error matrix is just comparing reference points of various seafloor cover types to the classified points (i.e. seagrass, carbonate sand, various land cover types on the coast). The Kappa coefficient takes into account chance agreement and thus, shows the reduction in errors generated by a classification process compared with the errors which could be received by a completely random classification – in other words, it evaluates quality of the classification. The overall map accuracy by supervised classificationis 72\% (Fig.\ref{tab:kappa-2}), which means that 72\% of the pixels are classified to the correctly chosen seafloor cover type in case, and in case of unsupervised classification we received result of 64\% (Fig.\ref{tab:kappa-1})  which proves that supervised classification is preferable method for seagrass mapping.
 \pagebreak
 
 %%%%%%%%%%%%%%%%%%%%%%%%% Discussion %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1857,7 +1855,7 @@ The relationship between the optical properties (spectral reflectance) of the se
 Further in \textit{Chapter 1:} 1.8 Research assumptions, we assume the constant values of the optical properties of the seawater, phytoplankton, total amount of suspended particles and solids, atmospheric conditions, as well as \ac{CDOM}, which have been set up in modelling part of this work, during \ac{WASI} simulations of various remote sensors.\vspace{1ex}\\
 The second \textit{Chapter 2:} \nameref{sec:2} starts from the review of the available research resources and then discusses various \nameref{sec:2-3} and concludes with reported experience of the remote sensing application towards seagrass mapping: \nameref{sec:2.4.1}. In section 2.2 of \textit{Chapter 2:} \nameref{sec:2}, \nameref{sec:2-2}, Measuring water optical properties: hyperspectral radiometers, the \ac{Trios-RAMSES}-ACC-\ac{UV} and \ac{Trios-RAMSES}-ARC spectroradiometers of \ac{Trios-RAMSES} Hyperspectral Sensor series are described. \\
 The instruments \ac{Trios-RAMSES} have been used during the fieldwork measurements-2009 for the collection of the reflectance spectra. The \ac{Trios-RAMSES}-ACC-\ac{UV} measures spectra in the wavelength domain between 280 nm and 500nm, the \ac{Trios-RAMSES}-ARC, suitable for UV and visible spectra, covers diapason of 320-950 nm with spectral accuracy of 0.3nm (better than 6\%), typical saturation (at 200nm) of  $1Wm^{-2}*nm^{-1}*sr^{-1}$ in 256 channels with a sampling interval of 3.3 nm/pixel and a \ac{FOV} is 7 degrees. The spectral reflectance of the seawater with and without sediments, respectively, was calculated by the ratio of the radiance and irradiance values. \\
-The reflectance spectra of \textit{P.oceanica} show (Fig.\ref{fig:4.10}, Fig.\ref{fig:A.12}, Fig. \ref{fig:A.12}, Fig.\ref{fig:A.13}, Fig.\ref{fig:A.25}, Fig. \ref{fig:A.26}) a values maximum between 450 nm and 600 nm, first, because of the chlorophyll absorption peak at 465 and 665nm (Fig. \ref{fig:A.2-2})\label{chlorophyll}, secondly, because of the weakening of \ac{CDOM} (or Gelbstoff) in the blue part of the \ac{VIS} spectrum, as it most strongly absorbs short wavelength light in blue to ultraviolet range, and finally, because the absorption of the seawater increases in the red part of the \ac{VIS} spectra. The decrease in spectral reflectance values of \textit{P.oceanica} after 660 nm (Fig.\ref{fig:A.13}) is caused by the second absorption peak of phytoplankton. The magnitude of the reflectance maximum slightly varies at single variables between about 8 \% and 12 \% (as on Fig.\ref{fig:A.12}) and is probably related to the individual pigmentation and colour composition of single leaves, their structure and geometric orientation, which naturally causes variations in radiance values. 
+The reflectance spectra of \textit{P.oceanica} show (Fig.\ref{fig:4.10}, Fig.\ref{fig:A.12}, Fig.\ref{fig:A.13}, Fig.\ref{fig:A.25}, Fig.\ref{fig:A.26}) a values maximum between 450 nm and 600 nm, first, because of the chlorophyll absorption peak at 465 and 665nm (Fig. \ref{fig:A.2-2})\label{chlorophyll}, secondly, because of the weakening of \ac{CDOM} (or Gelbstoff) in the blue part of the \ac{VIS} spectrum, as it most strongly absorbs short wavelength light in blue to ultraviolet range, and finally, because the absorption of the seawater increases in the red part of the \ac{VIS} spectra. The decrease in spectral reflectance values of \textit{P.oceanica} after 660 nm (Fig.\ref{fig:A.13}) is caused by the second absorption peak of phytoplankton. The magnitude of the reflectance maximum slightly varies at single variables between about 8 \% and 12 \% (as on Fig.\ref{fig:A.12}) and is probably related to the individual pigmentation and colour composition of single leaves, their structure and geometric orientation, which naturally causes variations in radiance values. 
 
 \begin{figure}[h]
 	\centering
@@ -1873,7 +1871,7 @@ The finding of \textit{Chapter 4}, \nameref{sec:4} showed that the relationship 
 10 \% reflectance in spectra of 500-600 nm, while sand has spectral reflectance approaching 33\% in its highest values. These results indicate that seagrass \textit{P.oceanica} can in general be detected and discriminated from other seafloor cover types (carbonate sand) with varying environmental conditions, i.e. water column height, by hyperspectral spectroradiometers (\ac{Trios-RAMSES}), which positively answers the \textbf{first research question} of this thesis (``Is \textit{P.oceanica} spectrally distinct from carbonate sand with varying \textit{in-situ} conditions ?").
 Further in \textit{Chapter 4}, \nameref{sec:4}, studies of the broadband and narrowband sensors demonstrate that simulated spectra of the seagrass, made using \ac{WASI} modeller, have the best results at \ac{CZCS} scanner, especially devoted to the measurement of ocean color. The spectrum of \textit{P.oceanica} reflectance, simulated for \ac{CZCS}, covers the wavelength interval of 400-800 nm, and is distinctive for various depths. Other remote sensors (\ac{MODIS}, \ac{SeaWiFS}) may also be used for the seagrass mapping, because their technical characteristics enable to spectrally discriminate \textit{P.oceanica} seagrass from other seafloor cover types (Fig.\ref{fig:4.6}), particularly carbonate sand as tested in the current work. Therefore, the \textbf{second research question} of this MSc thesis (``Do broadband and hyperspectral sensors provide enough radiometric information for spectral discrimination of seagrass, 
 and therefore, can be used for mapping of \textit{P.oceanica} ?") is answered with ``yes'', and the most suitable sensor is the Coastal Zone Color Scanner \ac{CZCS}.\vspace{1ex}\\
-The graphs showing optical properties of seawater with and without sediments (Fig.\ref{fig:4.4}, Fig.\ref{fig:27}, Fig.\ref{fig:4.2}) focused on spectral variability of the water with changed physical and chemical content. The alterations in the individual spectral signatures of single measurements (e.g. on Fig.\ref{fig:4.13}, Fig.\ref{fig:A.25}, Fig.\ref{fig:A.27}, Fig.\ref{fig:A.28}) reflect individual health properties of leaves: different nitrogen and chlorophyll content causing diverse colour pigmentation and light absorption, water content in leaves, plant physiological conditions, which vary across seagrass meadow, shoot morphology, etc. The differences in spectral reflectance values of the measurements taken on various days might have been caused by the impact of atmospheric conditions, such as solar radiation and sun illumination by different zenith angle.\vspace{1ex}\\
+The graphs showing optical properties of seawater with and without sediments (Fig.\ref{fig:4.4}, Fig.\ref{fig:27}, Fig.\ref{fig:4.2}) focused on spectral variability of the water with changed physical and chemical content. The alterations in the individual spectral signatures of single measurements (e.g. on Fig.\ref{fig:4.13}, Fig.\ref{fig:A.25}, Fig.\ref{fig:A.27}, Fig.\ref{fig:A.28}) reflect individual health properties of leaves: different nitrogen and chlorophyll content causing diverse colour pigmentation and light absorption, water content in leaves and plant physiological conditions, which vary across seagrass meadow, shoot morphology, etc. The differences in spectral reflectance values of the measurements taken on various days might have been caused by the impact of atmospheric conditions, such as solar radiation and sun illumination by different zenith angle.\vspace{1ex}\\
 For further development of the remote sensing based monitoring and mapping of the seagrass and other seafloor cover types it is desirable to consider upscale mapping with concern to bathymetry. Studies of the substratum and underwater relief in a more detailed way, i.e. bathymetric properties of the testing sizes, gives information about seagrass landscape distribution, because changes in relief directly cause and reinforce the colonisation process of \textit{P.oceanica} meadows.  Thus, the depression and valleys in relief in general stimulate increase of the sedimentation process. In turn, it enables accumulation of necessary nutrient for seagrass plant growth, increases resource allocation to the seagrass roots for better exploitation of pore-water nutrients by the \textit{P.oceanica} shoots. As for patchiness in seagrass landscapes, besides natural reasons, the anthropogenic disturbances (e.g. ocean trawling) still remain a main cause for landscapes fragmentation.
 
 \subsection{Upscale mapping of the seagrass landscapes}\index[concepts]{Seagrasses!spatial structure}\label{page-48}
@@ -1970,7 +1968,7 @@ To make further studies of \textit{P.oceanica} more effective we would suggest t
 %\renewcommand{\thetable}{A-\arabic{table}}
 
 \section{appendices}\label{app}
-\subsection{\footnote{The page where the illustration is explained in the main text of MSc thesis is given in angle brackets (e.g., Page: $<$\pageref{page-40}$>$).} Capturing aerial imagery from the Google Earth}
+\subsection{Capturing aerial imagery from the Google Earth}
 %\appendixname{\textbf{1: \\Capturing aerial imagery from the Google Earth: grabbing process}}
 
 \begin{figure}[H]
@@ -2342,7 +2340,7 @@ mapping seagrasses habitat boundaries. \\ Source: \href{http://kurrawa.gbrmpa.go
 \end{figure}
 \begin{table}[htbp]
 	\rowcolors{1}{LightSteelBlue}{Honeydew}
-	\caption{Results of the statistical analysis of spectral reflectance of \textit{P.oceanica}, with average values (for sets 1 - 350). Generalisation up to step 20 nm. Page: $<$\pageref{page-40}$>$}\label{tab:4.1}
+	\caption{Results of the statistical analysis of spectral reflectance of \textit{P.oceanica}, with average values (for sets 1 - 350). Generalisation up to step 20 nm. Pages: $<$\pageref{page-40}$>$, $<$\pageref{last}$>$}\label{tab:4.1}
 	\begin{center}
 	\begin{tabular}{|c|c|c|c|c|c|c|}
 	\hline
@@ -2483,7 +2481,7 @@ mapping seagrasses habitat boundaries. \\ Source: \href{http://kurrawa.gbrmpa.go
 
 \rowcolors{1}{GhostWhite}{LightCyan}\footnotesize
 \begin{longtable}{|c|c|c|c|c|c|c|}
-	\caption{Results of the statistical analysis of spectral reflectance of \textit{P.oceanica}, sets 1-350). Wavelength step: 3 nm. Measured on Agia Pelagia beach, 15th October. Pages: $<$\pageref{page-28}$>$, $<$\pageref{page-40}$>$}\label{tab:A.8} \\
+	\caption{Results of the statistical analysis of spectral reflectance of \textit{P.oceanica}, sets 1-350). Wavelength step: 3 nm. Measured on Agia Pelagia beach, 15th October. Pages: $<$\pageref{page-28}$>$, $<$\pageref{page-40}$>$, $<$\pageref{last}$>$}\label{tab:A.8} \\
 	  \multicolumn{1}{|l|}{\textbf{wl}} &
 	   \multicolumn{1}{l|}{\textbf{mean}} & 
 	   \multicolumn{1}{l|}{\textbf{Q1}} & 
@@ -3261,7 +3259,7 @@ Page: $<$\pageref{page-31}$>$­}
 
 \rowcolors{1}{OldLace}{FloralWhite}
 \begin{longtable}{|r|r|r|r|r|r|r|}
-	\caption{Results of the statistical analysis of spectral reflectance of \textit{carbonate sand}, with average values (for sets 1-3). Wavelength step: 3 nm. Measured on Agia Pelagia beach, 14th October. Page: $<$\pageref{page-40}$>$}\label{tab:A.29} \\
+	\caption{Results of the statistical analysis of spectral reflectance of \textit{carbonate sand}, with average values (for sets 1-3). Wavelength step: 3 nm. Measured on Agia Pelagia beach, 14th October. Pages: $<$\pageref{page-40}$>$, $<$\pageref{last}$>$}\label{tab:A.29} \\
  		 \multicolumn{1}{|l|}{\textbf{wl}} &
   		 \multicolumn{1}{l|}{\textbf{min}} & 
   		 \multicolumn{1}{l|}{\textbf{Q1}} & 
